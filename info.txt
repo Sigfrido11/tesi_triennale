@@ -1,0 +1,6 @@
+allora per il pgd id del c deuteron ho inventato una mia regola che segue le linee guida generali visto che per i nuclei il prefisso è 10 è per le considerazioni sul numero atomico bisognerebbe mettere 30 e il labda c ha 4122 come codice identificativo il valore che mi serve per il pgd-id sarà 10304122
+
+
+
+LISTA DI DOMANDE
+1) gli angoli di Cabibbo come li imposto? vanno lasciati a 0? internet dice l seno dell'angolo di Cabibbo è approssimativamente sin⁡(θC)≈0.225sin(θC​)≈0.225, mentre il coseno dell'angolo di Cabibbo è circa cos⁡(θC)≈0.974cos(θC​)≈0.974.
