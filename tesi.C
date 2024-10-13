@@ -1,10 +1,18 @@
 // Giuseppe Luciano software analisi dati tesi sul c-deuteron
 
+#include "TCanvas.h"
+#include "TGraphErrors.h"
+#include "TLegend.h"
 #include "TH1.h"
-#include <cmath> // Per std::abs
+#include <cmath> 
 #include <fstream>
 #include <iostream>
 #include <sstream>
+
+Double_t Pred(double *x, double *par) {
+  double res = par[0] * std::pow(M_E, x[0] * par[1]);
+  return res;
+}
 
 int main() {
   const int n{0};
@@ -45,8 +53,19 @@ int main() {
   s_t_Prediction->GetYaxis()->SetTitle("dN/dy");
   s_t_Prediction->GetXaxis()->CenterTitle(true);
   s_t_Prediction->GetXaxis()->CenterTitle(true);
+  TF1 *func = new TF1("pred", pred);
+  s_t_Prediction->Fit(func);
+  s_t_Prediction->GetYaxis()->SetMoreLogLabels();
+  s_t_Prediction->GetYaxis()->SetNoExponent();
+  gPad->SetLogy(1);
 
-  TF1* func = new TF1("pred", pred);
-  s_t_Prediction->Fit("func");
-  
+  auto canvas = new TCanvas("prediction", "prediction" , 200, 10, 600, 400);
+  cavas->cd(0);
+  auto leg = new TLegend(.6, .7, .9, .9);
+  leg[i]->SetTextSize(0.04);
+  leg[i]->SetBorderSize(0); // no border for legend
+  leg[i]->SetFillColor(0);  // fill color is white
+  leg[i]->AddEntry(h[i], legName[i], "p");
+  leg[i]->AddEntry(f[i], "fit", "l");
+  leg[i]->Draw();
 }
