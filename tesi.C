@@ -84,10 +84,17 @@ void grafici() {
     error[i / 2] = std::sqrt(integralError); // Errore finale
     integral[i / 2] = partialArea;
   }
+
   auto canvas = new TCanvas("prediction", "prediction", 200, 10, 600, 400);
   canvas->cd(0);
   canvas->SetLogy();
   TGraphErrors *finalGraph = new TGraphErrors(n / 2, mass, integral, error);
+  TF1 *fitExp = new TF1("fitExp", "[0] * exp(-[1] * x)", 0, 4);
+  fitExp->SetParameter(0, 1e3);
+  fitExp->SetParLimits(0, 0, 1e5);
+  fitExp->SetParLimits(1, 4, 8);
+  finalGraph->Fit(fitExp);
+
   finalGraph->SetLineColor(1);
   finalGraph->GetYaxis()->SetTitleOffset(1.2);
   finalGraph->GetXaxis()->SetTitleSize(0.04);
@@ -97,54 +104,99 @@ void grafici() {
   finalGraph->GetXaxis()->CenterTitle(true);
   finalGraph->GetXaxis()->CenterTitle(true);
   finalGraph->SetMarkerStyle(21); // Stile 21 è un cerchio
-  finalGraph->SetMarkerSize(1.5); // Cambia la dimensione del marker
-  // finalGraph->SetMarkerColor(kRed); // Cambia il colore del marker, ad
-  // esempio
-  //  rosso
-  // finalGraph->GetYaxis()->SetLimits(10, 1e-10);
-  // finalGraph->GetYaxis()->SetRangeUser(10, 1e-10);
+  finalGraph->SetMarkerSize(1.);  // Cambia la dimensione del marker
+  finalGraph->GetYaxis()->SetLimits(1e-7, 10);
+  finalGraph->GetYaxis()->SetRangeUser(1e-7, 10);
 
   const char *labels[n / 2] = {"p", "n", "d", "H3", "He3", "He4", "c-deuteron"};
   finalGraph->Draw("AP");
   for (int i = 0; i < finalGraph->GetN(); ++i) {
     double xLabel = finalGraph->GetPointX(i);
-    double yLabel =
-        finalGraph->GetPointY(i) * 2.1; // Posiziona l'etichetta sopra il punto
-    TLatex *label = new TLatex(xLabel, yLabel, labels[i]);
-    label->SetTextSize(.02);    // Dimensione del testo
+    double yLabel;
+    TLatex *label;
+    if (i == 1 or i == 4) {
+      yLabel = finalGraph->GetPointY(i) /
+               4.1; // Posiziona l'etichetta sopra il punto
+      label = new TLatex(xLabel, yLabel, labels[i]);
+    } else {
+      yLabel = finalGraph->GetPointY(i) *
+               2.1; // Posiziona l'etichetta sopra il punto
+      label = new TLatex(xLabel, yLabel, labels[i]);
+    }
+    label->SetTextSize(.05);    // Dimensione del testo
     label->SetNDC(kFALSE);      // Coordinate del testo non normalizzate
     label->SetTextColor(kBlue); // Colore delle etichette
     label->Draw();              // Disegna l'etichetta
   }
-  auto leg1 = new TLegend(0.1, 0.7, 0.3, 0.9);
+  // fitExp->Draw();
+  auto leg1 = new TLegend(0.7, 0.1, 0.9, 0.3);
   leg1->AddEntry(finalGraph, "Temperature 156 Mev", "");
   leg1->AddEntry(finalGraph, "Radius 5 fm", "");
   leg1->AddEntry(finalGraph, "|y|<0.5", "");
   leg1->SetTextSize(0.04);
   leg1->Draw();
+
   // Aggiorna la canvas per visualizzare i grafici
   gPad->SetLogy(1);
 
   canvas->Update();
 }
+
 void cambiamenti() {
-  int const n{14};
+  int const n{22}; // 24};
+  // se aggiungi un file le cose da cambiare sono qui
   const TString fileName[n] = {
       "generazioni/156_mev_8_fm/c-deuteron.dN.dy.dat",
       "generazioni/156_mev_8_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/156_mev_6,5_fm/c-deuteron.dN.dy.dat",
+      "generazioni/156_mev_6,5_fm/anti-c-deuteron.dN.dy.dat",
       "generazioni/156_mev_6_fm/c-deuteron.dN.dy.dat",
       "generazioni/156_mev_6_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/156_mev_5,5_fm/c-deuteron.dN.dy.dat",
+      "generazioni/156_mev_5,5_fm/anti-c-deuteron.dN.dy.dat",
       "generazioni/156_mev_5_fm/c-deuteron.dN.dy.dat",
       "generazioni/156_mev_5_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/156_mev_4,5_fm/c-deuteron.dN.dy.dat",
+      "generazioni/156_mev_4,5_fm/anti-c-deuteron.dN.dy.dat",
       "generazioni/156_mev_3,5_fm/c-deuteron.dN.dy.dat",
       "generazioni/156_mev_3,5_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni/154_mev_5_fm/c-deuteron.dN.dy.dat",
-      "generazioni/154_mev_5_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/160_mev_5_fm/c-deuteron.dN.dy.dat",
+      "generazioni/160_mev_5_fm/anti-c-deuteron.dN.dy.dat",
       "generazioni/158_mev_5_fm/c-deuteron.dN.dy.dat",
       "generazioni/158_mev_5_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/154_mev_5_fm/c-deuteron.dN.dy.dat",
+      "generazioni/154_mev_5_fm/anti-c-deuteron.dN.dy.dat",
       "generazioni/152_mev_5_fm/c-deuteron.dN.dy.dat",
       "generazioni/152_mev_5_fm/anti-c-deuteron.dN.dy.dat",
   };
+
+  /*
+  "generazioni/156_mev_8_fm/c-deuteron.dN.dy.dat",
+      "generazioni/156_mev_8_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/156_mev_6,5_fm/c-deuteron.dN.dy.dat",
+      "generazioni/156_mev_6,5_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/156_mev_6_fm/c-deuteron.dN.dy.dat",
+      "generazioni/156_mev_6_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/156_mev_5,5_fm/c-deuteron.dN.dy.dat",
+      "generazioni/156_mev_5,5_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/156_mev_5_fm/c-deuteron.dN.dy.dat",
+      "generazioni/156_mev_5_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/156_mev_4,5_fm/c-deuteron.dN.dy.dat",
+      "generazioni/156_mev_4,5_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/156_mev_4_fm/c-deuteron.dN.dy.dat",
+      "generazioni/156_mev_4_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/156_mev_3,5_fm/c-deuteron.dN.dy.dat",
+      "generazioni/156_mev_3,5_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/160_mev_5_fm/c-deuteron.dN.dy.dat",
+      "generazioni/160_mev_5_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/158_mev_5_fm/c-deuteron.dN.dy.dat",
+      "generazioni/158_mev_5_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/154_mev_5_fm/c-deuteron.dN.dy.dat",
+      "generazioni/154_mev_5_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/152_mev_5_fm/c-deuteron.dN.dy.dat",
+      "generazioni/152_mev_5_fm/anti-c-deuteron.dN.dy.dat",
+  };
+  */
 
   double count[n / 2];
 
@@ -176,31 +228,35 @@ void cambiamenti() {
         parzCount++;
       }
     }
-    if (i == 0) {
-      count[i / 2] = parzCount; // / 2.5e7;
-      std::cout << count[i / 2] << " " << parzCount << "\n";
-    } else {
-      count[i / 2] = parzCount; // / 2e7;
-      std::cout << count[i / 2] << " " << parzCount << "\n";
-    }
+    count[i / 2] = parzCount / 2e7;
+    std::cout << count[i / 2] << " " << parzCount << "\n";
   }
 
-  double volume[n / 2] = {8, 6, 5, 3.5, 5, 5, 5};
-  double temperature[n / 2] = {156, 156, 156, 156, 154, 158, 152};
+  // se aggiungi un file le cose da cambiare sono qui
 
-  // Crea un oggetto TGraph2D
-  TGraph2D *d2Graph = new TGraph2D(n, volume, temperature, count);
+  double volume[n / 2] = {
+      8,   6.5, 6, 5.5, 5, 4.5,
+      3.5, 5,   5, 5,   5}; //{8, 6.5, 6, 5.5, 5, 4.5, 4, 3.5, 5, 5, 5};
+  double temperature[n / 2] = {156, 156, 156, 156, 156, 156,
+                               156, 160, 158, 154, 152};
+  //{156, 156, 156, 156, 156, 156, 156, 156, 160, 158, 154, 152};
 
-  double a[4] = {8, 6, 5, 3.5};
-  double b[4] = {count[0], count[1], count[2], count[3]};
-  double c[4] = {156, 154, 158, 152};
-  double d[4] = {count[2], count[4], count[5], count[6]};
-  TGraph *diffVolume = new TGraph(4, a, b);
-  TGraph *diffTemp = new TGraph(3, c, d);
+  TGraph2D *d2Graph = new TGraph2D(n / 2, volume, temperature, count);
+  double a[7] = {8, 6.5, 6,  5.5,
+                 5, 4.5, 3.5}; //{8, 6.5, 6, 5.5, 5, 4.5, 4, 3.5};
+  double b[7] = {count[0], count[1], count[2], count[3],
+                 count[4], count[5], count[6]}; // count[7]
+  double c[5] = {160, 158, 156, 154, 152};
+  double d[5] = {count[7], count[8], count[4], count[9], count[10]};
+  // count[8], count[9], count[4], count[10],count[11]};
+
+  // se aggiungi un file le cose da cambiare sono qui nel numero di punti
+  TGraph *diffVolume = new TGraph(7, a, b);
+  TGraph *diffTemp = new TGraph(5, c, d);
   // Crea un canvas
   TCanvas *c1 = new TCanvas("c1", "c1", 800, 600);
 
-  c1->SetTheta(20); // Imposta l'angolo di vista in azimut
+  c1->SetTheta(15); // Imposta l'angolo di vista in azimut
   c1->SetPhi(20);   // Imposta l'angolo di vista in elevazione
 
   // Disegna il grafico 3D
@@ -208,131 +264,96 @@ void cambiamenti() {
   d2Graph->SetMarkerSize(1.5);    // Aumenta la dimensione del marker
   d2Graph->SetMarkerColor(kBlue); // Colore del marker blu
 
-  // Aggiungi una griglia per facilitare la lettura dei valori
-
-  // Crea una zona grande in alto (80% dell'altezza)
-  TPad *pad1 =
-      new TPad("pad1", "Pad grande", 0, 0.33, 1, 1); // xlow, ylow, xup, yup
-  pad1->SetBottomMargin(0.02); // Riduci il margine inferiore del pad1
+  // Crea il primo canvas per il pad1
+  TPad *pad1 = new TPad("pad1", "Pad grande", 0, 0, 1, 1);
+  // pad1->SetBottomMargin(0.05); // Riduci il margine inferiore del pad1
   pad1->Draw();
-  // Crea due zone piccole in basso (50% ciascuna della larghezza e 33%
-  // dell'altezza)
-  TPad *pad2 = new TPad("pad2", "Pad piccolo sinistro", 0, 0, 0.5,
-                        0.33); // Parte sinistra in basso
-  pad2->SetTopMargin(0.02);    // Riduci il margine superiore del pad2
-  pad2->Draw();
-
-  TPad *pad3 = new TPad("pad3", "Pad piccolo destro", 0.5, 0, 1,
-                        0.33); // Parte destra in basso
-  pad3->SetTopMargin(0.02);    // Riduci il margine superiore del pad3
-  pad3->Draw();
-
-  // Seleziona ciascun pad e disegna qualcosa
   pad1->cd();
+
   d2Graph->SetLineColor(1);
   d2Graph->GetYaxis()->SetTitleOffset(1.2);
   d2Graph->GetXaxis()->SetTitleSize(0.04);
   d2Graph->GetYaxis()->SetTitleSize(0.04);
   d2Graph->GetXaxis()->SetTitle("Radius (fm)");
   d2Graph->GetYaxis()->SetTitle("Temperature (Mev)");
-  d2Graph->GetZaxis()->SetTitle("Frequency");
-  d2Graph->GetZaxis()->CenterTitle(true);
-  d2Graph->GetXaxis()->CenterTitle(true);
-  d2Graph->GetXaxis()->CenterTitle(true);
+  d2Graph->GetXaxis()->SetLimits(1.5, 10);
+  d2Graph->GetXaxis()->SetRangeUser(1.5, 10);
+  d2Graph->GetYaxis()->SetLimits(150, 165);
+  d2Graph->GetYaxis()->SetRangeUser(150, 165);
   d2Graph->Draw("P0");
-  // Aggiungi etichette ai punti per maggiore chiarezza
-  /*
-    char *labels[n/2] = {"(156 Mev, 8 fm)",   "(156 Mev, 6 fm)", "(156 Mev, 5
-    fm)",
-                      "(156 Mev, 3.5 fm)", "(154 Mev, 5 fm)", "(158 Mev, 5 fm)",
-                      "(152 Mev, 5 fm)"};
-    double *xVals = d2Graph->GetX();
-    double *yVals = d2Graph->GetY();
-    double *zVals = d2Graph->GetZ();
 
-    for (int i = 0; i < d2Graph->GetN(); ++i) {
-      TString label = TString::Format("Point %d", i);
-      double x = xVals[i];
-      double y = yVals[i];
-      double z = zVals[i];
-      double x2d, y2d;
-      TPad *pad = (TPad*)gPad;
-      pad->GetCoord(x, y, z, x2d, y2d);
-      TLatex *label = new TLatex(xLabel, yLabel, labels[i]);
-      label->SetTextSize(.02); // Dimensione del testo
-      label->SetNDC(kFALSE);   // Coordinate del testo non normalizzate
-      label->Draw();           // Disegna l'etichetta
-    }
-  */
+  c1->Update(); // Aggiorna il canvas
+
+  // Crea il secondo canvas per il pad2
+  TCanvas *c2 = new TCanvas("c2", "Canvas 2", 800, 600);
+  TPad *pad2 = new TPad("pad2", "Pad piccolo sinistro", 0, 0, 1, 1);
+  pad2->Draw();
   pad2->cd();
+
+  // Disegna il grafico diffVolume
   diffVolume->SetLineColor(1);
   diffVolume->GetYaxis()->SetTitleOffset(1.2);
   diffVolume->GetXaxis()->SetTitleSize(0.04);
   diffVolume->GetYaxis()->SetTitleSize(0.04);
   diffVolume->GetXaxis()->SetTitle("Radius (fm)");
   diffVolume->GetYaxis()->SetTitle("Frequency");
-  diffVolume->GetXaxis()->CenterTitle(true);
-  diffVolume->GetXaxis()->CenterTitle(true);
   diffVolume->Draw("P0");
-  diffVolume->SetMarkerStyle(20);     // Marker stile 21 (cerchi pieni)
-  diffVolume->SetMarkerSize(.8);      // Aumenta la dimensione del marker
-  diffVolume->SetMarkerColor(kGreen); // Colore del marker blu
-  auto leg1 = new TLegend(0.1, 0.7, 0.3, 0.9);
-  leg1->AddEntry(diffVolume, "fixed temperature 156 Mev", "");
+  diffVolume->SetMarkerStyle(20);
+  diffVolume->SetMarkerSize(.8);
+  diffVolume->SetMarkerColor(kGreen);
+
+  auto leg1 = new TLegend(0.7, 0.1, 0.9, 0.3);
+  leg1->AddEntry(diffVolume, "T = 156 Mev", "");
   leg1->SetTextSize(0.04);
-  diffVolume->Draw("APE");
-  TF1 *fitVolume = new TF1("fitVolume", "[0]*x + [1]", 0, 10);
-  fitVolume->SetLineColor(kRed); // Colore della linea di fit
-  diffVolume->Fit(fitVolume);
-  double slopeVolume = fitVolume->GetParameter(0);     // [0] = pendenza
-  double interceptVolume = fitVolume->GetParameter(1); // [1] = intercetta
-  double slopeErrorVolume = fitVolume->GetParError(0); // Errore sulla pendenza
-  double interceptErrorVolume =
-      fitVolume->GetParError(1); // Errore sull'intercetta
-  TString fitInfoVolume =
-      TString::Format("Slope: %.2f ± %.2f", slopeVolume, slopeErrorVolume);
-  TString fitInfoVolume1 = TString::Format(
-      "Intercept: %.2f ± %.2f", interceptVolume, interceptErrorVolume);
-  leg1->AddEntry((TObject *)0, fitInfoVolume, "");
-  leg1->AddEntry((TObject *)0, fitInfoVolume1, "");
-  leg1->AddEntry(fitVolume, "Fit Line", "l");
   leg1->Draw();
 
+  // (Opzionale) Aggiungi la linea di fit
+  TF1 *fitVolume = new TF1("fitVolume", "[0] * log([1] * x) + [2]", 0, 10);
+  fitVolume->SetLineColor(kRed);
+  fitVolume->SetParameter(0, 1e-6);
+  // fitVolume->SetParLimits(0, 0, 1e-5);
+  fitVolume->SetParameter(1, 1e3);
+  // fitVolume->SetParLimits(1, 0, 1e5);
+  diffVolume->Fit(fitVolume);
+  leg1->AddEntry(fitVolume, "Fit Line", "l");
+  leg1->Draw();
+  diffVolume->Draw("APE");
+
+  c2->Update(); // Aggiorna il canvas
+
+  // Crea il terzo canvas per il pad3
+  TCanvas *c3 = new TCanvas("c3", "Canvas 3", 800, 600);
+  TPad *pad3 = new TPad("pad3", "Pad piccolo destro", 0, 0, 1, 1);
+  pad3->Draw();
   pad3->cd();
+
+  // Disegna il grafico diffTemp
   diffTemp->SetLineColor(1);
   diffTemp->GetYaxis()->SetTitleOffset(1.2);
   diffTemp->GetXaxis()->SetTitleSize(0.04);
   diffTemp->GetYaxis()->SetTitleSize(0.04);
-  diffTemp->GetXaxis()->SetTitle("Temperaure (Mev)");
+  diffTemp->GetXaxis()->SetTitle("Temperature (Mev)");
   diffTemp->GetYaxis()->SetTitle("Frequency");
-  diffTemp->GetXaxis()->CenterTitle(true);
-  diffTemp->GetXaxis()->CenterTitle(true);
-  diffTemp->GetXaxis()->SetRangeUser(150, 160);
-  diffTemp->GetXaxis()->SetRange(150, 160);
-  auto leg2 = new TLegend(0.1, 0.7, 0.3, 0.9);
-  leg2->AddEntry(diffTemp, "fixed radius r=5fm", "");
-  leg2->SetTextSize(0.04);
   diffTemp->Draw("P0");
-  diffTemp->SetMarkerStyle(20);   // Marker stile 21 (cerchi pieni)
-  diffTemp->SetMarkerSize(.8);    // Aumenta la dimensione del marker
-  diffTemp->SetMarkerColor(kRed); // Colore del marker blu
-  diffTemp->Draw("APE");
-  TF1 *fitTemp = new TF1("fitTemp", "[0]*x + [1]", 0, 10);
-  fitTemp->SetLineColor(kGreen); // Colore della linea di fit
-  diffTemp->Fit(fitTemp);
-  double slopeTemp = fitTemp->GetParameter(0);         // [0] = pendenza
-  double interceptTemp = fitTemp->GetParameter(1);     // [1] = intercetta
-  double slopeErrorTemp = fitTemp->GetParError(0);     // Errore sulla pendenza
-  double interceptErrorTemp = fitTemp->GetParError(1); // Errore sull'intercetta
-  TString fitInfoTemp =
-      TString::Format("Slope: %.2f ± %.2f", slopeTemp, slopeErrorTemp);
-  TString fitInfoTemp2 = TString::Format("Intercept: %.2f ± %.2f",
-                                         interceptTemp, interceptErrorTemp);
-
-  leg2->AddEntry((TObject *)0, fitInfoTemp, "");
-  leg2->AddEntry((TObject *)0, fitInfoTemp2, "");
-  leg2->AddEntry(fitTemp, "Fit Line", "l");
+  diffTemp->SetMarkerStyle(20);
+  diffTemp->SetMarkerSize(.8);
+  diffTemp->SetMarkerColor(kRed);
+  auto leg2 = new TLegend(0.7, 0.1, 0.9, 0.3);
+  leg2->AddEntry(diffTemp, "R=5fm", "");
+  leg2->SetTextSize(0.04);
   leg2->Draw();
 
-  c1->Update();
+  // (Opzionale) Aggiungi la linea di fit
+  TF1 *fitTemp = new TF1("fitTemp", "[0]*x + [1]", 0, 10);
+  fitTemp->SetLineColor(kGreen);
+  fitTemp->SetParameter(0, 1e-6);
+  // fitTemp->SetParLimits(0, 0, 1e-5);
+  fitTemp->SetParameter(1, 1e3);
+  // fitTemp->SetParLimits(1, 0, 1e5);
+  diffTemp->Fit(fitTemp);
+  leg2->AddEntry(fitTemp, "Fit Line", "l");
+  diffTemp->Draw("APE");
+  leg2->Draw();
+
+  c3->Update(); // Aggiorna il canvas
 }
