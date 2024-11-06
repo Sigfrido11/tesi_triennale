@@ -143,35 +143,10 @@ void grafici() {
 }
 
 void cambiamenti() {
-  int const n{22}; // 24};
+  int const n{24};
   // se aggiungi un file le cose da cambiare sono qui
   const TString fileName[n] = {
       "generazioni/156_mev_8_fm/c-deuteron.dN.dy.dat",
-      "generazioni/156_mev_8_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni/156_mev_6,5_fm/c-deuteron.dN.dy.dat",
-      "generazioni/156_mev_6,5_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni/156_mev_6_fm/c-deuteron.dN.dy.dat",
-      "generazioni/156_mev_6_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni/156_mev_5,5_fm/c-deuteron.dN.dy.dat",
-      "generazioni/156_mev_5,5_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni/156_mev_5_fm/c-deuteron.dN.dy.dat",
-      "generazioni/156_mev_5_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni/156_mev_4,5_fm/c-deuteron.dN.dy.dat",
-      "generazioni/156_mev_4,5_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni/156_mev_3,5_fm/c-deuteron.dN.dy.dat",
-      "generazioni/156_mev_3,5_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni/160_mev_5_fm/c-deuteron.dN.dy.dat",
-      "generazioni/160_mev_5_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni/158_mev_5_fm/c-deuteron.dN.dy.dat",
-      "generazioni/158_mev_5_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni/154_mev_5_fm/c-deuteron.dN.dy.dat",
-      "generazioni/154_mev_5_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni/152_mev_5_fm/c-deuteron.dN.dy.dat",
-      "generazioni/152_mev_5_fm/anti-c-deuteron.dN.dy.dat",
-  };
-
-  /*
-  "generazioni/156_mev_8_fm/c-deuteron.dN.dy.dat",
       "generazioni/156_mev_8_fm/anti-c-deuteron.dN.dy.dat",
       "generazioni/156_mev_6,5_fm/c-deuteron.dN.dy.dat",
       "generazioni/156_mev_6,5_fm/anti-c-deuteron.dN.dy.dat",
@@ -196,9 +171,11 @@ void cambiamenti() {
       "generazioni/152_mev_5_fm/c-deuteron.dN.dy.dat",
       "generazioni/152_mev_5_fm/anti-c-deuteron.dN.dy.dat",
   };
-  */
 
-  double count[n / 2];
+
+    double count[n / 2];
+    double countError[n / 2];
+
 
   for (int i{0}; i < n; i = i + 2) {
     std::ifstream inputFile1(fileName[i]); // Apertura del file
@@ -229,30 +206,27 @@ void cambiamenti() {
       }
     }
     count[i / 2] = parzCount / 2e7;
-    std::cout << count[i / 2] << " " << parzCount << "\n";
+    countError[i / 2]= std::sqrt(count[i / 2]) / 2e7;
+    std::cout << count[i / 2] << "+/-" << countError[i / 2] << "\n";
   }
 
-  // se aggiungi un file le cose da cambiare sono qui
-
-  double volume[n / 2] = {
-      8,   6.5, 6, 5.5, 5, 4.5,
-      3.5, 5,   5, 5,   5}; //{8, 6.5, 6, 5.5, 5, 4.5, 4, 3.5, 5, 5, 5};
-  double temperature[n / 2] = {156, 156, 156, 156, 156, 156,
-                               156, 160, 158, 154, 152};
-  //{156, 156, 156, 156, 156, 156, 156, 156, 160, 158, 154, 152};
+  double volume[n / 2] = {8, 6.5, 6, 5.5, 5, 4.5, 4, 3.5, 5, 5, 5};
+  double temperature[n / 2] = {156, 156, 156, 156, 156, 156, 156, 156, 160, 158, 154, 152};
 
   TGraph2D *d2Graph = new TGraph2D(n / 2, volume, temperature, count);
-  double a[7] = {8, 6.5, 6,  5.5,
-                 5, 4.5, 3.5}; //{8, 6.5, 6, 5.5, 5, 4.5, 4, 3.5};
-  double b[7] = {count[0], count[1], count[2], count[3],
-                 count[4], count[5], count[6]}; // count[7]
-  double c[5] = {160, 158, 156, 154, 152};
-  double d[5] = {count[7], count[8], count[4], count[9], count[10]};
-  // count[8], count[9], count[4], count[10],count[11]};
+  double radius[8] = {8, 6.5, 6, 5.5, 5, 4.5, 4, 3.5};
+  double countRadius[8] = {count[0], count[1], count[2], count[3],
+                 count[4], count[5], count[6], count[7]}; 
+  double errorVol[8] ={countError[0], countError[1], countError[2], countError[3],
+                 countError[4], countError[5], countError[6]};
 
-  // se aggiungi un file le cose da cambiare sono qui nel numero di punti
-  TGraph *diffVolume = new TGraph(7, a, b);
-  TGraph *diffTemp = new TGraph(5, c, d);
+  double temp[5] = {160, 158, 156, 154, 152};
+  double countTemp[5] = {count[8], count[9], count[4], count[10],count[11]};
+  double errorTemp[5] = {countError[8], countError[9], countError[4], countError[10],countError[11]};
+  
+
+  TGraphErrors *diffVolume = new TGraphErrors(8, radius, countRadius,errorVol);
+  TGraphErrors *diffTemp = new TGraphErrors(5, temp, countTemp, errorTemp);
   // Crea un canvas
   TCanvas *c1 = new TCanvas("c1", "c1", 800, 600);
 
@@ -282,9 +256,9 @@ void cambiamenti() {
   d2Graph->GetYaxis()->SetRangeUser(150, 165);
   d2Graph->Draw("P0");
 
-  c1->Update(); // Aggiorna il canvas
+  c1->Update(); 
 
-  // Crea il secondo canvas per il pad2
+
   TCanvas *c2 = new TCanvas("c2", "Canvas 2", 800, 600);
   TPad *pad2 = new TPad("pad2", "Pad piccolo sinistro", 0, 0, 1, 1);
   pad2->Draw();
@@ -308,12 +282,13 @@ void cambiamenti() {
   leg1->Draw();
 
   // (Opzionale) Aggiungi la linea di fit
-  TF1 *fitVolume = new TF1("fitVolume", "[0] * log([1] * x) + [2]", 0, 10);
+  //TF1 *fitVolume = new TF1("fitVolume", "[0] * log([1] * x) + [2]", 0, 10);
+  TF1 *fitVolume = new TF1("fitVolume", "[0] * x + [1]", 0, 10);
   fitVolume->SetLineColor(kRed);
   fitVolume->SetParameter(0, 1e-6);
-  // fitVolume->SetParLimits(0, 0, 1e-5);
-  fitVolume->SetParameter(1, 1e3);
-  // fitVolume->SetParLimits(1, 0, 1e5);
+  fitVolume->SetParLimits(0, 0, 3e-6);
+  fitVolume->SetParameter(1, 1e-3);
+  //fitVolume->SetParLimits(1, 0, 1e5);
   diffVolume->Fit(fitVolume);
   leg1->AddEntry(fitVolume, "Fit Line", "l");
   leg1->Draw();
