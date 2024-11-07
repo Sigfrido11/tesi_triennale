@@ -19,7 +19,7 @@ Double_t Pred(double *x, double *par) {
 void grafici() {
   const int n{14};
   TGraphErrors *graph[n];
-
+/*
   const TString fileName[n] = {
       "generazioni/156_mev_5_fm/p.dN.dy.dat",
       "generazioni/156_mev_5_fm/anti-p.dN.dy.dat",
@@ -36,6 +36,27 @@ void grafici() {
       "generazioni/156_mev_5_fm/c-deuteron.dN.dy.dat",
       "generazioni/156_mev_5_fm/anti-c-deuteron.dN.dy.dat"};
   //  "generazioni/156_mev_5_fm/HyperTriton.dN.dy.dat","generazioni/156_mev_5_fm/anti-HyperTriton.dN.dy.dat"};
+
+*/
+
+  const TString fileName[n] = {
+      "generazioni/155_mev_50_yc_8_fm/p.dN.dy.dat",
+      "generazioni/155_mev_50_yc_8_fm/anti-p.dN.dy.dat",
+      "generazioni/155_mev_50_yc_8_fm/n.dN.dy.dat",
+      "generazioni/155_mev_50_yc_8_fm/anti-n.dN.dy.dat",
+      "generazioni/155_mev_50_yc_8_fm/d.dN.dy.dat",
+      "generazioni/155_mev_50_yc_8_fm/anti-d.dN.dy.dat",
+      "generazioni/155_mev_50_yc_8_fm/H3.dN.dy.dat",
+      "generazioni/155_mev_50_yc_8_fm/anti-H3.dN.dy.dat",
+      "generazioni/155_mev_50_yc_8_fm/He3.dN.dy.dat",
+      "generazioni/155_mev_50_yc_8_fm/anti-He3.dN.dy.dat",
+      "generazioni/155_mev_50_yc_8_fm/He4.dN.dy.dat",
+      "generazioni/155_mev_50_yc_8_fm/anti-He4.dN.dy.dat",
+      "generazioni/155_mev_50_yc_8_fm/c-deuteron.dN.dy.dat", 
+      "generazioni/155_mev_50_yc_8_fm/anti-c-deuteron.dN.dy.dat"}; 
+  //  "generazioni/156_mev_5_fm/HyperTriton.dN.dy.dat","generazioni/156_mev_5_fm/anti-HyperTriton.dN.dy.dat"};
+
+
 
   TH1F *histo[n];
   TH1F *histoSum[n / 2];
@@ -63,6 +84,8 @@ void grafici() {
       // Estrai i punti x e y
       double x1, y1, x2, y2;
       graph[i]->GetPoint(k, x1, y1);
+      if(std::abs(x1)>0.5)
+      continue;
       graph[i]->GetPoint(k + 1, x2, y2);
 
       // Applica la formula del trapezio per l'area tra i punti (x1, y1) e (x2,
@@ -95,6 +118,15 @@ void grafici() {
   fitExp->SetParLimits(1, 4, 8);
   finalGraph->Fit(fitExp);
 
+  double a[1]={mass[n/2]};
+  double b[1]={integral[n/2]};
+  TGraph *cGraph = new TGraph(1, a, b);
+  TF1 *cFit = new TF1("c-Fit", "[0] * exp(-[1] * x) + [2]", 0, 4);
+  cFit->FixParameter(0, fitExp->GetParameter(0));
+  cFit->FixParameter(1, fitExp->GetParameter(1));
+  cGraph->Fit(cFit);
+
+
   finalGraph->SetLineColor(1);
   finalGraph->GetYaxis()->SetTitleOffset(1.2);
   finalGraph->GetXaxis()->SetTitleSize(0.04);
@@ -109,7 +141,8 @@ void grafici() {
   finalGraph->GetYaxis()->SetRangeUser(1e-7, 10);
 
   const char *labels[n / 2] = {"p", "n", "d", "H3", "He3", "He4", "c-deuteron"};
-  finalGraph->Draw("AP");
+  finalGraph->Draw("APE");
+  cFit->Draw(); 
   for (int i = 0; i < finalGraph->GetN(); ++i) {
     double xLabel = finalGraph->GetPointX(i);
     double yLabel;
@@ -332,3 +365,4 @@ void cambiamenti() {
 
   c3->Update(); // Aggiorna il canvas
 }
+
