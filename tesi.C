@@ -1,20 +1,14 @@
 // Giuseppe Luciano software analisi dati tesi sul c-deuteron
 
-/*
 #include "TCanvas.h"
 #include "TGraphErrors.h"
 #include "TH1.h"
 #include "TLegend.h"
-*/
+#include <cassert>
 #include <cmath>
 #include <fstream>
 #include <iostream>
 #include <sstream>
-
-Double_t Pred(double *x, double *par) {
-  double res = par[0] * std::pow(M_E, x[0] * par[1]);
-  return res;
-}
 
 void grafici() {
   const int n{14};
@@ -374,7 +368,9 @@ void densFreq() {
       "generazioni/156_mev_4_fm/anti-c-deuteron.dN.dp.dat"};
 
   int count{0}; // Contatore per i valori non nulli nella seconda colonna
-  for (int i{0}; i < n; i++) {
+  int bin1{0};
+  int bin2{0};
+  for (int i{0}; i < 2; i++) {
     std::ifstream inputFile(fileName[i]); // Apertura del file
     if (!inputFile) {
       std::cerr << "Impossibile aprire il file: " << fileName[i] << std::endl;
@@ -386,29 +382,66 @@ void densFreq() {
       if (ss >> col1 >> col2 >> col3 && col2 != 0) {
         count++;
       }
-    }
-    TH1F *hDdensFreq = new TH1F("densFreq", "densFreq", count, 0., 2);
-    std::ifstream inputP(fileName[2]);     // Apertura del file
-    std::ifstream inputAntiP(fileName[3]); // Apertura del file
-    if (!inputP) {
-      std::cerr << "Impossibile aprire il file: " << fileName[2] << std::endl;
-    }
-    if (!inputAntiP) {
-      std::cerr << "Impossibile aprire il file: " << fileName[3] << std::endl;
-    }
-    std::string line1;
-    std::string line2;
-    while (std::getline(inputAntiP, line) && std::getline(inputP, line)) {
-      std::istringstream s1(line1);
-      std::istringstream s2(line2);
-      double col1_1, colVal1, colErr1;
-      double col2_1, colVal2, colErr2;
-      double val, err;
-      if (s1 >> col1_1 >> colVal1 >> colErr1 &&
-          s2 >> col2_1 >> colVal2 >> colErr2) {
-        val = 0.5 * (colVal1 + colVal2);
-        err = std::sqrt(colErr1 * colErr1 + colErr2 * colErr2);
+      if (i == 0) {
+        bin1++;
       }
-      
+      if (i == 1) {
+        bin2++;
+      }
     }
   }
+  assert(bin1 == bin2);
+  std::ifstream inputP(fileName[2]);     // Apertura del file
+  std::ifstream inputAntiP(fileName[3]); // Apertura del file
+  if (!inputP) {
+    std::cerr << "Impossibile aprire il file: " << fileName[2] << std::endl;
+  }
+  if (!inputAntiP) {
+    std::cerr << "Impossibile aprire il file: " << fileName[3] << std::endl;
+  }
+  std::string line1;
+  std::string line2;
+  int i{0};
+  double P[bin1];   // impulso
+  double val[bin1]; // densfreq
+  double err[bin1]; // errdensfreq
+  while (std::getline(inputAntiP, line1) && std::getline(inputP, line2)) {
+    std::istringstream s1(line1);
+    std::istringstream s2(line2);
+    double col1_1, colVal1, colErr1;
+    double col2_1, colVal2, colErr2;
+    if (s1 >> col1_1 >> colVal1 >> colErr1 &&
+        s2 >> col2_1 >> colVal2 >> colErr2) {
+      if (col1_1 != col2_1) {
+        std::cout << "colonne disaccoppiate" << '\n';
+        assert(false);
+      } else {
+        P[i] = col1_1;
+      }
+      val[i] = 0.5 * (colVal1 + colVal2) / count;
+      err[i] = std::sqrt(colErr1 * colErr1 + colErr2 * colErr2) / count;
+      i++;
+    }
+  }
+  inputP.close();
+  inputAntiP.close();
+  TGraph *hDensFreq = new TGraph(bin1, P, val);
+  hDensFreq->SetName("densFreq");
+  hDensFreq->GetXaxis()->SetTitle("Impulso");
+  hDensFreq->GetYaxis()->SetTitle("Densità di Frequenza");
+  double totVal{0.0};
+  for (int i = 0; i < bin1 - 1; ++i) {
+    totVal += (P[i + 1] - P[i]) * val[i];
+}
+  double totErr = std::sqrt(std::accumulate(err, err + bin1 - 1, 0.0, [](double acc, double e){
+    return acc + e * e;
+  }));
+  
+  if( 1 > totVal-totErr && totVal + totErr >1 ){
+    std::cout << "compà t'appost" << '\n';
+    std::cout << totVal << " +/- " << totErr << '\n';
+  }
+  //controllo la normalizzazione
+  hDensFreq->Write();
+  file->Close();
+}
