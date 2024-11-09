@@ -19,25 +19,26 @@ Double_t Pred(double *x, double *par) {
 void grafici() {
   const int n{14};
   TGraphErrors *graph[n];
-/*
-  const TString fileName[n] = {
-      "generazioni/156_mev_5_fm/p.dN.dy.dat",
-      "generazioni/156_mev_5_fm/anti-p.dN.dy.dat",
-      "generazioni/156_mev_5_fm/n.dN.dy.dat",
-      "generazioni/156_mev_5_fm/anti-n.dN.dy.dat",
-      "generazioni/156_mev_5_fm/d.dN.dy.dat",
-      "generazioni/156_mev_5_fm/anti-d.dN.dy.dat",
-      "generazioni/156_mev_5_fm/H3.dN.dy.dat",
-      "generazioni/156_mev_5_fm/anti-H3.dN.dy.dat",
-      "generazioni/156_mev_5_fm/He3.dN.dy.dat",
-      "generazioni/156_mev_5_fm/anti-He3.dN.dy.dat",
-      "generazioni/156_mev_5_fm/He4.dN.dy.dat",
-      "generazioni/156_mev_5_fm/anti-He4.dN.dy.dat",
-      "generazioni/156_mev_5_fm/c-deuteron.dN.dy.dat",
-      "generazioni/156_mev_5_fm/anti-c-deuteron.dN.dy.dat"};
-  //  "generazioni/156_mev_5_fm/HyperTriton.dN.dy.dat","generazioni/156_mev_5_fm/anti-HyperTriton.dN.dy.dat"};
+  /*
+    const TString fileName[n] = {
+        "generazioni/156_mev_5_fm/p.dN.dy.dat",
+        "generazioni/156_mev_5_fm/anti-p.dN.dy.dat",
+        "generazioni/156_mev_5_fm/n.dN.dy.dat",
+        "generazioni/156_mev_5_fm/anti-n.dN.dy.dat",
+        "generazioni/156_mev_5_fm/d.dN.dy.dat",
+        "generazioni/156_mev_5_fm/anti-d.dN.dy.dat",
+        "generazioni/156_mev_5_fm/H3.dN.dy.dat",
+        "generazioni/156_mev_5_fm/anti-H3.dN.dy.dat",
+        "generazioni/156_mev_5_fm/He3.dN.dy.dat",
+        "generazioni/156_mev_5_fm/anti-He3.dN.dy.dat",
+        "generazioni/156_mev_5_fm/He4.dN.dy.dat",
+        "generazioni/156_mev_5_fm/anti-He4.dN.dy.dat",
+        "generazioni/156_mev_5_fm/c-deuteron.dN.dy.dat",
+        "generazioni/156_mev_5_fm/anti-c-deuteron.dN.dy.dat"};
+    //
+    "generazioni/156_mev_5_fm/HyperTriton.dN.dy.dat","generazioni/156_mev_5_fm/anti-HyperTriton.dN.dy.dat"};
 
-*/
+  */
 
   const TString fileName[n] = {
       "generazioni/155_mev_50_yc_8_fm/p.dN.dy.dat",
@@ -52,11 +53,9 @@ void grafici() {
       "generazioni/155_mev_50_yc_8_fm/anti-He3.dN.dy.dat",
       "generazioni/155_mev_50_yc_8_fm/He4.dN.dy.dat",
       "generazioni/155_mev_50_yc_8_fm/anti-He4.dN.dy.dat",
-      "generazioni/155_mev_50_yc_8_fm/c-deuteron.dN.dy.dat", 
-      "generazioni/155_mev_50_yc_8_fm/anti-c-deuteron.dN.dy.dat"}; 
+      "generazioni/155_mev_50_yc_8_fm/c-deuteron.dN.dy.dat",
+      "generazioni/155_mev_50_yc_8_fm/anti-c-deuteron.dN.dy.dat"};
   //  "generazioni/156_mev_5_fm/HyperTriton.dN.dy.dat","generazioni/156_mev_5_fm/anti-HyperTriton.dN.dy.dat"};
-
-
 
   TH1F *histo[n];
   TH1F *histoSum[n / 2];
@@ -84,8 +83,8 @@ void grafici() {
       // Estrai i punti x e y
       double x1, y1, x2, y2;
       graph[i]->GetPoint(k, x1, y1);
-      if(std::abs(x1)>0.5)
-      continue;
+      if (std::abs(x1) > 0.5)
+        continue;
       graph[i]->GetPoint(k + 1, x2, y2);
 
       // Applica la formula del trapezio per l'area tra i punti (x1, y1) e (x2,
@@ -118,14 +117,13 @@ void grafici() {
   fitExp->SetParLimits(1, 4, 8);
   finalGraph->Fit(fitExp);
 
-  double a[1]={mass[n/2]};
-  double b[1]={integral[n/2]};
+  double a[1] = {mass[n / 2]};
+  double b[1] = {integral[n / 2]};
   TGraph *cGraph = new TGraph(1, a, b);
   TF1 *cFit = new TF1("c-Fit", "[0] * exp(-[1] * x) + [2]", 0, 4);
   cFit->FixParameter(0, fitExp->GetParameter(0));
   cFit->FixParameter(1, fitExp->GetParameter(1));
   cGraph->Fit(cFit);
-
 
   finalGraph->SetLineColor(1);
   finalGraph->GetYaxis()->SetTitleOffset(1.2);
@@ -142,7 +140,7 @@ void grafici() {
 
   const char *labels[n / 2] = {"p", "n", "d", "H3", "He3", "He4", "c-deuteron"};
   finalGraph->Draw("APE");
-  cFit->Draw(); 
+  cFit->Draw();
   for (int i = 0; i < finalGraph->GetN(); ++i) {
     double xLabel = finalGraph->GetPointX(i);
     double yLabel;
@@ -205,10 +203,8 @@ void cambiamenti() {
       "generazioni/152_mev_5_fm/anti-c-deuteron.dN.dy.dat",
   };
 
-
-    double count[n / 2];
-    double countError[n / 2];
-
+  double count[n / 2];
+  double countError[n / 2];
 
   for (int i{0}; i < n; i = i + 2) {
     std::ifstream inputFile1(fileName[i]); // Apertura del file
@@ -239,26 +235,28 @@ void cambiamenti() {
       }
     }
     count[i / 2] = parzCount / 2e7;
-    countError[i / 2]= std::sqrt(count[i / 2]) / 2e7;
+    countError[i / 2] = std::sqrt(count[i / 2]) / 2e7;
     std::cout << count[i / 2] << "+/-" << countError[i / 2] << "\n";
   }
 
   double volume[n / 2] = {8, 6.5, 6, 5.5, 5, 4.5, 4, 3.5, 5, 5, 5};
-  double temperature[n / 2] = {156, 156, 156, 156, 156, 156, 156, 156, 160, 158, 154, 152};
+  double temperature[n / 2] = {156, 156, 156, 156, 156, 156,
+                               156, 156, 160, 158, 154, 152};
 
   TGraph2D *d2Graph = new TGraph2D(n / 2, volume, temperature, count);
   double radius[8] = {8, 6.5, 6, 5.5, 5, 4.5, 4, 3.5};
   double countRadius[8] = {count[0], count[1], count[2], count[3],
-                 count[4], count[5], count[6], count[7]}; 
-  double errorVol[8] ={countError[0], countError[1], countError[2], countError[3],
-                 countError[4], countError[5], countError[6]};
+                           count[4], count[5], count[6], count[7]};
+  double errorVol[8] = {countError[0], countError[1], countError[2],
+                        countError[3], countError[4], countError[5],
+                        countError[6]};
 
   double temp[5] = {160, 158, 156, 154, 152};
-  double countTemp[5] = {count[8], count[9], count[4], count[10],count[11]};
-  double errorTemp[5] = {countError[8], countError[9], countError[4], countError[10],countError[11]};
-  
+  double countTemp[5] = {count[8], count[9], count[4], count[10], count[11]};
+  double errorTemp[5] = {countError[8], countError[9], countError[4],
+                         countError[10], countError[11]};
 
-  TGraphErrors *diffVolume = new TGraphErrors(8, radius, countRadius,errorVol);
+  TGraphErrors *diffVolume = new TGraphErrors(8, radius, countRadius, errorVol);
   TGraphErrors *diffTemp = new TGraphErrors(5, temp, countTemp, errorTemp);
   // Crea un canvas
   TCanvas *c1 = new TCanvas("c1", "c1", 800, 600);
@@ -289,8 +287,7 @@ void cambiamenti() {
   d2Graph->GetYaxis()->SetRangeUser(150, 165);
   d2Graph->Draw("P0");
 
-  c1->Update(); 
-
+  c1->Update();
 
   TCanvas *c2 = new TCanvas("c2", "Canvas 2", 800, 600);
   TPad *pad2 = new TPad("pad2", "Pad piccolo sinistro", 0, 0, 1, 1);
@@ -315,13 +312,13 @@ void cambiamenti() {
   leg1->Draw();
 
   // (Opzionale) Aggiungi la linea di fit
-  //TF1 *fitVolume = new TF1("fitVolume", "[0] * log([1] * x) + [2]", 0, 10);
+  // TF1 *fitVolume = new TF1("fitVolume", "[0] * log([1] * x) + [2]", 0, 10);
   TF1 *fitVolume = new TF1("fitVolume", "[0] * x + [1]", 0, 10);
   fitVolume->SetLineColor(kRed);
   fitVolume->SetParameter(0, 1e-6);
   fitVolume->SetParLimits(0, 0, 3e-6);
   fitVolume->SetParameter(1, 1e-3);
-  //fitVolume->SetParLimits(1, 0, 1e5);
+  // fitVolume->SetParLimits(1, 0, 1e5);
   diffVolume->Fit(fitVolume);
   leg1->AddEntry(fitVolume, "Fit Line", "l");
   leg1->Draw();
@@ -366,3 +363,52 @@ void cambiamenti() {
   c3->Update(); // Aggiorna il canvas
 }
 
+void densFreq() {
+
+  TH1::AddDirectory(kFALSE);
+  TFile *file = new TFile("densFreq.root");
+  const TString fileName[4] = {
+      "generazioni/156_mev_4_fm/c-deuteron.dN.dy.dat",
+      "generazioni/156_mev_4_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/156_mev_4_fm/c-deuteron.dN.dp.dat",
+      "generazioni/156_mev_4_fm/anti-c-deuteron.dN.dp.dat"};
+
+  int count{0}; // Contatore per i valori non nulli nella seconda colonna
+  for (int i{0}; i < n; i++) {
+    std::ifstream inputFile(fileName[i]); // Apertura del file
+    if (!inputFile) {
+      std::cerr << "Impossibile aprire il file: " << fileName[i] << std::endl;
+    }
+    std::string line;
+    while (std::getline(inputFile, line)) {
+      std::istringstream ss(line);
+      double col1, col2, col3;
+      if (ss >> col1 >> col2 >> col3 && col2 != 0) {
+        count++;
+      }
+    }
+    TH1F *hDdensFreq = new TH1F("densFreq", "densFreq", count, 0., 2);
+    std::ifstream inputP(fileName[2]);     // Apertura del file
+    std::ifstream inputAntiP(fileName[3]); // Apertura del file
+    if (!inputP) {
+      std::cerr << "Impossibile aprire il file: " << fileName[2] << std::endl;
+    }
+    if (!inputAntiP) {
+      std::cerr << "Impossibile aprire il file: " << fileName[3] << std::endl;
+    }
+    std::string line1;
+    std::string line2;
+    while (std::getline(inputAntiP, line) && std::getline(inputP, line)) {
+      std::istringstream s1(line1);
+      std::istringstream s2(line2);
+      double col1_1, colVal1, colErr1;
+      double col2_1, colVal2, colErr2;
+      double val, err;
+      if (s1 >> col1_1 >> colVal1 >> colErr1 &&
+          s2 >> col2_1 >> colVal2 >> colErr2) {
+        val = 0.5 * (colVal1 + colVal2);
+        err = std::sqrt(colErr1 * colErr1 + colErr2 * colErr2);
+      }
+      
+    }
+  }
