@@ -69,6 +69,7 @@
         "variant": "cpp",
         "format": "cpp",
         "semaphore": "cpp",
-        "rilevazioni.C": "cpp"
+        "rilevazioni.C": "cpp",
+        "fit.C": "cpp"
     }
 }

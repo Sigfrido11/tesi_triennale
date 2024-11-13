@@ -11,46 +11,33 @@
 #include <sstream>
 
 void grafici() {
-  const int n{14};
+  const int n{22};
   TGraphErrors *graph[n];
-  /*
-    const TString fileName[n] = {
-        "generazioni/156_mev_5_fm/p.dN.dy.dat",
-        "generazioni/156_mev_5_fm/anti-p.dN.dy.dat",
-        "generazioni/156_mev_5_fm/n.dN.dy.dat",
-        "generazioni/156_mev_5_fm/anti-n.dN.dy.dat",
-        "generazioni/156_mev_5_fm/d.dN.dy.dat",
-        "generazioni/156_mev_5_fm/anti-d.dN.dy.dat",
-        "generazioni/156_mev_5_fm/H3.dN.dy.dat",
-        "generazioni/156_mev_5_fm/anti-H3.dN.dy.dat",
-        "generazioni/156_mev_5_fm/He3.dN.dy.dat",
-        "generazioni/156_mev_5_fm/anti-He3.dN.dy.dat",
-        "generazioni/156_mev_5_fm/He4.dN.dy.dat",
-        "generazioni/156_mev_5_fm/anti-He4.dN.dy.dat",
-        "generazioni/156_mev_5_fm/c-deuteron.dN.dy.dat",
-        "generazioni/156_mev_5_fm/anti-c-deuteron.dN.dy.dat"};
-    //
-    "generazioni/156_mev_5_fm/HyperTriton.dN.dy.dat","generazioni/156_mev_5_fm/anti-HyperTriton.dN.dy.dat"};
-
-  */
-
+  
   const TString fileName[n] = {
-      "generazioni/155_mev_50_yc_8_fm/p.dN.dy.dat",
-      "generazioni/155_mev_50_yc_8_fm/anti-p.dN.dy.dat",
-      "generazioni/155_mev_50_yc_8_fm/n.dN.dy.dat",
-      "generazioni/155_mev_50_yc_8_fm/anti-n.dN.dy.dat",
-      "generazioni/155_mev_50_yc_8_fm/d.dN.dy.dat",
-      "generazioni/155_mev_50_yc_8_fm/anti-d.dN.dy.dat",
-      "generazioni/155_mev_50_yc_8_fm/H3.dN.dy.dat",
-      "generazioni/155_mev_50_yc_8_fm/anti-H3.dN.dy.dat",
-      "generazioni/155_mev_50_yc_8_fm/He3.dN.dy.dat",
-      "generazioni/155_mev_50_yc_8_fm/anti-He3.dN.dy.dat",
-      "generazioni/155_mev_50_yc_8_fm/He4.dN.dy.dat",
-      "generazioni/155_mev_50_yc_8_fm/anti-He4.dN.dy.dat",
-      "generazioni/155_mev_50_yc_8_fm/c-deuteron.dN.dy.dat",
-      "generazioni/155_mev_50_yc_8_fm/anti-c-deuteron.dN.dy.dat"};
-  //  "generazioni/156_mev_5_fm/HyperTriton.dN.dy.dat","generazioni/156_mev_5_fm/anti-HyperTriton.dN.dy.dat"};
-
+      "generazioni/chemical_charm_30/156_mev_5_fm//p.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/anti-p.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/n.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/anti-n.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/d.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/anti-d.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/H3.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/anti-H3.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/He3.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/anti-He3.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/He4.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/anti-He4.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/c-deuteron.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/Lambda.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/anti-Lambda.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/Lambda(c)+.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/anti-Lambda(c)+.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/LambdaNeutron.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/anti-LambdaNeutron.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/LambdaProton.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/anti-LambdaProton.dN.dy.dat"};
+  
   TH1F *histo[n];
   TH1F *histoSum[n / 2];
 
@@ -132,7 +119,7 @@ void grafici() {
   finalGraph->GetYaxis()->SetLimits(1e-7, 10);
   finalGraph->GetYaxis()->SetRangeUser(1e-7, 10);
 
-  const char *labels[n / 2] = {"p", "n", "d", "H3", "He3", "He4", "c-deuteron"};
+  const char *labels[n / 2] = {"p", "n", "d", "H3", "He3", "He4", "c-deuteron", "Lambda", "Lambda(c)+", "Lambda-Neutron","Lambda-Neutron"};
   finalGraph->Draw("APE");
   cFit->Draw();
   for (int i = 0; i < finalGraph->GetN(); ++i) {
@@ -360,15 +347,15 @@ void cambiamenti() {
 void densFreq() {
 
   TH1::AddDirectory(kFALSE);
-  TFile *file = new TFile("densFreq.root");
+  TFile *file = new TFile("densFreq.root", "RECREATE");
   const TString fileName[4] = {
-      "generazioni/156_mev_4_fm/c-deuteron.dN.dy.dat",
-      "generazioni/156_mev_4_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni/156_mev_4_fm/c-deuteron.dN.dp.dat",
-      "generazioni/156_mev_4_fm/anti-c-deuteron.dN.dp.dat"};
+      "generazioni/chemical_charm_30/156_mev_5_fm/c-deuteron.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/c-deuteron.dN.dp.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/anti-c-deuteron.dN.dp.dat"};
 
   int count{0}; // Contatore per i valori non nulli nella seconda colonna
-  int bin1{0};
+  int bin1{0}; //conto il numero di bin di entrambi i dati
   int bin2{0};
   for (int i{0}; i < 2; i++) {
     std::ifstream inputFile(fileName[i]); // Apertura del file
@@ -390,6 +377,7 @@ void densFreq() {
       }
     }
   }
+  std::cout << "conteggi " << count << '\n';
   assert(bin1 == bin2);
   std::ifstream inputP(fileName[2]);     // Apertura del file
   std::ifstream inputAntiP(fileName[3]); // Apertura del file
@@ -442,6 +430,9 @@ void densFreq() {
     std::cout << totVal << " +/- " << totErr << '\n';
   }
   //controllo la normalizzazione
+  TCanvas *c1 = new TCanvas("Silicio", "Silicio", 200, 10, 600, 400);
+  c1->cd();
   hDensFreq->Write();
+  hDensFreq->Draw("APE");
   file->Close();
 }
