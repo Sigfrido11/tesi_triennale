@@ -1,4 +1,5 @@
 // lo faccio compilato e riciclo come una vagabonda il vecchio codice
+// DOPO LA SESSIONE CON PYTHIA FAI TUTTI I DECADIMENTI PER BENE
 
 #include "TFile.h"
 #include "TH1.h"
@@ -12,10 +13,9 @@
 #include <iterator>
 
 int main() {
-  int nGen{1e5};
   TH1::AddDirectory(kFALSE);
-  TFile *file = new TFile("histo.root", "RECREATE");
-  TGraph *densFreq = (TGraph *)file->Get("densFreq");
+  TFile *file = new TFile("densFreq.root", "RECREATE");
+  TGraph *freqCom = (TGraph *)file->Get("hFreqComu");
   gRandom->SetSeed(3032003);
   Particle::AddParticleType("pion +", 0.13957, 1);
   Particle::AddParticleType("deuteron", 0.49367, 0);
@@ -24,7 +24,6 @@ int main() {
   TH1F *pModuleDist = new TH1F("pModuleDist", "pModuleDist", 500, 0, 5);
   TH1F *dModule = new TH1F("dModule", "dModule", 500, 0, 5);
   std::array<double, 3> decProb = {0.3, 0.6, 0.9}; // valori di prova
-  std::array<Particle, nGen> EventParticles{};
   double detected{0};
 
   for (int i{0}; i < 1e6; i++) {
@@ -33,10 +32,10 @@ int main() {
     double randDist = gRandom->Rndm();
     double pM;
     int j{0};
-      while (true) {
-      if (randDist > densFreq->GetPointY(j)) {
-        p_m = densFreq->GetPointX(j);
-        brake;
+    while (true) {
+      if (randDist > freqCom->GetPointY(j)) {
+        pM = freqCom->GetPointX(j);
+        break;
       }
       j++;
     }
@@ -50,25 +49,13 @@ int main() {
     p.SetP(px, py, pz);
     Particle pD;
     Particle p2;
-    Particle p3;
-
+    // Particle p3;
+    // double decayMode = gRandom->Rndm();
     // tentativo di fare decadimenti a più corpi
-    double decayMode = gRandom->Rndm();
-    int decIndex =
-        std::find(decProb.begin(), decProb.end(), decProb[i] < decayMode);
-    int allGood;
-    if (decIndex == 0) {
-      allGood = p.Decay2Body(p1, p2);
-    }
-    if (decIndex == 1) {
-      allGood = p.Decay3Body(p1, p2, p3);
-    }
-    if (decIndex == 2) {
-    }
-    if (decIndex == 3) {
-    }
+
+    int allGood = p.Decay2Body(pD, p2);
     dModule->Fill(pD.GetModuleP());
-    
+
     if (pD.GetModuleP() < 0.2) {
       double var = gRandom->Rndm();
       if (var < 0.25) {
@@ -88,7 +75,7 @@ int main() {
       }
     }
   }
-  std::cout << "nutio vobis gaudio magnum abemus numero"<<detected << '\n';
+  std::cout << "nuntio vobis gaudium magnum habemus numero" << detected << '\n';
   pModuleDist->Draw("APE");
   dModule->Draw("APE");
 }

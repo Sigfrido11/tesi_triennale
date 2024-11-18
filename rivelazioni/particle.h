@@ -30,8 +30,11 @@ public:
   static void AddParticleType(std::string name, double mass, int charge,
                               double width = 0);
   static void PrintAllTypes();
+
   int Decay2Body(Particle &dau1,Particle &dau2) const;
 
+  double GetModuleP() const;
+  
 private:
   static const int maxNumParticleType_;
   static std::unordered_map<std::string, ParticleType *> particleTypes_;
@@ -42,7 +45,7 @@ private:
   double pz_;
 
    int FindParticle(std::string name) const;
-   double GetModuleP() const;
+   
 
   void Boost(double bx, double by, double bz);
 };

@@ -70,6 +70,7 @@
         "format": "cpp",
         "semaphore": "cpp",
         "rilevazioni.C": "cpp",
-        "fit.C": "cpp"
+        "fit.C": "cpp",
+        "Macro_combo.C": "cpp"
     }
 }

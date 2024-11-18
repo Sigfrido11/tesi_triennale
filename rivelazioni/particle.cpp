@@ -23,47 +23,47 @@ Particle::Particle(std::string name, double px = 0, double py = 0,
 }
 
 // Getters
- std::string Particle::GetName() const { return name_; }
+std::string Particle::GetName() const { return name_; }
 
- double Particle::GetPx() const { return px_; }
- double Particle::GetPy() const { return py_; }
- double Particle::GetPz() const { return pz_; }
+double Particle::GetPx() const { return px_; }
+double Particle::GetPy() const { return py_; }
+double Particle::GetPz() const { return pz_; }
 
- double Particle::GetMass() const {
+double Particle::GetMass() const {
   auto search = particleTypes_.find(name_);
   return search->second->GetMass();
 }
 
- int Particle::GetCharge() const { 
+int Particle::GetCharge() const {
   auto search = particleTypes_.find(name_);
   return search->second->GetCharge();
 }
 
- double Particle::GetEnergy() const {
+double Particle::GetEnergy() const {
   double const m2 = std::pow(GetMass(), 2);
   double const p2 = std::pow(GetModuleP(), 2);
   return std::sqrt(m2 + p2);
 }
 
- double Particle::GetInvariantMass(Particle & other_dau) const {
-  double const sum_e2{
-  std::pow(other_dau.GetEnergy() + GetEnergy(), 2)};
-  double const pxtot = GetPx()+ other_dau.GetPx();
-  double const pytot = GetPy()+ other_dau.GetPy();
-  double const pztot = GetPz()+ other_dau.GetPz();
-  double const sum_p2{std::pow(pxtot,2) + std::pow(pytot,2) + std::pow(pztot,2)};
-  if (sum_e2 < sum_p2){
+double Particle::GetInvariantMass(Particle &other_dau) const {
+  double const sum_e2{std::pow(other_dau.GetEnergy() + GetEnergy(), 2)};
+  double const pxtot = GetPx() + other_dau.GetPx();
+  double const pytot = GetPy() + other_dau.GetPy();
+  double const pztot = GetPz() + other_dau.GetPz();
+  double const sum_p2{std::pow(pxtot, 2) + std::pow(pytot, 2) +
+                      std::pow(pztot, 2)};
+  if (sum_e2 < sum_p2) {
     std::cout << "error in the energy distribution" << "\n";
   }
   return std::sqrt(sum_e2 - sum_p2);
 }
 
- double Particle::GetModuleP() const {
+double Particle::GetModuleP() const {
   double const p2 = std::pow(px_, 2) + std::pow(py_, 2) + std::pow(pz_, 2);
   return std::sqrt(p2);
 }
 
-//Setters
+// Setters
 void Particle::SetName(std::string new_name) {
   auto search = particleTypes_.find(new_name);
   if (search == particleTypes_.end()) {
@@ -122,16 +122,16 @@ int Particle::Decay2Body(Particle &dau1, Particle &dau2) const {
     return 2;
   }
 
-  double pout =
-      std::sqrt(
-          (massMot * massMot - (massDau1 + massDau2) * (massDau1 + massDau2)) *
-          (massMot * massMot - (massDau1 - massDau2) * (massDau1 - massDau2))) /
-      massMot * 0.5;
+    double pout =
+        std::sqrt(
+            (massMot * massMot - (massDau1 + massDau2) * (massDau1 + massDau2)) *
+            (massMot * massMot - (massDau1 - massDau2) * (massDau1 - massDau2))) /
+        massMot * 0.5;
 
   double norm = 2 * M_PI / RAND_MAX;
 
   double phi = std::rand() * norm;
-  double theta = std::rand() * norm * 0.5 - M_PI / 2.;
+  double theta = std::rand() * norm * 0.5 - M_PI / 2.; //è un modo per generare fra -pi/2 e pi/2
   dau1.SetP(pout * std::sin(theta) * std::cos(phi),
             pout * std::sin(theta) * std::sin(phi), pout * std::cos(theta));
   dau2.SetP(-pout * std::sin(theta) * std::cos(phi),
@@ -183,11 +183,11 @@ void Particle::AddParticleType(std::string name, double mass, int charge,
 
 void Particle::PrintAllTypes() {
   std::for_each(particleTypes_.begin(), particleTypes_.end(),
-                [](std::pair<const std::string, ParticleType*> p) { 
-                  p.second->Print(); 
+                [](std::pair<const std::string, ParticleType *> p) {
+                  p.second->Print();
                 });
 }
 
- int Particle::FindParticle(std::string name) const {
+int Particle::FindParticle(std::string name) const {
   return std::distance(particleTypes_.begin(), particleTypes_.find(name));
 }

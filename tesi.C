@@ -13,7 +13,7 @@
 void grafici() {
   const int n{22};
   TGraphErrors *graph[n];
-  
+
   const TString fileName[n] = {
       "generazioni/chemical_charm_30/156_mev_5_fm//p.dN.dy.dat",
       "generazioni/chemical_charm_30/156_mev_5_fm/anti-p.dN.dy.dat",
@@ -37,26 +37,30 @@ void grafici() {
       "generazioni/chemical_charm_30/156_mev_5_fm/anti-LambdaNeutron.dN.dy.dat",
       "generazioni/chemical_charm_30/156_mev_5_fm/LambdaProton.dN.dy.dat",
       "generazioni/chemical_charm_30/156_mev_5_fm/anti-LambdaProton.dN.dy.dat"};
-  
+
   TH1F *histo[n];
   TH1F *histoSum[n / 2];
 
-  double mass[n / 2] = {0.938272, 0.939565, 1.87561, 2.80892,
-                        2.80839,  3.72738,  3.225}; // m HyperTriton=2.99114
-  double integral[n / 2];
-  double error[n / 2];
+  double mass[8] = {0.938272, 0.939565, 1.87561,  2.80892,
+                    2.80839,  3.72738,  2.057000, 2.056000};
+  double massLambda[3] = {3.225, 1.800000,
+                          2.286460}; // massa c-deuteron lamda lambda c
+  double integral[8];
+  double error[8];
+  double integralLambda[3];
+  double errorLambda[3];
 
   for (int i{0}; i < n; i = i + 2) {
     graph[i] = new TGraphErrors(fileName[i], "%lg %lg %lg");
     graph[i + 1] = new TGraphErrors(fileName[i + 1], "%lg %lg %lg");
     for (int j{0}; j < graph[i]->GetN(); j++) {
-      graph[i]->SetPoint(j, graph[i]->GetPointX(j),
-                         graph[i]->GetPointY(j) + graph[i + 1]->GetPointY(j));
-      // errore calcolato con la somma in quadratura
-      double errY =
-          TMath::Sqrt(graph[i]->GetErrorY(j) * graph[i]->GetErrorY(j) +
-                      graph[i + 1]->GetErrorY(j) * graph[i + 1]->GetErrorY(j));
-      graph[i]->SetPointError(j, 0., errY);
+      double x = graph[i]->GetPointX(j);
+      double y1 = graph[i]->GetPointY(j);
+      double y2 = graph[i + 1]->GetPointY(j);
+      double err1 = graph[i]->GetErrorY(j);
+      double err2 = graph[i + 1]->GetErrorY(j);
+      graph[i]->SetPoint(j, x, y1 + y2);
+      graph[i]->SetPointError(j, 0., TMath::Sqrt(err1 * err1 + err2 * err2));
     }
     double partialArea{0};
     double integralError{0};
@@ -83,75 +87,250 @@ void grafici() {
       integralError +=
           areaError * areaError; // Somma in quadratura degli errori
     }
+    if (i < 16) {                              // Per i primi 16 grafici
+      error[i / 2] = std::sqrt(integralError); // Errore finale
+      integral[i / 2] = partialArea;
+    } else { // Per i grafici successivi
+      int lambdaIndex =
+          (i - 16) / 2; // Indice corretto per integralLambda e errorLambda
+      errorLambda[lambdaIndex] = std::sqrt(integralError); // Errore finale
+      integralLambda[lambdaIndex] = partialArea;
+    }
+  }
 
+  for (int i = 0; i < 8; ++i) {
+    std::cout << "integral[" << i << "] = " << integral[i] << std::endl;
+  }
+
+  std::cout << "\nArray integralLambda:" << std::endl;
+  for (int i = 0; i < 3; ++i) {
+    std::cout << "integralLambda[" << i << "] = " << integralLambda[i]
+              << std::endl;
+  }
+
+  TMultiGraph *finalGraph = new TMultiGraph;
+
+  // Creazione dei grafici con i dati di input
+  TGraphErrors *gNormal = new TGraphErrors(8, mass, integral, error);
+  TGraphErrors *gLambda =
+      new TGraphErrors(3, massLambda, integralLambda, errorLambda);
+
+  // Configurazione della funzione di fit per entrambi i grafici
+  TF1 *fitExp = new TF1("fitExp", "[0] * exp(-[1] * x)", 0, 4);
+  TF1 *fitExpLambda = new TF1("fitExpLambda", "[0] * exp(-[1] * x)", 0, 4);
+
+  fitExp->SetParameter(0, 1e3);
+  fitExp->SetParLimits(0, 0, 1e5);
+  fitExp->SetParameter(1, 5);
+  fitExp->SetParLimits(1, 4, 8);
+
+  fitExpLambda->SetParameter(0, 1e3);
+  fitExpLambda->SetParLimits(0, 0, 1e5);
+  fitExpLambda->SetParameter(1, 5);
+  fitExpLambda->SetParLimits(1, 4, 8);
+
+  // Configurazione dei marker per i grafici
+  gNormal->SetMarkerStyle(21);
+  gNormal->SetMarkerSize(1.0);
+  gNormal->SetTitle("Particles; Mass (GeV); dN/dy");
+
+  gLambda->SetMarkerStyle(21);
+  gLambda->SetMarkerSize(1.0);
+  gLambda->SetTitle("Lambda Particles; Mass (GeV); dN/dy");
+
+  // Canvas per gNormal
+  auto canvasNorm = new TCanvas("canvasNorm", "gNormal - Particles", 800, 600);
+  canvasNorm->cd();
+  canvasNorm->SetLogy();
+  gNormal->GetYaxis()->SetLimits(1e-7, 10);
+  gNormal->GetXaxis()->SetLimits(0, 6);
+  gNormal->Draw("APE");
+
+  // Canvas per gLambda
+  auto canvasLambda =
+      new TCanvas("canvasLambda", "gLambda - Particles", 800, 600);
+  canvasLambda->cd();
+  canvasLambda->SetLogy();
+  gLambda->GetYaxis()->SetLimits(1e-7, 10);
+  gLambda->GetXaxis()->SetLimits(0, 6);
+  gLambda->Draw("APE");
+
+  // Canvas per il grafico combinato
+  auto canvasFinal = new TCanvas("canvasFinal", "Combined Graph", 800, 600);
+  canvasFinal->cd();
+  canvasFinal->SetLogy();
+  finalGraph->Add(gNormal, "P");
+  finalGraph->Add(gLambda, "P");
+  finalGraph->SetTitle("Combined Graph; Mass (GeV); dN/dy");
+  finalGraph->Draw("APE");
+
+  // Aggiunta delle etichette ai punti
+  const char *labels[n / 2] = {
+      "p",          "n",      "d",         "H3", "He3", "He4", "Lambda-Neutron",
+      "c-deuteron", "Lambda", "Lambda(c)+"};
+
+  for (int i = 0; i < gNormal->GetN(); ++i) {
+    double x, y;
+    gNormal->GetPoint(i, x, y);
+    TLatex *label = new TLatex(x, y * 1.5, labels[i]);
+    label->SetTextSize(0.03);
+    label->Draw();
+  }
+
+  for (int i = 0; i < gLambda->GetN(); ++i) {
+    double x, y;
+    gLambda->GetPoint(i, x, y);
+    TLatex *label = new TLatex(x, y * 1.5, labels[i + 8]);
+    label->SetTextSize(0.03);
+    label->Draw();
+  }
+
+  // Aggiunta della legenda
+  auto leg = new TLegend(0.7, 0.7, 0.9, 0.9);
+  leg->AddEntry(gNormal, "Normal Particles", "P");
+  leg->AddEntry(gLambda, "Lambda Particles", "P");
+  leg->Draw();
+
+  // Configurazione del grafico finale
+  finalGraph->GetYaxis()->SetTitleOffset(1.2);
+  finalGraph->GetXaxis()->SetTitleSize(0.04);
+  finalGraph->GetYaxis()->SetTitleSize(0.04);
+  finalGraph->GetXaxis()->SetTitle("Mass (GeV)");
+  finalGraph->GetYaxis()->SetTitle("dN/dy");
+  finalGraph->GetXaxis()->CenterTitle(true);
+  finalGraph->GetYaxis()->CenterTitle(true);
+  finalGraph->GetYaxis()->SetLimits(1e-7, 10);
+  finalGraph->GetYaxis()->SetRangeUser(1e-7, 10);
+
+  // Aggiornamento della canvas per visualizzare i risultati
+  canvasFinal->Update();
+}
+
+void primo_grafico() {
+  const int n{22};
+  TGraphErrors *graph[n];
+
+  const TString fileName[n] = {
+      "generazioni/chemical_charm_30/156_mev_5_fm//p.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/anti-p.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/n.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/anti-n.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/d.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/anti-d.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/H3.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/anti-H3.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/He3.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/anti-He3.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/He4.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/anti-He4.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/c-deuteron.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/Lambda.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/anti-Lambda.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/Lambda(c)+.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/anti-Lambda(c)+.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/LambdaNeutron.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/"
+      "anti-LambdaNeutron.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/LambdaProton.dN.dy.dat",
+      "generazioni/chemical_charm_30/156_mev_5_fm/"
+      "anti-LambdaProton.dN.dy.dat"};
+
+  TH1F *histo[n];
+  TH1F *histoSum[n / 2];
+
+  double mass[n / 2] = {0.938272, 0.939565, 1.87561, 2.80892,  2.80839, 3.72738,
+                        2.057000, 2.056000, 3.225,   1.800000, 2.286460};
+  double integral[8];
+  double error[8];
+
+  for (int i{0}; i < n; i = i + 2) {
+    graph[i] = new TGraphErrors(fileName[i], "%lg %lg %lg");
+    graph[i + 1] = new TGraphErrors(fileName[i + 1], "%lg %lg %lg");
+    for (int j{0}; j < graph[i]->GetN(); j++) {
+      double x = graph[i]->GetPointX(j);
+      double y1 = graph[i]->GetPointY(j);
+      double y2 = graph[i + 1]->GetPointY(j);
+      double err1 = graph[i]->GetErrorY(j);
+      double err2 = graph[i + 1]->GetErrorY(j);
+      graph[i]->SetPoint(j, x, y1 + y2);
+      graph[i]->SetPointError(j, 0., TMath::Sqrt(err1 * err1 + err2 * err2));
+    }
+    double partialArea{0};
+    double integralError{0};
+    for (int k = 0; k < graph[i]->GetN() - 1; ++k) {
+      // Estrai i punti x e y
+      double x1, y1, x2, y2;
+      graph[i]->GetPoint(k, x1, y1);
+      if (std::abs(x1) > 0.5)
+        continue;
+      graph[i]->GetPoint(k + 1, x2, y2);
+
+      // Applica la formula del trapezio per l'area tra i punti (x1, y1) e
+      // (x2, y2)
+      double area = 0.5 * (y1 + y2) * (x2 - x1);
+      partialArea += area;
+
+      // Estrai gli errori sui punti y
+      double y1Error = graph[i]->GetErrorY(k);
+      double y2Error = graph[i]->GetErrorY(k + 1);
+
+      // Propagazione degli errori (considerando la somma in quadratura)
+      double areaError =
+          0.5 * std::sqrt(y1Error * y1Error + y2Error * y2Error) * (x2 - x1);
+      integralError +=
+          areaError * areaError; // Somma in quadratura degli errori
+    }
+    // Per i primi 16 grafici
     error[i / 2] = std::sqrt(integralError); // Errore finale
     integral[i / 2] = partialArea;
   }
 
-  auto canvas = new TCanvas("prediction", "prediction", 200, 10, 600, 400);
-  canvas->cd(0);
-  canvas->SetLogy();
+  for (int i = 0; i < n / 2; ++i) {
+    std::cout << "integral[" << i << "] = " << integral[i] << std::endl;
+  }
+
   TGraphErrors *finalGraph = new TGraphErrors(n / 2, mass, integral, error);
+
   TF1 *fitExp = new TF1("fitExp", "[0] * exp(-[1] * x)", 0, 4);
+
   fitExp->SetParameter(0, 1e3);
   fitExp->SetParLimits(0, 0, 1e5);
+  fitExp->SetParameter(1, 5);
   fitExp->SetParLimits(1, 4, 8);
-  finalGraph->Fit(fitExp);
 
-  double a[1] = {mass[n / 2]};
-  double b[1] = {integral[n / 2]};
-  TGraph *cGraph = new TGraph(1, a, b);
-  TF1 *cFit = new TF1("c-Fit", "[0] * exp(-[1] * x) + [2]", 0, 4);
-  cFit->FixParameter(0, fitExp->GetParameter(0));
-  cFit->FixParameter(1, fitExp->GetParameter(1));
-  cGraph->Fit(cFit);
+  auto canvasFinal = new TCanvas("canvasFinal", "Combined Graph", 800, 600);
+  canvasFinal->cd();
+  canvasFinal->SetLogy();
+  finalGraph->SetTitle("Combined Graph; Mass (GeV); dN/dy");
+  finalGraph->Draw("APE");
 
-  finalGraph->SetLineColor(1);
+  // Aggiunta delle etichette ai punti
+  const char *labels[n / 2] = {
+      "p",          "n",      "d",         "H3", "He3", "He4", "Lambda-Neutron",
+      "c-deuteron", "Lambda", "Lambda(c)+"};
+
+  for (int i = 0; i < finalGraph->GetN(); ++i) {
+    double x, y;
+    finalGraph->GetPoint(i, x, y);
+    TLatex *label = new TLatex(x, y * 1.5, labels[i]);
+    label->SetTextSize(0.03);
+    label->Draw();
+  }
+
+  // Configurazione del grafico finale
   finalGraph->GetYaxis()->SetTitleOffset(1.2);
   finalGraph->GetXaxis()->SetTitleSize(0.04);
   finalGraph->GetYaxis()->SetTitleSize(0.04);
-  finalGraph->GetXaxis()->SetTitle("Mass (Gev)");
+  finalGraph->GetXaxis()->SetTitle("Mass (GeV)");
   finalGraph->GetYaxis()->SetTitle("dN/dy");
   finalGraph->GetXaxis()->CenterTitle(true);
-  finalGraph->GetXaxis()->CenterTitle(true);
-  finalGraph->SetMarkerStyle(21); // Stile 21 è un cerchio
-  finalGraph->SetMarkerSize(1.);  // Cambia la dimensione del marker
+  finalGraph->GetYaxis()->CenterTitle(true);
   finalGraph->GetYaxis()->SetLimits(1e-7, 10);
   finalGraph->GetYaxis()->SetRangeUser(1e-7, 10);
 
-  const char *labels[n / 2] = {"p", "n", "d", "H3", "He3", "He4", "c-deuteron", "Lambda", "Lambda(c)+", "Lambda-Neutron","Lambda-Neutron"};
-  finalGraph->Draw("APE");
-  cFit->Draw();
-  for (int i = 0; i < finalGraph->GetN(); ++i) {
-    double xLabel = finalGraph->GetPointX(i);
-    double yLabel;
-    TLatex *label;
-    if (i == 1 or i == 4) {
-      yLabel = finalGraph->GetPointY(i) /
-               4.1; // Posiziona l'etichetta sopra il punto
-      label = new TLatex(xLabel, yLabel, labels[i]);
-    } else {
-      yLabel = finalGraph->GetPointY(i) *
-               2.1; // Posiziona l'etichetta sopra il punto
-      label = new TLatex(xLabel, yLabel, labels[i]);
-    }
-    label->SetTextSize(.05);    // Dimensione del testo
-    label->SetNDC(kFALSE);      // Coordinate del testo non normalizzate
-    label->SetTextColor(kBlue); // Colore delle etichette
-    label->Draw();              // Disegna l'etichetta
-  }
-  // fitExp->Draw();
-  auto leg1 = new TLegend(0.7, 0.1, 0.9, 0.3);
-  leg1->AddEntry(finalGraph, "Temperature 156 Mev", "");
-  leg1->AddEntry(finalGraph, "Radius 5 fm", "");
-  leg1->AddEntry(finalGraph, "|y|<0.5", "");
-  leg1->SetTextSize(0.04);
-  leg1->Draw();
-
-  // Aggiorna la canvas per visualizzare i grafici
-  gPad->SetLogy(1);
-
-  canvas->Update();
+  // Aggiornamento della canvas per visualizzare i risultati
+  canvasFinal->Update();
 }
 
 void cambiamenti() {
@@ -347,7 +526,7 @@ void cambiamenti() {
 void densFreq() {
 
   TH1::AddDirectory(kFALSE);
-  TFile *file = new TFile("densFreq.root", "RECREATE");
+  TFile *file = new TFile("rivelazioni/densFreq.root", "RECREATE");
   const TString fileName[4] = {
       "generazioni/chemical_charm_30/156_mev_5_fm/c-deuteron.dN.dy.dat",
       "generazioni/chemical_charm_30/156_mev_5_fm/anti-c-deuteron.dN.dy.dat",
@@ -355,7 +534,7 @@ void densFreq() {
       "generazioni/chemical_charm_30/156_mev_5_fm/anti-c-deuteron.dN.dp.dat"};
 
   int count{0}; // Contatore per i valori non nulli nella seconda colonna
-  int bin1{0}; //conto il numero di bin di entrambi i dati
+  int bin1{0};  // conto il numero di bin di entrambi i dati
   int bin2{0};
   for (int i{0}; i < 2; i++) {
     std::ifstream inputFile(fileName[i]); // Apertura del file
@@ -391,8 +570,8 @@ void densFreq() {
   std::string line2;
   int i{0};
   double P[bin1];   // impulso
-  double val[bin1]; // densfreq
-  double err[bin1]; // errdensfreq
+  double val[bin1]; // freq
+  double err[bin1]; // errfreq
   while (std::getline(inputAntiP, line1) && std::getline(inputP, line2)) {
     std::istringstream s1(line1);
     std::istringstream s2(line2);
@@ -413,26 +592,36 @@ void densFreq() {
   }
   inputP.close();
   inputAntiP.close();
-  TGraph *hDensFreq = new TGraph(bin1, P, val);
-  hDensFreq->SetName("densFreq");
-  hDensFreq->GetXaxis()->SetTitle("Impulso");
-  hDensFreq->GetYaxis()->SetTitle("Densità di Frequenza");
-  double totVal{0.0};
-  for (int i = 0; i < bin1 - 1; ++i) {
-    totVal += (P[i + 1] - P[i]) * val[i];
-}
-  double totErr = std::sqrt(std::accumulate(err, err + bin1 - 1, 0.0, [](double acc, double e){
-    return acc + e * e;
-  }));
-  
-  if( 1 > totVal-totErr && totVal + totErr >1 ){
-    std::cout << "compà t'appost" << '\n';
-    std::cout << totVal << " +/- " << totErr << '\n';
+
+  double comulative[bin1];
+  comulative[0] = val[0] * (P[1] - P[0]); // Primo intervallo
+  for (int j = 1; j < bin1 - 1; ++j) {
+    comulative[j] = comulative[j - 1] + val[j] * (P[j + 1] - P[j]);
   }
-  //controllo la normalizzazione
-  TCanvas *c1 = new TCanvas("Silicio", "Silicio", 200, 10, 600, 400);
+
+  // Normalizzazione
+  double normalization = comulative[bin1 - 2];
+  for (int j = 0; j < bin1 - 1; ++j) {
+    comulative[j] /= normalization;
+  }
+
+  TGraph *hFreq = new TGraph(bin1, P, val);
+  hFreq->SetName("freq");
+  hFreq->GetXaxis()->SetTitle("Impulso");
+  hFreq->GetYaxis()->SetTitle("Frequenza");
+  TCanvas *c1 = new TCanvas("Frequenza", "Frequenza", 200, 10, 600, 400);
   c1->cd();
-  hDensFreq->Write();
-  hDensFreq->Draw("APE");
+  hFreq->Write();
+  hFreq->Draw("APE");
+
+  TGraph *hFreqComu = new TGraph(bin1, P, comulative);
+  hFreqComu->SetName("hFreqComu");
+  hFreqComu->GetXaxis()->SetTitle("Impulso");
+  hFreqComu->GetYaxis()->SetTitle("Frequenza comulativa");
+  TCanvas *c2 = new TCanvas("hFreqComu", "hFreqComu", 200, 10, 600, 400);
+  c2->cd();
+  hFreqComu->Write();
+  hFreqComu->Draw("APE");
+
   file->Close();
 }
