@@ -87,11 +87,12 @@ void Particle::Print() const {
 }
 
 int Particle::Decay2Body(Particle &dau1, Particle &dau2) const {
+  std::cout << "tutto bene" << '\n';
   if (GetMass() == 0.0) {
     printf("Decayment cannot be preformed if mass is zero\n");
     return 1;
   }
-
+  std::cout << "tutto bene" << '\n';
   double massMot = GetMass();
   double massDau1 = dau1.GetMass();
   double massDau2 = dau2.GetMass();
@@ -122,16 +123,17 @@ int Particle::Decay2Body(Particle &dau1, Particle &dau2) const {
     return 2;
   }
 
-    double pout =
-        std::sqrt(
-            (massMot * massMot - (massDau1 + massDau2) * (massDau1 + massDau2)) *
-            (massMot * massMot - (massDau1 - massDau2) * (massDau1 - massDau2))) /
-        massMot * 0.5;
+  double pout =
+      std::sqrt(
+          (massMot * massMot - (massDau1 + massDau2) * (massDau1 + massDau2)) *
+          (massMot * massMot - (massDau1 - massDau2) * (massDau1 - massDau2))) /
+      massMot * 0.5;
 
   double norm = 2 * M_PI / RAND_MAX;
 
   double phi = std::rand() * norm;
-  double theta = std::rand() * norm * 0.5 - M_PI / 2.; //è un modo per generare fra -pi/2 e pi/2
+  double theta = std::rand() * norm * 0.5 -
+                 M_PI / 2.; // è un modo per generare fra -pi/2 e pi/2
   dau1.SetP(pout * std::sin(theta) * std::cos(phi),
             pout * std::sin(theta) * std::sin(phi), pout * std::cos(theta));
   dau2.SetP(-pout * std::sin(theta) * std::cos(phi),

@@ -605,23 +605,23 @@ void densFreq() {
     comulative[j] /= normalization;
   }
 
-  TGraph *hFreq = new TGraph(bin1, P, val);
-  hFreq->SetName("freq");
-  hFreq->GetXaxis()->SetTitle("Impulso");
-  hFreq->GetYaxis()->SetTitle("Frequenza");
+  TGraph *Freq = new TGraph(bin1, P, val);
+  Freq->SetName("freq");
+  Freq->GetXaxis()->SetTitle("Impulso");
+  Freq->GetYaxis()->SetTitle("Frequenza");
   TCanvas *c1 = new TCanvas("Frequenza", "Frequenza", 200, 10, 600, 400);
   c1->cd();
-  hFreq->Write();
-  hFreq->Draw("APE");
+  Freq->Write();
+  Freq->Draw("APE");
 
-  TGraph *hFreqComu = new TGraph(bin1, P, comulative);
-  hFreqComu->SetName("hFreqComu");
-  hFreqComu->GetXaxis()->SetTitle("Impulso");
-  hFreqComu->GetYaxis()->SetTitle("Frequenza comulativa");
+  TGraph *FreqComu = new TGraph(bin1, P, comulative);
+  FreqComu->SetName("FreqComu");
+  FreqComu->GetXaxis()->SetTitle("Impulso");
+  FreqComu->GetYaxis()->SetTitle("Frequenza comulativa");
   TCanvas *c2 = new TCanvas("hFreqComu", "hFreqComu", 200, 10, 600, 400);
   c2->cd();
-  hFreqComu->Write();
-  hFreqComu->Draw("APE");
+  FreqComu->Write();
+  FreqComu->Draw("APE");
 
   file->Close();
 }
