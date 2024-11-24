@@ -526,7 +526,7 @@ void cambiamenti() {
 void densFreq() {
 
   TH1::AddDirectory(kFALSE);
-  TFile *file = new TFile("rivelazioni/densFreq.root", "RECREATE");
+  TFile *file = new TFile("rivelazioni/pythia/pythia8312/densFreq.root", "RECREATE");
   const TString fileName[4] = {
       "generazioni/chemical_charm_30/156_mev_5_fm/c-deuteron.dN.dy.dat",
       "generazioni/chemical_charm_30/156_mev_5_fm/anti-c-deuteron.dN.dy.dat",
