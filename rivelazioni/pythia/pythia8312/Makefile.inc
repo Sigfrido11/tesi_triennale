@@ -1,14 +1,14 @@
 # PYTHIA configuration file.
-# Generated on dom 10 nov 2024, 14:37:19, CET with the user supplied options:
+# Generated on dom 24 nov 2024, 20:25:34, CET with the user supplied options:
 
 # Install directory prefixes.
-PREFIX_BIN=/home/giuseppe/Desktop/Giuseppe/università/terzo_anno/pythia/pythia8312/bin
-PREFIX_INCLUDE=/home/giuseppe/Desktop/Giuseppe/università/terzo_anno/pythia/pythia8312/include
-PREFIX_LIB=/home/giuseppe/Desktop/Giuseppe/università/terzo_anno/pythia/pythia8312/lib
-PREFIX_SHARE=/home/giuseppe/Desktop/Giuseppe/università/terzo_anno/pythia/pythia8312/share/Pythia8
+PREFIX_BIN=/home/giuseppe/Scrivania/giuseppe/uni/terzo_anno/casko/rivelazioni/pythia/pythia8312/bin
+PREFIX_INCLUDE=/home/giuseppe/Scrivania/giuseppe/uni/terzo_anno/casko/rivelazioni/pythia/pythia8312/include
+PREFIX_LIB=/home/giuseppe/Scrivania/giuseppe/uni/terzo_anno/casko/rivelazioni/pythia/pythia8312/lib
+PREFIX_SHARE=/home/giuseppe/Scrivania/giuseppe/uni/terzo_anno/casko/rivelazioni/pythia/pythia8312/share/Pythia8
 
 # Compilation flags (see ./configure --help for further documentation).
-CXX=g++-11
+CXX=g++
 CXX_DTAGS=-Wl,--disable-new-dtags
 CXX_COMMON=-O2 -std=c++11 -pedantic -W -Wall -Wshadow -fPIC -pthread
 CXX_SHARED=-shared

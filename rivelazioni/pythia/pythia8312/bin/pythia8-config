@@ -17,7 +17,7 @@
 #     USAGE:    Text printed when the --help option is passed.
 #     OPTIONS:  List of valid options that can be passed by the user.
 ################################################################################
-CFG_FILE=/home/giuseppe/Desktop/Giuseppe/università/terzo_anno/pythia/pythia8312/share/Pythia8/examples/Makefile.inc
+CFG_FILE=/home/giuseppe/Scrivania/giuseppe/uni/terzo_anno/casko/rivelazioni/pythia/pythia8312/share/Pythia8/examples/Makefile.inc
 read -d "" USAGE << "BLOCKTEXT"
 Usage: ./pythia8-config [OPTIONS]
 
