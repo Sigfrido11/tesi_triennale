@@ -1,8 +1,39 @@
-\documentclass[12pt,a4paper]{report}
-\usepackage[italian]{babel}
+\documentclass[12pt,a4paper]{book}
+\usepackage[english]{babel}
 \usepackage{newlfont}
 \usepackage{color}
 \textwidth=450pt\oddsidemargin=0pt
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+\usepackage[margin = 1.4in]{geometry}
+\usepackage{amsmath}
+\usepackage{centernot}
+\usepackage{amsfonts}
+\usepackage{placeins}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage[font=scriptsize]{caption}
+%\usepackage[table,xcdraw]{xcolor}
+\usepackage[framemethod=tikz]{mdframed}
+\usepackage[
+backend=biber,
+style=alphabetic,
+]{biblatex}
+\addbibresource{citations.bib}
+\newmdenv[innerlinewidth=0.5pt,roundcorner=4pt,linecolor=lightgray,innerleftmargin=6pt,
+innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
+
+\pagestyle{fancy}  % Imposta il formato delle intestazioni e dei piè di pagina
+
+% Personalizzazione dell'intestazione e del piè di pagina
+\fancyhf{}  % Rimuove qualsiasi intestazione e piè di pagina predefiniti
+
+% Imposta il nome della sezione in alto a sinistra
+\fancyhead[L]{\leftmark}  % \leftmark contiene il nome della sezione
+
+% Imposta la numerazione delle pagine in basso a sinistra
+\fancyfoot[L]{\thepage}
 
 
 \begin{document}
@@ -48,7 +79,7 @@
 					\textcolor{black}{
 						\bf Correlatore: 
 						\vspace{2mm}\\
-							Dott. Nicolò Jacazio \\\\}}}
+						Dott. Nicolò Jacazio \\\\}}}
 		\end{minipage}
 		%
 		\hfill
@@ -78,13 +109,182 @@
 	
 	\newpage
 	
-	\section{Abstract}
+	\chapter{Abstract}
 	Testo dell'introduzione...
 	
 	\newpage
 	
-	\section{Capitolo 1}
-	Testo del capitolo 1...
+	\chapter{Introduction}
+	
+	Recent development of hadron spectroscopy revealed that there may exist various molecular bound states of hadrons (observed as hadron resonances) . In particular, the observation	of the unexpected X, Y, and Z mesons and the follow by theoretical studies indicates that heavy quark molecules are more plausible. This can be understood from the balance between the kinetic term and the potential in the Hamiltonian: a heavier system has a smaller kinetic
+	energy. The above naive expectation motivates us to explore possible bound states composed of
+	%charmed (or bottomed) baryons Yc(b) (Λc(b) , Σc(b) , . . . ) and the nucleon (N ) or nucleus. This
+	is, of course, a natural extension of the hypernucleus, which is a nuclear bound state with
+	%one or more strange baryons Y ( Λ, Σ, Ξ . . . ). Hypernuclear spectroscopy in the last decades
+	played a key role in analysing structures of hypernuclei and extracting information on the
+	%Y N and Y Y interactions. Because there is no two-body bound states in ΛN or ΣN systems
+	and it is difficult to perform direct scattering experiments for the hyperons, it is important
+	to get information on their interactions from the three-body or heavier nucleus with strange
+	baryon(s).
+	
+	There has been an impressive experimental progress in the spectroscopy of heavy hadrons,
+	mainly in the charm sector. The theoretical analysis of hidden and open heavy flavor
+	hadrons has revealed how interesting is the interaction of heavy hadrons, with presumably
+	%a long-range part of Yukawa type, and a short-range part mediated by quark−quark and
+	%quark−antiquark forces. Some of the recently reported states might appear as bound states
+	or resonances in the scattering of two hadrons with heavy flavor content.  The observation of events that could be interpreted in terms of the decay of a
+	charmed nucleus [13, 14], fostered conjectures about the possible existence of charm analogs
+	of strange hypernuclei [15–17]. This resulted in several theoretical estimates about the bind-
+	ing energy and the potential-well depth of charmed hypernuclei based on one-boson exchange
+	%potentials for the charmed baryon−nucleon interaction [18–22]. The current experimental
+	prospects have reinvigorated studies of the low-energy YcN interactions
+	
+	\subsection{One Boson exchange model}
+	Before the publications of Hideki Yukawa's papers in 1935 \cite{yukawa} physicists cannot explain the results of James Chadwick's atomic model, which consisted of positively charged protons and neutrons packed inside of a small nucleus, with a radius on the order of $10^{-14}-10^{-15}$ m. This because the electromagnetic forces at these lengths would cause these protons to repel each other and for the nucleus to fall apart. For these reason in 1932, Werner Heisenberg proposed a "Platzwechsel" (migration) interaction between the neutrons and protons inside the nucleus, in which neutrons were composite particles of protons and electrons. These composite neutrons would emit electrons, creating an attractive force with the protons, and then turn into protons themselves \cite{heisemerg}. The model just explained violate the linear and anglular momentum and for these reason Enrico Fermi in 1934 proposed the  proposed the emission and absorption of two light particles: the neutrino and electron, rather than just the electron. Some month later the soviet physicists Igor Tamm and Dmitri Ivanenko demonstrated that the force associated with the neutrino and electron emission was not strong enough to bind the protons and neutrons in the nucleus.
+	
+	For these reasons Hideki Yukawa combines both the idea of Heisenberg's short-range force interaction and Fermi's idea of an exchange particle in order to fix the issue of the neutron-proton interaction. For introducing the Yukawa's potential we can start from the Klein-Gordon equation that governs dynamics of free massive scalar, without spin, field
+	
+	\begin{equation}
+		\nabla^2 \phi(\vec{r},t) - \frac{1}{c^2} \frac{\partial^2 \phi(\vec{r},t)}{\partial^2 t} = \frac{m^2 c^2}{\hbar^2} \phi(\vec{r},t)
+		\label{eq:klein-gordon}
+	\end{equation}
+	
+	where $\phi$ is the wave function, $\vec{r}$ the position, t the time, and m the mass of the particle. In spherical coordinate becomes for the radial component.
+	\begin{equation}
+		\frac{1}{r^2} \frac{\partial}{\partial r} (r^2 \frac{\partial}{\partial r} \phi(\vec{r},t)) - \frac{1}{c^2} \frac{\partial^2 \phi(\vec{r},t)}{\partial^2 t} = \frac{m^2 c^2}{\hbar^2} \phi(\vec{r},t)
+		\label{eq:klein-gordon-spjericaò}
+	\end{equation}
+	
+	A solution for the second equation is.
+	\begin{equation}
+		\phi(\vec{r},t)= - g^2 \hbar c \frac{e^{\frac{i}{\hbar}(\vec{r} \cdot \vec{P}- E t)}}{r} 
+		\label{eq:klein-gordon-sol}
+	\end{equation}
+	
+	Where $\vec{P}$ is the linear momentum and E the energy. For virtual particles hold that $0 \sim p^2 c^2 + m^2 c^4$ so $p\sim \pm i m c$ and with the Einsten-De Broglie equation one get that $\lambda = \frac{\pm ih}{mc}$, named Compton wave length, and the solution can be rewritten as
+	\begin{equation}
+		\phi(\vec{r},t)= - g^2 \hbar c \frac{e^{-\frac{r}{\lambda}}}{r} = - g^2 \hbar c \frac{e^{-\frac{r mc}{h}}}{r}
+		\label{eq:klein-gordon-final-sol}
+	\end{equation}
+	
+	after have rejectes the divergent solution. The equation \cite{eq:klein-gordon-final-sol} clarify that massive mediators gives short range interaction. A graphical representation of the phenomena is visible in the pictures, \ref{fig:one_boson_exchange}.
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=0.7\linewidth]{pictures/one_boson_exchange.png}
+		\caption{The one-boson-exchange diagram of the nucleon-nucleon scattering.}
+		\label{fig:one_boson_exchange} 
+	\end{figure}
+	Yukawa used his equation aslo to predict the mass of the mediating particle as about 200 times the mass of the electron $\sim 140$ Mev. Physicists called this particle the "meson," as its mass was in the middle of the leptons and barions. Yukawa's meson was found in 1947, and came to be known as the pion.
+	The model has been referred to as the "one-boson-exchange model" (OBE model) or the
+	"one-particle-exchange model". This model has presented a new possibility for the realistic understanding of nuclear forces. Basing on the Yukawa potential the Sakata \cite{sakata} model was created with the aim of giving a systematic understanding not only of the nucleon-nucleon interaction but	of other various strong reactions. In this model, mesons and baryons are considered as composite systems of the fundamental particles: proton (p), neutron (n) and $\lambda$-particle ($\lambda$), and their antiparticles. With other generalization these works predicted the existence of many resonance levels including the octet mesons now established and seemed to support the basic features of the Sakata model and it became clear from experiment that the wide-spread existence of these resonance levels is one of the fundamental features of the baryon-meson system. From analysis of pion production processes, etc., by the isobar model in which the resonance states are regarded as particles was noted that: The treatment of a resonance as an "elementary" particle has considerable applicability and the non-correlated final states play only a minor role. For these reason the strong interactions should be derived from the fundamental interactions between the fundamental particles, and the Yukawa interaction observed between pion and nucleon is regarded as an effective Hamiltonian which results from the fundamental interactions including all the higher order corrections on the system of composite particles. Higher order effect should not be taken for the Yukawa interaction as because such effects should be considered in the fundamental interaction, not for the model Hamiltonian. Furthermore	The	Yukawa interaction, as a model Hamiltonian, already contain some of the higher order effects of the fundamental interaction in a certain correlated form. In conclusion we cannot logically exclude the possibility that there may remain some higher order effects of the fundamental interactions not represented by the lowest order diagram and that the higher order of the model interaction might represent such parts. However, we are interested in the OBE model as a zeroth order trial. \cite{onebosonexchangepotentialmodelapproach}.
+	
+	
+	
+	
+	\subsection{$\Lambda_c$ N interaction}
+	This section is a resume of the \cite{Charmed-nucleon} and \cite{baryon–nucleon-potential}
+	Constructing a model for describe with first-principles analytical calculations of non-perturbative quantum chromo-dynamics (QCD) phenomena is very limited. Furthermore the lack of experimental information on the elementary $Y_c$ N makes the describing of the formation of bound states much more difficult. Thus, the situation can be ameliorated with the use of well constrained models based as much as possible on symmetry principles and analogies with other similar processes, which is still a valid alternative for making progress.
+	
+	A model was proposed in the early 1990s in an attempt to obtain a simultaneous
+	description of the light baryon spectrum and the nucleon-nucleon interaction \cite{Valcarce_2005}. It was later on generalized to all flavor. In this model, hadrons are described as clusters of three interacting massive (constituent) quarks. The masses of the quarks are generated by the dynamical breaking of the original $SU(2)_L \otimes SU(2)_R$ chiral symmetry of the QCD Lagrangian at a momentum scale of the order of $\Lambda_cbs= 4 \pi f_\pi \sim $ 1 GeV, where $f_\pi$ is the pion electroweak decay constant. 
+	
+	In fact massless fermions in Dirac theory are described left or right-handed spinors that each have 2 complex components. These have spin either aligned (right-handed chirality), or counter-aligned (left-handed chirality), with their momenta. In this case chirality is a conserved quantum number of the fermion and the description of the can be spinous can be reduced in these space. A Dirac mass term explicitly breaks the symmetry but in QCD, the lowest mass quarks are nearly massless and exist an approximate chiral symmetry.The vacuum in QCD is non-trivial. It does not simply consist of empty space; rather, it has a rich structure in which quark-antiquark pairs are continually being created and annihilated. This is sometimes referred to as the QCD vacuum. This vacuum is described as a superposition of many states, and the interactions between quarks and gluons cause the system to prefer a certain configuration, which spontaneously breaks the chiral symmetry.
+	According to Goldstone's theorem, when a continuous symmetry is spontaneously broken, there should be massless particles associated with the broken symmetry. These particles are called Goldstone bosons. In the case of chiral symmetry breaking, the pions are the pseudo-Goldstone bosons. They arise because the chiral symmetry is spontaneously broken, and although they are not strictly massless, they have a very small mass compared to other hadrons like protons and neutrons. \cite{Smit_2023}
+	
+	Light quarks interact through potentials generated by the exchange of pseudoscalar Goldstone bosons ($\pi$) and their chiral partner ($\sigma$):
+	\begin{equation}
+		V_\chi = V_\sigma(\vec{r_{ij}}) +V_\pi (\vec{r_{ij}})
+	\end{equation}
+	where 
+	\begin{equation}
+		V_\sigma(\vec{r_{ij}})= \frac{-g_{ch}^2}{4\pi} \frac{\Lambda^2}{\Lambda^2-m_\sigma^2} m_\sigma \left[ Y(m_\sigma r_{ij}- \frac{\Lambda}{m_\sigma}) Y(\Lambda r_{ij}) \right]
+		\label{eq:sigma-potential}
+	\end{equation}
+	
+	\begin{align}
+		V_\pi(\vec{r_{ij}}) &= \frac{g_{ch}^2}{4\pi} \frac{m_\pi^2}{12 m_i m_j} \frac{\Lambda^2}{\Lambda^2 - m_\pi^2} m_\pi \left[ Y(m_\pi r_{ij} - \frac{\Lambda^3}{m_\pi^3}) Y(\Lambda r_{ij}) \right] \vec{\sigma_i} \cdot \vec{\sigma_j} \notag \\
+		&+ \left[ H(m_\pi r_{ij}) - \frac{\Lambda^3}{m_\pi^3} H(\Lambda r_{ij}) \right] S_{ij}^2 (\vec{\tau_i} \cdot \vec{\tau_j})
+		\label{eq:pi-potential}
+	\end{align}
+	
+	
+	$\frac{g_{ch}^2}{4\pi}$ is the chiral coupling constant, $m_i$ are the masses of the constituent quarks, $\Lambda \sim \Lambda_{CSB}$, $Y(x)= \frac{e^{-x}}{x}$ is the standard Yukawa function, $H(x)= (1 + \frac{3}{x} + \frac{3}{x^2}) Y(x)$, $S_{ij}=3(\vec{\sigma_i} \cdot \hat{r_{ij}}) (\vec{\sigma_j} \cdot \hat{r_{ij}}) \vec{\sigma_i} \cdot \vec{\sigma_j}$ is the quark tensor operator. Instead perturbative QCD effects are taken into account through the one-gluon-exchange (OGE) potential
+	
+	\begin{equation}
+		V_{OGE}(\vec{r_{ij}}) = \frac{a_s}{4} \vec{\lambda_i^c} \cdot \vec{\lambda_j^c} \left[ \frac{1}{r_{ij}}- \frac{1}{4} \left(\frac{1}{2m_i^2} + \frac{1}{2m_j^2} + \frac{2 \vec{\sigma_i} \cdot \vec{\sigma_j}}{3 m_i m_j} \right) \frac{e^{-r_{ij}/r_0}}{r_0^2 r_{ij}} \frac{3 S_{ij}}{4m_i m_j r_{ij}^3} \right]
+		\label{eq:pi-potential}
+	\end{equation}
+	where $\vec{\label^c}$ are the SU(3) color matrices, $r_0= \hat{r_0}/\nu$ is a flavor-dependent regularization scaling	with the reduced mass $\nu$ of the interacting pair, and $\alpha_s$ is the scale-dependent strong coupling constant given by:
+	\begin{equation}
+		\alpha_s(\nu)= \frac{\alpha_0}{ln[(\nu^2+\mu_0^2)/\gamma_0^2]}
+		\label{eq:coupling}
+	\end{equation}
+	$\alpha_0$=2.118, $\mu_0$ =36.976 Mev and $\gamma_0$=0.113 $fm^-1$. the  equation \ref{eq:coupling} give rise $\alpha_s \sim 0.54$ for light quark and $\alpha_s \sim 0.43$ for uc pairs. The table resume all the parameter \cite{tab:par-resume}
+	
+	\begin{tabular}{c|c|c}
+		content...
+		\label{tab:par-resume}
+	\end{tabular}
+	
+	Finally, any model imitating QCD should incorporate confinement. Although it is a very important term from the spectroscopic point of view, it is negligible for the hadron-hadron interaction. Lattice QCD calculations suggest a screening effect on the potential when increasing the interquark distance which is modeled here by.
+	\begin{equation}
+		V_{CON}(\vec{r_{ij}})= -\alpha_c (1-e^{-\mu_c r_{ij}}) \vec{\lambda_i^c} \cdot \vec{\lambda_j^c}
+		\label{eq:confinement}
+	\end{equation}
+	
+	The figures \ref{fig:one_boson_exchange} shows the different diagrams contributing to the charmed baryon−nucleon interaction. The first type of interaction, visible in (a) and (b), is mediated by the exchange of a boson between light quark or between a light ad heavy flavor. The second one instead take in account also the exchange of the identical light quark (c) and (d). The second possibility correspond to short range that contain one-gluon exchange contributions that are also missed in hadronic models.
+	
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=0.7\linewidth]{pictures/charmed_nucleos_interaction.png}
+		\caption{ The vertical solid lines represent a light quark, u or d. The vertical thick solid lines represent the charm quark. The dotted horizontal lines stand for the exchanged boson. (a) Interaction between	two light quarks. (b) Interaction between the heavy and a light quark. (c) Interaction between	two light quarks together with the exchange of identical light quarks. (d) Interaction between the		heavy and a light quark together with the exchange of identical light quarks.}
+		\label{fig:charmed_nucleos_interaction} 
+	\end{figure}
+	
+	
+	A numerical simulation of the potential is described in \cite{pot_simulation} performed with lattice QCD with lattice spacing a =0.0907(13)fm and a physical lattice size of La=2.902(42)fm. In order to see the quark mass dependence of the potentials, the members of the study had employed three ensembles of gauge configurations. The hopping parameters of these ensembles are $\kappa_{ud}$ =0.13700 (Ensemble 1), 0.13727 (Ensemble 2), 0.13754 (Ensemble 3) for u, d-quarks. The figure \ref{fig:radial_potential_1s} show the $\lambda_c$N central potential in the $1^S_0$ channel for each ensemble with different mass considered for the pion. For Ensemble 1 $m_\pi \sim$ 700 Mev, $m_\pi \sim$ 570 Mev for Ensemble 2 and 410 Mev for Ensemble 3. They found a repulsive core at short distances (r < 0.5 fm) and an attractive one for intermediate distances (0.5 < r < 1.5 fm). They discovered also that the height of the repulsive core increases and the minimum of the attractive pocket shifts outward, as u, d quark masses decrease. A variation of the repulsive core against u, d quark masses may be explained by the fact that the colour magnetic interaction is proportional to the inverse of the constituent quark mass. The same operation has also be done with a $\Lambda_c$N system with $J^P=1^+$ obtaining the result visible in figure \cite{fig:fig:radial_potential_3s}, 
+	the result is similar to the one in $1^S_0$ channel exept at short distance (r<0.5fm) but in both cases the actrattive potential is weaker than the $\Lambda_c$N system.
+	
+	\begin{figure}
+		\centering
+		\begin{minipage}{0.45\textwidth}
+			\centering
+			\includegraphics[width=0.74 \linewidth]{pictures/radial_potential_1s.jpg}
+			\caption{ The figure show $\Lambda_c$N central potential in the $ 1^S_0$ channel for each ensemble. The potential is calculated for $m_\pi \approx$ 700 MeV case (Blue), for $m_\pi \approx$ 570 MeV case (Green) and for $m_\pi \approx$ 410 MeV case (Red).}
+			\label{fig:fig:radial_potential_1s}
+			
+		\end{minipage}
+		\begin{minipage}{0.5\textwidth}
+			\centering
+			\includegraphics[width=0.74 \linewidth]{pictures/radial_potential_1s.jpg}
+			\caption{ The figure show $\Lambda_c$N central potential in the $ 3^S_0$ channel for each ensemble. The potential is calculated for $m_\pi \approx$ 700 MeV case (Blue), for $m_\pi \approx$  570 MeV case (Green) and for $m_\pi \approx$  410 MeV case (Red).}
+			\label{ffig:fig:radial_potential_3s}
+		\end{minipage}%
+	\end{figure}
+	
+	The weaker potential than $\Lambda_C$N could be explained from following facts: 
+	\begin{itemize}
+		\item The long-range contribution is expected to be caused by the K meson exchange for $\Lambda$N interaction. In the system, however, the K meson (strange quark) exchange is replaced by the D meson (charm quark) exchange, and this contribution is highly suppressed due to the much heavier D meson mass than the K meson mass.
+		\item The one-pion exchange in the transition is considered to give a sizable contribution to the effective $\Lambda$N interaction. In the system, however, this contribution is expected to be suppressed due to the large mass difference between $\Lambda_c$N and $\Sigma_c$N 
+		
+	\end{itemize}  
+	If no meson exchanges were considered, the S wave phase shifts of the $\Lambda_C$N system are very similar to the corresponding NN scattering. In both partial waves one obtains typical	hard-core phase shifts due to the short-range gluon and quark-exchange dynamics. However,the hard-core radius in the spin-singlet state is larger than in the spin-triplet one leading	to a more attractive interaction in the spin-triplet partial wave due to a lower short-range repulsion. In fact, the hard cores caused by the color magnetic part of the OGE potential have been calculated obtaining 0.35 fm for the spin-triplet state and 0.44 fm	for the spin-singlet one.
+	
+	\subsection{Possible $\Lambda_c$ hypernuclei}
+	
+	One of the most interesting applications of the charmed baryon−nucleon interaction is the study of the possible existence of charmed hypernuclei. Since the $\Lambda_c$ interaction is dominated by the spin-independent central force, as we discussed in the previous section, the spectrum of hypernuclei, if they exist, would probably can be approximated by the following single-folding potential defined by
+	\begin{equation}
+		V_f(\vec{r}) = \int d^3f' \rho_A (\vec{r}') V_{\Lambda_cN} (\vec{r}- \vec{r}') 
+	\end{equation}
+	where $\rho_A(\vec{r})$ correspond to ne nuclear density corresponding with the atomic number A and $V_{\Lambda_cN}$ stands for the two body spin-independent central potential of the $\Lambda_c$ system. The study described assumed,
+	\begin{equation}
+		\rho_A(\vec{r})=\rho_0 \left[1+ e^{\frac{r-c}{a}}\right]
+	\end{equation}
+	where the parameters employed $\rho_0$, c, a are the same used for described spherical nuclei. They test the equation with different set of parameter taking the value assumed in the following nuclei ${12}^C$, ${28}^Si$, ${40}^Ca$, ${58}^Ni$ and ${208}^Pb$.
+	With the following potential they calculate the binding energy for $\Lambda_c$ hypernuclei by the Gaussian expansion method. The result is shown in figure \ref{fig:binding_energy}
+	
+	The binding energy of $\Lambda_c$ hypernuclei has been analyzed in \ref{pot_simulation} using the HAL QCD for $m_\pi$ = 410 MeV. 
+	
 	
 	\newpage
 	
@@ -106,6 +306,8 @@
 	\subsection{Conclusion}
 	Testo della sezione 2.1...
 	
-	\newpage
+	\medskip
+	
+	\printbibliography
 	
 \end{document}
