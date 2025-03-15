@@ -3,8 +3,9 @@
 \contentsline {chapter}{\numberline {2}Introduction}{7}{}%
 \contentsline {subsection}{\numberline {2.0.1}One Boson exchange model}{7}{}%
 \contentsline {subsection}{\numberline {2.0.2}$\Lambda _c$ N interaction}{10}{}%
-\contentsline {subsection}{\numberline {2.0.3}$\Lambda _c$ N potential}{13}{}%
-\contentsline {subsection}{\numberline {2.0.4}Sezione 1.1}{14}{}%
-\contentsline {subsection}{\numberline {2.0.5}Sezione 1.2}{15}{}%
-\contentsline {section}{\numberline {2.1}Capitolo 2}{16}{}%
-\contentsline {subsection}{\numberline {2.1.1}Conclusion}{17}{}%
+\contentsline {subsection}{\numberline {2.0.3}Potential energy}{13}{}%
+\contentsline {subsection}{\numberline {2.0.4}Possible $\Lambda _c$ hypernuclei}{13}{}%
+\contentsline {subsection}{\numberline {2.0.5}Sezione 1.1}{16}{}%
+\contentsline {subsection}{\numberline {2.0.6}Sezione 1.2}{17}{}%
+\contentsline {section}{\numberline {2.1}Capitolo 2}{18}{}%
+\contentsline {subsection}{\numberline {2.1.1}Conclusion}{19}{}%

@@ -221,9 +221,14 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	\end{equation}
 	$\alpha_0$=2.118, $\mu_0$ =36.976 Mev and $\gamma_0$=0.113 $fm^-1$. the  equation \ref{eq:coupling} give rise $\alpha_s \sim 0.54$ for light quark and $\alpha_s \sim 0.43$ for uc pairs. The table resume all the parameter \cite{tab:par-resume}
 	
-	\begin{tabular}{c|c|c}
-		content...
+	\begin{tabular}{c c|c c}
+		$m_{u,d}$ (MeV) & 313 & $g_{ch}^2/ 4\pi$ & 0.54 \\
+		$m_{c}$ (MeV) & 1752 & $m_{\sigma} (fm^{-1})$ & 3.42 \\
+		$\hat{r_0}$ (Mev fm) & 28.170 &  $m_{\pi} (fm^{-1})$ & 0.70 \\
+		$\mu_c (fm^{-1})$ & 0.70 & $\Lambda (fm^{-1})$ & 4.2 \\
+		b (fm) & 0.518 & $a_c$ (MeV) & 230 \\
 		\label{tab:par-resume}
+		\caption{The table resume the typical value of the parameter present in the previous equation.}
 	\end{tabular}
 	
 	Finally, any model imitating QCD should incorporate confinement. Although it is a very important term from the spectroscopic point of view, it is negligible for the hadron-hadron interaction. Lattice QCD calculations suggest a screening effect on the potential when increasing the interquark distance which is modeled here by.
@@ -270,6 +275,10 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	\end{itemize}  
 	If no meson exchanges were considered, the S wave phase shifts of the $\Lambda_C$N system are very similar to the corresponding NN scattering. In both partial waves one obtains typical	hard-core phase shifts due to the short-range gluon and quark-exchange dynamics. However,the hard-core radius in the spin-singlet state is larger than in the spin-triplet one leading	to a more attractive interaction in the spin-triplet partial wave due to a lower short-range repulsion. In fact, the hard cores caused by the color magnetic part of the OGE potential have been calculated obtaining 0.35 fm for the spin-triplet state and 0.44 fm	for the spin-singlet one.
 	
+	\subsection{Potential energy}
+		
+	
+	
 	\subsection{Possible $\Lambda_c$ hypernuclei}
 	
 	One of the most interesting applications of the charmed baryon−nucleon interaction is the study of the possible existence of charmed hypernuclei. Since the $\Lambda_c$ interaction is dominated by the spin-independent central force, as we discussed in the previous section, the spectrum of hypernuclei, if they exist, would probably can be approximated by the following single-folding potential defined by
@@ -281,7 +290,26 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 		\rho_A(\vec{r})=\rho_0 \left[1+ e^{\frac{r-c}{a}}\right]
 	\end{equation}
 	where the parameters employed $\rho_0$, c, a are the same used for described spherical nuclei. They test the equation with different set of parameter taking the value assumed in the following nuclei ${12}^C$, ${28}^Si$, ${40}^Ca$, ${58}^Ni$ and ${208}^Pb$.
-	With the following potential they calculate the binding energy for $\Lambda_c$ hypernuclei by the Gaussian expansion method. The result is shown in figure \ref{fig:binding_energy}
+	With the following potential they calculate the binding energy for $\Lambda_c$ hypernuclei by the Gaussian expansion method. The result is shown in figure \ref{fig:binding_energy}. As expected the binding increases as the atomic number increases. Furthermore, as the potential approaches to the physical one (as the u, d quark masses decrease toward physical values), the binding energy increases. These results suggest that hypernuclei may exist, if their binding energy is larger than the Coulomb repulsion energy described by\ref{eq:culomb_potential}.
+	
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.74 \linewidth]{pictures/binding_energy.jpg}
+		\caption{ The figure show the binding energy in symmetric nuclei with the parameter assumed for each atomic number for each ensemble. The binding energies are calculated from the folding potentials for $\Lambda_c$ hypernuclei by using the Gaussian expansion method. The folding potentials are constructed from the spin-independent central potential of the $\Lambda_c$N system}
+		\label{fig:binding_energy}
+	\end{figure}
+	
+	It's interesting to confront energy expectation taking into account also the Culomb repulsion, the result is reported in figure \ref{fig:binding_culomb}. It's possible to see that only the system with lower atomic number could eventually exist.
+	
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.74 \linewidth]{pictures/binding_culomb.jpg}
+		\caption{ The figure show the expectation value of folding potential for Coulomb force in $\Lambda_c$ hypernuclei (Blue). The expectation values are calculated from the binding solution of the $\Lambda_c$c hypernuclei for Ensemble 3 ($m_\pi$≃ 410 MeV). For comparison, the binding energy of $\Lambda_c$ hypernuclei (Green) and sum of them (Red) are also plotted.}
+		\label{fig:binding_culomb}
+	\end{figure}
+	 
+	
+	
 	
 	The binding energy of $\Lambda_c$ hypernuclei has been analyzed in \ref{pot_simulation} using the HAL QCD for $m_\pi$ = 410 MeV. 
 	

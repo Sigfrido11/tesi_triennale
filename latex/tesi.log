@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.10)  14 MAR 2025 16:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.11)  14 MAR 2025 19:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -39,9 +39,9 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
 Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language38). Reported on input line 105.
+(babel)             (\language11). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language38). Reported on input line 108.
+(babel)             (\language11). Reported on input line 108.
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
 Package babel Info: Importing font and identification data for english
@@ -1227,56 +1227,20 @@ LaTeX Warning: Citation 'tab:par-resume' on page 11 undefined on input line 222
 .
 
 
-! LaTeX Error: Illegal character in array arg.
+! Package caption Error: \caption outside float.
 
-See the LaTeX manual or LaTeX Companion for explanation.
+See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.224   	\begin{tabular}{cols}
-                              
-You're in trouble here.  Try typing  <return>  to proceed.
+l.231 		\caption
+                {The table resume the typical value of the parameter present...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Illegal character in array arg.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.224   	\begin{tabular}{cols}
-                              
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Unicode character − (U+2212)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.229 ... view, it is negligible for the hadron−
-                                                  hadron interaction. Lattic...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character − (U+2212)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.235 ...ams contributing to the charmed baryon−
-                                                  nucleon interaction. The f...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1287,248 +1251,49 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [11]
+
+! LaTeX Error: Unicode character − (U+2212)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.240 ...ams contributing to the charmed baryon−
+                                                  nucleon interaction. The f...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
 <pictures/charmed_nucleos_interaction.png, id=59, 1009.7725pt x 284.06125pt>
 File: pictures/charmed_nucleos_interaction.png Graphic file (type png)
 <use pictures/charmed_nucleos_interaction.png>
 Package pdftex.def Info: pictures/charmed_nucleos_interaction.png  used on inpu
-t line 239.
+t line 244.
 (pdftex.def)             Requested size: 276.60573pt x 77.8115pt.
 
-
-LaTeX Warning: Citation 'pot_simulation' on page 12 undefined on input line 245
+LaTeX Warning: Citation 'pot_simulation' on page 12 undefined on input line 250
 .
 
 
 LaTeX Warning: Reference `fig:radial_potential_1s' on page 12 undefined on inpu
-t line 245.
+t line 250.
 
 
 LaTeX Warning: Citation 'fig:fig:radial_potential_3s' on page 12 undefined on i
-nput line 245.
-
-! Missing { inserted.
-<to be read again> 
-                   $
-l.245 ...e potential is weaker than the $\Lambda_$
-                                                  N system.
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.245 ...e potential is weaker than the $\Lambda_$
-                                                  N system.
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+nput line 250.
 
 <pictures/radial_potential_1s.jpg, id=60, 246.58524pt x 179.37415pt>
 File: pictures/radial_potential_1s.jpg Graphic file (type jpg)
 <use pictures/radial_potential_1s.jpg>
 Package pdftex.def Info: pictures/radial_potential_1s.jpg  used on input line 2
-51.
+57.
 (pdftex.def)             Requested size: 131.58595pt x 95.72198pt.
-
-! LaTeX Error: Unicode character ≃ (U+2243)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.252 ... and for $m_\pi$ ≃ 410 MeV case (Red).}
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≃ (U+2243)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.252 ... and for $m_\pi$ ≃ 410 MeV case (Red).}
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≃ (U+2243)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.252 ... and for $m_\pi$ ≃ 410 MeV case (Red).}
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≃ (U+2243)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.252 ... and for $m_\pi$ ≃ 410 MeV case (Red).}
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≃ (U+2243)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.252 ... and for $m_\pi$ ≃ 410 MeV case (Red).}
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≃ (U+2243)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.252 ... and for $m_\pi$ ≃ 410 MeV case (Red).}
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
 File: pictures/radial_potential_1s.jpg Graphic file (type jpg)
 <use pictures/radial_potential_1s.jpg>
 Package pdftex.def Info: pictures/radial_potential_1s.jpg  used on input line 2
-58.
+64.
 (pdftex.def)             Requested size: 146.2076pt x 106.35806pt.
-
-! LaTeX Error: Unicode character ≃ (U+2243)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.259 ... and for $m_\pi$ ≃ 410 MeV case (Red).}
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≃ (U+2243)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.259 ... and for $m_\pi$ ≃ 410 MeV case (Red).}
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≃ (U+2243)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.259 ... and for $m_\pi$ ≃ 410 MeV case (Red).}
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≃ (U+2243)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.259 ... and for $m_\pi$ ≃ 410 MeV case (Red).}
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≃ (U+2243)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.259 ... and for $m_\pi$ ≃ 410 MeV case (Red).}
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≃ (U+2243)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.259 ... and for $m_\pi$ ≃ 410 MeV case (Red).}
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-! Missing { inserted.
-<to be read again> 
-                   $
-l.264 	The weaker potential than $\Lambda_$
-                                           N could be explained from followi...
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.264 	The weaker potential than $\Lambda_$
-                                           N could be explained from followi...
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-! LaTeX Error: Unicode character Λ (U+039B)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.266 ... be caused by the K meson exchange for Λ
-                                                  N interaction [6]. In the ...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1539,41 +1304,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [12 <./pictures/charmed_nucleos_interaction.png>]
 
-! LaTeX Error: Unicode character Λ (U+039B)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.267 ... sizable contribution to the effective Λ
-                                                  N interaction. In the syst...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-! Missing { inserted.
-<to be read again> 
-                   $
-l.270 ...the S wave phase shifts of the $\Lambda_$
-                                                  N system are very similar ...
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.270 ...the S wave phase shifts of the $\Lambda_$
-                                                  N system are very similar ...
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
 ! LaTeX Error: Unicode character − (U+2212)
                not set up for use with LaTeX.
 
@@ -1581,15 +1311,11 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.274 ...ing applications of the charmed baryon−
+l.284 ...ing applications of the charmed baryon−
                                                   nucleon interaction is the...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
-
-
-LaTeX Warning: Reference `pot_simulation' on page 13 undefined on input line 27
-4.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1602,6 +1328,61 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [13{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./pictures/rad
 ial_potential_1s.jpg>]
 
+LaTeX Warning: Reference `eq:culomb_potential' on page 14 undefined on input li
+ne 293.
+
+<pictures/binding_energy.jpg, id=70, 235.16658pt x 180.675pt>
+File: pictures/binding_energy.jpg Graphic file (type jpg)
+<use pictures/binding_energy.jpg>
+Package pdftex.def Info: pictures/binding_energy.jpg  used on input line 297.
+(pdftex.def)             Requested size: 292.4152pt x 224.66599pt.
+
+LaTeX Warning: File `pictures/binding_culomb.jpg' not found on input line 306.
+
+
+! Package pdftex.def Error: File `pictures/binding_culomb.jpg' not found: using
+ draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.306 ... \linewidth]{pictures/binding_culomb.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Unicode character ≃ (U+2243)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.307 ... and sum of them (Red) are also plotted.}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ≃ (U+2243)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.307 ... and sum of them (Red) are also plotted.}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+LaTeX Warning: Reference `pot_simulation' on page 14 undefined on input line 31
+4.
+
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -1609,7 +1390,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[14]
+[14 <./pictures/binding_energy.jpg>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1629,7 +1410,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [16]
 
-LaTeX Warning: Empty bibliography on input line 299.
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[17]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[18]
+
+LaTeX Warning: Empty bibliography on input line 339.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1639,7 +1438,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[17] (./tesi.aux)
+[19] (./tesi.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -1661,13 +1460,13 @@ Package logreq Info: Writing requests to 'tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27464 strings out of 474222
- 558226 string characters out of 5748732
- 1941975 words of memory out of 5000000
- 49294 multiletter control sequences out of 15000+600000
- 573084 words of font info for 99 fonts, out of 8000000 for 9000
+ 27506 strings out of 474222
+ 559663 string characters out of 5748732
+ 1943975 words of memory out of 5000000
+ 49335 multiletter control sequences out of 15000+600000
+ 573253 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 101i,11n,107p,2322b,1794s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,12n,107p,2322b,1794s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/tex
@@ -1681,13 +1480,14 @@ onts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/te
-xmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on tesi.pdf (17 pages, 474759 bytes).
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texmf/fo
+nts/type1/public/cm-super/sfrm1200.pfb>
+Output written on tesi.pdf (19 pages, 667010 bytes).
 PDF statistics:
- 154 PDF objects out of 1000 (max. 8388607)
- 95 compressed objects within 1 object stream
+ 168 PDF objects out of 1000 (max. 8388607)
+ 103 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 28 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
