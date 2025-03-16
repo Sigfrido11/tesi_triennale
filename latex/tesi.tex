@@ -113,7 +113,6 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	Testo dell'introduzione...
 	
 	\newpage
-	
 	\chapter{Introduction}
 	
 	Recent development of hadron spectroscopy revealed that there may exist various molecular bound states of hadrons (observed as hadron resonances) . In particular, the observation	of the unexpected X, Y, and Z mesons and the follow by theoretical studies indicates that heavy quark molecules are more plausible. This can be understood from the balance between the kinetic term and the potential in the Hamiltonian: a heavier system has a smaller kinetic
@@ -138,6 +137,306 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	ing energy and the potential-well depth of charmed hypernuclei based on one-boson exchange
 	%potentials for the charmed baryon−nucleon interaction [18–22]. The current experimental
 	prospects have reinvigorated studies of the low-energy YcN interactions
+	
+	
+	\chapter{concepts of quantum chromodynamics (QCD)}
+	Before talking about heavy-ion collision we can introduce some concepts of quantum chromodynamics (QCD). This theory is the most successful one to explain the strong interaction, one of the four fundamental interaction assumed in the standard model (SM), between quarks mediated by gluons. It takes it's name because it introduces a property called color, the QCD analog of electric charge. Gluons are the force carriers of the theory, just as photons are for the electromagnetic force in quantum electrodynamics. 
+	First hint about the real existence of color charge was given with the discovery of $\Delta^{++}$ baryon in 1951.  This baryon could be explained only imaging that it is composed of three quark u with the spin aligned observing it's mass end it's spin. so the configuration of the particle could be written as follows 
+	\[
+	|\Delta^{++}\rangle = | u_{\uparrow} u_{\uparrow} u_{\uparrow} \rangle
+	\]
+	A highly symmetric configuration. However, since the the particle is a fermion, it must have an overall antisymmetric wave function. In 1965, fourteen years after its discovery, this was finally understood by the introduction of colour as a new quantum number associated with the	lie group SU(3). With this new parameter we can add another inner space associated to the particle ad is configuration can be written
+	\[
+	|\Delta^{++}\rangle = | u_{\uparrow} u_{\uparrow} u_{\uparrow} \rangle \, \epsilon_{ijk} \, \left[ C_i \otimes C_j \otimes C_k \right]
+	\]
+	where $\epsilon_{ijk}$ is the Ricci's tensor. Many other strong support of the assumption had been discovered with the passing of time. Quantum Chromodynamics is based on the gauge group SU(3), the Special Unitary group in 3	(complex) dimensions, whose elements are the set of unitary 3 × 3 matrices with determinant one. Since there are 9 linearly independent unitary complex matrices, the condition on the determinant reduced the set at 8 independent directions in this matrix space, corresponding to eight different generators of the group.  The Lagrangian density of QCD is
+	\begin{equation}
+		\mathcal{L}= \bar{\psi}^i_q(i\gamma^\mu)(D_\mu)_{ij}\psi^j_q- m_q \bar{\psi}^i_q \psi_{iq}-\frac{1}{4} F^a_{\mu \nu} F^{a\mu \nu}
+		\label{eq:QCD_lagrangian}
+	\end{equation} 
+	where $\psi^j_q$ denotes a quark field with colour index, $\gamma^\mu$ is a Dirac matrix that expresses the vector nature of the strong interaction, with $\mu$ being a Lorentz vector index, $m_q$, the mass of the quark, allows for the possibility of non-zero quark masses, $F^a_{\mu \nu}$ is the gluon field strength tensor for a gluon and $D_\mu$ is the covariant derivative in QCD given by $(D_\mu)_{ij}= \delta_{ij} \partial_\mu - ig_s t^a_{ij} A^a_\mu$, with $g_s$ the strong coupling \cite{Skands_2013}.
+	The QCD at low transferred momentum is not perturbative ad so obtain analytical results is extremely difficult, fortunately when the transferred momentum became larger strong coupling decrease and the theory could be tested. This property has been discovered by Gross,Wilczek and Politzer and take the name of asymptotic freedom \cite{DAVIDPOLITZER1974129}. %aggiungi l'equazione del running della forza forte (già scritta in fondo e parla dei jets)
+	
+	However in typical nuclear condition the energy are too low for permit perturbative calculation but the physicist believe that a direct consequence of the theory is the confinement of hadrons, well supported by the experimental data, that exclude the possibility of find free quark. A formal proof had not been yet obtained and this problem has been added to the list of the Millennium Prize Problems. For our discussion the Polyakov loop operator gets a particular importance. 
+	\begin{equation}
+		L=\frac{1}{3} Tr \left(P e^{ig \int_{0}^{\beta} d\tau A_4(\vec(x),\tau) } \right)
+		\label{eq:Polyakov-loop}
+	\end{equation}
+	Where P is the path-ordering operator and $A-4$ is the Euclidean temporal component of the gauge field and $\beta= \frac{1}{T}$, T temperature. A vanishing thermal expectation value $\left<L\right>$ of the Polyakov loop operator thus indicates infinite energy for a free quark, i.e. quark confinement. Studying the equation became evident that as the temperature increases $\left<L\right>$ increases rapidly to a nonzero value at high temperatures. This indicates that quark confinement is broken at the corresponding critical temperature $T_cr$. In the absence of quark	masses the equation \ref{eq:QCD_lagrangian} is chirally symmetric. Since the up and down quark masses are very small, neglecting them is a good approximation. The nonvanishing chiral condensate at T = 0 breaks this chiral symmetry and generates a dynamic mass, the so called “constituent” masses. In vacuum this mass are thus about 300 MeV for the up and down quarks, about 450 MeV for the strange quark and 1.5 Gev for the charm, 4.5 Gev for bottom and 180 Gev for top. The dynamically generated mass disappeared at $T_cr$ , making the quarks light again and restoring the approximate chiral symmetry of QCD. The dissolution of massive hadrons into almost massles quarks and gluons at $T_cr$ leads to a very rapid rise of the energy density near the deconfinement transition, as shown in figure \ref{fig:deconfinement}.
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=0.7\linewidth]{pictures/deconfinement.png}
+		\caption{The symbol $\epsilon$ stands fo energy density, the curves labelled “2 flavour” and “3 flavor” were calculated for two and three light quark flavors, “2+1 flavour” indicates a calculation for two light and one heavier strange quark flavor.}
+		\label{fig:deconfinement} 
+	\end{figure}
+	For a massless gas of quarks and gluons the energy density is proportional to $T^4$.  We see that for T < 4$T_cr$ the data remain about 20\% below this Stefan-Boltzmann	limit. Instead near $T_cr$ the ratio $\epsilon$/T 4 drops rapidly by more than a factor 10. This is due to hadronization. The much heavier hadrons are exponentially suppressed below $T_cr$, leading to a much smaller number of equivalent massless degrees of freedom. The dependence of $T^4$ is particularly important because for exceed the critical temperature by only 30\% in order to reach the upper edge of the transition region, an energy density $\epsilon \approx$  3.5 GeV/$fm^3$ is required and to reach 2$T_cr$ the energy density needed arrived at 23 GeV/$fm^3$ \cite{heinz2004conceptsheavyionphysics}.
+	
+	\subsection{The QCD phase diagram}
+	In QCD we have seen that the only viable option to free the hadron constituents is to increase significantly the energy scale of the system by compression or by heating. At this high energy regime hadronic matter melts releasing its elementary degrees of freedom (quark and gluons) in a way which is analogous to a phase transition. A simple description of the phases of nuclear matter is given in Fig \ref{fig:QCD_phase_diagram}. In order to gain insight	into the dynamics of the QCD phase, many studies were performed by using lattice QCD	calculations. 
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=0.7\linewidth]{pictures/QCD_phase_diagram.jpg}
+		\caption{A sketched view of the phase diagram of strongly interacting matter, in the plane of temperature and the baryon chemical potential that represents the amount of net baryon charge available in the system}
+		\label{fig:QCD_phase_diagram} 
+	\end{figure}
+	The Quark Gluon Plasma (QGP) is hottest and most dense liquid known to humankind and according to the most widely accepted cosmological model, the $\Lambda$CDM, where the condition of our universe only few microseconds after the Big Bang. The chemical potential is a thermodynamic coordinate like the temperature, which can be best understood as the energy required by the system to change its chemical composition . It is tightly connected with the density of quarks: when the former is zero, the latter is zero as well. \cite{QCDPhase-Diagram}. Particularly problematic is the study of the diagram when $\mu_B$ approaches 0, like in the condition of the primordial universe. Lattice QCD tells us that even for realistically small up and down quark masses the transition at $\mu_B$ = 0 is most likely not a sharp phase transition but a rapid crossover as shown in Fig \ref{fig:QCD_phase_diagram}.  At low temperatures and asymptotically large baryon densities quarks are also deconfined, although not in a quark-gluon plasma state but rather in a
+	color superconductor, in these state matter carries color charge without loss, analogous to the conventional superconductors that can carry electric charge without loss. The superconducting state is separated from the QGP by a first order transition at a critical temperature estimated to be of order 30-50 MeV.  Unfortunately, one cannot use heavy-ion collisions to compress nuclear matter without producing a lot of entropy and therefore also heating it; hence it seems impossible to probe with them the color superconducting phase \cite{heinz2004conceptsheavyionphysics}.
+	
+	\subsection{The different stage of a heavy-ion collision}
+	The main stages of relativistic heavy-ion collisions are: Pre-equilibrium, thermalization, Chemical freeze-out, and	decoupling. This section came mainly from \cite{heinz2004conceptsheavyionphysics} and \cite{amsdottorato9036}.
+	\begin{enumerate}
+		\item Pre-equilibrium (t < 1 fm/c): the two nuclei just collided. The partons of every
+		participating nucleon interact producing a large amount of quarks and gluons. The system is now formed by a dense inhomogeneous droplet of strongly interacting QGP matter. In the very early collision stages the momentum transferred is huge and the particle production can be calculated in perturbative QCD. However the strong force is the first that manifest it's effect. According to the Heisemberg uncertainty relation the production happens on a time scale $t \sim \frac{1}{\sqrt[2]{Q^2}}$, where Q is the momentum transfers. The key difference between elementary particle and nucleus-nucleus collisions is that the quanta created in the primary collisions between the incoming nucleons can’t right away escape into the surrounding vacuum, but rescatter of each other. In a central collision between two Pb or Au nuclei the nuclear reaction zone has a transverse diameter of about 12 fm, so a hard particle created near the edge and moving towards the center needs 12 fm/c before it emerges on the other side. During this time the matter thermalizes, expands, cools down and almost reaches decoupling. It does so by scattering off the evolving medium and losing energy which can be measured. The energy loss is proportional to the density of the medium times the scattering cross section between the probe and the medium constituents, integrated along the probe’s trajectory. Other probes of the early collision stage are direct photons, either real or virtual, and other process connected to QED such the creation of a couple lepton-antilepton generally known as “dileptons”.  In contrast to all hadronic probes, they thus escape from the collision zone without reinteraction and carry pristine information about the momentum distributions of the particle that generated them. Unfortunately, the directly emitted photons and dileptons must be must be searched in a huge background of indirect photons and particle generated in other process, This renders the measurement of these clean electromagnetic signals difficult. %controlla sia l'interazione forte la prima ad intervenire
+		
+		\item  Thermalization ($t \sim 1 \div10$ fm/c): the medium reaches thermal equilibrium thanks to the many interactions and the formations of new parton. The produced partons rescatter both elastically and inelastically. Both types of collisions lead to equipartitioning of the deposited energy, but only the inelastic collisions change the “chemical” composition of the medium by changing the flavor of partons. The system, now in equilibrium, builds an internal pressure that finds no opposition by the void that surrounds it. This leads to a rapid expansion of the system together with a decrease in the temperature. As the temperature lowers, the system energy density is not able to keep partons separated and hadrons start to form when the energy density approach $\epsilon \approx$  1 GeV/$fm^3$. During this phase transition the entropy density drops because of the recombination. However the total entropy cannot decrease this implies that the fireball volume must increase by a large factor while the temperature remains approximately constant. Since the recombination take times the systems spend significant time near $T_cr$.
+		
+		\item Chemical freeze-out: when the temperature decreases enough inelastic interactions among hadrons have completely stopped and only the (pseudo-)elastic one occur. This happen because at this point the matter becomes so dilute that the average distance between hadrons exceeds the range of the strong interactions. The hadrons abundance "freeze out" but the creation of some resonance is however possible but such processes don’t change the finally observed chemical composition. Since most of the	hadrons in a relativistic fireball are pions, very light particle $m_\pi \sim 140$ MeV, resonances with them are very efficient in keeping the system in thermal equilibrium.
+		
+		\item Kinetic freeze-out: at this stage the hadrons,including the then present unstable resonances, start to decouple from the medium as the temperature lowers and the mean free path becomes larger than the mean distance	between hadrons. This results in a complete stop of all interactions. Now the repartition of the kinetic energy among all hadrons has stopped and	the transverse momentum spectrum is approximately exponential. The unstable resonances decay in particle with smaller transverse momenta. Since most resonances decay by emitting a pion, this effect is particularly important for the pion spectrum which at low $p_\perp$ are completely dominated by decay products. 
+		
+	\end{enumerate}
+	A graphical resume of the process is visible in Fig \ref{fig::collision_stage} and \ref{fig:collision_stage_mikowsky}
+	
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=0.6\linewidth]{pictures/collision_stage.png}
+		\caption{A sketched view of the phase of the system after the collision}
+		\label{fig::collision_stage} 
+	\end{figure}
+	
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=0.4\linewidth]{pictures/collision_stage_mikowsky.png}
+		\caption{Evolution of a central heavy ion collision in a Minkowski-like plane. The two scenarios with and without QGP are pointed out. The critical temperature is indicated by $T_c$, while the freeze-out and chemical freeze-out temperatures, are pointed out with $T_{fo}$, and $T_{ch}$, respectively \cite{EvolutionofcollisionsandQGP}.}
+		\label{fig:collision_stage_mikowsky} 
+	\end{figure}
+	
+	\chapter{Thermal model}
+	\subsection{hydrodynamical description}
+	This section resume the information of \cite{heinz2004conceptsheavyionphysics}, \cite{phdthesis}, \cite{Cooper-Frye}.
+	
+	The fireball can be approximately described as an ideal fluid if the microscopic scattering time scale is much shorter than any macroscopic time scale associated with the fireball evolution. 	Hydrodynamics becomes applicable when the mean free path of the particles is much smaller than the system size, and allows for a description of the system in terms of	macroscopic quantities.The hydrodynamic equations require knowledge of the equation of state that in this case must connect the pressure, the energy density and baryon density. Hydrodynamics is the ideal language for relating observed collective flow phenomena because it allows ad description of the hadronization phase transition without any need for a microscopic description. 
+	
+	For define the collective flow we can consider any space-time point in the fireball and considered an infinitesimal volume associate with the point. So the flow velocity can be expressed by $\vec{v}(x) =\frac{\vec{P}}{P^0}$, where $\vec{P}$ is the mean 3-momentum of the particle in the volume and $P^0$ is the mean energy in quadrivectorial formalism. With $\vec{v}(x)$ we can associate a normalized velocity $u^\mu=\gamma(\,\vec{v}(x)= \frac{1}{\sqrt[2]{1-v(x)^2}})$ In the same manner it's we define T(x) the average local temperature and the $\mu_i$, the chemical potential of the i-th particle species.  It's possible to separate the flow velocity into its components along the beam direction (“longitudinal flow” $\vec{v}_l(x)$) and in the plane perpendicular to the beam (“transverse flow” $\vec{v}_\perp(x)$). From now on we use the unit c=1, $\hbar$=1. In this case the phase-space distribution of particles of type i is given by the Lorentz covariant local equilibrium distribution
+	\begin{equation}
+		f_{i,eq}(x,p)=\frac{g_i}{e^{(p \cdot u - \mu_i)/T} \pm 1} = g_i \sum_{n=1}^{\infty} (\pm)^{n} e^{n(p \cdot u - \mu_i)/T}
+		\label{eq:boltzmann}
+	\end{equation}
+	Here gi is a spin-isospin-color-flavor-etc. degeneracy factor which counts all particles with the same properties. The factor $p \cdot u$ is the energy of the particle in the local rest frame. The $\pm$1 in the denominator accounts for the proper quantum statistics of particle (-1 for fermions and +1 for boson). The Boltzmann approximation corresponds to keeping only the first term in the sum over n in the last expression. In our applications this is an excellent analytical approximation for all hadrons except for the pion because of their mass.
+	
+	At relativistic energies it is convenient to parametrize the longitudinal flow velocities and momenta in terms of rapidities, $\eta= \frac{1}{2} ln \frac{1+v}{1-v}$ in this way $v = tanh \eta$. It's also possible to define $\eta_l = \frac{1}{2} ln \frac{1+v_l}{1-v_l}$ and y = $\frac{1}{2} ln \frac{1+\frac{p_l}{E}}{1-\frac{p_l}{E}}= \frac{1}{2} ln \frac{E+p_l}{E -p _l}$.  Bjorken argued that at asymptotically high energies the physics of secondary particle production should be independent of the longitudinal reference frame. Furthermore, the boost-invariance of these initial conditions is preserved in longitudinal proper time if the system expands collectively along the longitudinal direction, in this approximation hold $\eta=\eta_l$. For more detail see \cite{PhysRevD.27.140}. The Bjorken scaling approximation is expected to be good at high energies and not too close to the beam and target rapidities, i.e. in safe distance from the longitudinal kinematic limits. Whit Bjorken intuition.
+	\begin{equation}
+		p \cdot u(x) = \gamma_\perp(\vec{r}_perp, \tau) \left(m_perp cosh(y-\eta) - \vec{p}_\perp \cdot \vec{v}_perp(\vec{r}_perp, \tau) \right)
+		\label{eq:p*u}
+	\end{equation}
+	Where $\vec{r}_perp=(x,y)$, $m_\perp=\sqrt{m^2 + p_\perp^2}$ is the transverse mass, $\tau=\sqrt{t^2-z^2}$ is the longitudinal proper time and z the longitudinal position. 
+	
+	\subsubsection{The Cooper-Frye formula}
+	
+	Suppose we want to count the total number of particles of species i after produced in the collision. Since this number does not depend on the reference frame of the observer, we must be able to express it in a Lorentz-invariant way. We define a three-dimensional hypersurface $\Sigma$(x) in 4-dimensional space-time along which we perform the counting. Different choices for the 3-dimensional hypersurface $\Sigma$ are possible as long as it completely closes off the future light cone emerging from the collision point. We count particles crossing the surface by subdividing it into infinitesimal elements $d^3 \sigma$, defining an outward-pointing 4-vector $d^3 \sigma_\mu$(x) perpendicular to $\Sigma$(x) at point x with the magnitude $d^3 \sigma$. Introducing the 4-vector $j^\mu_i$ describing the current of particles i through point x, and summing over all the infinitesimal hypersurface elements we get
+	
+	\begin{equation}
+		N_i = \int_{\Sigma} d^3 \sigma_\mu (x) j_i^\mu(x) = \int_{\Sigma} d^3 \sigma_\mu (x) \left( \frac{1}{(2\pi)^3} \int \frac{d^3 p}{E} p^\mu f_i(x,p)  \right)
+		\label{eq:particle_number}
+	\end{equation}
+	Where $j_i^\mu(x)$ is given in terms of the Lorentz-invariant phase-space distribution (giving the probability of finding a particle with momentum p at point x) by multiplying it with the velocity $\frac{p^\mu}{E}$ and integrating over all momenta with measure $\frac{d^3 p}{(2\hbar\pi)^3}=\frac{d^3 p}{(2\pi)^3}$. We finally obtain the Cooper-Frye formula
+	\begin{equation}
+		E \frac{dN_i}{d^3 p}= \frac{dN_i}{dy p_\perp dp_\perp d\phi_p} = \frac{dN_i}{dy m_\perp dm_\perp d\phi_p} = \frac{1}{(2\pi)^3} \int_{\Sigma} p \cdot d^3 \sigma_\mu (x) f_i (x,p)
+		\label{eq:cooper-frye}
+	\end{equation}
+	with $\phi_p$ is the azimuthal angle. To compute the measured momentum spectrum we can therefore replace the surface $\Sigma$ corresponding to the detector by shrinking it to the smallest and earliest surface that still encloses all scattering processes. We call this the “surface of last scattering” or “freeze-out surface” $\Sigma_f$. The the number of particles obtained from the Cooper-Frye formula is not always positive-definite. Physically negative contributions of the Cooper-Frye formula are particles that stream backwards into the hydrodynamical region. It's possible to compare the negative contribution with the total number particles crossing the transition hypersurface. It is found that the number of underlying inward crossings is much smaller than the one the Cooper-Frye formula gives under the assumption of equilibrium distribution functions. 
+	
+	to compute the measured momentum spectrum requires knowledge of the phase-space distribution on the surface of last scattering If the system expands very fast, its density decreases rapidly and the mean free path of the particles growth quickly. The transition from strong coupling to free-steaming thus happens in a short time interval. During this short time it is unlikely that the phase-space distribution undergoes qualitative changes, and we may approximate $f_i(x, p)$ on the last scattering surface by its thermal equilibrium form that it still had just a little earlier. In this section we report only the final result but the proof could be find in the appendix.
+	\begin{equation}
+		\frac{dN_i}{dy \, m_\perp \, dm_\perp \, d\phi_p} = \frac{g_i}{\pi} \int_{0}^{\infty} r_\perp \, dr_\perp \, n_i(r_\perp) \left[ m_\perp K_1 \left( \frac{m_\perp \cosh(\rho(r_\perp))}{T(r_\perp)}\right) I_0 \left( \frac{p_\perp \sinh(\rho(r_\perp))}{T(r_\perp)} \right) - p_\perp \frac{\partial \tau}{\partial r_\perp} K_0 \left( \frac{m_\perp \cosh(\rho(r_\perp))}{T(r_\perp)}\right) I_1 \left( \frac{p_\perp \sinh(\rho(r_\perp))}{T(r_\perp)} \right) \right]
+		\label{eq:momentum_cooper-frye}
+	\end{equation}
+	
+	Where appear the modified Bessel functions and $v_\perp= tanh \rho$. This formula is useful because it allows to easily perform systematic studies of the influence of the radial profiles of temperature, density and transverse flow on the transverse momentum spectrum, in order to better understand which features of a real dynamical calculation of these profiles control the shape of the observed spectra.
+	
+	\subsubsection{Transverse momentum spectra and freeze-out temperature}
+	For all hadrons is observed that $m_\perp/T >1$ so the modified Bessel function can be approximate in the following manner $K_\nu \sim e^{- \frac{m_\perp \cosh \rho}{T}}$. Since  temperature on the freeze-out hypersurface is approximately constant and that the freeze-out volume is controlled by the mean free path which is inversely proportional to the density, which itself is a steep function of temperature. At $r_\perp$ = 0 the radial flow velocity must vanish by symmetry but to larger $r_\perp$ typically rises	linearly. , it eventually reaches a maximum value and drops again to zero since the dilute tail of the initial density distribution freezes out early. Some simulated profile of grow are shown in the Fig \ref{fig:radial_flow} \cite{teaney2001hydrodynamicdescriptionheavyion}.
+	
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=0.4\linewidth]{pictures/radial_flow.png}
+		\caption{Radial flow rapidity profile $\rho(r_\perp)= y_T$ for central Au+Au collisions at RHIC, from hydrodynamic calculations employing three different equations of state \cite{EvolutionofcollisionsandQGP}.}
+		\label{fig:radial_flow} 
+	\end{figure}
+	
+	Different process can manifest, for example	at SPS energies the freeze-out surface moves from the edge inward since the fireball matter cools and freezes out faster than the developing radial flow can push it out. At LHC energies the much stronger radial flow generated by the much higher internal pressure makes the fireball grow considerably before suddenly freezing out after about 13 fm/c. 
+	For understand how the radial flow influence the spectra first consider the absence of flow ($\rho=0$), in this condition $I_q(0)=0$ so the equation \ref{eq:momentum_cooper-frye} reduced to
+	\begin{equation}
+		\frac{dN_i}{dy m_\perp dm_\perp} \sim m_\perp K_1(\frac{m_\perp}{T}) \sim m_\perp^{1/2} e^{- \frac{m_\perp}{T}}
+		\label{eq:vanish_rad_flow}
+	\end{equation}
+	In these condition as the temperature is the same for all hadron the spectra depend only on the transverse mass, a fact known as "$m_\perp$" scaling. As visible in the equation the temperature can be extracted easily. Instead if the radial flow is not vanishing approximating $p_\perp \approx m_\perp$ one get.
+	\begin{equation}
+		\frac{dN_i}{dy m_\perp dm_\perp} \sim  e^{- \frac{m_\perp (\cosh \rho - \sinh \rho)}{T}} =  e^{- \frac{m_\perp}{T_{slope}}}
+		\label{eq:no_vanish_rad_flow}
+	\end{equation}
+	With $T_{slope} = T \sqrt{\frac{1+v_\perp}{1-v_\perp}}$ It is most extreme for a thin shell expanding with fixed velocity (“blast wave”), shown in Fig \ref{fig:flow_spectra}, in which case for sufficiently large hadron mass and flow velocity the spectrum develops a blast wave peak at nonzero transverse momentum. In conclusion is possible to summarize these two important limits
+	
+	\begin{equation}
+		\text{Non relativistic:}\quad p_\perp \ll m_i \qquad T_{\text{i,slope}} \approx T_f + \frac{1}{2} m_i \langle v_\perp \rangle^2
+		\label{eq:T_norel_limit}
+	\end{equation}
+	\begin{equation}
+		\text{Relativistic:}\quad p_\perp \gg m_i \qquad T_{\text{slope}} = T \sqrt{\frac{1+v_\perp}{1-v_\perp}}
+		\label{eq:T_rel_limit}
+	\end{equation}
+	
+	
+	
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=0.4\linewidth]{pictures/flow_spectra.png}
+		\caption{Flow spectra for various hadrons as a function of $m_\perp-m_0$ where $m_0$ is their rest mass. The calculation assumes an infinitesimally thin shell of temperature T = 150 MeV expanding with $v_\perp$ = 0.9. The curve labelled "$\pi^+$ (all)” includes pions from resonance decays in addition to the thermally emitted pions.}
+		\label{fig:flow_spectra} 
+	\end{figure}
+	
+	\subsection{Elliptic flow}
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=0.4\linewidth]{pictures/elliptic_flow_collision.pdf}
+		\caption{Almond shaped interaction volume after a non-central collision of two nuclei. The spatial anisotropy with respect to the x-z plane (reaction plane) translates into a momentum anisotropy of the produced particles (anisotropic flow).}
+		\label{fig:elliptic_flow_collision} 
+	\end{figure}
+	this section come from \cite{Snellings_2011}, \cite{heinz2004conceptsheavyionphysics} \cite{Kolb_2000}. 
+	For central collisions between equal spherical nuclei, radial flow is the only possible type of transverse flow allowed by symmetry. In non-central collisions between this azimuthal symmetry is broken and anisotropic transverse flow patterns can develop. The overlap region of the two colliding nuclei is then spatially deformed in the transverse plane. Experimentally, the most direct evidence of flow comes from the observation of anisotropic flow which is the anisotropy in particle momentum distributions correlated with the reaction plane. The evolution of the almond shaped interaction volume is shown in Fig \ref{fig:time_evolution_perepheral} \cite{kolb2003hydrodynamicdescriptionultrarelativisticheavyion}. The contours indicate the energy density profile and the sequence show the time evolution from an almond shaped transverse overlap region into an almost symmetric system. This expansion happen at the speed of speed velocity $v_s=\sqrt{\frac{\partial p}{\partial \epsilon}}$. 
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=0.4\linewidth]{pictures/timeEvolutionPerepheral.pdf}
+		\caption{The created initial transverse energy density profile and its time	dependence in coordinate space for a non-central heavy-ion collision. The z-axis is along the colliding beams, the x-axis is defined by the impact parameter.}
+		\label{fig:time_evolution_perepheral} 
+	\end{figure}
+	In this situation the equation \ref{eq:cooper-frye} can be written using a Fourier expansion and introducing b, the impact parameter, in the form
+	\begin{equation}
+		E \frac{dN_i}{d^3 p}(b)= \frac{dN_i}{dy p_\perp dp_\perp d\phi_p} (b) = \frac{1}{2\pi} \frac{dN_i}{dy p_\perp dp_\perp} (b) \left(1 + 2 \sum_{n=1}^{\infty} v_2^i(p_\perp,b) \cos(n\phi_p) \right)
+	\end{equation}
+	In this Fourier decomposition, the coefficients $v^1$ and $v^2$	are known as directed and elliptic flow, respectively. The overlap region of the two colliding nuclei is then spatially deformed in the transverse, as visible in Fig \ref{fig:elliptic_flow_collision}, plane so the momentum space distribution changes in the opposite direction from being approximately azimuthally symmetric to having a preferred direction in the reaction plane. The asymmetry in momentum space can be quantified by the spatial ellipticity:
+	\begin{equation}
+		\epsilon_x(b)=\frac{\langle y^2 - x^2\rangle}{\langle y^2 - x^2\rangle}
+		\label{eq:anisotropy}
+	\end{equation}
+	As a function of time $\epsilon_x$ decreases, spontaneously due to free-streaming radial expansion (if no rescattering happens) or somewhat more quickly due to the development of elliptic flow (if rescattering occurs) which makes the system expand faster into the reaction plane than perpendicular to it. The first mechanism is a consequence of the Heisenberg uncertainty principle because if the definition in the position is higher the uncertainty on the linear momentum in the same direction is higher and the particle can move faster. Instead the elliptic flow is a consequence of the fact that there is high pressure in the interior of the reaction zone which falls off to zero outside. the pressure gradient is so steeper in the short direction, leading to stronger hydrodynamic acceleration. Hydrodynamics predicts that heavier particles gain more momentum than lighter ones, leading to the previously discussed flattening of their spectra at low transverse kinetic energies. It's possible to show that the spatial eccentricity decrease as a function of time in the following manner, the proof is in the appendix.
+	\begin{equation}
+		\frac{\epsilon_x(\tau_0 + \Delta \tau)}{\epsilon_x(\tau_0)} = \left[1+ \frac{(c \Delta \tau)^2}{\langle \vec{r}^2 \rangle_{\tau_0}} \right]^{-1}
+	\end{equation}
+	where $\tau_0$ is the time when the particles were created and $\langle \vec{r}^2 \rangle_{\tau_0}$ is the azimuthally averaged initial transverse radius squared of the reaction zone. So if thermalization is delayed by a time $\Delta \tau$ , any elliptic flow would have to build on a reduced spatial deformation and would come out smaller. It is also known from microscopic kinetic studies that for	a given initial spatial eccentricity the magnitude of the generated elliptic flow is a monotonic function of the mean free path that can be rewritten by the product of density and scattering cross section in the fireball.
+	
+	More recently, it was realized that small deviations from ideal hydrodynamics, in particular viscous corrections, already modify significantly the buildup of the elliptic flow. The shear viscosity determines how good a fluid is, however, for relativistic
+	fluids the more useful quantity is the shear viscosity over entropy ratio $\eta_v/s$. For perfect	fluids the ratio can be approximated by:
+	\begin{equation}
+		\frac{\eta_v}{s} \approx \frac{\hbar}{4\pi k_B}
+	\end{equation}
+	It is argued that the transition from hadrons to quarks and gluons	occurs in the vicinity of the minimum in $\eta_v/s$, just as is the case for the phase transitions	in helium, nitrogen, and water. The fact that the QGP behaves like an ideal fluid implies strong non-perturbative interactions in the quark-gluon plasma phase.
+	
+	
+	\subsection{Statistical Hadronisation Model (SHM)}
+	This section had been inspired by the folowing article \cite{becattini2009introductionstatisticalhadronizationmodel}, \cite{charm_hierarchy_in_the_statistical_hadronization_model} \cite{heinz2004conceptsheavyionphysics} \cite{amsdottorato9036}.
+	
+	The idea of applying statistical concepts to the problem of multi-particle production in high energy collisions dates back to a work of Fermi in 1950, who assumed that particles originated from an excited region evenly occupying all available phase space states. The microscopic description of the process in which thousand of quarks and gluons combine to form	thousands of final state hadrons is an impractical problem. Note that such a statistical approach has, of course, its limitations. In fact investigating correlations between pairs, triplets, quadruplets etc. of particles, because they all belong to a single collision and are not produced entirely independently. For example the momenta of thousand of particle emerging from the fireball must conserve the original momentum of the initially colliding nuclei probably generating non-statistical momentum correlations among considerably smaller subclusters of particles. So for describe this complex dynamical process, the Statistical Hadronisation Model (SHM) postulates that hadrons are formed from the decay of each cluster in a purely statistical way so. \fbox{Every multihadronic state localized within the cluster and compatible with conservation laws is equally likely.}
+		
+	The volume of the system created in	heavy-ion collisions is considerably larger than the partonic scale, this justifies the usage of a grand-canonical ensemble. Under these conditions the elementary volume under study can exchange both particles and energy with its surroundings meaning that the quantum numbers are conserved. In particular the volume of clusters is in a constant ratio with their mass when hadronization takes place.  In addition one has to consider the quantum behaviour of both fermionic and bosonic degrees of freedom that form the system. Quantum interference effects in the production of identical particles, the so-called Bose-Einstein correlations or Hanbury Brown-Twiss second-order interference would simply be impossible without a finite volume. The Bose-Einstein correlations (BEC) refer to a quantum mechanical phenomenon that arises due to the wave-like nature of bosonic particles and their tendency to occupy the same quantum state. Instead the Hanbury Brown and Twiss (HBT) effect is any of a variety of correlation and anti-correlation effects in the intensities received by two detectors from a beam of particles. HBT effects can generally be attributed to the wave–particle duality of the beam, and the results of a given experiment depend on whether the beam is composed of fermions or bosons. From statistical mechanics is known that hold
+	
+	\begin{equation}
+		\begin{subequations}
+			\begin{align}
+			\langle N \rangle = \frac{1}{\beta} \left( \frac{\partial lnZ}{\partial \mu_B}\right) \\
+		\end{align}
+	\end{subequations}
+	\begin{subequations}
+	\begin{align}
+				\langle E \rangle = - \left( \frac{\partial lnZ}{\partial \beta}\right) + \mu_B \langle N \rangle \\
+	\end{align}
+	\end{subequations}
+	\begin{subequations}
+		\begin{align}
+		\langle S \rangle = k_B \frac{\partial T \cdot lnZ}{\partial T} \\
+		\end{align}
+	\end{subequations}
+	\begin{subequations}
+		\begin{align}
+	P_{pressure} = \frac{1}{\beta} \left( \frac{\partial lnZ}{\partial V}\right) \\
+		\end{align}
+	\end{subequations}
+	\end{equation}
+	
+	Where E,S $P_{pressure}$, N, T and $k_B$ are respectively the energy, the entropy, the pressure, the number of particle the temperature and the Boltzmann constant, instead $\beta=\frac{1}{k_BT}$ and Z is the partition function that can be expressed in the following manner
+	\begin{equation}
+		ln Z_i(T,V,\mu_i)= \frac{\Delta V g_i}{2\pi^2\hbar^3} \int_{0}^{\infty} \theta_i p^2 dp ln(1+\theta_i e^{\beta(\mu_i-E)})
+		\label{eq:partition_function}
+	\end{equation}
+	$\theta_i$ is +1 for fermions and −1 for bosons. Global observables such as the
+	particle mean multiplicities can be derived from the previus equation:
+	\begin{equation}
+		\langle N \rangle = \frac{\Delta V g_i}{2\pi^2\hbar^3} \int_{0}^{\infty} dp \frac{p^2}{e^{\beta(\mu_i-E)}+\theta_i} 
+		\label{eq:particle_number}
+	\end{equation}
+	\begin{equation}
+	\langle S \rangle= -\sum_{K} \int_{\Delta V} \int \frac{d^3x d^3p}{(2\pi)^3} \left[f_i f_i ln f_i + \theta_i (1-\theta_if_i)ln(1-\theta_if_i) \right]
+		\label{eq:entropy}
+	\end{equation}
+	In this case the distribution is a bit different from the \ref{eq:boltzmann}.
+	\begin{equation}
+		f_{i,eq}(x,p)=\frac{g_i}{e^{\beta(\Delta V)(E_i-\mu_i(\Delta V))} +\theta_i} 
+		\label{eq:boltmann2}
+	\end{equation}
+	can be further developed the by considering the Eq \ref{eq:partition_function} Taylor expansion of the logarithmic part, the full derivation is given in the appendix.
+	\begin{equation}
+		ln Z_i(T,V,\mu_i)= \frac{\Delta V g_i}{2\pi^2\hbar^3\beta} \sum_{K} \frac{(\theta_i e^{\beta \mu_i})^k}{k^2} m_i^2K_2(k\beta m_i)
+		\label{eq:partition_function2}
+	\end{equation}
+	 
+	The definition of the chemical potential $\mu_i$ is strictly related to the processes at play and to the type of chosen ensemble.it became necessary in order to taking into account the possibility to have fluctuations of the number of particles of species i. This can happen because the volume can exchange particles with its surroundings, incrementing or decrementing the components of each species. This formulation corresponds to the grand-canonical ensemble which is the most commonly used in the description of heavy-ion collisions. For a given species i the chemical potential can be split into $\mu_i = B_i mu_B + S_i μ_S + Qi μ_Q$ , where $B_i$ , $S_i$ and $Q_i$ are respectively the baryon number, strangeness and electric charge while $μ_B$ , $μ_S$ and $μ_Q$ are the corresponding chemical potentials. For smaller systems, like happen for example in collision between proton or proton and other nucleos, the grand-canonical ensemble is no longer a good description of the system. In this case the volume created after the collision is considerably smaller and it is better to require the local conservation of quantum numbers and so the canonical formulation is more appropriate. it is worth mentioning that the transition from a canonical to a grand-canonical description effectively occurs when the cluster volume is of the order of 100 $fm^3$ at an
+	energy density of 0.5 GeV/$fm^3$. If the energy of the collision is not enough the strange quark and antiquark can be non thermalized. So we should add another therm to chemical potential, This term take the form $|s_i| \bar{mu_s}$ where $s_i$ is the total number of	strange quarks and antiquarks in hadron and $\bar{mu_s}$ the corresponding potential. However in heavy-ion collisions the s quarks can be fully thermalized. Equation \ref{eq:boltmann2} is a local thermal and chemical equilibrium distribution function. If the system could	be kept at constant volume, any type of strong interaction among the hadrons would leave this distribution unchanged since such microscopic processes again conserve energy, baryon number and strangeness. Instead from a kinematic point of view the equilibrium is not achieved as a result of hadronic rescattering but statistically by interference of many different hadron production channels. The achievement of kinematic equilibrium is due to two different types of processes. The first one is to take the system of hadrons with an arbitrary initial phase-space, that respect the constrain, distribution and let it evolve for a sufficiently long time to obtain the validity of the Eq. \ref{eq:boltmann2} as a result of the action of	elastic and inelastic processes among the hadrons, the kinetic equilibration. Or is possible to realize	statistical process which fills hadronic phase-space in the statistically most probable configuration. This	is statistical equilibrium. Both processes share the property that they lead to a state of Maximum Entropy.
+	However, statistical hadronization can produce a Maximum Entropy distribution through non-hadronic processes which occur much faster than any inelastic scattering among hadrons at the given energy and	baryon number density. %chiedi quali sono questi processi extra
+	
+	
+	Starting from measurements of the identified particle yields (dN/dy) in the light flavor sector by using the SHM approach one gains the access to the thermodynamic properties of the system created in the collision. In principle the more particle species are measured the better, in fact all particle that are produced at equilibrium can be used for this purpose. An example of such measurement for different particle species is given in Fig. \ref{fig:hadron_yelds}. It is possible to see that the large evolution in particle production and identify some key features:
+	\begin{itemize}
+		\item All particles and their corresponding anti-particles tend to be equally produced if the collision energy is high enough. This is especially true at LHC energies
+		\item Baryons (p and $\Lambda$) and mesons ($\pi$ and K) follow different behaviour with significant baryon/anti-baryon discrepancies at lower energies.
+		\item  When $μ_B$ is larger than 0 the baryonic number of the colliding nuclei is to be found in the products of the collision. At low energies, an important fraction of the initial colliding nucleons are found in the final state (large stopping power). For larger beam energies the colliding nuclei become almost transparent to each other (no baryon stopping). 
+		\item The production of $\Lambda$, similar to p, is affected by the non-zero $μ_B$ at low energies but the effect is reduced since it contains an s quark. At intermediate energies $\Lambda$ exhibits a decrease similar to that of p.
+		\item  At high energies, pions are the most abundant particle species produced
+		\item Particles containing s quarks are subject to a significant increase in their abundances above the SPS energies. This effect known as “strangeness enhancement” was historically identified as a signature typical of the QGP. This aspect will be discuss better later.
+		\item At high energies the production of particles with same mass but different quark content tends to be similar.
+	\end{itemize}
+
+
+	The SHM can be used to fit the measured dN/dy using only a limited number of parameters This allows to obtain quantities such as the chemical freeze-out temperature, the system volume V and the chemical potential $\mu_B$. Results Fig. \ref{fig:particle_abbundance} show how the best fit parameters to describe the data from Pb–Pb central collisions collected by the ALICE experiment at $\sqrt{s_{NN}}$ = 2.76 TeV are:	T = 156.5 $\pm$ 1.5 MeV, $μ_B$ = 0.7 $\pm$ 3.8 MeV, V = 5280 $\pm$ 410 $fm^3$ . The model is able to describe reasonably well measurements of yields which span over 9 order of magnitudes with a $\tilde{\chi}^2$ = 1.61 with a low number of free parameters. The largest tension is observed for p and p̄, reaching almost a 3σ deviation. \cite{Andronic_2017} In addition these results allow for a direct comparison with predictions from lattice QCD. Such comparison is resumed in Fig. \ref{fig:shm_qcd_comparison} where is possible to see that the curve is correctly described.
+	
+		\begin{figure}
+		\centering
+		\begin{minipage}{0.45\textwidth}
+			\centering
+			\includegraphics[width=0.74 \linewidth]{pictures/hadron_yelds.png}
+			\caption{ The energy dependence of experimenal hadron yields at	mid-rapidity for various species produced in central nucleus-nucleus collisions. The energy regimes for various accelerators are marked. Note that, for SPS energies, there are two independent measurements available for the $\Lambda$ hyperon yields. \cite{Andronic_2006}
+			\label{fig:hadron_yelds}
+		\end{minipage}
+		\begin{minipage}{0.5\textwidth}
+			\centering
+			\includegraphics[width=0.74 \linewidth]{pictures/particle_abbundance.png}
+			\caption{adron multiplicities in central (0-10\%) Pb–Pb collisions at the LHC, for different particles: $\pi^\pm, k^\pm, \phi, p, \bar{p}, \Lambda, \bar{\Lambda}, \Xi^-, \bar{\Xi}^+, \Omega, \bar{\Omega}^+, 3^He, 3^\bar{He}, 3^\Lambda_He, 3^\Lambda_\bar{He}, 4^\bar{He}$ \cite{Andronic_2017}}
+			\label{fig:particle_abbundance}
+		\end{minipage}%
+		\centering
+			\includegraphics[width=0.74 \linewidth]{pictures/shm_qcd_comparison.png}
+		\caption{ The a panel show (a) comparison between the Phase diagram of QCD with data points as obtained at different energies and the thermal model fits from SIS up to LHC data. The panel (b) show the evolution of the temperature of chemical freeze-out and the $\mu_B$ as a function of the $\sqrt{s_{NN}}$.\cite{Andronic_2017}}
+		\label{fig:shm_qcd_comparison}
+		
+	\end{figure}
+	
+	\subsection{Strangeness enhancement}
+
+	
+	
+	
+	
+	\FloatBarrier
+	$Y_c$N bound state}
 	
 	\subsection{One Boson exchange model}
 	Before the publications of Hideki Yukawa's papers in 1935 \cite{yukawa} physicists cannot explain the results of James Chadwick's atomic model, which consisted of positively charged protons and neutrons packed inside of a small nucleus, with a radius on the order of $10^{-14}-10^{-15}$ m. This because the electromagnetic forces at these lengths would cause these protons to repel each other and for the nucleus to fall apart. For these reason in 1932, Werner Heisenberg proposed a "Platzwechsel" (migration) interaction between the neutrons and protons inside the nucleus, in which neutrons were composite particles of protons and electrons. These composite neutrons would emit electrons, creating an attractive force with the protons, and then turn into protons themselves \cite{heisemerg}. The model just explained violate the linear and anglular momentum and for these reason Enrico Fermi in 1934 proposed the  proposed the emission and absorption of two light particles: the neutrino and electron, rather than just the electron. Some month later the soviet physicists Igor Tamm and Dmitri Ivanenko demonstrated that the force associated with the neutrino and electron emission was not strong enough to bind the protons and neutrons in the nucleus.
@@ -167,7 +466,7 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 		\label{eq:klein-gordon-final-sol}
 	\end{equation}
 	
-	after have rejectes the divergent solution. The equation \cite{eq:klein-gordon-final-sol} clarify that massive mediators gives short range interaction. A graphical representation of the phenomena is visible in the pictures, \ref{fig:one_boson_exchange}.
+	after have rejectes the divergent solution. The equation \ref{eq:klein-gordon-final-sol} clarify that massive mediators gives short range interaction. A graphical representation of the phenomena is visible in the pictures, \ref{fig:one_boson_exchange}.
 	\begin{figure}[ht]
 		\centering
 		\includegraphics[width=0.7\linewidth]{pictures/one_boson_exchange.png}
@@ -177,8 +476,6 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	Yukawa used his equation aslo to predict the mass of the mediating particle as about 200 times the mass of the electron $\sim 140$ Mev. Physicists called this particle the "meson," as its mass was in the middle of the leptons and barions. Yukawa's meson was found in 1947, and came to be known as the pion.
 	The model has been referred to as the "one-boson-exchange model" (OBE model) or the
 	"one-particle-exchange model". This model has presented a new possibility for the realistic understanding of nuclear forces. Basing on the Yukawa potential the Sakata \cite{sakata} model was created with the aim of giving a systematic understanding not only of the nucleon-nucleon interaction but	of other various strong reactions. In this model, mesons and baryons are considered as composite systems of the fundamental particles: proton (p), neutron (n) and $\lambda$-particle ($\lambda$), and their antiparticles. With other generalization these works predicted the existence of many resonance levels including the octet mesons now established and seemed to support the basic features of the Sakata model and it became clear from experiment that the wide-spread existence of these resonance levels is one of the fundamental features of the baryon-meson system. From analysis of pion production processes, etc., by the isobar model in which the resonance states are regarded as particles was noted that: The treatment of a resonance as an "elementary" particle has considerable applicability and the non-correlated final states play only a minor role. For these reason the strong interactions should be derived from the fundamental interactions between the fundamental particles, and the Yukawa interaction observed between pion and nucleon is regarded as an effective Hamiltonian which results from the fundamental interactions including all the higher order corrections on the system of composite particles. Higher order effect should not be taken for the Yukawa interaction as because such effects should be considered in the fundamental interaction, not for the model Hamiltonian. Furthermore	The	Yukawa interaction, as a model Hamiltonian, already contain some of the higher order effects of the fundamental interaction in a certain correlated form. In conclusion we cannot logically exclude the possibility that there may remain some higher order effects of the fundamental interactions not represented by the lowest order diagram and that the higher order of the model interaction might represent such parts. However, we are interested in the OBE model as a zeroth order trial. \cite{onebosonexchangepotentialmodelapproach}.
-	
-	
 	
 	
 	\subsection{$\Lambda_c$ N interaction}
@@ -212,24 +509,27 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	
 	\begin{equation}
 		V_{OGE}(\vec{r_{ij}}) = \frac{a_s}{4} \vec{\lambda_i^c} \cdot \vec{\lambda_j^c} \left[ \frac{1}{r_{ij}}- \frac{1}{4} \left(\frac{1}{2m_i^2} + \frac{1}{2m_j^2} + \frac{2 \vec{\sigma_i} \cdot \vec{\sigma_j}}{3 m_i m_j} \right) \frac{e^{-r_{ij}/r_0}}{r_0^2 r_{ij}} \frac{3 S_{ij}}{4m_i m_j r_{ij}^3} \right]
-		\label{eq:pi-potential}
+		\label{eq:one-gluon-exchange-potential}
 	\end{equation}
 	where $\vec{\label^c}$ are the SU(3) color matrices, $r_0= \hat{r_0}/\nu$ is a flavor-dependent regularization scaling	with the reduced mass $\nu$ of the interacting pair, and $\alpha_s$ is the scale-dependent strong coupling constant given by:
 	\begin{equation}
 		\alpha_s(\nu)= \frac{\alpha_0}{ln[(\nu^2+\mu_0^2)/\gamma_0^2]}
 		\label{eq:coupling}
 	\end{equation}
-	$\alpha_0$=2.118, $\mu_0$ =36.976 Mev and $\gamma_0$=0.113 $fm^-1$. the  equation \ref{eq:coupling} give rise $\alpha_s \sim 0.54$ for light quark and $\alpha_s \sim 0.43$ for uc pairs. The table resume all the parameter \cite{tab:par-resume}
+	$\alpha_0$=2.118, $\mu_0$ =36.976 Mev and $\gamma_0$=0.113 $fm^-1$. the  equation \ref{eq:coupling} give rise $\alpha_s \sim 0.54$ for light quark and $\alpha_s \sim 0.43$ for uc pairs. The table resume all the parameter \ref{tab:par-resume}
 	
-	\begin{tabular}{c c|c c}
-		$m_{u,d}$ (MeV) & 313 & $g_{ch}^2/ 4\pi$ & 0.54 \\
-		$m_{c}$ (MeV) & 1752 & $m_{\sigma} (fm^{-1})$ & 3.42 \\
-		$\hat{r_0}$ (Mev fm) & 28.170 &  $m_{\pi} (fm^{-1})$ & 0.70 \\
-		$\mu_c (fm^{-1})$ & 0.70 & $\Lambda (fm^{-1})$ & 4.2 \\
-		b (fm) & 0.518 & $a_c$ (MeV) & 230 \\
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{c c | c c}
+			$m_{u,d}$ (MeV) & 313 & $g_{ch}^2 / 4\pi$ & 0.54 \\
+			$m_{c}$ (MeV) & 1752 & $m_{\sigma} \, (fm^{-1})$ & 3.42 \\
+			$\hat{r_0}$ (MeV fm) & 28.170 &  $m_{\pi} \, (fm^{-1})$ & 0.70 \\
+			$\mu_c \, (fm^{-1})$ & 0.70 & $\Lambda \, (fm^{-1})$ & 4.2 \\
+			$b$ (fm) & 0.518 & $a_c$ (MeV) & 230 \\
+		\end{tabular}
+		\caption{The table summarizes the typical values of the parameters present in the previous equation.}
 		\label{tab:par-resume}
-		\caption{The table resume the typical value of the parameter present in the previous equation.}
-	\end{tabular}
+	\end{table}
 	
 	Finally, any model imitating QCD should incorporate confinement. Although it is a very important term from the spectroscopic point of view, it is negligible for the hadron-hadron interaction. Lattice QCD calculations suggest a screening effect on the potential when increasing the interquark distance which is modeled here by.
 	\begin{equation}
@@ -237,17 +537,17 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 		\label{eq:confinement}
 	\end{equation}
 	
-	The figures \ref{fig:one_boson_exchange} shows the different diagrams contributing to the charmed baryon−nucleon interaction. The first type of interaction, visible in (a) and (b), is mediated by the exchange of a boson between light quark or between a light ad heavy flavor. The second one instead take in account also the exchange of the identical light quark (c) and (d). The second possibility correspond to short range that contain one-gluon exchange contributions that are also missed in hadronic models.
+	The figures \ref{fig:one_boson_exchange} shows the different diagrams contributing to the charmed baryon-nucleon interaction. The first type of interaction, visible in (a) and (b), is mediated by the exchange of a boson between light quark or between a light ad heavy flavor. The second one instead take in account also the exchange of the identical light quark (c) and (d). The second possibility correspond to short range that contain one-gluon exchange contributions that are also missed in hadronic models.
 	
 	\begin{figure}[ht]
 		\centering
 		\includegraphics[width=0.7\linewidth]{pictures/charmed_nucleos_interaction.png}
-		\caption{ The vertical solid lines represent a light quark, u or d. The vertical thick solid lines represent the charm quark. The dotted horizontal lines stand for the exchanged boson. (a) Interaction between	two light quarks. (b) Interaction between the heavy and a light quark. (c) Interaction between	two light quarks together with the exchange of identical light quarks. (d) Interaction between the		heavy and a light quark together with the exchange of identical light quarks.}
+		\caption{ The vertical solid lines represent a light quark, u or d. The vertical thick solid lines represent the charm quark. The dotted horizontal lines stand for the exchanged boson. (a) Interaction between	two light quarks. (b) Interaction between the heavy and a light quark. (c) Interaction between	two light quarks together with the exchange of identical light quarks. (d) Interaction between the	heavy and a light quark together with the exchange of identical light quarks.}
 		\label{fig:charmed_nucleos_interaction} 
 	\end{figure}
 	
 	
-	A numerical simulation of the potential is described in \cite{pot_simulation} performed with lattice QCD with lattice spacing a =0.0907(13)fm and a physical lattice size of La=2.902(42)fm. In order to see the quark mass dependence of the potentials, the members of the study had employed three ensembles of gauge configurations. The hopping parameters of these ensembles are $\kappa_{ud}$ =0.13700 (Ensemble 1), 0.13727 (Ensemble 2), 0.13754 (Ensemble 3) for u, d-quarks. The figure \ref{fig:radial_potential_1s} show the $\lambda_c$N central potential in the $1^S_0$ channel for each ensemble with different mass considered for the pion. For Ensemble 1 $m_\pi \sim$ 700 Mev, $m_\pi \sim$ 570 Mev for Ensemble 2 and 410 Mev for Ensemble 3. They found a repulsive core at short distances (r < 0.5 fm) and an attractive one for intermediate distances (0.5 < r < 1.5 fm). They discovered also that the height of the repulsive core increases and the minimum of the attractive pocket shifts outward, as u, d quark masses decrease. A variation of the repulsive core against u, d quark masses may be explained by the fact that the colour magnetic interaction is proportional to the inverse of the constituent quark mass. The same operation has also be done with a $\Lambda_c$N system with $J^P=1^+$ obtaining the result visible in figure \cite{fig:fig:radial_potential_3s}, 
+	A numerical simulation of the potential is described in \ref{pot_simulation} performed with lattice QCD with lattice spacing a =0.0907(13)fm and a physical lattice size of La=2.902(42)fm. In order to see the quark mass dependence of the potentials, the members of the study had employed three ensembles of gauge configurations. The hopping parameters of these ensembles are $\kappa_{ud}$ =0.13700 (Ensemble 1), 0.13727 (Ensemble 2), 0.13754 (Ensemble 3) for u, d-quarks. The figure \ref{fig:radial_potential_1s} show the $\lambda_c$N central potential in the $1^S_0$ channel for each ensemble with different mass considered for the pion. For Ensemble 1 $m_\pi \sim$ 700 Mev, $m_\pi \sim$ 570 Mev for Ensemble 2 and 410 Mev for Ensemble 3. They found a repulsive core at short distances (r < 0.5 fm) and an attractive one for intermediate distances (0.5 < r < 1.5 fm). They discovered also that the height of the repulsive core increases and the minimum of the attractive pocket shifts outward, as u, d quark masses decrease. A variation of the repulsive core against u, d quark masses may be explained by the fact that the colour magnetic interaction is proportional to the inverse of the constituent quark mass. The same operation has also be done with a $\Lambda_c$N system with $J^P=1^+$ obtaining the result visible in figure \ref{fig:radial_potential_3s}, 
 	the result is similar to the one in $1^S_0$ channel exept at short distance (r<0.5fm) but in both cases the actrattive potential is weaker than the $\Lambda_c$N system.
 	
 	\begin{figure}
@@ -256,14 +556,14 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 			\centering
 			\includegraphics[width=0.74 \linewidth]{pictures/radial_potential_1s.jpg}
 			\caption{ The figure show $\Lambda_c$N central potential in the $ 1^S_0$ channel for each ensemble. The potential is calculated for $m_\pi \approx$ 700 MeV case (Blue), for $m_\pi \approx$ 570 MeV case (Green) and for $m_\pi \approx$ 410 MeV case (Red).}
-			\label{fig:fig:radial_potential_1s}
+			\label{fig:radial_potential_1s}
 			
 		\end{minipage}
 		\begin{minipage}{0.5\textwidth}
 			\centering
 			\includegraphics[width=0.74 \linewidth]{pictures/radial_potential_1s.jpg}
 			\caption{ The figure show $\Lambda_c$N central potential in the $ 3^S_0$ channel for each ensemble. The potential is calculated for $m_\pi \approx$ 700 MeV case (Blue), for $m_\pi \approx$  570 MeV case (Green) and for $m_\pi \approx$  410 MeV case (Red).}
-			\label{ffig:fig:radial_potential_3s}
+			\label{fig:radial_potential_3s}
 		\end{minipage}%
 	\end{figure}
 	
@@ -276,12 +576,12 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	If no meson exchanges were considered, the S wave phase shifts of the $\Lambda_C$N system are very similar to the corresponding NN scattering. In both partial waves one obtains typical	hard-core phase shifts due to the short-range gluon and quark-exchange dynamics. However,the hard-core radius in the spin-singlet state is larger than in the spin-triplet one leading	to a more attractive interaction in the spin-triplet partial wave due to a lower short-range repulsion. In fact, the hard cores caused by the color magnetic part of the OGE potential have been calculated obtaining 0.35 fm for the spin-triplet state and 0.44 fm	for the spin-singlet one.
 	
 	\subsection{Potential energy}
-		
 	
 	
-	\subsection{Possible $\Lambda_c$ hypernuclei}
 	
-	One of the most interesting applications of the charmed baryon−nucleon interaction is the study of the possible existence of charmed hypernuclei. Since the $\Lambda_c$ interaction is dominated by the spin-independent central force, as we discussed in the previous section, the spectrum of hypernuclei, if they exist, would probably can be approximated by the following single-folding potential defined by
+	\subsection{Possible $\Lambda_c$ supernuclei}
+	
+	One of the most interesting applications of the charmed baryon-nucleon interaction is the study of the possible existence of charmed hypernuclei. Since the $\Lambda_c$ interaction is dominated by the spin-independent central force, as we discussed in the previous section, the spectrum of hypernuclei, if they exist, would probably can be approximated by the following single-folding potential defined by
 	\begin{equation}
 		V_f(\vec{r}) = \int d^3f' \rho_A (\vec{r}') V_{\Lambda_cN} (\vec{r}- \vec{r}') 
 	\end{equation}
@@ -304,10 +604,10 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	\begin{figure}
 		\centering
 		\includegraphics[width=0.74 \linewidth]{pictures/binding_culomb.jpg}
-		\caption{ The figure show the expectation value of folding potential for Coulomb force in $\Lambda_c$ hypernuclei (Blue). The expectation values are calculated from the binding solution of the $\Lambda_c$c hypernuclei for Ensemble 3 ($m_\pi$≃ 410 MeV). For comparison, the binding energy of $\Lambda_c$ hypernuclei (Green) and sum of them (Red) are also plotted.}
+		\caption{The figure show the expectation value of folding potential for Coulomb force in $\Lambda_c$ hypernuclei (Blue). The expectation values are calculated from the binding solution of the $\Lambda_c$ hypernuclei for Ensemble 3 ($m_\pi \approx$ 410 MeV). For comparison, the binding energy of $\Lambda_c$ hypernuclei (Green) and sum of them (Red) are also plotted.}
 		\label{fig:binding_culomb}
 	\end{figure}
-	 
+	
 	
 	
 	
@@ -316,25 +616,29 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	
 	\newpage
 	
-	\subsection{Sezione 1.1}
-	Testo della sezione 1.1...
+	\chapter{ALICE}
 	
-	\newpage
+	\appendix
+	\subsection{Cooper-Frye}
+	We start with the proof that $dy p_\perp dp_\perp d\phi_p = dy m_\perp dm_\perp d\phi_p$, in fact $m_\perp=\sqrt{m^2 + p_\perp^2}$ so $\frac{dm_\perp}{dp_\perp}= \frac{p_\perp}{\sqrt{m^2 + p_\perp^2}} = \frac{p_\perp}{m_\perp}$ and the result follow immediately.
 	
-	\subsection{Sezione 1.2}
-	Testo della sezione 1.2...
+	For the other equation starting from \ref{eq:cooper-frye} and inserting \ref{eq:boltzmann} one get
 	
-	\newpage
+	\begin{equation}
+		\frac{d N_i}{dy m_\perp dm_\perp d\phi_p}= \frac{g_i}{(2\pi)^3} \sum{n=1}^{\infty} (\pm)^n \int d^2 r_\perp \tau_f e^{n\mu_i/T} e^{n\gamma_\perp \vec{v_\perp} \cdot \vec{p_\perp}} x \int_{-\infty}^{+\infty} d\eta \left(m_\perp cosh(y-\eta)- \vec{p}_\perp \cdot \nabla_\perp \tau_f \right) e^{-n \gamma_\perp m_\perp cosh(y-\eta)/T} = \frac{g_i}{(2\pi)^3} \sum{n=1}^{\infty} (\pm)^n \int d^2 r_\perp \tau_f e^{n\mu_i/T} e^{n\gamma_\perp \vec{v_\perp} \cdot \vec{p_\perp}} \left( m_\perp K_1(n m_\perp \frac{\gamma_\perp(\vec{r}_perp)}{T(\vec{r}_perp)}) -\vec{p}_\perp \cdot \nabla_\perp \tau_f K_0(n m_\perp \frac{\gamma_\perp(\vec{r}_perp)}{T(\vec{r}_perp)}) \right)
+	\end{equation}
+	Where the modified Bessel function enters the game. The azimuthal integral can thus be done analytically
+	\begin{equation}
+		\frac{d N_i}{dy m_\perp dm_\perp}= \frac{g_i}{(2\pi)^3} \sum{n=1}^{\infty} (\pm)^n \int dr_\perp \tau_f e^{n\mu_i/T} \left(m_\perp K_1(n m_\perp \frac{\gamma_\perp(\vec{r}_perp)}{T(\vec{r}_perp)}) I_0(n \frac{p_\perp v_\perp \gamma_\perp}{T}) - p_\perp \frac{\partial \tau_f}{\partial r_\perp} K_0(n m_\perp \frac{\gamma_\perp(\vec{r}_perp)}{T(\vec{r}_perp)}) I_1(n \frac{p_\perp v_\perp \gamma_\perp}{T}) \right)
+	\end{equation}
+	and finally defying $v_\perp= tanh \rho$ one get
+	\begin{equation}
+		\frac{dN_i}{dy \, m_\perp \, dm_\perp \, d\phi_p} = \frac{g_i}{\pi} \int_{0}^{\infty} r_\perp \, dr_\perp \, n_i(r_\perp) \left[ m_\perp K_1 \left( \frac{m_\perp \cosh(\rho(r_\perp))}{T(r_\perp)}\right) I_0 \left( \frac{p_\perp \sinh(\rho(r_\perp))}{T(r_\perp)} \right) - p_\perp \frac{\partial \tau}{\partial r_\perp} K_0 \left( \frac{m_\perp \cosh(\rho(r_\perp))}{T(r_\perp)}\right) I_1 \left( \frac{p_\perp \sinh(\rho(r_\perp))}{T(r_\perp)} \right) \right]
+		\label{eq:momentum_cooper-frye_a}
+	\end{equation}
 	
-	\section{Capitolo 2}
-	Testo del capitolo 2...
 	
-	\newpage
 	
-	\subsection{Conclusion}
-	Testo della sezione 2.1...
-	
-	\medskip
 	
 	\printbibliography
 	

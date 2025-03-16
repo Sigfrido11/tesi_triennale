@@ -1,11 +1,19 @@
 \babel@toc {english}{}\relax 
 \contentsline {chapter}{\numberline {1}Abstract}{5}{}%
 \contentsline {chapter}{\numberline {2}Introduction}{7}{}%
-\contentsline {subsection}{\numberline {2.0.1}One Boson exchange model}{7}{}%
-\contentsline {subsection}{\numberline {2.0.2}$\Lambda _c$ N interaction}{10}{}%
-\contentsline {subsection}{\numberline {2.0.3}Potential energy}{13}{}%
-\contentsline {subsection}{\numberline {2.0.4}Possible $\Lambda _c$ hypernuclei}{13}{}%
-\contentsline {subsection}{\numberline {2.0.5}Sezione 1.1}{16}{}%
-\contentsline {subsection}{\numberline {2.0.6}Sezione 1.2}{17}{}%
-\contentsline {section}{\numberline {2.1}Capitolo 2}{18}{}%
-\contentsline {subsection}{\numberline {2.1.1}Conclusion}{19}{}%
+\contentsline {chapter}{\numberline {3}concepts of quantum chromodynamics (QCD)}{9}{}%
+\contentsline {subsection}{\numberline {3.0.1}The QCD phase diagram}{11}{}%
+\contentsline {subsection}{\numberline {3.0.2}The different stage of a heavy-ion collision}{12}{}%
+\contentsline {chapter}{\numberline {4}Thermal model}{17}{}%
+\contentsline {subsection}{\numberline {4.0.1}hydrodynamical description}{17}{}%
+\contentsline {subsubsection}{The Cooper-Frye formula}{18}{}%
+\contentsline {subsubsection}{Transverse momentum spectra and freeze-out temperature}{19}{}%
+\contentsline {subsection}{\numberline {4.0.2}Elliptic flow}{21}{}%
+\contentsline {subsection}{\numberline {4.0.3}Statistical Hadronisation Model (SHM)}{23}{}%
+\contentsline {chapter}{\numberline {5}$Y_c$N bound state}{29}{}%
+\contentsline {subsection}{\numberline {5.0.1}One Boson exchange model}{29}{}%
+\contentsline {subsection}{\numberline {5.0.2}$\Lambda _c$ N interaction}{31}{}%
+\contentsline {subsection}{\numberline {5.0.3}Potential energy}{35}{}%
+\contentsline {subsection}{\numberline {5.0.4}Possible $\Lambda _c$ supernuclei}{35}{}%
+\contentsline {chapter}{\numberline {6}ALICE}{37}{}%
+\contentsline {subsection}{\numberline {.0.1}Cooper-Frye}{37}{}%

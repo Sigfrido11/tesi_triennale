@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.11)  14 MAR 2025 19:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.10)  16 MAR 2025 16:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -39,9 +39,9 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
 Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language11). Reported on input line 105.
+(babel)             (\language38). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language11). Reported on input line 108.
+(babel)             (\language38). Reported on input line 108.
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
 Package babel Info: Importing font and identification data for english
@@ -965,11 +965,7 @@ Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
 
-(./tesi.aux
-
-LaTeX Warning: Label `eq:pi-potential' multiply defined.
-
-)
+(./tesi.aux)
 \openout1 = `tesi.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
@@ -1139,34 +1135,256 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 Chapter 2.
-
-LaTeX Warning: Citation 'yukawa' on page 7 undefined on input line 143.
-
-
-LaTeX Warning: Citation 'heisemerg' on page 7 undefined on input line 143.
-
 [7]
 
-LaTeX Warning: Citation 'eq:klein-gordon-final-sol' on page 8 undefined on inpu
-t line 170.
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
-<pictures/one_boson_exchange.png, id=37, 200.75pt x 231.86626pt>
-File: pictures/one_boson_exchange.png Graphic file (type png)
-<use pictures/one_boson_exchange.png>
-Package pdftex.def Info: pictures/one_boson_exchange.png  used on input line 17
-3.
-(pdftex.def)             Requested size: 276.60573pt x 319.52643pt.
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-LaTeX Warning: Citation 'sakata' on page 8 undefined on input line 179.
+[8
 
+]
+Chapter 3.
+[9{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 
-LaTeX Warning: Citation 'onebosonexchangepotentialmodelapproach' on page 8 unde
-fined on input line 179.
+LaTeX Warning: Citation 'Skands_2013' on page 10 undefined on input line 157.
 
 
-Overfull \hbox (49.78111pt too wide) in paragraph at lines 170--180
-[]\OT1/cmr/m/n/12 after have re-jectes the di-ver-gent so-lu-tion. The equa-tio
-n [[]]
+LaTeX Warning: Citation 'DAVIDPOLITZER1974129' on page 10 undefined on input li
+ne 158.
+
+<pictures/deconfinement.png, id=44, 624.3325pt x 429.605pt>
+File: pictures/deconfinement.png Graphic file (type png)
+<use pictures/deconfinement.png>
+Package pdftex.def Info: pictures/deconfinement.png  used on input line 168.
+(pdftex.def)             Requested size: 276.60573pt x 190.33783pt.
+
+LaTeX Warning: Citation 'heinz2004conceptsheavyionphysics' on page 10 undefined
+ on input line 172.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 27.05003pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.05003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-15.05003pt}.
+
+[10]
+<pictures/QCD_phase_diagram.jpg, id=53, 602.25pt x 397.485pt>
+File: pictures/QCD_phase_diagram.jpg Graphic file (type jpg)
+<use pictures/QCD_phase_diagram.jpg>
+Package pdftex.def Info: pictures/QCD_phase_diagram.jpg  used on input line 178
+.
+(pdftex.def)             Requested size: 276.60573pt x 182.56631pt.
+
+
+LaTeX Warning: Citation 'QCDPhase-Diagram' on page 11 undefined on input line 1
+82.
+
+
+LaTeX Warning: Citation 'heinz2004conceptsheavyionphysics' on page 11 undefined
+ on input line 183.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 27.05003pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.05003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-15.05003pt}.
+
+[11 <./pictures/deconfinement.png>]
+
+LaTeX Warning: Citation 'heinz2004conceptsheavyionphysics' on page 12 undefined
+ on input line 186.
+
+
+LaTeX Warning: Citation 'amsdottorato9036' on page 12 undefined on input line 1
+86.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 27.05003pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.05003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-15.05003pt}.
+
+[12 <./pictures/QCD_phase_diagram.jpg>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 27.05003pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.05003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-15.05003pt}.
+
+[13]
+<pictures/collision_stage.png, id=65, 602.25pt x 751.80875pt>
+File: pictures/collision_stage.png Graphic file (type png)
+<use pictures/collision_stage.png>
+Package pdftex.def Info: pictures/collision_stage.png  used on input line 202.
+(pdftex.def)             Requested size: 237.09407pt x 295.9689pt.
+<pictures/collision_stage_mikowsky.png, id=66, 481.8pt x 440.64626pt>
+File: pictures/collision_stage_mikowsky.png Graphic file (type png)
+<use pictures/collision_stage_mikowsky.png>
+Package pdftex.def Info: pictures/collision_stage_mikowsky.png  used on input l
+ine 209.
+(pdftex.def)             Requested size: 158.05869pt x 144.55307pt.
+
+
+LaTeX Warning: Citation 'EvolutionofcollisionsandQGP' on page 14 undefined on i
+nput line 210.
+
+
+LaTeX Warning: Citation 'EvolutionofcollisionsandQGP' on page 14 undefined on i
+nput line 210.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 27.05003pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.05003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-15.05003pt}.
+
+[14 <./pictures/collision_stage.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 27.05003pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.05003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-15.05003pt}.
+
+[15 <./pictures/collision_stage_mikowsky.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 27.05003pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.05003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-15.05003pt}.
+
+[16
+
+]
+Chapter 4.
+
+LaTeX Warning: Citation 'heinz2004conceptsheavyionphysics' on page 17 undefined
+ on input line 216.
+
+
+LaTeX Warning: Citation 'phdthesis' on page 17 undefined on input line 216.
+
+
+LaTeX Warning: Citation 'Cooper-Frye' on page 17 undefined on input line 216.
+
+
+Overfull \hbox (12.65483pt too wide) in paragraph at lines 216--217
+\OT1/cmr/m/n/12 This sec-tion re-sume the in-for-ma-tion of [[]],
+ []
+
+[17]
+
+LaTeX Warning: Citation 'PhysRevD.27.140' on page 18 undefined on input line 22
+7.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[18]
+Overfull \hbox (328.54546pt too wide) detected at line 253
+[][] \OT1/cmr/m/n/12 = [] [][] \OML/cmm/m/it/12 r[] dr[] n[]\OT1/cmr/m/n/12 (\O
+ML/cmm/m/it/12 r[]\OT1/cmr/m/n/12 ) []
+ []
+
+
+LaTeX Warning: Citation 'teaney2001hydrodynamicdescriptionheavyion' on page 19 
+undefined on input line 258.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[19]
+<pictures/radial_flow.png, id=91, 714.67pt x 695.59875pt>
+File: pictures/radial_flow.png Graphic file (type png)
+<use pictures/radial_flow.png>
+Package pdftex.def Info: pictures/radial_flow.png  used on input line 262.
+(pdftex.def)             Requested size: 158.05869pt x 153.83885pt.
+
+
+LaTeX Warning: Citation 'EvolutionofcollisionsandQGP' on page 20 undefined on i
+nput line 263.
+
+
+LaTeX Warning: Citation 'EvolutionofcollisionsandQGP' on page 20 undefined on i
+nput line 263.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[20 <./pictures/radial_flow.png>]
+<pictures/flow_spectra.png, id=96, 406.51875pt x 397.485pt>
+File: pictures/flow_spectra.png Graphic file (type png)
+<use pictures/flow_spectra.png>
+Package pdftex.def Info: pictures/flow_spectra.png  used on input line 293.
+(pdftex.def)             Requested size: 158.05869pt x 154.54544pt.
+<pictures/elliptic_flow_collision.pdf, id=97, 564.1075pt x 263.98625pt>
+File: pictures/elliptic_flow_collision.pdf Graphic file (type pdf)
+<use pictures/elliptic_flow_collision.pdf>
+Package pdftex.def Info: pictures/elliptic_flow_collision.pdf  used on input li
+ne 301.
+(pdftex.def)             Requested size: 158.05869pt x 73.968pt.
+
+
+LaTeX Warning: Citation 'Snellings_2011' on page 21 undefined on input line 305
+.
+
+
+LaTeX Warning: Citation 'heinz2004conceptsheavyionphysics' on page 21 undefined
+ on input line 305.
+
+
+LaTeX Warning: Citation 'Kolb_2000' on page 21 undefined on input line 305.
+
+
+LaTeX Warning: Citation 'kolb2003hydrodynamicdescriptionultrarelativisticheavyi
+on' on page 21 undefined on input line 306.
+
+<pictures/timeEvolutionPerepheral.pdf, id=98, 916.42375pt x 281.05pt>
+File: pictures/timeEvolutionPerepheral.pdf Graphic file (type pdf)
+<use pictures/timeEvolutionPerepheral.pdf>
+Package pdftex.def Info: pictures/timeEvolutionPerepheral.pdf  used on input li
+ne 309.
+(pdftex.def)             Requested size: 158.05869pt x 48.4726pt.
+
+Overfull \hbox (41.73178pt too wide) in paragraph at lines 305--314
+[]\OT1/cmr/m/n/12 this sec-tion come from [[]], [[]]
+ []
+
+
+Overfull \hbox (41.35464pt too wide) in paragraph at lines 305--314
+\OT1/cmr/m/n/12 shown in Fig 4.4[] [[]].
  []
 
 
@@ -1177,7 +1395,661 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[8]
+[21 <./pictures/flow_spectra.png> <./pictures/elliptic_flow_collision.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[22 <./pictures/timeEvolutionPerepheral.pdf>]
+
+LaTeX Warning: Citation 'becattini2009introductionstatisticalhadronizationmodel
+' on page 23 undefined on input line 337.
+
+
+LaTeX Warning: Citation 'charm_hierarchy_in_the_statistical_hadronization_model
+' on page 23 undefined on input line 337.
+
+
+LaTeX Warning: Citation 'heinz2004conceptsheavyionphysics' on page 23 undefined
+ on input line 337.
+
+
+Overfull \hbox (204.44025pt too wide) in paragraph at lines 337--338
+\OT1/cmr/m/n/12 this sec-tion had been in-spired by the folow-ing ar-ti-cle [[]
+],
+ []
+
+
+Overfull \hbox (143.85403pt too wide) in paragraph at lines 337--338
+\OT1/cmr/m/n/12 [[]] [[]]. 
+ []
+
+
+Overfull \hbox (177.10802pt too wide) in paragraph at lines 339--340
+[] 
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[23]
+
+! Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.347 		\end{align}
+                   
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.352 	\end{align}
+                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.357 		\end{align}
+                   
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.362 		\end{align}
+                   
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (48.14638pt too wide) detected at line 364
+[][][][][][][][][]
+ []
+
+
+! LaTeX Error: Unicode character μ (U+03BC)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.369 ...be split into each conserved quantify: μ
+                                                  i = Bi μB + Si μS + Qi �...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character μ (U+03BC)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.369 ...into each conserved quantify: μi = Bi μ
+                                                  B + Si μS + Qi μQ ,
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character μ (U+03BC)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.369 ... conserved quantify: μi = Bi μB + Si μ
+                                                  S + Qi μQ ,
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character μ (U+03BC)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.369 ...d quantify: μi = Bi μB + Si μS + Qi μ
+                                                  Q ,
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character μ (U+03BC)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.371 	charge while μ
+                      B , μS and μQ are the corresponding chemical potenti...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character μ (U+03BC)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.371 	charge while μB , μ
+                            S and μQ are the corresponding chemical potenti...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character μ (U+03BC)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.371 	charge while μB , μS and μ
+                                    Q are the corresponding chemical potenti...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character − (U+2212)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.372 	(e+e−
+               , pp and p–Pb) the grand-canonical ensemble is no longer a ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character γ (U+03B3)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.384 	introducing γ
+                     s as the strangeness suppression factor. In this case �...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character γ (U+03B3)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.384 ...eness suppression factor. In this case γ
+                                                  s takes into account the
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character γ (U+03B3)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.386 	expected to have γ
+                          s < 1 in small collision systems (where the canoni...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character γ (U+03B3)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.388 	be fully thermalized and γ
+                                  s can reach values of 1. The common aim am...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character π (U+03C0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.396 ...rement for different particle species (π
+                                                   ± , K ±, p, p̄, Λ and...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ̄ (U+0304)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.396 ...nt particle species (π ± , K ±, p, p̄
+                                                  , Λ and Λ̄) is given
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character Λ (U+039B)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.396 ...article species (π ± , K ±, p, p̄, Λ
+                                                   and Λ̄) is given
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character Λ (U+039B)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.396 ... species (π ± , K ±, p, p̄, Λ and Λ
+                                                  ̄) is given
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ̄ (U+0304)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.396 ...pecies (π ± , K ±, p, p̄, Λ and Λ̄
+                                                  ) is given
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character √ (U+221A)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.397 	in Fig. 2.1 as a function of the √
+                                           
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character Λ (U+039B)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.402 	2. Baryons (p and Λ
+                           ) and mesons (π and K) follow different behaviou...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character π (U+03C0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.402 	2. Baryons (p and Λ) and mesons (π
+                                            and K) follow different behaviou...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ̄ (U+0304)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.404 	• The yields of p lowers while p̄
+                                            increase with √
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character √ (U+221A)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.404 ...s of p lowers while p̄ increase with √
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character μ (U+03BC)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.406 	μ
+         B . When μB is larger than 0 the baryonic number of the colliding ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character μ (U+03BC)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.406 	μB . When μ
+                    B is larger than 0 the baryonic number of the colliding ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character Λ (U+039B)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.412 	• The production of Λ
+                               , similar to p, is affected by the non-zero �...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character μ (U+03BC)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.412 ...ilar to p, is affected by the non-zero μ
+                                                  B at low energies
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character Λ (U+039B)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.413 ...s an s quark. At intermediate energies Λ
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character Λ (U+039B)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.421 	tends to be similar (e.g. p and Λ
+                                         ).
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character γ (U+03B3)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.423 ... limited number of parameters (T , V , γ
+                                                  s , μ) and carrying out t...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character μ (U+03BC)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.423 ...ed number of parameters (T , V , γs , μ
+                                                  ) and carrying out the cal...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character μ (U+03BC)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.426 	μ
+         B. Results from [41] (Fig. 2.2) show how the best fit parameters to...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character √ (U+221A)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.427 ... collected by the ALICE experiment at √
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character μ (U+03BC)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.429 	T = 156.5 ± 1.5 MeV, μ
+                               B = 0.7 ± 3.8 MeV, V = 5280 ± 410 fm3 . The...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character χ (U+03C7)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.431 	a χ
+            2 /NDF = 1.61 with a low number of free parameters. The largest ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ̄ (U+0304)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.432 	p and p̄
+                , reaching almost a 3σ deviation.
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character σ (U+03C3)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.432 	p and p̄, reaching almost a 3σ
+                                        deviation.
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character π (U+03C0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.434 ...shown in Fig. 2.3. In this case both K/π
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character π (U+03C0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.435 	and p/π
+                are well reproduced by the model over a wide range of energi...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character μ (U+03BC)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.441 ... lattice QCD calculations at vanishing μ
+                                                  B [41]. Such comparison is...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character − (U+2212)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.446 	systems such as pp and e+ e−
+                                      collisions. In this case [49] it is ne...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[24]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1189,29 +2061,338 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[9 <./pictures/one_boson_exchange.png>]
+[25]
 
-LaTeX Warning: Citation 'Charmed-nucleon' on page 10 undefined on input line 18
-5.
+! LaTeX Error: Unicode character ̄ (U+0304)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.451 ...rocess does not change the number of ss̄
+                                                   pairs (for example, becau...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
 
 
-LaTeX Warning: Citation 'baryon–nucleon-potential' on page 10 undefined on in
-put line 185.
+! LaTeX Error: Unicode character μ (U+03BC)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.454 	the expression for μ
+                            i in (85) generalizes to μi = Bi μB +SiμS +|s...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character μ (U+03BC)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.454 ...ression for μi in (85) generalizes to μ
+                                                  i = Bi μB +SiμS +|si |μ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character μ (U+03BC)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.454 ...or μi in (85) generalizes to μi = Bi μ
+                                                  B +SiμS +|si |μ̃s where...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character μ (U+03BC)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.454 ...in (85) generalizes to μi = Bi μB +Siμ
+                                                  S +|si |μ̃s where |si| i...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character μ (U+03BC)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.454 ...neralizes to μi = Bi μB +SiμS +|si |μ
+                                                  ̃s where |si| is the tota...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ̃ (U+0303)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.454 ...ralizes to μi = Bi μB +SiμS +|si |μ̃
+                                                  s where |si| is the total ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character μ (U+03BC)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.455 ... quarks and antiquarks in hadron i and μ
+                                                  ̃s is a further Lagrange ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ̃ (U+0303)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.455 ...uarks and antiquarks in hadron i and μ̃
+                                                  s is a further Lagrange mu...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character γ (U+03B3)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.456 	constraint. The associated fugacity γ
+                                             s = eβμ̃s is known as the �...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character β (U+03B2)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.456 ...traint. The associated fugacity γs = eβ
+                                                  μ̃s is known as the “s...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character μ (U+03BC)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.456 ...aint. The associated fugacity γs = eβμ
+                                                  ̃s is known as the “str...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ̃ (U+0303)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.456 ...nt. The associated fugacity γs = eβμ̃
+                                                  s is known as the “stran...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character γ (U+03B3)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.458 	corresponds to γ
+                        s < 1 resp. γs > 1.
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character γ (U+03B3)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.458 	corresponds to γs < 1 resp. γ
+                                      s > 1.
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ≃ (U+2243)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.479 ...rgy density has dropped to ehad = ecr ≃
+                                                   1 GeV/fm3 . Therefore the...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[26]
+
+! LaTeX Error: Unicode character − (U+2212)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.517 ...and one finds a smooth curve in the T −
+                                                   μ B plane (see Fig. 9).
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character μ (U+03BC)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.517 ... one finds a smooth curve in the T − μ
+                                                   B plane (see Fig. 9).
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[27]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[28
+
+]
+Chapter 5.
+
+LaTeX Warning: Citation 'yukawa' on page 29 undefined on input line 526.
+
+
+LaTeX Warning: Citation 'heisemerg' on page 29 undefined on input line 526.
+
+[29]
+<pictures/one_boson_exchange.png, id=154, 200.75pt x 231.86626pt>
+File: pictures/one_boson_exchange.png Graphic file (type png)
+<use pictures/one_boson_exchange.png>
+Package pdftex.def Info: pictures/one_boson_exchange.png  used on input line 55
+6.
+(pdftex.def)             Requested size: 276.60573pt x 319.52643pt.
+
+
+LaTeX Warning: Citation 'sakata' on page 30 undefined on input line 562.
+
+
+LaTeX Warning: Citation 'onebosonexchangepotentialmodelapproach' on page 30 und
+efined on input line 562.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[30 <./pictures/one_boson_exchange.png>]
+
+LaTeX Warning: Citation 'Charmed-nucleon' on page 31 undefined on input line 56
+6.
+
+
+LaTeX Warning: Citation 'baryon–nucleon-potential' on page 31 undefined on in
+put line 566.
 
 Missing character: There is no � in font cmbx12!
 Missing character: There is no � in font cmbx12!
 Missing character: There is no � in font cmbx12!
 
-Overfull \hbox (39.9397pt too wide) in paragraph at lines 185--187
+Overfull \hbox (39.9397pt too wide) in paragraph at lines 566--568
 \OT1/cmr/m/n/12 This sec-tion is a re-sume of the [[]] and [[]]
  []
 
 
-LaTeX Warning: Citation 'Valcarce_2005' on page 10 undefined on input line 189.
+LaTeX Warning: Citation 'Valcarce_2005' on page 31 undefined on input line 570.
 
-
-
-LaTeX Warning: Citation 'Smit_2023' on page 10 undefined on input line 192.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1221,26 +2402,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[10]
+[31]
 
-LaTeX Warning: Citation 'tab:par-resume' on page 11 undefined on input line 222
-.
-
-
-! Package caption Error: \caption outside float.
-
-See the caption package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.231 		\caption
-                {The table resume the typical value of the parameter present...
-
-If you do not understand this error, please take a closer look
-at the documentation of the `caption' package, especially the
-section about errors.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+LaTeX Warning: Citation 'Smit_2023' on page 32 undefined on input line 573.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1250,136 +2414,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[11]
-
-! LaTeX Error: Unicode character − (U+2212)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.240 ...ams contributing to the charmed baryon−
-                                                  nucleon interaction. The f...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-<pictures/charmed_nucleos_interaction.png, id=59, 1009.7725pt x 284.06125pt>
+[32]
+<pictures/charmed_nucleos_interaction.png, id=168, 1009.7725pt x 284.06125pt>
 File: pictures/charmed_nucleos_interaction.png Graphic file (type png)
 <use pictures/charmed_nucleos_interaction.png>
 Package pdftex.def Info: pictures/charmed_nucleos_interaction.png  used on inpu
-t line 244.
+t line 628.
 (pdftex.def)             Requested size: 276.60573pt x 77.8115pt.
 
-LaTeX Warning: Citation 'pot_simulation' on page 12 undefined on input line 250
-.
 
-
-LaTeX Warning: Reference `fig:radial_potential_1s' on page 12 undefined on inpu
-t line 250.
-
-
-LaTeX Warning: Citation 'fig:fig:radial_potential_3s' on page 12 undefined on i
-nput line 250.
-
-<pictures/radial_potential_1s.jpg, id=60, 246.58524pt x 179.37415pt>
-File: pictures/radial_potential_1s.jpg Graphic file (type jpg)
-<use pictures/radial_potential_1s.jpg>
-Package pdftex.def Info: pictures/radial_potential_1s.jpg  used on input line 2
-57.
-(pdftex.def)             Requested size: 131.58595pt x 95.72198pt.
-File: pictures/radial_potential_1s.jpg Graphic file (type jpg)
-<use pictures/radial_potential_1s.jpg>
-Package pdftex.def Info: pictures/radial_potential_1s.jpg  used on input line 2
-64.
-(pdftex.def)             Requested size: 146.2076pt x 106.35806pt.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[12 <./pictures/charmed_nucleos_interaction.png>]
-
-! LaTeX Error: Unicode character − (U+2212)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.284 ...ing applications of the charmed baryon−
-                                                  nucleon interaction is the...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[13{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./pictures/rad
-ial_potential_1s.jpg>]
-
-LaTeX Warning: Reference `eq:culomb_potential' on page 14 undefined on input li
-ne 293.
-
-<pictures/binding_energy.jpg, id=70, 235.16658pt x 180.675pt>
-File: pictures/binding_energy.jpg Graphic file (type jpg)
-<use pictures/binding_energy.jpg>
-Package pdftex.def Info: pictures/binding_energy.jpg  used on input line 297.
-(pdftex.def)             Requested size: 292.4152pt x 224.66599pt.
-
-LaTeX Warning: File `pictures/binding_culomb.jpg' not found on input line 306.
-
-
-! Package pdftex.def Error: File `pictures/binding_culomb.jpg' not found: using
- draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.306 ... \linewidth]{pictures/binding_culomb.jpg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Unicode character ≃ (U+2243)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.307 ... and sum of them (Red) are also plotted.}
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≃ (U+2243)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.307 ... and sum of them (Red) are also plotted.}
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-LaTeX Warning: Reference `pot_simulation' on page 14 undefined on input line 31
+LaTeX Warning: Reference `pot_simulation' on page 33 undefined on input line 63
 4.
 
 
@@ -1390,45 +2434,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[14 <./pictures/binding_energy.jpg>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[15]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[16]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[17]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[18]
-
-LaTeX Warning: Empty bibliography on input line 339.
+[33]
+<pictures/radial_potential_1s.jpg, id=172, 246.58524pt x 179.37415pt>
+File: pictures/radial_potential_1s.jpg Graphic file (type jpg)
+<use pictures/radial_potential_1s.jpg>
+Package pdftex.def Info: pictures/radial_potential_1s.jpg  used on input line 6
+41.
+(pdftex.def)             Requested size: 131.58595pt x 95.72198pt.
+File: pictures/radial_potential_1s.jpg Graphic file (type jpg)
+<use pictures/radial_potential_1s.jpg>
+Package pdftex.def Info: pictures/radial_potential_1s.jpg  used on input line 6
+48.
+(pdftex.def)             Requested size: 146.2076pt x 106.35806pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1438,7 +2455,71 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[19] (./tesi.aux)
+[34 <./pictures/charmed_nucleos_interaction.png> <./pictures/radial_potential_1
+s.jpg>]
+
+LaTeX Warning: Reference `eq:culomb_potential' on page 35 undefined on input li
+ne 677.
+
+<pictures/binding_energy.jpg, id=177, 235.16658pt x 180.675pt>
+File: pictures/binding_energy.jpg Graphic file (type jpg)
+<use pictures/binding_energy.jpg>
+Package pdftex.def Info: pictures/binding_energy.jpg  used on input line 681.
+(pdftex.def)             Requested size: 292.4152pt x 224.66599pt.
+<pictures/binding_culomb.jpg, id=178, 235.16658pt x 174.8934pt>
+File: pictures/binding_culomb.jpg Graphic file (type jpg)
+<use pictures/binding_culomb.jpg>
+Package pdftex.def Info: pictures/binding_culomb.jpg  used on input line 690.
+(pdftex.def)             Requested size: 292.4152pt x 217.4767pt.
+
+LaTeX Warning: Reference `pot_simulation' on page 35 undefined on input line 69
+8.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[35]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[36 <./pictures/binding_energy.jpg> <./pictures/binding_culomb.jpg>]
+Chapter 6.
+
+Overfull \hbox (781.0767pt too wide) detected at line 713
+[][] \OT1/cmr/m/n/12 = [] [] [][](\OMS/cmsy/m/n/12 ^^F\OT1/cmr/m/n/12 )[] [] \O
+ML/cmm/m/it/12 d[]r[]^^\[]e[]e[]x [][] d^^Q [] e[] \OT1/cmr/m/n/12 = [] [] [][]
+(\OMS/cmsy/m/n/12 ^^F\OT1/cmr/m/n/12 )[] [] \OML/cmm/m/it/12 d[]r[]^^\[]e[]e[] 
+[]
+ []
+
+
+Overfull \hbox (284.98308pt too wide) detected at line 717
+[][] \OT1/cmr/m/n/12 = [] [] [][](\OMS/cmsy/m/n/12 ^^F\OT1/cmr/m/n/12 )[] [] \O
+ML/cmm/m/it/12 dr[]^^\[]e[] []
+ []
+
+
+Overfull \hbox (328.54546pt too wide) detected at line 722
+[][] \OT1/cmr/m/n/12 = [] [][] \OML/cmm/m/it/12 r[] dr[] n[]\OT1/cmr/m/n/12 (\O
+ML/cmm/m/it/12 r[]\OT1/cmr/m/n/12 ) []
+ []
+
+
+LaTeX Warning: Empty bibliography on input line 727.
+
+[37
+
+] (./tesi.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -1446,9 +2527,6 @@ L3 programming layer <2024-01-22>
 
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
 
 
 Package biblatex Warning: Please (re)run Biber on the file:
@@ -1460,34 +2538,35 @@ Package logreq Info: Writing requests to 'tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27506 strings out of 474222
- 559663 string characters out of 5748732
- 1943975 words of memory out of 5000000
- 49335 multiletter control sequences out of 15000+600000
- 573253 words of font info for 100 fonts, out of 8000000 for 9000
+ 27588 strings out of 474222
+ 561823 string characters out of 5748732
+ 1942975 words of memory out of 5000000
+ 49417 multiletter control sequences out of 15000+600000
+ 574439 words of font info for 105 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 101i,12n,107p,2322b,1794s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,13n,107p,2322b,1794s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texmf/fo
-nts/type1/public/cm-super/sfrm1200.pfb>
-Output written on tesi.pdf (19 pages, 667010 bytes).
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texmf/fonts
+/type1/public/cm-super/sfrm1200.pfb>
+Output written on tesi.pdf (37 pages, 1884066 bytes).
 PDF statistics:
- 168 PDF objects out of 1000 (max. 8388607)
- 103 compressed objects within 2 object streams
+ 272 PDF objects out of 1000 (max. 8388607)
+ 169 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 78 words of extra memory for PDF output out of 10000 (max. 10000000)
 
