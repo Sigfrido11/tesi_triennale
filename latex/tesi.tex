@@ -254,12 +254,21 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	
 	Where appear the modified Bessel functions and $v_\perp= tanh \rho$. This formula is useful because it allows to easily perform systematic studies of the influence of the radial profiles of temperature, density and transverse flow on the transverse momentum spectrum, in order to better understand which features of a real dynamical calculation of these profiles control the shape of the observed spectra.
 	
+	Eq \ref{eq:momentum_cooper-frye_a} can be simplified by assuming instantaneous freeze-out at $r_T$ = R, The freeze-out volume. In this case there	is no dependence of the proper time at the freeze-out surface $\tau$ therefore $\frac{\partial \tau}{\partial r_\perp}$ so we can rewrite the previus equation in the following manner.
+	
+		\begin{equation}
+		\frac{dN_i}{dy \, m_\perp \, dm_\perp \, d\phi_p} = \frac{g_i}{\pi} \int_{0}^{\infty} r_\perp \, dr_\perp \, n_i(r_\perp) \left[ m_\perp K_1 \left( \frac{m_\perp \cosh(\rho(r_\perp))}{T(r_\perp)}\right) I_0 \left( \frac{p_\perp \sinh(\rho(r_\perp))}{T(r_\perp)} \right) \right]
+		\label{eq:BG_blast_wave}
+	\end{equation}
+	 Commonly named Boltzmann-Gibs blast wave. This formulation is particulary used for extract properties of the common source such as the temperature $T_f$ or to fit the single particle spectra. The agreement of Eq \ref{eq:BG_blast_wave} with the spectra is quite remarkable especially in central events where the thermal description is expected to work better. Conversely, for peripheral collisions the two fits give quite different results.
+	
+	
 	\subsubsection{Transverse momentum spectra and freeze-out temperature}
 	For all hadrons is observed that $m_\perp/T >1$ so the modified Bessel function can be approximate in the following manner $K_\nu \sim e^{- \frac{m_\perp \cosh \rho}{T}}$. Since  temperature on the freeze-out hypersurface is approximately constant and that the freeze-out volume is controlled by the mean free path which is inversely proportional to the density, which itself is a steep function of temperature. At $r_\perp$ = 0 the radial flow velocity must vanish by symmetry but to larger $r_\perp$ typically rises	linearly. , it eventually reaches a maximum value and drops again to zero since the dilute tail of the initial density distribution freezes out early. Some simulated profile of grow are shown in the Fig \ref{fig:radial_flow} \cite{teaney2001hydrodynamicdescriptionheavyion}.
 	
 	\begin{figure}[ht]
 		\centering
-		\includegraphics[width=0.4\linewidth]{pictures/radial_flow.png}
+		\includegraphics[width=0.6\linewidth]{pictures/radial_flow.png}
 		\caption{Radial flow rapidity profile $\rho(r_\perp)= y_T$ for central Au+Au collisions at RHIC, from hydrodynamic calculations employing three different equations of state \cite{EvolutionofcollisionsandQGP}.}
 		\label{fig:radial_flow} 
 	\end{figure}
@@ -285,12 +294,13 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 		\text{Relativistic:}\quad p_\perp \gg m_i \qquad T_{\text{slope}} = T \sqrt{\frac{1+v_\perp}{1-v_\perp}}
 		\label{eq:T_rel_limit}
 	\end{equation}
-	
+	This effect are visible in Fig. \ref{fig:flow_spectra} for two flow velocities. In particular is possible to observe that for small $m_\perp$ the $m_\perp$-scaling is expected to be broken as a consequence of the presence of flow. These formulations have of course their practical limitations in fact pions, the lightest hadrons, are quickly falling into the relativistic case and few measure are performed at low momenta, especially in collider experiments. In addition, non-relativistic pions are affected by both Bose-Einstein statistics and contribution from resonance decays. Furthermore the $m_\perp$-scaling is expected to be more evident for the pp collision while for the heavy-ion case the presence of the radial flow breaks the $m_\perp$ -scaling. As expected, radial flow causes a mass-dependent flattening of the spectra in the low $p_\perp$ region, while all spectra
+	start to assume the same slope ad higher momenta. The modification of the spectral shape affects also the mean of the distribution in a mass-dependent way, resulting in an increase of the $p_\perp$ with the particle mass. This increasing is expected to be more evident when flow is stronger i.e. in more energetic collision.
 	
 	
 	\begin{figure}[ht]
 		\centering
-		\includegraphics[width=0.4\linewidth]{pictures/flow_spectra.png}
+		\includegraphics[width=0.8\linewidth]{pictures/flow_spectra.png}
 		\caption{Flow spectra for various hadrons as a function of $m_\perp-m_0$ where $m_0$ is their rest mass. The calculation assumes an infinitesimally thin shell of temperature T = 150 MeV expanding with $v_\perp$ = 0.9. The curve labelled "$\pi^+$ (all)” includes pions from resonance decays in addition to the thermally emitted pions.}
 		\label{fig:flow_spectra} 
 	\end{figure}
@@ -298,7 +308,7 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	\subsection{Elliptic flow}
 	\begin{figure}[ht]
 		\centering
-		\includegraphics[width=0.4\linewidth]{pictures/elliptic_flow_collision.pdf}
+		\includegraphics[width=0.8\linewidth]{pictures/elliptic_flow_collision.pdf}
 		\caption{Almond shaped interaction volume after a non-central collision of two nuclei. The spatial anisotropy with respect to the x-z plane (reaction plane) translates into a momentum anisotropy of the produced particles (anisotropic flow).}
 		\label{fig:elliptic_flow_collision} 
 	\end{figure}
@@ -306,7 +316,7 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	For central collisions between equal spherical nuclei, radial flow is the only possible type of transverse flow allowed by symmetry. In non-central collisions between this azimuthal symmetry is broken and anisotropic transverse flow patterns can develop. The overlap region of the two colliding nuclei is then spatially deformed in the transverse plane. Experimentally, the most direct evidence of flow comes from the observation of anisotropic flow which is the anisotropy in particle momentum distributions correlated with the reaction plane. The evolution of the almond shaped interaction volume is shown in Fig \ref{fig:time_evolution_perepheral} \cite{kolb2003hydrodynamicdescriptionultrarelativisticheavyion}. The contours indicate the energy density profile and the sequence show the time evolution from an almond shaped transverse overlap region into an almost symmetric system. This expansion happen at the speed of speed velocity $v_s=\sqrt{\frac{\partial p}{\partial \epsilon}}$. 
 	\begin{figure}[ht]
 		\centering
-		\includegraphics[width=0.4\linewidth]{pictures/timeEvolutionPerepheral.pdf}
+		\includegraphics[width=0.8\linewidth]{pictures/timeEvolutionPerepheral.pdf}
 		\caption{The created initial transverse energy density profile and its time	dependence in coordinate space for a non-central heavy-ion collision. The z-axis is along the colliding beams, the x-axis is defined by the impact parameter.}
 		\label{fig:time_evolution_perepheral} 
 	\end{figure}
@@ -323,7 +333,7 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	\begin{equation}
 		\frac{\epsilon_x(\tau_0 + \Delta \tau)}{\epsilon_x(\tau_0)} = \left[1+ \frac{(c \Delta \tau)^2}{\langle \vec{r}^2 \rangle_{\tau_0}} \right]^{-1}
 	\end{equation}
-	where $\tau_0$ is the time when the particles were created and $\langle \vec{r}^2 \rangle_{\tau_0}$ is the azimuthally averaged initial transverse radius squared of the reaction zone. So if thermalization is delayed by a time $\Delta \tau$ , any elliptic flow would have to build on a reduced spatial deformation and would come out smaller. It is also known from microscopic kinetic studies that for	a given initial spatial eccentricity the magnitude of the generated elliptic flow is a monotonic function of the mean free path that can be rewritten by the product of density and scattering cross section in the fireball.
+	where $\tau_0$ is the time when the particles were created and $\langle \vec{r}^2 \rangle_{\tau_0}$ is the azimuthally averaged initial transverse radius squared of the reaction zone. So if thermalization is delayed by a time $\Delta \tau$ , any elliptic flow would have to build on a reduced spatial deformation and would come out smaller. It is also known from microscopic kinetic studies that for a given initial spatial eccentricity the magnitude of the generated elliptic flow is a monotonic function of the mean free path that can be rewritten by the product of density and scattering cross section in the fireball.
 	
 	More recently, it was realized that small deviations from ideal hydrodynamics, in particular viscous corrections, already modify significantly the buildup of the elliptic flow. The shear viscosity determines how good a fluid is, however, for relativistic
 	fluids the more useful quantity is the shear viscosity over entropy ratio $\eta_v/s$. For perfect	fluids the ratio can be approximated by:
@@ -341,27 +351,22 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	The volume of the system created in	heavy-ion collisions is considerably larger than the partonic scale, this justifies the usage of a grand-canonical ensemble. Under these conditions the elementary volume under study can exchange both particles and energy with its surroundings meaning that the quantum numbers are conserved. In particular the volume of clusters is in a constant ratio with their mass when hadronization takes place.  In addition one has to consider the quantum behaviour of both fermionic and bosonic degrees of freedom that form the system. Quantum interference effects in the production of identical particles, the so-called Bose-Einstein correlations or Hanbury Brown-Twiss second-order interference would simply be impossible without a finite volume. The Bose-Einstein correlations (BEC) refer to a quantum mechanical phenomenon that arises due to the wave-like nature of bosonic particles and their tendency to occupy the same quantum state. Instead the Hanbury Brown and Twiss (HBT) effect is any of a variety of correlation and anti-correlation effects in the intensities received by two detectors from a beam of particles. HBT effects can generally be attributed to the wave–particle duality of the beam, and the results of a given experiment depend on whether the beam is composed of fermions or bosons. From statistical mechanics is known that hold
 	
 	\begin{equation}
-		\begin{subequations}
-			\begin{align}
-			\langle N \rangle = \frac{1}{\beta} \left( \frac{\partial lnZ}{\partial \mu_B}\right) \\
-		\end{align}
-	\end{subequations}
-	\begin{subequations}
-	\begin{align}
-				\langle E \rangle = - \left( \frac{\partial lnZ}{\partial \beta}\right) + \mu_B \langle N \rangle \\
-	\end{align}
-	\end{subequations}
-	\begin{subequations}
-		\begin{align}
-		\langle S \rangle = k_B \frac{\partial T \cdot lnZ}{\partial T} \\
-		\end{align}
-	\end{subequations}
-	\begin{subequations}
-		\begin{align}
-	P_{pressure} = \frac{1}{\beta} \left( \frac{\partial lnZ}{\partial V}\right) \\
-		\end{align}
-	\end{subequations}
-	\end{equation}u
+		\langle N \rangle = \frac{1}{\beta} \left( \frac{\partial lnZ}{\partial \mu_B}\right)
+		\label{eq:stat_n}
+	\end{equation}
+	\begin{equation}
+		\langle E \rangle = - \left( \frac{\partial lnZ}{\partial \beta}\right) + \mu_B \langle N \rangle 
+		\label{eq:stat_energy}
+	\end{equation}
+	\begin{equation}
+		\langle S \rangle = k_B \frac{\partial T \cdot lnZ}{\partial T}
+		\label{eq:stat_entropy}
+	\end{equation}
+	\begin{equation}
+		P_{pressure} = \frac{1}{\beta} \left( \frac{\partial lnZ}{\partial V}\right) 
+		\label{eq:stat_pressure}
+	\end{equation}
+
 	
 	Where E,S $P_{pressure}$, N, T and $k_B$ are respectively the energy, the entropy, the pressure, the number of particle the temperature and the Boltzmann constant, instead $\beta=\frac{1}{k_BT}$ and Z is the partition function that can be expressed in the following manner
 	\begin{equation}
@@ -412,25 +417,29 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 		\centering
 		\begin{minipage}{0.45\textwidth}
 			\centering
-			\includegraphics[width=0.74 \linewidth]{pictures/hadron_yelds.png}
-			\caption{ The energy dependence of experimenal hadron yields at	mid-rapidity for various species produced in central nucleus-nucleus collisions. The energy regimes for various accelerators are marked. Note that, for SPS energies, there are two independent measurements available for the $\Lambda$ hyperon yields. \cite{Andronic_2006}
+			\includegraphics[width=0.8 \linewidth]{pictures/hadron_yelds.png}
+			\caption{ The energy dependence of experimenal hadron yields at	mid-rapidity for various species produced in central nucleus-nucleus collisions. The energy regimes for various accelerators are marked. Note that, for SPS energies, there are two independent measurements available for the $\Lambda$ hyperon yields. \cite{Andronic_2006}}
 			\label{fig:hadron_yelds}
 		\end{minipage}
-		\begin{minipage}{0.5\textwidth}
+		\begin{minipage}{0.45\textwidth}
 			\centering
-			\includegraphics[width=0.74 \linewidth]{pictures/particle_abbundance.png}
+			\includegraphics[width=0.7 \linewidth]{pictures/particle_abbundance.png}
 			\caption{adron multiplicities in central (0-10\%) Pb–Pb collisions at the LHC, for different particles: $\pi^\pm, k^\pm, \phi, p, \bar{p}, \Lambda, \bar{\Lambda}, \Xi^-, \bar{\Xi}^+, \Omega, \bar{\Omega}^+, 3^He, 3^\bar{He}, 3^\Lambda_He, 3^\Lambda_\bar{He}, 4^\bar{He}$ \cite{Andronic_2017}}
 			\label{fig:particle_abbundance}
-		\end{minipage}%
+		\end{minipage}
 		\centering
-			\includegraphics[width=0.74 \linewidth]{pictures/shm_qcd_comparison.png}
+			\includegraphics[width=0.8 \linewidth]{pictures/shm_qcd_comparison.png}
 		\caption{ The a panel show (a) comparison between the Phase diagram of QCD with data points as obtained at different energies and the thermal model fits from SIS up to LHC data. The panel (b) show the evolution of the temperature of chemical freeze-out and the $\mu_B$ as a function of the $\sqrt{s_{NN}}$.\cite{Andronic_2017}}
 		\label{fig:shm_qcd_comparison}
 		
 	\end{figure}
 	
-	\subsection{Strangeness enhancement}
-
+	\subsection{Strangeness and Charmness enhancement}
+	Considering the particles production one would expect a suppression in the production af the heavier flavor with respect to the u and d quark, both for their mass but also for the conservation of quantum number. This is related to the fact that strong interactions conserve the strangeness number exactly. However is known that in microscopic therm the QCD predict that the heavier flavor are produced in pairs. So, ad example, for the small fireball volumes created in elementary particle collisions strange hadron get suppressed since always a second hadron with balancing strangeness has to be created inside the same small volume at the same time, and this requires more energy. More complicated is the problem for the quark u e d because of their similar mass that required he introduction of the isospin. This hold for a canonical formalism. Instead the grand-canonical formulation assumes the average	conservation of the quantum number, a condition that is easily reproduced in heavy-ion collisions. For these reason the strangeness suppression is observed in small collision systems such as pp, p $\bar{p}$̄ and $e^+ e^−$. When quark–gluon plasma disassembles into hadrons in a breakup process, the high availability of strange antiquarks helps to produce antimatter containing multiple strange quarks, which is otherwise rarely made. Similar considerations are at present made for the heavier charm flavor, which is made at the beginning of the collision process in the first interactions and is only abundant in the high-energy environments of CERN's Large Hadron Collider. In addition, the restoration of the chiral symmetry in proximity to the temperature of deconfined transition lowers the constituent mass below $\sim$ 150 MeV thus decreasing the energetic threshold for its production. These reduce the time scale for strangeness saturation and chemical equilibration. The fact that the gran canonical formalism is useful for description of the process tell us that the system behave as if the strange and antistrange hadrons were created independently and statistically distributed over the entire nuclear fireball. This mean that the is not important the initial contrition in witch the pairs s$\bar{s}$ is created for determine the final distribution and make the statistical assumption hold. This point is not completely understood but is probably related to the fact that a significant amount of strangeness diffusion occur before hadronization.
+	
+	The net strange quark abundance is starting to saturate for temperatures above 160 MeV. This temperature is close to the one of the chemical freeze-out where the relative particle abundances are fixed. As a consequence of the larger amount of strange quarks available before the hadronization it is expected that strange hadrons will be found more abundantly in the final state. The production of strange content in the plasma is predominant with respect to the one formed in interactions occurring after the hadronization	phase. 
+	
+	Instead the charm quark mass is much larger than the other described in this section and hence thermal production of charm quarks or hadrons is strongly suppressed. However, with increasing center-of-mass energy the total charm production cross section which results from initial hard collisions increases strongly. 
 	
 	
 	
@@ -520,7 +529,7 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	
 	\begin{table}[h]
 		\centering
-		\begin{tabular}{c c | c c}
+		\begin{tabular}{|c c | c c|}
 			$m_{u,d}$ (MeV) & 313 & $g_{ch}^2 / 4\pi$ & 0.54 \\
 			$m_{c}$ (MeV) & 1752 & $m_{\sigma} \, (fm^{-1})$ & 3.42 \\
 			$\hat{r_0}$ (MeV fm) & 28.170 &  $m_{\pi} \, (fm^{-1})$ & 0.70 \\
@@ -653,7 +662,7 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	\end{equation}
 	One get
 	\begin{equation}
-		\frac{\epsilon_x(t_0+\Delta T)}{\epsilon_x(\tau_0)}= \left[1+ \frac{(c \Delta \tau)^2}{\langle \vec{r}^2 \rangle_{\tau_0} \right]
+		\frac{\epsilon_x(t_0+\Delta T)}{\epsilon_x(\tau_0)}= \left[1+ \frac{(c \Delta \tau)^2}{\langle \vec{r}^2 \rangle_{\tau_0} \right]}
 	\end{equation}
 	
 	\subsection{Appendice C}

@@ -2386,3 +2386,61 @@
     <bcf:citekey order="23" intorder="1">heinz2004conceptsheavyionphysics</bcf:citekey>
     <bcf:citekey order="24" intorder="1">amsdottorato9036</bcf:citekey>
     <bcf:citekey order="25" intorder="1">Andronic_2017</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">Andronic_2006</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">Andronic_2006</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">Andronic_2017</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">Andronic_2017</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">Andronic_2017</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">Andronic_2017</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">yukawa</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">heisemerg</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">sakata</bcf:citekey>
+    <bcf:citekey order="35" intorder="1">onebosonexchangepotentialmodelapproach</bcf:citekey>
+    <bcf:citekey order="36" intorder="1">Charmed-nucleon</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">baryon–nucleon-potential</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">Valcarce_2005</bcf:citekey>
+    <bcf:citekey order="39" intorder="1">Smit_2023</bcf:citekey>
+  </bcf:section>
+  <!-- SORTING TEMPLATES -->
+  <bcf:sortingtemplate name="anyt">
+    <bcf:sort order="1">
+      <bcf:sortitem order="1">presort</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="2">
+      <bcf:sortitem order="1">labelalpha</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="3" final="1">
+      <bcf:sortitem order="1">sortkey</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="4">
+      <bcf:sortitem order="1">sortname</bcf:sortitem>
+      <bcf:sortitem order="2">author</bcf:sortitem>
+      <bcf:sortitem order="3">editor</bcf:sortitem>
+      <bcf:sortitem order="4">translator</bcf:sortitem>
+      <bcf:sortitem order="5">sorttitle</bcf:sortitem>
+      <bcf:sortitem order="6">title</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="5">
+      <bcf:sortitem order="1">sortyear</bcf:sortitem>
+      <bcf:sortitem order="2">year</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="6">
+      <bcf:sortitem order="1">sorttitle</bcf:sortitem>
+      <bcf:sortitem order="2">title</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="7">
+      <bcf:sortitem order="1">volume</bcf:sortitem>
+      <bcf:sortitem literal="1" order="2">0</bcf:sortitem>
+    </bcf:sort>
+  </bcf:sortingtemplate>
+  <!-- DATALISTS -->
+  <bcf:datalist section="0"
+                name="anyt/global//global/global"
+                type="entry"
+                sortingtemplatename="anyt"
+                sortingnamekeytemplatename="global"
+                labelprefix=""
+                uniquenametemplatename="global"
+                labelalphanametemplatename="global">
+  </bcf:datalist>
+</bcf:controlfile>
