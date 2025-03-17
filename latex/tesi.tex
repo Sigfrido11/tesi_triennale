@@ -368,11 +368,11 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 		ln Z_i(T,V,\mu_i)= \frac{\Delta V g_i}{2\pi^2\hbar^3} \int_{0}^{\infty} \theta_i p^2 dp ln(1+\theta_i e^{\beta(\mu_i-E)})
 		\label{eq:partition_function}
 	\end{equation}
-	$\theta_i$ is +1 for fermions and −1 for bosons. Global observables such as the
-	particle mean multiplicities can be derived from the previus equation:
+	$\theta_i$ is +1 for fermions and -1 for bosons. Global observables such as the
+	particle mean multiplicities can be derived from the previous equation:
 	\begin{equation}
 		\langle N \rangle = \frac{\Delta V g_i}{2\pi^2\hbar^3} \int_{0}^{\infty} dp \frac{p^2}{e^{\beta(\mu_i-E)}+\theta_i} 
-		\label{eq:particle_number}
+		\label{eq:mean_particle_number}
 	\end{equation}
 	\begin{equation}
 	\langle S \rangle= -\sum_{K} \int_{\Delta V} \int \frac{d^3x d^3p}{(2\pi)^3} \left[f_i f_i ln f_i + \theta_i (1-\theta_if_i)ln(1-\theta_if_i) \right]
@@ -389,7 +389,7 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 		\label{eq:partition_function2}
 	\end{equation}
 	 
-	The definition of the chemical potential $\mu_i$ is strictly related to the processes at play and to the type of chosen ensemble.it became necessary in order to taking into account the possibility to have fluctuations of the number of particles of species i. This can happen because the volume can exchange particles with its surroundings, incrementing or decrementing the components of each species. This formulation corresponds to the grand-canonical ensemble which is the most commonly used in the description of heavy-ion collisions. For a given species i the chemical potential can be split into $\mu_i = B_i mu_B + S_i μ_S + Qi μ_Q$ , where $B_i$ , $S_i$ and $Q_i$ are respectively the baryon number, strangeness and electric charge while $μ_B$ , $μ_S$ and $μ_Q$ are the corresponding chemical potentials. For smaller systems, like happen for example in collision between proton or proton and other nucleos, the grand-canonical ensemble is no longer a good description of the system. In this case the volume created after the collision is considerably smaller and it is better to require the local conservation of quantum numbers and so the canonical formulation is more appropriate. it is worth mentioning that the transition from a canonical to a grand-canonical description effectively occurs when the cluster volume is of the order of 100 $fm^3$ at an
+	The definition of the chemical potential $\mu_i$ is strictly related to the processes at play and to the type of chosen ensemble.it became necessary in order to taking into account the possibility to have fluctuations of the number of particles of species i. This can happen because the volume can exchange particles with its surroundings, incrementing or decrementing the components of each species. This formulation corresponds to the grand-canonical ensemble which is the most commonly used in the description of heavy-ion collisions. For a given species i the chemical potential can be split into $\mu_i = B_i mu_B + S_i \mu_S + Qi \mu_Q$ , where $B_i$ , $S_i$ and $Q_i$ are respectively the baryon number, strangeness and electric charge while $\mu_B$ , $\mu_S$ and $\mu_Q$ are the corresponding chemical potentials. For smaller systems, like happen for example in collision between proton or proton and other nucleos, the grand-canonical ensemble is no longer a good description of the system. In this case the volume created after the collision is considerably smaller and it is better to require the local conservation of quantum numbers and so the canonical formulation is more appropriate. it is worth mentioning that the transition from a canonical to a grand-canonical description effectively occurs when the cluster volume is of the order of 100 $fm^3$ at an
 	energy density of 0.5 GeV/$fm^3$. If the energy of the collision is not enough the strange quark and antiquark can be non thermalized. So we should add another therm to chemical potential, This term take the form $|s_i| \bar{mu_s}$ where $s_i$ is the total number of	strange quarks and antiquarks in hadron and $\bar{mu_s}$ the corresponding potential. However in heavy-ion collisions the s quarks can be fully thermalized. Equation \ref{eq:boltmann2} is a local thermal and chemical equilibrium distribution function. If the system could	be kept at constant volume, any type of strong interaction among the hadrons would leave this distribution unchanged since such microscopic processes again conserve energy, baryon number and strangeness. Instead from a kinematic point of view the equilibrium is not achieved as a result of hadronic rescattering but statistically by interference of many different hadron production channels. The achievement of kinematic equilibrium is due to two different types of processes. The first one is to take the system of hadrons with an arbitrary initial phase-space, that respect the constrain, distribution and let it evolve for a sufficiently long time to obtain the validity of the Eq. \ref{eq:boltmann2} as a result of the action of	elastic and inelastic processes among the hadrons, the kinetic equilibration. Or is possible to realize	statistical process which fills hadronic phase-space in the statistically most probable configuration. This	is statistical equilibrium. Both processes share the property that they lead to a state of Maximum Entropy.
 	However, statistical hadronization can produce a Maximum Entropy distribution through non-hadronic processes which occur much faster than any inelastic scattering among hadrons at the given energy and	baryon number density. %chiedi quali sono questi processi extra
 	
@@ -398,15 +398,15 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	\begin{itemize}
 		\item All particles and their corresponding anti-particles tend to be equally produced if the collision energy is high enough. This is especially true at LHC energies
 		\item Baryons (p and $\Lambda$) and mesons ($\pi$ and K) follow different behaviour with significant baryon/anti-baryon discrepancies at lower energies.
-		\item  When $μ_B$ is larger than 0 the baryonic number of the colliding nuclei is to be found in the products of the collision. At low energies, an important fraction of the initial colliding nucleons are found in the final state (large stopping power). For larger beam energies the colliding nuclei become almost transparent to each other (no baryon stopping). 
-		\item The production of $\Lambda$, similar to p, is affected by the non-zero $μ_B$ at low energies but the effect is reduced since it contains an s quark. At intermediate energies $\Lambda$ exhibits a decrease similar to that of p.
+		\item  When $\mu_B$ is larger than 0 the baryonic number of the colliding nuclei is to be found in the products of the collision. At low energies, an important fraction of the initial colliding nucleons are found in the final state (large stopping power). For larger beam energies the colliding nuclei become almost transparent to each other (no baryon stopping). 
+		\item The production of $\Lambda$, similar to p, is affected by the non-zero $\mu_B$ at low energies but the effect is reduced since it contains an s quark. At intermediate energies $\Lambda$ exhibits a decrease similar to that of p.
 		\item  At high energies, pions are the most abundant particle species produced
 		\item Particles containing s quarks are subject to a significant increase in their abundances above the SPS energies. This effect known as “strangeness enhancement” was historically identified as a signature typical of the QGP. This aspect will be discuss better later.
 		\item At high energies the production of particles with same mass but different quark content tends to be similar.
 	\end{itemize}
 
 
-	The SHM can be used to fit the measured dN/dy using only a limited number of parameters This allows to obtain quantities such as the chemical freeze-out temperature, the system volume V and the chemical potential $\mu_B$. Results Fig. \ref{fig:particle_abbundance} show how the best fit parameters to describe the data from Pb–Pb central collisions collected by the ALICE experiment at $\sqrt{s_{NN}}$ = 2.76 TeV are:	T = 156.5 $\pm$ 1.5 MeV, $μ_B$ = 0.7 $\pm$ 3.8 MeV, V = 5280 $\pm$ 410 $fm^3$ . The model is able to describe reasonably well measurements of yields which span over 9 order of magnitudes with a $\tilde{\chi}^2$ = 1.61 with a low number of free parameters. The largest tension is observed for p and p̄, reaching almost a 3σ deviation. \cite{Andronic_2017} In addition these results allow for a direct comparison with predictions from lattice QCD. Such comparison is resumed in Fig. \ref{fig:shm_qcd_comparison} where is possible to see that the curve is correctly described.
+	The SHM can be used to fit the measured dN/dy using only a limited number of parameters This allows to obtain quantities such as the chemical freeze-out temperature, the system volume V and the chemical potential $\mu_B$. Results Fig. \ref{fig:particle_abbundance} show how the best fit parameters to describe the data from Pb–Pb central collisions collected by the ALICE experiment at $\sqrt{s_{NN}}$ = 2.76 TeV are: T = 156.5 $\pm$ 1.5 MeV, $\mu_B$ = 0.7 $\pm$ 3.8 MeV, V = 5280 $\pm$ 410 $fm^3$ . The model is able to describe reasonably well measurements of yields which span over 9 order of magnitudes with a $\tilde{\chi}^2$ = 1.61 with a low number of free parameters. The largest tension is observed for p and $\bar{p}$, reaching almost a 3 $\sigma$ deviation. \cite{Andronic_2017} In addition these results allow for a direct comparison with predictions from lattice QCD. Such comparison is resumed in Fig. \ref{fig:shm_qcd_comparison} where is possible to see that the curve is correctly described.
 	
 		\begin{figure}
 		\centering
@@ -436,7 +436,7 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	
 	
 	\FloatBarrier
-	$Y_c$N bound state}
+    \chapter{$Y_c$N bound state}
 	
 	\subsection{One Boson exchange model}
 	Before the publications of Hideki Yukawa's papers in 1935 \cite{yukawa} physicists cannot explain the results of James Chadwick's atomic model, which consisted of positively charged protons and neutrons packed inside of a small nucleus, with a radius on the order of $10^{-14}-10^{-15}$ m. This because the electromagnetic forces at these lengths would cause these protons to repel each other and for the nucleus to fall apart. For these reason in 1932, Werner Heisenberg proposed a "Platzwechsel" (migration) interaction between the neutrons and protons inside the nucleus, in which neutrons were composite particles of protons and electrons. These composite neutrons would emit electrons, creating an attractive force with the protons, and then turn into protons themselves \cite{heisemerg}. The model just explained violate the linear and anglular momentum and for these reason Enrico Fermi in 1934 proposed the  proposed the emission and absorption of two light particles: the neutrino and electron, rather than just the electron. Some month later the soviet physicists Igor Tamm and Dmitri Ivanenko demonstrated that the force associated with the neutrino and electron emission was not strong enough to bind the protons and neutrons in the nucleus.
@@ -613,6 +613,7 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	
 	The binding energy of $\Lambda_c$ hypernuclei has been analyzed in \ref{pot_simulation} using the HAL QCD for $m_\pi$ = 410 MeV. 
 	
+	\FloatBarrier
 	
 	\newpage
 	
@@ -636,6 +637,77 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 		\frac{dN_i}{dy \, m_\perp \, dm_\perp \, d\phi_p} = \frac{g_i}{\pi} \int_{0}^{\infty} r_\perp \, dr_\perp \, n_i(r_\perp) \left[ m_\perp K_1 \left( \frac{m_\perp \cosh(\rho(r_\perp))}{T(r_\perp)}\right) I_0 \left( \frac{p_\perp \sinh(\rho(r_\perp))}{T(r_\perp)} \right) - p_\perp \frac{\partial \tau}{\partial r_\perp} K_0 \left( \frac{m_\perp \cosh(\rho(r_\perp))}{T(r_\perp)}\right) I_1 \left( \frac{p_\perp \sinh(\rho(r_\perp))}{T(r_\perp)} \right) \right]
 		\label{eq:momentum_cooper-frye_a}
 	\end{equation}
+	
+	\subsection{Appendice B}
+	Under free-streaming the phase space distribution evolves as
+	\begin{equation}
+		f(\vec{r},\vec{p}, t) = f(\vec{r} - \frac{\vec{p}}{E}(t-t_0), \vec{p}, t) 
+	\end{equation}
+	Using a Gaussian parametrization for the initial phase-space distribution of produced secondary particles
+	\begin{equation}
+		f(\vec{r},\vec{p}, \tau) =e^{- \frac{x^2}{2 R_x^2} - \frac{y^2}{2 R_y^2}- \frac{p_x^2+ p_y^2}{2 (\Delta \tau)^2}}
+	\end{equation}
+	where $\Delta t$ so writing the Eq \ref{eq:anisotropy} in integral form.
+	\begin{equation}
+		\epsilon_x = \frac{\int d^2 r r^2 cos(2 \psi_r \int d^3 p f(\vec{r},\vec{p}, \tau))}{\int d^2 r r^2  \int d^3 p f(\vec{r},\vec{p}, \tau)} \approx \frac{R_x^2 +R_y^2}{R_x^2 +R_y^2 + 2(c \Delta \tau)^2}
+	\end{equation}
+	One get
+	\begin{equation}
+		\frac{\epsilon_x(t_0+\Delta T)}{\epsilon_x(\tau_0)}= \left[1+ \frac{(c \Delta \tau)^2}{\langle \vec{r}^2 \rangle_{\tau_0} \right]
+	\end{equation}
+	
+	\subsection{Appendice C}
+	For get the gran canonical partition function starting from Eq \ref{eq:partition_function} visible below.
+	\begin{equation}
+		ln Z_i(T,V,\mu_i)= \frac{\Delta V g_i}{2\pi^2\hbar^3} \int_{0}^{\infty} \theta_i p^2 dp ln(1+\theta_i e^{\beta(\mu_i-E)})
+	\end{equation}
+	replacing the logarithm with taylor expansion under the assumpion that $e^{\beta(\mu_i-E)} < 1 \rightarrow \mu_i < E$ and using $\lambda_i= e^{\beta \mu_i}$ it's possible to rewrite \ref{eq:boltzmann}.
+	\begin{equation}
+		ln Z_i(T,V,\mu_i)= \frac{\Delta V g_i}{2\pi^2\hbar^3} \sum_{K} \frac{(\theta \lambda_i)^k}{k} \int_{0}^{\infty} p^2 dp e^{-k \beta E}
+	\end{equation}
+	integring by part
+	\begin{equation}
+		ln Z_i(T,V,\mu_i)= \frac{\Delta V g_i}{2\pi^2\hbar^3} \sum_{K} \frac{(\theta \lambda_i)^k}{k} \left[\frac{p^3 e^{-k \beta E}}{3} \big|_0^\infty + \int_{0}^{\infty} dp \frac{p^3 k \beta e^{-k \beta E}}{3} \frac{dE}{dp} \right]
+	\end{equation}
+	The first integrand vanish.
+	\begin{equation}
+		\frac{dE}{dp} = \frac{d}{dp} (\sqrt{p^2+m_i^2}) = \frac{p}{\sqrt{p^2+m_i^2}} = \frac{p}{E}
+	\end{equation}
+	so
+	\begin{equation}
+		ln Z_i(T,V,\mu_i)= \frac{\Delta V g_i}{2\pi^2\hbar^3} \sum_{K} \frac{(\theta \lambda_i)^k}{k}  \int_{0}^{\infty} dp \frac{p^3 k \beta e^{-k \beta E}}{3} \frac{E}{p} 
+	\end{equation}
+	introducing $x= k\beta E$, $w_i=k\beta m_i$ and $y_i=x/w_i$
+	\begin{equation}
+		ln Z_i(T,V,\mu_i)= \frac{\Delta V g_i}{2\pi^2\hbar^3} \sum_{K} \frac{(\theta \lambda_i)^k}{k}  \int_{0}^{\infty} dE \frac{p^3 k \beta e^{-k \beta}}{3} 
+	\end{equation}
+	\begin{equation}
+		ln Z_i(T,V,\mu_i)= \frac{\Delta V g_i}{2\pi^2\hbar^3} \sum_{K} \frac{(\theta \lambda_i)^k}{k}  \int_{0}^{\infty} dE \frac{(E^2-m_i^2)^{3/2} k \beta e^{-k \beta}}{3} 
+	\end{equation}
+	\begin{equation}
+		ln Z_i(T,V,\mu_i)= \frac{\Delta V g_i m_i^2}{2\pi^2\hbar^3 \beta} \sum_{K} \frac{(\theta \lambda_i)^k}{k^2}  \int_{0}^{\infty} dE \frac{(x^2-w_i^2)^{3/2}}{3 w_i^2} e^{-x} 
+	\end{equation}
+	
+		\begin{equation}
+		ln Z_i(T,V,\mu_i)= \frac{\Delta V g_i m_i^2}{6 \pi^2\hbar^3 \beta} \sum_{K} \frac{(\theta \lambda_i)^k w_i}{k^2}  \int_{0}^{\infty} dE (\frac{x^2}{w_i^2}-1)^{3/2} e^{-x} 
+	\end{equation}
+	
+	\begin{equation}
+		ln Z_i(T,V,\mu_i)= \frac{\Delta V g_i m_i^2}{6 \pi^2\hbar^3 \beta} \sum_{K} \frac{(\theta \lambda_i)^k w_i}{k^2}  \int_{0}^{\infty} dE w_i (y^2-1)^{3/2} e^{-w_i y} 
+	\end{equation}
+	introducing the modified Bessel function 
+	\begin{equation}
+		k_2(q)= \frac{q^2}{3} \int_{0}^{\infty} dy (y^2-1)^{3/2} e^{-qy}
+	\end{equation}
+	we finally obtain
+	\begin{equation}
+		ln Z_i(T,V,\mu_i)= \frac{\Delta V g_i}{2\pi^2\hbar^3\beta} \sum_{K} \frac{(\theta_i e^{\beta \mu_i})^k}{k^2} m_i^2K_2(k\beta m_i)
+	\end{equation}
+	
+	
+	
+	
+	
 	
 	
 	
