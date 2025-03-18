@@ -159,7 +159,7 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	
 	However in typical nuclear condition the energy are too low for permit perturbative calculation but the physicist believe that a direct consequence of the theory is the confinement of hadrons, well supported by the experimental data, that exclude the possibility of find free quark. A formal proof had not been yet obtained and this problem has been added to the list of the Millennium Prize Problems. For our discussion the Polyakov loop operator gets a particular importance. 
 	\begin{equation}
-		L=\frac{1}{3} Tr \left(P e^{ig \int_{0}^{\beta} d\tau A_4(\vec(x),\tau) } \right)
+		L=\frac{1}{3} Tr \left(P e^{ig \int_{0}^{\beta} d\tau A_4(\vec{x},\tau) } \right)
 		\label{eq:Polyakov-loop}
 	\end{equation}
 	Where P is the path-ordering operator and $A-4$ is the Euclidean temporal component of the gauge field and $\beta= \frac{1}{T}$, T temperature. A vanishing thermal expectation value $\left<L\right>$ of the Polyakov loop operator thus indicates infinite energy for a free quark, i.e. quark confinement. Studying the equation became evident that as the temperature increases $\left<L\right>$ increases rapidly to a nonzero value at high temperatures. This indicates that quark confinement is broken at the corresponding critical temperature $T_cr$. In the absence of quark	masses the equation \ref{eq:QCD_lagrangian} is chirally symmetric. Since the up and down quark masses are very small, neglecting them is a good approximation. The nonvanishing chiral condensate at T = 0 breaks this chiral symmetry and generates a dynamic mass, the so called “constituent” masses. In vacuum this mass are thus about 300 MeV for the up and down quarks, about 450 MeV for the strange quark and 1.5 Gev for the charm, 4.5 Gev for bottom and 180 Gev for top. The dynamically generated mass disappeared at $T_cr$ , making the quarks light again and restoring the approximate chiral symmetry of QCD. The dissolution of massive hadrons into almost massles quarks and gluons at $T_cr$ leads to a very rapid rise of the energy density near the deconfinement transition, as shown in figure \ref{fig:deconfinement}.
@@ -224,40 +224,47 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	\end{equation}
 	Here gi is a spin-isospin-color-flavor-etc. degeneracy factor which counts all particles with the same properties. The factor $p \cdot u$ is the energy of the particle in the local rest frame. The $\pm$1 in the denominator accounts for the proper quantum statistics of particle (-1 for fermions and +1 for boson). The Boltzmann approximation corresponds to keeping only the first term in the sum over n in the last expression. In our applications this is an excellent analytical approximation for all hadrons except for the pion because of their mass.
 	
-	At relativistic energies it is convenient to parametrize the longitudinal flow velocities and momenta in terms of rapidities, $\eta= \frac{1}{2} ln \frac{1+v}{1-v}$ in this way $v = tanh \eta$. It's also possible to define $\eta_l = \frac{1}{2} ln \frac{1+v_l}{1-v_l}$ and y = $\frac{1}{2} ln \frac{1+\frac{p_l}{E}}{1-\frac{p_l}{E}}= \frac{1}{2} ln \frac{E+p_l}{E -p _l}$.  Bjorken argued that at asymptotically high energies the physics of secondary particle production should be independent of the longitudinal reference frame. Furthermore, the boost-invariance of these initial conditions is preserved in longitudinal proper time if the system expands collectively along the longitudinal direction, in this approximation hold $\eta=\eta_l$. For more detail see \cite{PhysRevD.27.140}. The Bjorken scaling approximation is expected to be good at high energies and not too close to the beam and target rapidities, i.e. in safe distance from the longitudinal kinematic limits. Whit Bjorken intuition.
+	At relativistic energies it is convenient to parametrize the longitudinal flow velocities and momenta in terms of rapidities, $\eta= \frac{1}{2} ln \frac{1+v}{1-v}$ in this way $v = tanh (\eta)$. It's also possible to define $\eta_l = \frac{1}{2} ln \frac{1+v_l}{1-v_l}$ and y = $\frac{1}{2} ln \frac{1+\frac{p_l}{E}}{1-\frac{p_l}{E}}= \frac{1}{2} ln \frac{E+p_l}{E -p _l}$.  Bjorken argued that at asymptotically high energies the physics of secondary particle production should be independent of the longitudinal reference frame. Furthermore, the boost-invariance of these initial conditions is preserved in longitudinal proper time if the system expands collectively along the longitudinal direction, in this approximation hold $\eta=\eta_l$. For more detail see \cite{PhysRevD.27.140}. The Bjorken scaling approximation is expected to be good at high energies and not too close to the beam and target rapidities, i.e. in safe distance from the longitudinal kinematic limits. Whit Bjorken intuition.
 	\begin{equation}
-		p \cdot u(x) = \gamma_\perp(\vec{r}_perp, \tau) \left(m_perp cosh(y-\eta) - \vec{p}_\perp \cdot \vec{v}_perp(\vec{r}_perp, \tau) \right)
+		p \cdot u(x) = \gamma_\perp(\vec{r}_\perp, \tau) \left(m_\perp cosh(y-\eta) - \vec{p}_\perp \cdot \vec{v}_\perp(\vec{r}_\perp, \tau) \right)
 		\label{eq:p*u}
 	\end{equation}
-	Where $\vec{r}_perp=(x,y)$, $m_\perp=\sqrt{m^2 + p_\perp^2}$ is the transverse mass, $\tau=\sqrt{t^2-z^2}$ is the longitudinal proper time and z the longitudinal position. 
+	Where $\vec{r}_\perp=(x,y)$, $m_\perp=\sqrt{m^2 + p_\perp^2}$ is the transverse mass, $\tau=\sqrt{t^2-z^2}$ is the longitudinal proper time and z the longitudinal position. 
 	
 	\subsubsection{The Cooper-Frye formula}
 	
 	Suppose we want to count the total number of particles of species i after produced in the collision. Since this number does not depend on the reference frame of the observer, we must be able to express it in a Lorentz-invariant way. We define a three-dimensional hypersurface $\Sigma$(x) in 4-dimensional space-time along which we perform the counting. Different choices for the 3-dimensional hypersurface $\Sigma$ are possible as long as it completely closes off the future light cone emerging from the collision point. We count particles crossing the surface by subdividing it into infinitesimal elements $d^3 \sigma$, defining an outward-pointing 4-vector $d^3 \sigma_\mu$(x) perpendicular to $\Sigma$(x) at point x with the magnitude $d^3 \sigma$. Introducing the 4-vector $j^\mu_i$ describing the current of particles i through point x, and summing over all the infinitesimal hypersurface elements we get
 	
 	\begin{equation}
+		
 		N_i = \int_{\Sigma} d^3 \sigma_\mu (x) j_i^\mu(x) = \int_{\Sigma} d^3 \sigma_\mu (x) \left( \frac{1}{(2\pi)^3} \int \frac{d^3 p}{E} p^\mu f_i(x,p)  \right)
 		\label{eq:particle_number}
 	\end{equation}
 	Where $j_i^\mu(x)$ is given in terms of the Lorentz-invariant phase-space distribution (giving the probability of finding a particle with momentum p at point x) by multiplying it with the velocity $\frac{p^\mu}{E}$ and integrating over all momenta with measure $\frac{d^3 p}{(2\hbar\pi)^3}=\frac{d^3 p}{(2\pi)^3}$. We finally obtain the Cooper-Frye formula
 	\begin{equation}
-		E \frac{dN_i}{d^3 p}= \frac{dN_i}{dy p_\perp dp_\perp d\phi_p} = \frac{dN_i}{dy m_\perp dm_\perp d\phi_p} = \frac{1}{(2\pi)^3} \int_{\Sigma} p \cdot d^3 \sigma_\mu (x) f_i (x,p)
+		\boxed{
+		E \frac{dN_i}{d^3 p}= \frac{dN_i}{dy p_\perp dp_\perp d\phi_p} = \frac{dN_i}{dy m_\perp dm_\perp d\phi_p} = \frac{1}{(2\pi)^3} \int_{\Sigma} p \cdot d^3 \sigma_\mu (x) f_i (x,p) 
+	}
 		\label{eq:cooper-frye}
 	\end{equation}
 	with $\phi_p$ is the azimuthal angle. To compute the measured momentum spectrum we can therefore replace the surface $\Sigma$ corresponding to the detector by shrinking it to the smallest and earliest surface that still encloses all scattering processes. We call this the “surface of last scattering” or “freeze-out surface” $\Sigma_f$. The the number of particles obtained from the Cooper-Frye formula is not always positive-definite. Physically negative contributions of the Cooper-Frye formula are particles that stream backwards into the hydrodynamical region. It's possible to compare the negative contribution with the total number particles crossing the transition hypersurface. It is found that the number of underlying inward crossings is much smaller than the one the Cooper-Frye formula gives under the assumption of equilibrium distribution functions. 
 	
 	to compute the measured momentum spectrum requires knowledge of the phase-space distribution on the surface of last scattering If the system expands very fast, its density decreases rapidly and the mean free path of the particles growth quickly. The transition from strong coupling to free-steaming thus happens in a short time interval. During this short time it is unlikely that the phase-space distribution undergoes qualitative changes, and we may approximate $f_i(x, p)$ on the last scattering surface by its thermal equilibrium form that it still had just a little earlier. In this section we report only the final result but the proof could be find in the appendix.
-	\begin{equation}
-		\frac{dN_i}{dy \, m_\perp \, dm_\perp \, d\phi_p} = \frac{g_i}{\pi} \int_{0}^{\infty} r_\perp \, dr_\perp \, n_i(r_\perp) \left[ m_\perp K_1 \left( \frac{m_\perp \cosh(\rho(r_\perp))}{T(r_\perp)}\right) I_0 \left( \frac{p_\perp \sinh(\rho(r_\perp))}{T(r_\perp)} \right) - p_\perp \frac{\partial \tau}{\partial r_\perp} K_0 \left( \frac{m_\perp \cosh(\rho(r_\perp))}{T(r_\perp)}\right) I_1 \left( \frac{p_\perp \sinh(\rho(r_\perp))}{T(r_\perp)} \right) \right]
-		\label{eq:momentum_cooper-frye}
-	\end{equation}
+\begin{equation}
+	\begin{aligned}
+	\frac{dN_i}{dy \, m_\perp \, dm_\perp} = \frac{g_i}{\pi^2} \int_{0}^{\infty} r_\perp \, dr_\perp \, n_i(r_\perp) \left[ 
+	m_\perp K_1 \left( \frac{m_\perp \cosh(\rho(r_\perp))}{T(r_\perp)}\right) I_0 \left( \frac{p_\perp \sinh(\rho(r_\perp))}{T(r_\perp)} \right) \right. \\
+	\left. - p_\perp \frac{\partial \tau}{\partial r_\perp} K_0 \left( \frac{m_\perp \cosh(\rho(r_\perp))}{T(r_\perp)}\right) I_1 \left( \frac{p_\perp \sinh(\rho(r_\perp))}{T(r_\perp)} \right) \right]
+\end{aligned}
+	\label{eq:momentum_cooper-frye}
+\end{equation}
 	
 	Where appear the modified Bessel functions and $v_\perp= tanh \rho$. This formula is useful because it allows to easily perform systematic studies of the influence of the radial profiles of temperature, density and transverse flow on the transverse momentum spectrum, in order to better understand which features of a real dynamical calculation of these profiles control the shape of the observed spectra.
 	
 	Eq \ref{eq:momentum_cooper-frye_a} can be simplified by assuming instantaneous freeze-out at $r_T$ = R, The freeze-out volume. In this case there	is no dependence of the proper time at the freeze-out surface $\tau$ therefore $\frac{\partial \tau}{\partial r_\perp}$ so we can rewrite the previus equation in the following manner.
 	
 		\begin{equation}
-		\frac{dN_i}{dy \, m_\perp \, dm_\perp \, d\phi_p} = \frac{g_i}{\pi} \int_{0}^{\infty} r_\perp \, dr_\perp \, n_i(r_\perp) \left[ m_\perp K_1 \left( \frac{m_\perp \cosh(\rho(r_\perp))}{T(r_\perp)}\right) I_0 \left( \frac{p_\perp \sinh(\rho(r_\perp))}{T(r_\perp)} \right) \right]
+		\frac{dN_i}{dy \, m_\perp \, dm_\perp \,} = \frac{g_i}{\pi^2} \int_{0}^{\infty} r_\perp \, dr_\perp \, n_i(r_\perp) \left[ m_\perp K_1 \left( \frac{m_\perp \cosh(\rho(r_\perp))}{T(r_\perp)}\right) I_0 \left( \frac{p_\perp \sinh(\rho(r_\perp))}{T(r_\perp)} \right) \right]
 		\label{eq:BG_blast_wave}
 	\end{equation}
 	 Commonly named Boltzmann-Gibs blast wave. This formulation is particulary used for extract properties of the common source such as the temperature $T_f$ or to fit the single particle spectra. The agreement of Eq \ref{eq:BG_blast_wave} with the spectra is quite remarkable especially in central events where the thermal description is expected to work better. Conversely, for peripheral collisions the two fits give quite different results.
@@ -276,7 +283,7 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	Different process can manifest, for example	at SPS energies the freeze-out surface moves from the edge inward since the fireball matter cools and freezes out faster than the developing radial flow can push it out. At LHC energies the much stronger radial flow generated by the much higher internal pressure makes the fireball grow considerably before suddenly freezing out after about 13 fm/c. 
 	For understand how the radial flow influence the spectra first consider the absence of flow ($\rho=0$), in this condition $I_q(0)=0$ so the equation \ref{eq:momentum_cooper-frye} reduced to
 	\begin{equation}
-		\frac{dN_i}{dy m_\perp dm_\perp} \sim m_\perp K_1(\frac{m_\perp}{T}) \sim m_\perp^{1/2} e^{- \frac{m_\perp}{T}}
+		\frac{dN_i}{dy m_\perp dm_\perp} \sim m_\perp K_1	\left(\frac{m_\perp}{T}\right) \sim m_\perp^{1/2} e^{- \frac{m_\perp}{T}}
 		\label{eq:vanish_rad_flow}
 	\end{equation}
 	In these condition as the temperature is the same for all hadron the spectra depend only on the transverse mass, a fact known as "$m_\perp$" scaling. As visible in the equation the temperature can be extracted easily. Instead if the radial flow is not vanishing approximating $p_\perp \approx m_\perp$ one get.
@@ -370,7 +377,7 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	
 	Where E,S $P_{pressure}$, N, T and $k_B$ are respectively the energy, the entropy, the pressure, the number of particle the temperature and the Boltzmann constant, instead $\beta=\frac{1}{k_BT}$ and Z is the partition function that can be expressed in the following manner
 	\begin{equation}
-		ln Z_i(T,V,\mu_i)= \frac{\Delta V g_i}{2\pi^2\hbar^3} \int_{0}^{\infty} \theta_i p^2 dp ln(1+\theta_i e^{\beta(\mu_i-E)})
+		ln Z_i(T,V,\mu_i)= \frac{\Delta V g_i}{2\pi^2\hbar^3} \int_{0}^{\infty} \theta_i p^2 \  dp \ln(1+\theta_i e^{\beta(\mu_i-E)})
 		\label{eq:partition_function}
 	\end{equation}
 	$\theta_i$ is +1 for fermions and -1 for bosons. Global observables such as the
@@ -380,7 +387,7 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 		\label{eq:mean_particle_number}
 	\end{equation}
 	\begin{equation}
-	\langle S \rangle= -\sum_{K} \int_{\Delta V} \int \frac{d^3x d^3p}{(2\pi)^3} \left[f_i f_i ln f_i + \theta_i (1-\theta_if_i)ln(1-\theta_if_i) \right]
+	\langle S \rangle= -\sum_{K} \int_{\Delta V} \int \frac{d^3x d^3p}{(2\pi)^3} \left[f_i \ln f_i + \theta_i (1-\theta_if_i)ln(1-\theta_if_i) \right]
 		\label{eq:entropy}
 	\end{equation}
 	In this case the distribution is a bit different from the \ref{eq:boltzmann}.
@@ -635,11 +642,14 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	For the other equation starting from \ref{eq:cooper-frye} and inserting \ref{eq:boltzmann} one get
 	
 	\begin{equation}
-		\frac{d N_i}{dy m_\perp dm_\perp d\phi_p}= \frac{g_i}{(2\pi)^3} \sum{n=1}^{\infty} (\pm)^n \int d^2 r_\perp \tau_f e^{n\mu_i/T} e^{n\gamma_\perp \vec{v_\perp} \cdot \vec{p_\perp}} x \int_{-\infty}^{+\infty} d\eta \left(m_\perp cosh(y-\eta)- \vec{p}_\perp \cdot \nabla_\perp \tau_f \right) e^{-n \gamma_\perp m_\perp cosh(y-\eta)/T} = \frac{g_i}{(2\pi)^3} \sum{n=1}^{\infty} (\pm)^n \int d^2 r_\perp \tau_f e^{n\mu_i/T} e^{n\gamma_\perp \vec{v_\perp} \cdot \vec{p_\perp}} \left( m_\perp K_1(n m_\perp \frac{\gamma_\perp(\vec{r}_perp)}{T(\vec{r}_perp)}) -\vec{p}_\perp \cdot \nabla_\perp \tau_f K_0(n m_\perp \frac{\gamma_\perp(\vec{r}_perp)}{T(\vec{r}_perp)}) \right)
+			
+		\frac{d N_i}{dy m_\perp dm_\perp d\phi_p} = \frac{g_i}{(2\pi)^3} \sum{n=1}^{\infty} (\pm)^n \int d^2 r_\perp \tau_f e^{n\mu_i/T} e^{n\gamma_\perp \vec{v_\perp} \cdot \vec{p_\perp}} x \int_{-\infty}^{+\infty} d\eta \left(m_\perp cosh(y-\eta) 
+		 - \vec{p}_\perp \cdot \nabla_\perp \tau_f \right) e^{-n \gamma_\perp m_\perp cosh(y-\eta)/T} = \frac{g_i}{(2\pi)^3} \sum{n=1}^{\infty} (\pm)^n \int d^2 r_\perp \tau_f e^{n\mu_i/T} e^{n\gamma_\perp \vec{v_\perp} \cdot \vec{p_\perp}} \left( m_\perp K_1(n m_\perp \frac{\gamma_\perp(\vec{r}_perp)}{T(\vec{r}_perp)}) -\vec{p}_\perp \cdot \nabla_\perp \tau_f K_0(n m_\perp \frac{\gamma_\perp(\vec{r}_perp)}{T(\vec{r}_perp)}) \right)
+		
 	\end{equation}
 	Where the modified Bessel function enters the game. The azimuthal integral can thus be done analytically
 	\begin{equation}
-		\frac{d N_i}{dy m_\perp dm_\perp}= \frac{g_i}{(2\pi)^3} \sum{n=1}^{\infty} (\pm)^n \int dr_\perp \tau_f e^{n\mu_i/T} \left(m_\perp K_1(n m_\perp \frac{\gamma_\perp(\vec{r}_perp)}{T(\vec{r}_perp)}) I_0(n \frac{p_\perp v_\perp \gamma_\perp}{T}) - p_\perp \frac{\partial \tau_f}{\partial r_\perp} K_0(n m_\perp \frac{\gamma_\perp(\vec{r}_perp)}{T(\vec{r}_perp)}) I_1(n \frac{p_\perp v_\perp \gamma_\perp}{T}) \right)
+		\frac{d N_i}{dy m_\perp dm_\perp}= \frac{g_i}{(2\pi)^3} \sum{n=1}^{\infty} (\pm)^n \int dr_\perp \tau_f e^{n\mu_i/T} \left(m_\perp K_1(n m_\perp \frac{\gamma_\perp(\vec{r}_\perp)}{T(\vec{r}_\perp)}) I_0(n \frac{p_\perp v_\perp \gamma_\perp}{T}) - p_\perp \frac{\partial \tau_f}{\partial r_\perp} K_0(n m_\perp \frac{\gamma_\perp(\vec{r}_perp)}{T(\vec{r}_perp)}) I_1(n \frac{p_\perp v_\perp \gamma_\perp}{T}) \right)
 	\end{equation}
 	and finally defying $v_\perp= tanh \rho$ one get
 	\begin{equation}

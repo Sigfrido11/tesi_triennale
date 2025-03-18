@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.10)  17 MAR 2025 21:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.11)  18 MAR 2025 09:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -39,9 +39,9 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
 Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language38). Reported on input line 105.
+(babel)             (\language11). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language38). Reported on input line 108.
+(babel)             (\language11). Reported on input line 108.
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
 Package babel Info: Importing font and identification data for english
@@ -1294,6 +1294,60 @@ Overfull \hbox (12.65483pt too wide) in paragraph at lines 216--217
 LaTeX Warning: Citation 'PhysRevD.27.140' on page 18 undefined on input line 22
 7.
 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.239 		
+        
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.239 		
+        
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.240 		N_
+          i = \int_{\Sigma} d^3 \sigma_\mu (x) j_i^\mu(x) = \int_{\Sigma} d^...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! You can't use `\eqno' in math mode.
+\veqno ->\@kernel@eqno 
+                       \aftergroup \ignorespaces 
+l.242 	\end{equation}
+                     
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.242 	\end{equation}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (5.56328pt too wide) in paragraph at lines 240--244
+[]\OT1/cmr/m/n/12 N$[] = [][] \OML/cmm/m/it/12 d[]^^[[]\OT1/cmr/m/n/12 (\OML/cm
+m/m/it/12 x\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 j[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/
+12 x\OT1/cmr/m/n/12 ) = [][] \OML/cmm/m/it/12 d[]^^[[]\OT1/cmr/m/n/12 (\OML/cmm
+/m/it/12 x\OT1/cmr/m/n/12 ) [][] []$$$ Where $\OML/cmm/m/it/12 j[]\OT1/cmr/m/n/
+12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )$
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1303,16 +1357,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [18]
-Overfull \hbox (328.54546pt too wide) detected at line 253
+Overfull \hbox (35.15126pt too wide) detected at line 260
+[][][]
+ []
+
+
+Overfull \hbox (42.28459pt too wide) detected at line 269
 [][] \OT1/cmr/m/n/12 = [] [][] \OML/cmm/m/it/12 r[] dr[] n[]\OT1/cmr/m/n/12 (\O
 ML/cmm/m/it/12 r[]\OT1/cmr/m/n/12 ) []
  []
 
 
-Overfull \hbox (57.29736pt too wide) detected at line 262
-[][] \OT1/cmr/m/n/12 = [] [][] \OML/cmm/m/it/12 r[] dr[] n[]\OT1/cmr/m/n/12 (\O
-ML/cmm/m/it/12 r[]\OT1/cmr/m/n/12 ) []
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1325,20 +1382,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [19]
 
 LaTeX Warning: Citation 'teaney2001hydrodynamicdescriptionheavyion' on page 20 
-undefined on input line 267.
+undefined on input line 274.
 
 <pictures/radial_flow.png, id=91, 714.67pt x 695.59875pt>
 File: pictures/radial_flow.png Graphic file (type png)
 <use pictures/radial_flow.png>
-Package pdftex.def Info: pictures/radial_flow.png  used on input line 271.
+Package pdftex.def Info: pictures/radial_flow.png  used on input line 278.
 (pdftex.def)             Requested size: 237.09407pt x 230.7689pt.
 
 LaTeX Warning: Citation 'EvolutionofcollisionsandQGP' on page 20 undefined on i
-nput line 272.
+nput line 279.
 
 
 LaTeX Warning: Citation 'EvolutionofcollisionsandQGP' on page 20 undefined on i
-nput line 272.
+nput line 279.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1352,43 +1409,43 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <pictures/flow_spectra.png, id=96, 714.67pt x 324.21124pt>
 File: pictures/flow_spectra.png Graphic file (type png)
 <use pictures/flow_spectra.png>
-Package pdftex.def Info: pictures/flow_spectra.png  used on input line 303.
+Package pdftex.def Info: pictures/flow_spectra.png  used on input line 310.
 (pdftex.def)             Requested size: 316.12341pt x 143.41028pt.
 <pictures/elliptic_flow_collision.pdf, id=97, 564.1075pt x 263.98625pt>
 File: pictures/elliptic_flow_collision.pdf Graphic file (type pdf)
 <use pictures/elliptic_flow_collision.pdf>
 Package pdftex.def Info: pictures/elliptic_flow_collision.pdf  used on input li
-ne 311.
+ne 318.
 (pdftex.def)             Requested size: 316.12341pt x 147.936pt.
 
 
-LaTeX Warning: Citation 'Snellings_2011' on page 21 undefined on input line 315
+LaTeX Warning: Citation 'Snellings_2011' on page 21 undefined on input line 322
 .
 
 
 LaTeX Warning: Citation 'heinz2004conceptsheavyionphysics' on page 21 undefined
- on input line 315.
+ on input line 322.
 
 
-LaTeX Warning: Citation 'Kolb_2000' on page 21 undefined on input line 315.
+LaTeX Warning: Citation 'Kolb_2000' on page 21 undefined on input line 322.
 
 
 LaTeX Warning: Citation 'kolb2003hydrodynamicdescriptionultrarelativisticheavyi
-on' on page 21 undefined on input line 316.
+on' on page 21 undefined on input line 323.
 
 <pictures/timeEvolutionPerepheral.pdf, id=98, 916.42375pt x 281.05pt>
 File: pictures/timeEvolutionPerepheral.pdf Graphic file (type pdf)
 <use pictures/timeEvolutionPerepheral.pdf>
 Package pdftex.def Info: pictures/timeEvolutionPerepheral.pdf  used on input li
-ne 319.
+ne 326.
 (pdftex.def)             Requested size: 316.12341pt x 96.94948pt.
 
-Overfull \hbox (24.10696pt too wide) in paragraph at lines 315--324
+Overfull \hbox (24.10696pt too wide) in paragraph at lines 322--331
 \OT1/cmr/m/n/12 this sec-tion come from [[]], [[]]
  []
 
 
-Overfull \hbox (41.35464pt too wide) in paragraph at lines 315--324
+Overfull \hbox (41.35464pt too wide) in paragraph at lines 322--331
 \OT1/cmr/m/n/12 shown in Fig 4.4[] [[]].
  []
 
@@ -1401,9 +1458,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [21]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1424,33 +1478,33 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [23 <./pictures/timeEvolutionPerepheral.pdf>]
 
 LaTeX Warning: Citation 'becattini2009introductionstatisticalhadronizationmodel
-' on page 24 undefined on input line 347.
+' on page 24 undefined on input line 354.
 
 
 LaTeX Warning: Citation 'charm_hierarchy_in_the_statistical_hadronization_model
-' on page 24 undefined on input line 347.
+' on page 24 undefined on input line 354.
 
 
 LaTeX Warning: Citation 'heinz2004conceptsheavyionphysics' on page 24 undefined
- on input line 347.
+ on input line 354.
 
 
 LaTeX Warning: Citation 'amsdottorato9036' on page 24 undefined on input line 3
-47.
+54.
 
 
-Overfull \hbox (208.35687pt too wide) in paragraph at lines 347--348
+Overfull \hbox (208.35687pt too wide) in paragraph at lines 354--355
 \OT1/cmr/m/n/12 This sec-tion had been in-spired by the folow-ing ar-ti-cle [[]
 ],
  []
 
 
-Overfull \hbox (140.59018pt too wide) in paragraph at lines 347--348
+Overfull \hbox (140.59018pt too wide) in paragraph at lines 354--355
 \OT1/cmr/m/n/12 [[]] [[]]
  []
 
 
-Overfull \hbox (177.10802pt too wide) in paragraph at lines 349--350
+Overfull \hbox (177.10802pt too wide) in paragraph at lines 356--357
 [] 
  []
 
@@ -1482,7 +1536,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [26]
 
-LaTeX Warning: Citation 'Andronic_2017' on page 27 undefined on input line 414.
+LaTeX Warning: Citation 'Andronic_2017' on page 27 undefined on input line 421.
 
 
 
@@ -1497,27 +1551,27 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <pictures/hadron_yelds.png, id=148, 497.86pt x 484.81125pt>
 File: pictures/hadron_yelds.png Graphic file (type png)
 <use pictures/hadron_yelds.png>
-Package pdftex.def Info: pictures/hadron_yelds.png  used on input line 420.
+Package pdftex.def Info: pictures/hadron_yelds.png  used on input line 427.
 (pdftex.def)             Requested size: 142.25456pt x 138.52773pt.
 
 
-LaTeX Warning: Citation 'Andronic_2006' on page 28 undefined on input line 421.
+LaTeX Warning: Citation 'Andronic_2006' on page 28 undefined on input line 428.
 
 
 
-LaTeX Warning: Citation 'Andronic_2006' on page 28 undefined on input line 421.
+LaTeX Warning: Citation 'Andronic_2006' on page 28 undefined on input line 428.
 
 
 <pictures/particle_abbundance.png, id=149, 751.80875pt x 485.815pt>
 File: pictures/particle_abbundance.png Graphic file (type png)
 <use pictures/particle_abbundance.png>
 Package pdftex.def Info: pictures/particle_abbundance.png  used on input line 4
-26.
+33.
 (pdftex.def)             Requested size: 124.47173pt x 80.43028pt.
 ! Missing { inserted.
 <to be read again> 
                    \gdef 
-l.427 ...ar{He}, 4^\bar{He}$ \cite{Andronic_2017}}
+l.434 ...ar{He}, 4^\bar{He}$ \cite{Andronic_2017}}
                                                   
 A left brace was mandatory here, so I've put one in.
 You might want to delete and/or insert some corrections
@@ -1527,7 +1581,7 @@ so that I will find a matching right brace soon.
 ! Missing { inserted.
 <to be read again> 
                    \gdef 
-l.427 ...ar{He}, 4^\bar{He}$ \cite{Andronic_2017}}
+l.434 ...ar{He}, 4^\bar{He}$ \cite{Andronic_2017}}
                                                   
 A left brace was mandatory here, so I've put one in.
 You might want to delete and/or insert some corrections
@@ -1537,7 +1591,7 @@ so that I will find a matching right brace soon.
 ! Missing { inserted.
 <to be read again> 
                    \gdef 
-l.427 ...ar{He}, 4^\bar{He}$ \cite{Andronic_2017}}
+l.434 ...ar{He}, 4^\bar{He}$ \cite{Andronic_2017}}
                                                   
 A left brace was mandatory here, so I've put one in.
 You might want to delete and/or insert some corrections
@@ -1547,7 +1601,7 @@ so that I will find a matching right brace soon.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.427 ...ar{He}, 4^\bar{He}$ \cite{Andronic_2017}}
+l.434 ...ar{He}, 4^\bar{He}$ \cite{Andronic_2017}}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1558,7 +1612,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.427 ...ar{He}, 4^\bar{He}$ \cite{Andronic_2017}}
+l.434 ...ar{He}, 4^\bar{He}$ \cite{Andronic_2017}}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1569,7 +1623,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.427 ...ar{He}, 4^\bar{He}$ \cite{Andronic_2017}}
+l.434 ...ar{He}, 4^\bar{He}$ \cite{Andronic_2017}}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1578,23 +1632,13 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-LaTeX Warning: Citation 'Andronic_2017' on page 28 undefined on input line 427.
+LaTeX Warning: Citation 'Andronic_2017' on page 28 undefined on input line 434.
 
 
 ! Missing { inserted.
 <to be read again> 
                    \gdef 
-l.427 ...ar{He}, 4^\bar{He}$ \cite{Andronic_2017}}
-                                                  
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-! Missing { inserted.
-<to be read again> 
-                   \gdef 
-l.427 ...ar{He}, 4^\bar{He}$ \cite{Andronic_2017}}
+l.434 ...ar{He}, 4^\bar{He}$ \cite{Andronic_2017}}
                                                   
 A left brace was mandatory here, so I've put one in.
 You might want to delete and/or insert some corrections
@@ -1604,7 +1648,17 @@ so that I will find a matching right brace soon.
 ! Missing { inserted.
 <to be read again> 
                    \gdef 
-l.427 ...ar{He}, 4^\bar{He}$ \cite{Andronic_2017}}
+l.434 ...ar{He}, 4^\bar{He}$ \cite{Andronic_2017}}
+                                                  
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing { inserted.
+<to be read again> 
+                   \gdef 
+l.434 ...ar{He}, 4^\bar{He}$ \cite{Andronic_2017}}
                                                   
 A left brace was mandatory here, so I've put one in.
 You might want to delete and/or insert some corrections
@@ -1614,7 +1668,7 @@ so that I will find a matching right brace soon.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.427 ...ar{He}, 4^\bar{He}$ \cite{Andronic_2017}}
+l.434 ...ar{He}, 4^\bar{He}$ \cite{Andronic_2017}}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1625,7 +1679,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.427 ...ar{He}, 4^\bar{He}$ \cite{Andronic_2017}}
+l.434 ...ar{He}, 4^\bar{He}$ \cite{Andronic_2017}}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1636,7 +1690,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.427 ...ar{He}, 4^\bar{He}$ \cite{Andronic_2017}}
+l.434 ...ar{He}, 4^\bar{He}$ \cite{Andronic_2017}}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1645,26 +1699,26 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-LaTeX Warning: Citation 'Andronic_2017' on page 28 undefined on input line 427.
+LaTeX Warning: Citation 'Andronic_2017' on page 28 undefined on input line 434.
 
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 427--427
+Underfull \hbox (badness 10000) in paragraph at lines 434--434
 []\OT1/cmr/m/n/8 Figure 4.6: |adron mul-ti-plic-i-ties in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 427--427
+Underfull \hbox (badness 10000) in paragraph at lines 434--434
 \OT1/cmr/m/n/8 cen-tral (0-10%) Pb{Pb col-li-sions
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 427--427
+Underfull \hbox (badness 10000) in paragraph at lines 434--434
 \OT1/cmr/m/n/8 at the LHC, for dif-fer-ent par-ti-cles:
  []
 
 
-Overfull \hbox (34.42532pt too wide) in paragraph at lines 427--427
+Overfull \hbox (34.42532pt too wide) in paragraph at lines 434--434
 \OML/cmm/m/it/8 ^^Y[]; k[]; ^^^; p; []; \OT1/cmr/m/n/8 ^^C\OML/cmm/m/it/8 ; [];
  \OT1/cmr/m/n/8 ^^D[]\OML/cmm/m/it/8 ; []; \OT1/cmr/m/n/8 
 \OML/cmm/m/it/8 ; []; \OT1/cmr/m/n/8 3[]\OML/cmm/m/it/8 e; \OT1/cmr/m/n/8 3[]$
@@ -1674,14 +1728,14 @@ Overfull \hbox (34.42532pt too wide) in paragraph at lines 427--427
 File: pictures/shm_qcd_comparison.png Graphic file (type png)
 <use pictures/shm_qcd_comparison.png>
 Package pdftex.def Info: pictures/shm_qcd_comparison.png  used on input line 43
-1.
+8.
 (pdftex.def)             Requested size: 316.12341pt x 209.13962pt.
 
-LaTeX Warning: Citation 'Andronic_2017' on page 28 undefined on input line 432.
+LaTeX Warning: Citation 'Andronic_2017' on page 28 undefined on input line 439.
 
 
 
-LaTeX Warning: Citation 'Andronic_2017' on page 28 undefined on input line 432.
+LaTeX Warning: Citation 'Andronic_2017' on page 28 undefined on input line 439.
 
 
 
@@ -1692,7 +1746,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.438 ...llision systems such as pp, p $\bar{p}$̄
+l.445 ...llision systems such as pp, p $\bar{p}$̄
                                                    and $e^+ e^−$. When qua...
 
 You may provide a definition with
@@ -1701,7 +1755,7 @@ You may provide a definition with
 ! Missing { inserted.
 <to be read again> 
                    \begingroup 
-l.438 ... such as pp, p $\bar{p}$̄ and $e^+ e^−
+l.445 ... such as pp, p $\bar{p}$̄ and $e^+ e^−
                                                   $. When quark–gluon plas...
 A left brace was mandatory here, so I've put one in.
 You might want to delete and/or insert some corrections
@@ -1716,7 +1770,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.438 ... such as pp, p $\bar{p}$̄ and $e^+ e^−
+l.445 ... such as pp, p $\bar{p}$̄ and $e^+ e^−
                                                   $. When quark–gluon plas...
 
 You may provide a definition with
@@ -1725,7 +1779,7 @@ You may provide a definition with
 ! Missing } inserted.
 <inserted text> 
                 }
-l.438 ...such as pp, p $\bar{p}$̄ and $e^+ e^−$
+l.445 ...such as pp, p $\bar{p}$̄ and $e^+ e^−$
                                                   . When quark–gluon plasm...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1763,10 +1817,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [30]
 Chapter 5.
 
-LaTeX Warning: Citation 'yukawa' on page 31 undefined on input line 451.
+LaTeX Warning: Citation 'yukawa' on page 31 undefined on input line 458.
 
 
-LaTeX Warning: Citation 'heisemerg' on page 31 undefined on input line 451.
+LaTeX Warning: Citation 'heisemerg' on page 31 undefined on input line 458.
 
 [31
 
@@ -1775,15 +1829,15 @@ LaTeX Warning: Citation 'heisemerg' on page 31 undefined on input line 451.
 File: pictures/one_boson_exchange.png Graphic file (type png)
 <use pictures/one_boson_exchange.png>
 Package pdftex.def Info: pictures/one_boson_exchange.png  used on input line 48
-1.
+8.
 (pdftex.def)             Requested size: 276.60573pt x 319.52643pt.
 
 
-LaTeX Warning: Citation 'sakata' on page 32 undefined on input line 487.
+LaTeX Warning: Citation 'sakata' on page 32 undefined on input line 494.
 
 
 LaTeX Warning: Citation 'onebosonexchangepotentialmodelapproach' on page 32 und
-efined on input line 487.
+efined on input line 494.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1796,22 +1850,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [32 <./pictures/one_boson_exchange.png>]
 
 LaTeX Warning: Citation 'Charmed-nucleon' on page 33 undefined on input line 49
-1.
+8.
 
 
 LaTeX Warning: Citation 'baryon–nucleon-potential' on page 33 undefined on in
-put line 491.
+put line 498.
 
 Missing character: There is no � in font cmbx12!
 Missing character: There is no � in font cmbx12!
 Missing character: There is no � in font cmbx12!
 
-Overfull \hbox (39.9397pt too wide) in paragraph at lines 491--493
+Overfull \hbox (39.9397pt too wide) in paragraph at lines 498--500
 \OT1/cmr/m/n/12 This sec-tion is a re-sume of the [[]] and [[]]
  []
 
 
-LaTeX Warning: Citation 'Valcarce_2005' on page 33 undefined on input line 495.
+LaTeX Warning: Citation 'Valcarce_2005' on page 33 undefined on input line 502.
 
 
 
@@ -1824,7 +1878,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [33]
 
-LaTeX Warning: Citation 'Smit_2023' on page 34 undefined on input line 498.
+LaTeX Warning: Citation 'Smit_2023' on page 34 undefined on input line 505.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1839,12 +1893,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 File: pictures/charmed_nucleos_interaction.png Graphic file (type png)
 <use pictures/charmed_nucleos_interaction.png>
 Package pdftex.def Info: pictures/charmed_nucleos_interaction.png  used on inpu
-t line 553.
+t line 560.
 (pdftex.def)             Requested size: 276.60573pt x 77.8115pt.
 
 
-LaTeX Warning: Reference `pot_simulation' on page 35 undefined on input line 55
-9.
+LaTeX Warning: Reference `pot_simulation' on page 35 undefined on input line 56
+6.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1859,12 +1913,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 File: pictures/radial_potential_1s.jpg Graphic file (type jpg)
 <use pictures/radial_potential_1s.jpg>
 Package pdftex.def Info: pictures/radial_potential_1s.jpg  used on input line 5
-66.
+73.
 (pdftex.def)             Requested size: 131.58595pt x 95.72198pt.
 File: pictures/radial_potential_1s.jpg Graphic file (type jpg)
 <use pictures/radial_potential_1s.jpg>
 Package pdftex.def Info: pictures/radial_potential_1s.jpg  used on input line 5
-73.
+80.
 (pdftex.def)             Requested size: 146.2076pt x 106.35806pt.
 
 
@@ -1879,21 +1933,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 s.jpg>]
 
 LaTeX Warning: Reference `eq:culomb_potential' on page 37 undefined on input li
-ne 602.
+ne 609.
 
 <pictures/binding_energy.jpg, id=191, 235.16658pt x 180.675pt>
 File: pictures/binding_energy.jpg Graphic file (type jpg)
 <use pictures/binding_energy.jpg>
-Package pdftex.def Info: pictures/binding_energy.jpg  used on input line 606.
+Package pdftex.def Info: pictures/binding_energy.jpg  used on input line 613.
 (pdftex.def)             Requested size: 292.4152pt x 224.66599pt.
 <pictures/binding_culomb.jpg, id=192, 235.16658pt x 174.8934pt>
 File: pictures/binding_culomb.jpg Graphic file (type jpg)
 <use pictures/binding_culomb.jpg>
-Package pdftex.def Info: pictures/binding_culomb.jpg  used on input line 615.
+Package pdftex.def Info: pictures/binding_culomb.jpg  used on input line 622.
 (pdftex.def)             Requested size: 292.4152pt x 217.4767pt.
 
-LaTeX Warning: Reference `pot_simulation' on page 37 undefined on input line 62
-3.
+LaTeX Warning: Reference `pot_simulation' on page 37 undefined on input line 63
+0.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1914,22 +1968,134 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [38 <./pictures/binding_energy.jpg> <./pictures/binding_culomb.jpg>]
 Chapter 6.
+! Missing $ inserted.
+<inserted text> 
+                $
+l.645 			
+         
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-Overfull \hbox (781.0767pt too wide) detected at line 639
-[][] \OT1/cmr/m/n/12 = [] [] [][](\OMS/cmsy/m/n/12 ^^F\OT1/cmr/m/n/12 )[] [] \O
-ML/cmm/m/it/12 d[]r[]^^\[]e[]e[]x [][] d^^Q [] e[] \OT1/cmr/m/n/12 = [] [] [][]
-(\OMS/cmsy/m/n/12 ^^F\OT1/cmr/m/n/12 )[] [] \OML/cmm/m/it/12 d[]r[]^^\[]e[]e[] 
-[]
+! Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.645 			
+         
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.646 		\frac{d N_i}{dy m_\perp dm_\perp d\phi_p}
+                                                  = \frac{g_i}{(2\pi)^3} \su...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.646 		\frac{d N_i}{dy m_\perp dm_\perp d\phi_p}
+                                                  = \frac{g_i}{(2\pi)^3} \su...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.646 		\frac{d N_i}{dy m_\perp dm_\perp d\phi_p}
+                                                  = \frac{g_i}{(2\pi)^3} \su...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+\frac  #1#2->{\begingroup #1\endgroup \@@over #2}
+                                                 
+l.646 		\frac{d N_i}{dy m_\perp dm_\perp d\phi_p}
+                                                  = \frac{g_i}{(2\pi)^3} \su...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.648 		
+        
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (504.13913pt too wide) in paragraph at lines 646--648
+[]\OT1/cmr/m/n/12 d N$[]$$[]$ 
  []
 
 
-Overfull \hbox (284.98308pt too wide) detected at line 643
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.649 	\end{equation}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! You can't use `\eqno' in vertical mode.
+\veqno ->\@kernel@eqno 
+                       \aftergroup \ignorespaces 
+l.649 	\end{equation}
+                     
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.649 	\end{equation}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.649 	\end{equation}
+                     
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.649 	\end{equation}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (270.35109pt too wide) detected at line 653
 [][] \OT1/cmr/m/n/12 = [] [] [][](\OMS/cmsy/m/n/12 ^^F\OT1/cmr/m/n/12 )[] [] \O
 ML/cmm/m/it/12 dr[]^^\[]e[] []
  []
 
 
-Overfull \hbox (328.54546pt too wide) detected at line 648
+Overfull \hbox (328.54546pt too wide) detected at line 658
 [][] \OT1/cmr/m/n/12 = [] [][] \OML/cmm/m/it/12 r[] dr[] n[]\OT1/cmr/m/n/12 (\O
 ML/cmm/m/it/12 r[]\OT1/cmr/m/n/12 ) []
  []
@@ -1940,7 +2106,7 @@ ML/cmm/m/it/12 r[]\OT1/cmr/m/n/12 ) []
 ! Missing } inserted.
 <inserted text> 
                 }
-l.665 ...angle \vec{r}^2 \rangle_{\tau_0} \right]}
+l.675 ...angle \vec{r}^2 \rangle_{\tau_0} \right]}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1951,7 +2117,7 @@ my insertion and my current dilemma will both disappear.
 ! Extra }, or forgotten $.
 \frac  #1#2->{\begingroup #1\endgroup \@@over #2}
                                                  
-l.665 ...angle \vec{r}^2 \rangle_{\tau_0} \right]}
+l.675 ...angle \vec{r}^2 \rangle_{\tau_0} \right]}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1960,7 +2126,7 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-Overfull \hbox (19.44318pt too wide) in paragraph at lines 672--674
+Overfull \hbox (19.44318pt too wide) in paragraph at lines 682--684
 \OT1/cmr/m/n/12 replacing the log-a-rithm with tay-lor ex-pan-sion un-der the a
 s-sum-pion that $\OML/cmm/m/it/12 e[] <
  []
@@ -1975,7 +2141,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [40]
 
-LaTeX Warning: Empty bibliography on input line 724.
+LaTeX Warning: Empty bibliography on input line 734.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2004,10 +2170,10 @@ Package logreq Info: Writing requests to 'tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27607 strings out of 474222
- 562640 string characters out of 5748732
- 1942975 words of memory out of 5000000
- 49436 multiletter control sequences out of 15000+600000
+ 27609 strings out of 474222
+ 562698 string characters out of 5748732
+ 1941975 words of memory out of 5000000
+ 49438 multiletter control sequences out of 15000+600000
  574439 words of font info for 105 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  101i,13n,107p,2502b,1794s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2031,7 +2197,7 @@ st/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texmf/fonts/type1/public/c
 m-super/sfrm1200.pfb>
-Output written on tesi.pdf (41 pages, 2221967 bytes).
+Output written on tesi.pdf (41 pages, 2224775 bytes).
 PDF statistics:
  300 PDF objects out of 1000 (max. 8388607)
  183 compressed objects within 2 object streams

@@ -8,7 +8,7 @@
 \contentsline {subsection}{\numberline {4.0.1}hydrodynamical description}{17}{}%
 \contentsline {subsubsection}{The Cooper-Frye formula}{18}{}%
 \contentsline {subsubsection}{Transverse momentum spectra and freeze-out temperature}{20}{}%
-\contentsline {subsection}{\numberline {4.0.2}Elliptic flow}{21}{}%
+\contentsline {subsection}{\numberline {4.0.2}Elliptic flow}{22}{}%
 \contentsline {subsection}{\numberline {4.0.3}Statistical Hadronisation Model (SHM)}{24}{}%
 \contentsline {subsection}{\numberline {4.0.4}Strangeness and Charmness enhancement}{28}{}%
 \contentsline {chapter}{\numberline {5}$Y_c$N bound state}{31}{}%
