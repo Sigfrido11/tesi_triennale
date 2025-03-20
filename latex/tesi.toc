@@ -2,7 +2,7 @@
 \contentsline {chapter}{\numberline {1}Abstract}{5}{}%
 \contentsline {chapter}{\numberline {2}Concepts of quantum chromodynamics (QCD)}{7}{}%
 \contentsline {subsection}{\numberline {2.0.1}The QCD phase diagram}{11}{}%
-\contentsline {subsection}{\numberline {2.0.2}The different stage of a heavy-ion collision}{12}{}%
+\contentsline {subsection}{\numberline {2.0.2}The different stage of a heavy-ion collision}{13}{}%
 \contentsline {chapter}{\numberline {3}Thermal model}{17}{}%
 \contentsline {subsection}{\numberline {3.0.1}hydrodynamical description}{17}{}%
 \contentsline {subsubsection}{The Cooper-Frye formula}{18}{}%
@@ -17,6 +17,7 @@
 \contentsline {subsection}{\numberline {4.0.3}Potential energy}{37}{}%
 \contentsline {subsection}{\numberline {4.0.4}Possible $\Lambda _c$ supernuclei}{37}{}%
 \contentsline {chapter}{\numberline {5}ALICE}{39}{}%
-\contentsline {subsection}{\numberline {.0.1}Cooper-Frye}{39}{}%
-\contentsline {subsection}{\numberline {.0.2}Appendice B}{40}{}%
-\contentsline {subsection}{\numberline {.0.3}Appendice C}{40}{}%
+\contentsline {chapter}{\numberline {6}Appendix}{41}{}%
+\contentsline {subsection}{\numberline {.0.1}Cooper-Frye}{41}{}%
+\contentsline {subsection}{\numberline {.0.2}Appendice B}{42}{}%
+\contentsline {subsection}{\numberline {.0.3}Appendice C}{42}{}%
