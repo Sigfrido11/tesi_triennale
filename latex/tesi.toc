@@ -17,7 +17,23 @@
 \contentsline {subsection}{\numberline {4.0.3}Potential energy}{37}{}%
 \contentsline {subsection}{\numberline {4.0.4}Possible $\Lambda _c$ supernuclei}{37}{}%
 \contentsline {chapter}{\numberline {5}ALICE}{39}{}%
-\contentsline {chapter}{\numberline {6}Appendix}{41}{}%
-\contentsline {subsection}{\numberline {.0.1}Cooper-Frye}{41}{}%
-\contentsline {subsection}{\numberline {.0.2}Appendice B}{42}{}%
-\contentsline {subsection}{\numberline {.0.3}Appendice C}{42}{}%
+\contentsline {subsection}{\numberline {5.0.1}Inner Tracking System (ITS)}{40}{}%
+\contentsline {subsection}{\numberline {5.0.2}Time projection chamber (TPC)}{42}{}%
+\contentsline {subsection}{\numberline {5.0.3}Time Of Flight (TOF)}{43}{}%
+\contentsline {subsection}{\numberline {5.0.4}Central Barrel Detectors}{44}{}%
+\contentsline {subsubsection}{Transition Radiation Detector (TRD)}{44}{}%
+\contentsline {subsubsection}{Photon Spectrometer (PHOS)}{45}{}%
+\contentsline {subsubsection}{High-Momentum Particle Identification Detector (HMPID)}{45}{}%
+\contentsline {subsubsection}{Electromagnetic Calorimeter (EMCaL)}{45}{}%
+\contentsline {subsection}{\numberline {5.0.5}Forward Detectors}{46}{}%
+\contentsline {subsubsection}{VZERO detector (V0)}{46}{}%
+\contentsline {subsubsection}{T0 Detectors}{46}{}%
+\contentsline {subsubsection}{Zero Degree Calorimeter (ZDC)}{46}{}%
+\contentsline {subsubsection}{Muon Spectrometer}{47}{}%
+\contentsline {subsection}{\numberline {5.0.6}Track and vertex reconstruction}{47}{}%
+\contentsline {subsection}{\numberline {5.0.7}centrality}{49}{}%
+\contentsline {subsection}{\numberline {5.0.8}Particle identification}{50}{}%
+\contentsline {chapter}{\numberline {6}Appendix}{51}{}%
+\contentsline {subsection}{\numberline {.0.1}Cooper-Frye}{51}{}%
+\contentsline {subsection}{\numberline {.0.2}Appendice B}{52}{}%
+\contentsline {subsection}{\numberline {.0.3}Appendice C}{52}{}%
