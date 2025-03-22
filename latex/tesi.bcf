@@ -2365,76 +2365,86 @@
     <bcf:citekey order="2" intorder="1">Skands_2013</bcf:citekey>
     <bcf:citekey order="3" intorder="1">DAVIDPOLITZER1974129</bcf:citekey>
     <bcf:citekey order="4" intorder="1">Semprini</bcf:citekey>
-    <bcf:citekey order="5" intorder="1">heinz2004conceptsheavyionphysics</bcf:citekey>
-    <bcf:citekey order="6" intorder="1">QCDPhase-Diagram</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">heinz2004conceptsheavyionphysics</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">Peskin:1995ev</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">Herrmann:2920632</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">Semprini</bcf:citekey>
     <bcf:citekey order="8" intorder="1">heinz2004conceptsheavyionphysics</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">amsdottorato9036</bcf:citekey>
-    <bcf:citekey order="10" intorder="1">EvolutionofcollisionsandQGP</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">EvolutionofcollisionsandQGP</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">heinz2004conceptsheavyionphysics</bcf:citekey>
-    <bcf:citekey order="13" intorder="1">phdthesis</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">Cooper-Frye</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">PhysRevD.27.140</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">teaney2001hydrodynamicdescriptionheavyion</bcf:citekey>
-    <bcf:citekey order="17" intorder="1">EvolutionofcollisionsandQGP</bcf:citekey>
-    <bcf:citekey order="18" intorder="1">EvolutionofcollisionsandQGP</bcf:citekey>
-    <bcf:citekey order="19" intorder="1">Snellings_2011</bcf:citekey>
-    <bcf:citekey order="20" intorder="1">heinz2004conceptsheavyionphysics</bcf:citekey>
-    <bcf:citekey order="21" intorder="1">Kolb_2000</bcf:citekey>
-    <bcf:citekey order="22" intorder="1">kolb2003hydrodynamicdescriptionultrarelativisticheavyion</bcf:citekey>
-    <bcf:citekey order="23" intorder="1">becattini2009introductionstatisticalhadronizationmodel</bcf:citekey>
-    <bcf:citekey order="24" intorder="1">charm_hierarchy_in_the_statistical_hadronization_model</bcf:citekey>
-    <bcf:citekey order="25" intorder="1">heinz2004conceptsheavyionphysics</bcf:citekey>
-    <bcf:citekey order="26" intorder="1">amsdottorato9036</bcf:citekey>
-    <bcf:citekey order="27" intorder="1">Andronic_2017</bcf:citekey>
-    <bcf:citekey order="28" intorder="1">Andronic_2006</bcf:citekey>
-    <bcf:citekey order="29" intorder="1">Andronic_2006</bcf:citekey>
-    <bcf:citekey order="30" intorder="1">Andronic_2017</bcf:citekey>
-    <bcf:citekey order="31" intorder="1">Andronic_2017</bcf:citekey>
-    <bcf:citekey order="32" intorder="1">Andronic_2017</bcf:citekey>
-    <bcf:citekey order="33" intorder="1">Andronic_2017</bcf:citekey>
-    <bcf:citekey order="34" intorder="1">yukawa</bcf:citekey>
-    <bcf:citekey order="35" intorder="1">heisemerg</bcf:citekey>
-    <bcf:citekey order="36" intorder="1">sakata</bcf:citekey>
-    <bcf:citekey order="37" intorder="1">onebosonexchangepotentialmodelapproach</bcf:citekey>
-    <bcf:citekey order="38" intorder="1">Charmed-nucleon</bcf:citekey>
-    <bcf:citekey order="39" intorder="1">baryon–nucleon-potential</bcf:citekey>
-    <bcf:citekey order="40" intorder="1">Valcarce_2005</bcf:citekey>
-    <bcf:citekey order="41" intorder="1">Smit_2023</bcf:citekey>
-    <bcf:citekey order="42" intorder="1">Alice</bcf:citekey>
-    <bcf:citekey order="43" intorder="1">Padhan:2924203</bcf:citekey>
-    <bcf:citekey order="44" intorder="1">Arata:2922803</bcf:citekey>
-    <bcf:citekey order="45" intorder="1">Padhan:2924203</bcf:citekey>
-    <bcf:citekey order="46" intorder="1">amsdottorato9036</bcf:citekey>
-    <bcf:citekey order="47" intorder="1">Cheng:2908766</bcf:citekey>
-    <bcf:citekey order="48" intorder="1">Arata:2922803</bcf:citekey>
-    <bcf:citekey order="49" intorder="1">Rolandi:2008ujz</bcf:citekey>
-    <bcf:citekey order="50" intorder="1">Padhan:2924203</bcf:citekey>
-    <bcf:citekey order="51" intorder="1">amsdottorato9036</bcf:citekey>
-    <bcf:citekey order="52" intorder="1">Cheng:2908766</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">PhysRevD.27.140</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">amsdottorato9036</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">QCDPhase-Diagram</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">QCDPhase-Diagram</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">QCDPhase-Diagram</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">heinz2004conceptsheavyionphysics</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">heinz2004conceptsheavyionphysics</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">Herrmann:2920632</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">Padhan:2924203</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">Arata:2922803</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">amsdottorato9036</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">EvolutionofcollisionsandQGP</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">EvolutionofcollisionsandQGP</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">heinz2004conceptsheavyionphysics</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">phdthesis</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">PhysRevD.27.140</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">Cooper-Frye</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">teaney2001hydrodynamicdescriptionheavyion</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">EvolutionofcollisionsandQGP</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">EvolutionofcollisionsandQGP</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">Snellings_2011</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">heinz2004conceptsheavyionphysics</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">Kolb_2000</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">kolb2003hydrodynamicdescriptionultrarelativisticheavyion</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">becattini2009introductionstatisticalhadronizationmodel</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">charm_hierarchy_in_the_statistical_hadronization_model</bcf:citekey>
+    <bcf:citekey order="35" intorder="1">heinz2004conceptsheavyionphysics</bcf:citekey>
+    <bcf:citekey order="36" intorder="1">amsdottorato9036</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">Andronic_2017</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">Andronic_2006</bcf:citekey>
+    <bcf:citekey order="39" intorder="1">Andronic_2006</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">Andronic_2017</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">Andronic_2017</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">Andronic_2017</bcf:citekey>
+    <bcf:citekey order="43" intorder="1">Andronic_2017</bcf:citekey>
+    <bcf:citekey order="44" intorder="1">yukawa</bcf:citekey>
+    <bcf:citekey order="45" intorder="1">heisemerg</bcf:citekey>
+    <bcf:citekey order="46" intorder="1">sakata</bcf:citekey>
+    <bcf:citekey order="47" intorder="1">onebosonexchangepotentialmodelapproach</bcf:citekey>
+    <bcf:citekey order="48" intorder="1">Charmed-nucleon</bcf:citekey>
+    <bcf:citekey order="49" intorder="1">baryon–nucleon-potential</bcf:citekey>
+    <bcf:citekey order="50" intorder="1">Valcarce_2005</bcf:citekey>
+    <bcf:citekey order="51" intorder="1">Smit_2023</bcf:citekey>
+    <bcf:citekey order="52" intorder="1">Alice</bcf:citekey>
     <bcf:citekey order="53" intorder="1">Padhan:2924203</bcf:citekey>
-    <bcf:citekey order="54" intorder="1">amsdottorato9036</bcf:citekey>
+    <bcf:citekey order="54" intorder="1">Arata:2922803</bcf:citekey>
     <bcf:citekey order="55" intorder="1">Padhan:2924203</bcf:citekey>
     <bcf:citekey order="56" intorder="1">amsdottorato9036</bcf:citekey>
-    <bcf:citekey order="57" intorder="1">Padhan:2924203</bcf:citekey>
-    <bcf:citekey order="58" intorder="1">amsdottorato9036</bcf:citekey>
-    <bcf:citekey order="59" intorder="1">Padhan:2924203</bcf:citekey>
-    <bcf:citekey order="60" intorder="1">Arata:2922803</bcf:citekey>
-    <bcf:citekey order="61" intorder="1">Padhan:2924203</bcf:citekey>
-    <bcf:citekey order="62" intorder="1">amsdottorato9036</bcf:citekey>
+    <bcf:citekey order="57" intorder="1">Cheng:2908766</bcf:citekey>
+    <bcf:citekey order="58" intorder="1">Arata:2922803</bcf:citekey>
+    <bcf:citekey order="59" intorder="1">Rolandi:2008ujz</bcf:citekey>
+    <bcf:citekey order="60" intorder="1">Padhan:2924203</bcf:citekey>
+    <bcf:citekey order="61" intorder="1">amsdottorato9036</bcf:citekey>
+    <bcf:citekey order="62" intorder="1">Cheng:2908766</bcf:citekey>
     <bcf:citekey order="63" intorder="1">Padhan:2924203</bcf:citekey>
     <bcf:citekey order="64" intorder="1">amsdottorato9036</bcf:citekey>
     <bcf:citekey order="65" intorder="1">Padhan:2924203</bcf:citekey>
     <bcf:citekey order="66" intorder="1">amsdottorato9036</bcf:citekey>
     <bcf:citekey order="67" intorder="1">Padhan:2924203</bcf:citekey>
-    <bcf:citekey order="68" intorder="1">Alicemuonspectometer</bcf:citekey>
-    <bcf:citekey order="69" intorder="1">Cheng:2908766</bcf:citekey>
-    <bcf:citekey order="70" intorder="1">Herrmann:2920632</bcf:citekey>
+    <bcf:citekey order="68" intorder="1">amsdottorato9036</bcf:citekey>
+    <bcf:citekey order="69" intorder="1">Padhan:2924203</bcf:citekey>
+    <bcf:citekey order="70" intorder="1">Arata:2922803</bcf:citekey>
     <bcf:citekey order="71" intorder="1">Padhan:2924203</bcf:citekey>
-    <bcf:citekey order="72" intorder="1">Padhan:2924203</bcf:citekey>
-    <bcf:citekey order="73" intorder="1">ALICE:2014sbx</bcf:citekey>
+    <bcf:citekey order="72" intorder="1">amsdottorato9036</bcf:citekey>
+    <bcf:citekey order="73" intorder="1">Padhan:2924203</bcf:citekey>
     <bcf:citekey order="74" intorder="1">amsdottorato9036</bcf:citekey>
+    <bcf:citekey order="75" intorder="1">Padhan:2924203</bcf:citekey>
+    <bcf:citekey order="76" intorder="1">amsdottorato9036</bcf:citekey>
+    <bcf:citekey order="77" intorder="1">Padhan:2924203</bcf:citekey>
+    <bcf:citekey order="78" intorder="1">Alicemuonspectometer</bcf:citekey>
+    <bcf:citekey order="79" intorder="1">Cheng:2908766</bcf:citekey>
+    <bcf:citekey order="80" intorder="1">Herrmann:2920632</bcf:citekey>
+    <bcf:citekey order="81" intorder="1">Padhan:2924203</bcf:citekey>
+    <bcf:citekey order="82" intorder="1">Padhan:2924203</bcf:citekey>
+    <bcf:citekey order="83" intorder="1">ALICE:2014sbx</bcf:citekey>
+    <bcf:citekey order="84" intorder="1">amsdottorato9036</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">
