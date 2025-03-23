@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.10)  22 MAR 2025 19:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.10)  23 MAR 2025 20:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -526,6 +526,27 @@ Package caption Info: Standard document class detected.
 \c@continuedfloat=\count303
 Package caption Info: float package is loaded.
 )
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2022/06/20 v1.0f Color table columns (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen265
+\ar@mcellbox=\box71
+\extrarowheight=\dimen266
+\NC@list=\toks41
+\extratabsurround=\skip62
+\backup@length=\skip63
+\ar@cellbox=\box72
+)
+\everycr=\toks42
+\minrowclearance=\skip64
+\rownum=\count304
+)
+
+LaTeX Warning: Package "xcolor" has already been loaded: ignoring load-time
+(LaTeX)        option "xcdraw".
+
 (/usr/share/texlive/texmf-dist/tex/latex/mdframed/mdframed.sty
 Package: mdframed 2013/07/01 1.9b: mdframed
 
@@ -544,8 +565,8 @@ Package: expl3 2024-01-22 L3 programming layer (loader)
 
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count304
-\l__pdf_internal_box=\box71
+\l__color_backend_stack_int=\count305
+\l__pdf_internal_box=\box73
 ))
 Package: xparse 2023-10-10 L3 Experimental document command parser
 )
@@ -578,53 +599,53 @@ Package zref Info: New property list: main on input line 767.
 Package zref Info: New property: default on input line 768.
 Package zref Info: New property: page on input line 769.
 )
-\c@abspage=\count305
+\c@abspage=\count306
 Package zref Info: New property: abspage on input line 67.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/needspace/needspace.sty
 Package: needspace 2010/09/12 v1.3d reserve vertical space
 )
-\mdf@templength=\skip62
-\c@mdf@globalstyle@cnt=\count306
-\mdf@skipabove@length=\skip63
-\mdf@skipbelow@length=\skip64
-\mdf@leftmargin@length=\skip65
-\mdf@rightmargin@length=\skip66
-\mdf@innerleftmargin@length=\skip67
-\mdf@innerrightmargin@length=\skip68
-\mdf@innertopmargin@length=\skip69
-\mdf@innerbottommargin@length=\skip70
-\mdf@splittopskip@length=\skip71
-\mdf@splitbottomskip@length=\skip72
-\mdf@outermargin@length=\skip73
-\mdf@innermargin@length=\skip74
-\mdf@linewidth@length=\skip75
-\mdf@innerlinewidth@length=\skip76
-\mdf@middlelinewidth@length=\skip77
-\mdf@outerlinewidth@length=\skip78
-\mdf@roundcorner@length=\skip79
-\mdf@footenotedistance@length=\skip80
-\mdf@userdefinedwidth@length=\skip81
-\mdf@needspace@length=\skip82
-\mdf@frametitleaboveskip@length=\skip83
-\mdf@frametitlebelowskip@length=\skip84
-\mdf@frametitlerulewidth@length=\skip85
-\mdf@frametitleleftmargin@length=\skip86
-\mdf@frametitlerightmargin@length=\skip87
-\mdf@shadowsize@length=\skip88
-\mdf@extratopheight@length=\skip89
-\mdf@subtitleabovelinewidth@length=\skip90
-\mdf@subtitlebelowlinewidth@length=\skip91
-\mdf@subtitleaboveskip@length=\skip92
-\mdf@subtitlebelowskip@length=\skip93
-\mdf@subtitleinneraboveskip@length=\skip94
-\mdf@subtitleinnerbelowskip@length=\skip95
-\mdf@subsubtitleabovelinewidth@length=\skip96
-\mdf@subsubtitlebelowlinewidth@length=\skip97
-\mdf@subsubtitleaboveskip@length=\skip98
-\mdf@subsubtitlebelowskip@length=\skip99
-\mdf@subsubtitleinneraboveskip@length=\skip100
-\mdf@subsubtitleinnerbelowskip@length=\skip101
+\mdf@templength=\skip65
+\c@mdf@globalstyle@cnt=\count307
+\mdf@skipabove@length=\skip66
+\mdf@skipbelow@length=\skip67
+\mdf@leftmargin@length=\skip68
+\mdf@rightmargin@length=\skip69
+\mdf@innerleftmargin@length=\skip70
+\mdf@innerrightmargin@length=\skip71
+\mdf@innertopmargin@length=\skip72
+\mdf@innerbottommargin@length=\skip73
+\mdf@splittopskip@length=\skip74
+\mdf@splitbottomskip@length=\skip75
+\mdf@outermargin@length=\skip76
+\mdf@innermargin@length=\skip77
+\mdf@linewidth@length=\skip78
+\mdf@innerlinewidth@length=\skip79
+\mdf@middlelinewidth@length=\skip80
+\mdf@outerlinewidth@length=\skip81
+\mdf@roundcorner@length=\skip82
+\mdf@footenotedistance@length=\skip83
+\mdf@userdefinedwidth@length=\skip84
+\mdf@needspace@length=\skip85
+\mdf@frametitleaboveskip@length=\skip86
+\mdf@frametitlebelowskip@length=\skip87
+\mdf@frametitlerulewidth@length=\skip88
+\mdf@frametitleleftmargin@length=\skip89
+\mdf@frametitlerightmargin@length=\skip90
+\mdf@shadowsize@length=\skip91
+\mdf@extratopheight@length=\skip92
+\mdf@subtitleabovelinewidth@length=\skip93
+\mdf@subtitlebelowlinewidth@length=\skip94
+\mdf@subtitleaboveskip@length=\skip95
+\mdf@subtitlebelowskip@length=\skip96
+\mdf@subtitleinneraboveskip@length=\skip97
+\mdf@subtitleinnerbelowskip@length=\skip98
+\mdf@subsubtitleabovelinewidth@length=\skip99
+\mdf@subsubtitlebelowlinewidth@length=\skip100
+\mdf@subsubtitleaboveskip@length=\skip101
+\mdf@subsubtitlebelowskip@length=\skip102
+\mdf@subsubtitleinneraboveskip@length=\skip103
+\mdf@subsubtitleinnerbelowskip@length=\skip104
 
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
@@ -634,10 +655,10 @@ Package: needspace 2010/09/12 v1.3d reserve vertical space
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
-\pgffor@iter=\dimen265
-\pgffor@skip=\dimen266
-\pgffor@stack=\toks41
-\pgffor@toks=\toks42
+\pgffor@iter=\dimen267
+\pgffor@skip=\dimen268
+\pgffor@stack=\toks43
+\pgffor@toks=\toks44
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2023-01-15 v3.1.10 (3.1.10)
@@ -645,33 +666,33 @@ Package: tikz 2023-01-15 v3.1.10 (3.1.10)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
 .code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count307
-\pgfplotmarksize=\dimen267
+\pgf@plot@mark@count=\count308
+\pgfplotmarksize=\dimen269
 )
-\tikz@lastx=\dimen268
-\tikz@lasty=\dimen269
-\tikz@lastxsaved=\dimen270
-\tikz@lastysaved=\dimen271
-\tikz@lastmovetox=\dimen272
-\tikz@lastmovetoy=\dimen273
-\tikzleveldistance=\dimen274
-\tikzsiblingdistance=\dimen275
-\tikz@figbox=\box72
-\tikz@figbox@bg=\box73
-\tikz@tempbox=\box74
-\tikz@tempbox@bg=\box75
-\tikztreelevel=\count308
-\tikznumberofchildren=\count309
-\tikznumberofcurrentchild=\count310
-\tikz@fig@count=\count311
+\tikz@lastx=\dimen270
+\tikz@lasty=\dimen271
+\tikz@lastxsaved=\dimen272
+\tikz@lastysaved=\dimen273
+\tikz@lastmovetox=\dimen274
+\tikz@lastmovetoy=\dimen275
+\tikzleveldistance=\dimen276
+\tikzsiblingdistance=\dimen277
+\tikz@figbox=\box74
+\tikz@figbox@bg=\box75
+\tikz@tempbox=\box76
+\tikz@tempbox@bg=\box77
+\tikztreelevel=\count309
+\tikznumberofchildren=\count310
+\tikznumberofcurrentchild=\count311
+\tikz@fig@count=\count312
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count312
-\pgfmatrixcurrentcolumn=\count313
-\pgf@matrix@numberofcolumns=\count314
+\pgfmatrixcurrentrow=\count313
+\pgfmatrixcurrentcolumn=\count314
+\pgf@matrix@numberofcolumns=\count315
 )
-\tikz@expandcount=\count315
+\tikz@expandcount=\count316
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarytopaths.code.tex
@@ -680,48 +701,48 @@ File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/usr/share/texlive/texmf-dist/tex/latex/mdframed/md-frame-1.mdf
 File: md-frame-1.mdf 2013/07/01\ 1.9b: md-frame-1
 )
-\mdf@frametitlebox=\box76
-\mdf@footnotebox=\box77
-\mdf@splitbox@one=\box78
-\mdf@splitbox@two=\box79
-\mdf@splitbox@save=\box80
-\mdfsplitboxwidth=\skip102
-\mdfsplitboxtotalwidth=\skip103
-\mdfsplitboxheight=\skip104
-\mdfsplitboxdepth=\skip105
-\mdfsplitboxtotalheight=\skip106
-\mdfframetitleboxwidth=\skip107
-\mdfframetitleboxtotalwidth=\skip108
-\mdfframetitleboxheight=\skip109
-\mdfframetitleboxdepth=\skip110
-\mdfframetitleboxtotalheight=\skip111
-\mdffootnoteboxwidth=\skip112
-\mdffootnoteboxtotalwidth=\skip113
-\mdffootnoteboxheight=\skip114
-\mdffootnoteboxdepth=\skip115
-\mdffootnoteboxtotalheight=\skip116
-\mdftotallinewidth=\skip117
-\mdfboundingboxwidth=\skip118
-\mdfboundingboxtotalwidth=\skip119
-\mdfboundingboxheight=\skip120
-\mdfboundingboxdepth=\skip121
-\mdfboundingboxtotalheight=\skip122
-\mdf@freevspace@length=\skip123
-\mdf@horizontalwidthofbox@length=\skip124
-\mdf@verticalmarginwhole@length=\skip125
-\mdf@horizontalspaceofbox=\skip126
-\mdfsubtitleheight=\skip127
-\mdfsubsubtitleheight=\skip128
-\c@mdfcountframes=\count316
+\mdf@frametitlebox=\box78
+\mdf@footnotebox=\box79
+\mdf@splitbox@one=\box80
+\mdf@splitbox@two=\box81
+\mdf@splitbox@save=\box82
+\mdfsplitboxwidth=\skip105
+\mdfsplitboxtotalwidth=\skip106
+\mdfsplitboxheight=\skip107
+\mdfsplitboxdepth=\skip108
+\mdfsplitboxtotalheight=\skip109
+\mdfframetitleboxwidth=\skip110
+\mdfframetitleboxtotalwidth=\skip111
+\mdfframetitleboxheight=\skip112
+\mdfframetitleboxdepth=\skip113
+\mdfframetitleboxtotalheight=\skip114
+\mdffootnoteboxwidth=\skip115
+\mdffootnoteboxtotalwidth=\skip116
+\mdffootnoteboxheight=\skip117
+\mdffootnoteboxdepth=\skip118
+\mdffootnoteboxtotalheight=\skip119
+\mdftotallinewidth=\skip120
+\mdfboundingboxwidth=\skip121
+\mdfboundingboxtotalwidth=\skip122
+\mdfboundingboxheight=\skip123
+\mdfboundingboxdepth=\skip124
+\mdfboundingboxtotalheight=\skip125
+\mdf@freevspace@length=\skip126
+\mdf@horizontalwidthofbox@length=\skip127
+\mdf@verticalmarginwhole@length=\skip128
+\mdf@horizontalspaceofbox=\skip129
+\mdfsubtitleheight=\skip130
+\mdfsubsubtitleheight=\skip131
+\c@mdfcountframes=\count317
 
 ****** mdframed patching \endmdf@trivlist
 
 ****** -- success******
 
-\mdf@envdepth=\count317
-\c@mdf@env@i=\count318
-\c@mdf@env@ii=\count319
-\c@mdf@zref@counter=\count320
+\mdf@envdepth=\count318
+\c@mdf@env@i=\count319
+\c@mdf@env@ii=\count320
+\c@mdf@zref@counter=\count321
 Package zref Info: New property: mdf@pagevalue on input line 895.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
@@ -729,7 +750,7 @@ Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
 
 (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count321
+\lrq@indent=\count322
 
 (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
@@ -741,63 +762,63 @@ Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-\c@tabx@nest=\count322
-\c@listtotal=\count323
-\c@listcount=\count324
-\c@liststart=\count325
-\c@liststop=\count326
-\c@citecount=\count327
-\c@citetotal=\count328
-\c@multicitecount=\count329
-\c@multicitetotal=\count330
-\c@instcount=\count331
-\c@maxnames=\count332
-\c@minnames=\count333
-\c@maxitems=\count334
-\c@minitems=\count335
-\c@citecounter=\count336
-\c@maxcitecounter=\count337
-\c@savedcitecounter=\count338
-\c@uniquelist=\count339
-\c@uniquename=\count340
-\c@refsection=\count341
-\c@refsegment=\count342
-\c@maxextratitle=\count343
-\c@maxextratitleyear=\count344
-\c@maxextraname=\count345
-\c@maxextradate=\count346
-\c@maxextraalpha=\count347
-\c@abbrvpenalty=\count348
-\c@highnamepenalty=\count349
-\c@lownamepenalty=\count350
-\c@maxparens=\count351
-\c@parenlevel=\count352
-\blx@tempcnta=\count353
-\blx@tempcntb=\count354
-\blx@tempcntc=\count355
-\c@blx@maxsection=\count356
-\blx@maxsegment@0=\count357
-\blx@notetype=\count358
-\blx@parenlevel@text=\count359
-\blx@parenlevel@foot=\count360
-\blx@sectionciteorder@0=\count361
-\blx@sectionciteorderinternal@0=\count362
-\blx@entrysetcounter=\count363
-\blx@biblioinstance=\count364
-\labelnumberwidth=\skip129
-\labelalphawidth=\skip130
-\biblabelsep=\skip131
-\bibitemsep=\skip132
-\bibnamesep=\skip133
-\bibinitsep=\skip134
-\bibparsep=\skip135
-\bibhang=\skip136
+\c@tabx@nest=\count323
+\c@listtotal=\count324
+\c@listcount=\count325
+\c@liststart=\count326
+\c@liststop=\count327
+\c@citecount=\count328
+\c@citetotal=\count329
+\c@multicitecount=\count330
+\c@multicitetotal=\count331
+\c@instcount=\count332
+\c@maxnames=\count333
+\c@minnames=\count334
+\c@maxitems=\count335
+\c@minitems=\count336
+\c@citecounter=\count337
+\c@maxcitecounter=\count338
+\c@savedcitecounter=\count339
+\c@uniquelist=\count340
+\c@uniquename=\count341
+\c@refsection=\count342
+\c@refsegment=\count343
+\c@maxextratitle=\count344
+\c@maxextratitleyear=\count345
+\c@maxextraname=\count346
+\c@maxextradate=\count347
+\c@maxextraalpha=\count348
+\c@abbrvpenalty=\count349
+\c@highnamepenalty=\count350
+\c@lownamepenalty=\count351
+\c@maxparens=\count352
+\c@parenlevel=\count353
+\blx@tempcnta=\count354
+\blx@tempcntb=\count355
+\blx@tempcntc=\count356
+\c@blx@maxsection=\count357
+\blx@maxsegment@0=\count358
+\blx@notetype=\count359
+\blx@parenlevel@text=\count360
+\blx@parenlevel@foot=\count361
+\blx@sectionciteorder@0=\count362
+\blx@sectionciteorderinternal@0=\count363
+\blx@entrysetcounter=\count364
+\blx@biblioinstance=\count365
+\labelnumberwidth=\skip132
+\labelalphawidth=\skip133
+\biblabelsep=\skip134
+\bibitemsep=\skip135
+\bibnamesep=\skip136
+\bibinitsep=\skip137
+\bibparsep=\skip138
+\bibhang=\skip139
 \blx@bcfin=\read5
 \blx@bcfout=\write4
 \blx@langwohyphens=\language90
-\c@mincomprange=\count365
-\c@maxcomprange=\count366
-\c@mincompwidth=\count367
+\c@mincomprange=\count366
+\c@maxcomprange=\count367
+\c@mincompwidth=\count368
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -808,88 +829,88 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'alphabetic.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count368
-\c@savedafterword=\count369
-\c@annotator=\count370
-\c@savedannotator=\count371
-\c@author=\count372
-\c@savedauthor=\count373
-\c@bookauthor=\count374
-\c@savedbookauthor=\count375
-\c@commentator=\count376
-\c@savedcommentator=\count377
-\c@editor=\count378
-\c@savededitor=\count379
-\c@editora=\count380
-\c@savededitora=\count381
-\c@editorb=\count382
-\c@savededitorb=\count383
-\c@editorc=\count384
-\c@savededitorc=\count385
-\c@foreword=\count386
-\c@savedforeword=\count387
-\c@holder=\count388
-\c@savedholder=\count389
-\c@introduction=\count390
-\c@savedintroduction=\count391
-\c@namea=\count392
-\c@savednamea=\count393
-\c@nameb=\count394
-\c@savednameb=\count395
-\c@namec=\count396
-\c@savednamec=\count397
-\c@translator=\count398
-\c@savedtranslator=\count399
-\c@shortauthor=\count400
-\c@savedshortauthor=\count401
-\c@shorteditor=\count402
-\c@savedshorteditor=\count403
-\c@labelname=\count404
-\c@savedlabelname=\count405
-\c@institution=\count406
-\c@savedinstitution=\count407
-\c@lista=\count408
-\c@savedlista=\count409
-\c@listb=\count410
-\c@savedlistb=\count411
-\c@listc=\count412
-\c@savedlistc=\count413
-\c@listd=\count414
-\c@savedlistd=\count415
-\c@liste=\count416
-\c@savedliste=\count417
-\c@listf=\count418
-\c@savedlistf=\count419
-\c@location=\count420
-\c@savedlocation=\count421
-\c@organization=\count422
-\c@savedorganization=\count423
-\c@origlocation=\count424
-\c@savedoriglocation=\count425
-\c@origpublisher=\count426
-\c@savedorigpublisher=\count427
-\c@publisher=\count428
-\c@savedpublisher=\count429
-\c@language=\count430
-\c@savedlanguage=\count431
-\c@origlanguage=\count432
-\c@savedoriglanguage=\count433
-\c@pageref=\count434
-\c@savedpageref=\count435
-\shorthandwidth=\skip137
-\shortjournalwidth=\skip138
-\shortserieswidth=\skip139
-\shorttitlewidth=\skip140
-\shortauthorwidth=\skip141
-\shorteditorwidth=\skip142
-\locallabelnumberwidth=\skip143
-\locallabelalphawidth=\skip144
-\localshorthandwidth=\skip145
-\localshortjournalwidth=\skip146
-\localshortserieswidth=\skip147
-\localshorttitlewidth=\skip148
-\localshortauthorwidth=\skip149
-\localshorteditorwidth=\skip150
+\c@afterword=\count369
+\c@savedafterword=\count370
+\c@annotator=\count371
+\c@savedannotator=\count372
+\c@author=\count373
+\c@savedauthor=\count374
+\c@bookauthor=\count375
+\c@savedbookauthor=\count376
+\c@commentator=\count377
+\c@savedcommentator=\count378
+\c@editor=\count379
+\c@savededitor=\count380
+\c@editora=\count381
+\c@savededitora=\count382
+\c@editorb=\count383
+\c@savededitorb=\count384
+\c@editorc=\count385
+\c@savededitorc=\count386
+\c@foreword=\count387
+\c@savedforeword=\count388
+\c@holder=\count389
+\c@savedholder=\count390
+\c@introduction=\count391
+\c@savedintroduction=\count392
+\c@namea=\count393
+\c@savednamea=\count394
+\c@nameb=\count395
+\c@savednameb=\count396
+\c@namec=\count397
+\c@savednamec=\count398
+\c@translator=\count399
+\c@savedtranslator=\count400
+\c@shortauthor=\count401
+\c@savedshortauthor=\count402
+\c@shorteditor=\count403
+\c@savedshorteditor=\count404
+\c@labelname=\count405
+\c@savedlabelname=\count406
+\c@institution=\count407
+\c@savedinstitution=\count408
+\c@lista=\count409
+\c@savedlista=\count410
+\c@listb=\count411
+\c@savedlistb=\count412
+\c@listc=\count413
+\c@savedlistc=\count414
+\c@listd=\count415
+\c@savedlistd=\count416
+\c@liste=\count417
+\c@savedliste=\count418
+\c@listf=\count419
+\c@savedlistf=\count420
+\c@location=\count421
+\c@savedlocation=\count422
+\c@organization=\count423
+\c@savedorganization=\count424
+\c@origlocation=\count425
+\c@savedoriglocation=\count426
+\c@origpublisher=\count427
+\c@savedorigpublisher=\count428
+\c@publisher=\count429
+\c@savedpublisher=\count430
+\c@language=\count431
+\c@savedlanguage=\count432
+\c@origlanguage=\count433
+\c@savedoriglanguage=\count434
+\c@pageref=\count435
+\c@savedpageref=\count436
+\shorthandwidth=\skip140
+\shortjournalwidth=\skip141
+\shortserieswidth=\skip142
+\shorttitlewidth=\skip143
+\shortauthorwidth=\skip144
+\shorteditorwidth=\skip145
+\locallabelnumberwidth=\skip146
+\locallabelalphawidth=\skip147
+\localshorthandwidth=\skip148
+\localshortjournalwidth=\skip149
+\localshortserieswidth=\skip150
+\localshorttitlewidth=\skip151
+\localshortauthorwidth=\skip152
+\localshorteditorwidth=\skip153
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
@@ -901,19 +922,19 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
-\c@textcitecount=\count436
-\c@textcitetotal=\count437
-\c@textcitemaxnames=\count438
-\c@biburlbigbreakpenalty=\count439
-\c@biburlbreakpenalty=\count440
-\c@biburlnumpenalty=\count441
-\c@biburlucpenalty=\count442
-\c@biburllcpenalty=\count443
+\c@textcitecount=\count437
+\c@textcitetotal=\count438
+\c@textcitemaxnames=\count439
+\c@biburlbigbreakpenalty=\count440
+\c@biburlbreakpenalty=\count441
+\c@biburlnumpenalty=\count442
+\c@biburlucpenalty=\count443
+\c@biburllcpenalty=\count444
 \biburlbigskip=\muskip18
 \biburlnumskip=\muskip19
 \biburlucskip=\muskip20
 \biburllcskip=\muskip21
-\c@smartand=\count444
+\c@smartand=\count445
 )
 Package biblatex Info: Trying to load bibliography style 'alphabetic'...
 Package biblatex Info: ... file 'alphabetic.bbx' found.
@@ -925,8 +946,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count445
-\c@bbx:relatedtotal=\count446
+\c@bbx:relatedcount=\count446
+\c@bbx:relatedtotal=\count447
 ))
 Package biblatex Info: Trying to load citation style 'alphabetic'...
 Package biblatex Info: ... file 'alphabetic.cbx' found.
@@ -960,41 +981,55 @@ Package biblatex Info: ... and expl3
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
 Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
 ))
+
+! Package caption Error: color{grey} undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 \captionsetup{font={color{grey}}}
+                                      
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
-
 (./tesi.aux)
 \openout1 = `tesi.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count447
-\scratchdimen=\dimen276
-\scratchbox=\box81
-\nofMPsegments=\count448
-\nofMParguments=\count449
-\everyMPshowfont=\toks43
-\MPscratchCnt=\count450
-\MPscratchDim=\dimen277
-\MPnumerator=\count451
-\makeMPintoPDFobject=\count452
-\everyMPtoPDFconversion=\toks44
+\scratchcounter=\count448
+\scratchdimen=\dimen278
+\scratchbox=\box83
+\nofMPsegments=\count449
+\nofMParguments=\count450
+\everyMPshowfont=\toks45
+\MPscratchCnt=\count451
+\MPscratchDim=\dimen279
+\MPnumerator=\count452
+\makeMPintoPDFobject=\count453
+\everyMPtoPDFconversion=\toks46
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1053,41 +1088,41 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'tesi.bbl' found.
  (./tesi.bbl)
-Package biblatex Info: Reference section=0 on input line 39.
-Package biblatex Info: Reference segment=0 on input line 39.
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 47
+Package biblatex Info: Reference section=0 on input line 41.
+Package biblatex Info: Reference segment=0 on input line 41.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 49
 .
 (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 47.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 49.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 47.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 49.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (54.40085pt too wide) in paragraph at lines 47--50
+Overfull \hbox (54.40085pt too wide) in paragraph at lines 49--52
  [] 
  []
 
 
-Overfull \hbox (54.40085pt too wide) in paragraph at lines 47--50
+Overfull \hbox (54.40085pt too wide) in paragraph at lines 49--52
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--83
+Underfull \hbox (badness 10000) in paragraph at lines 74--85
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--83
+Underfull \hbox (badness 10000) in paragraph at lines 74--85
 
  []
 
@@ -1137,30 +1172,30 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 Chapter 2.
 
 LaTeX Warning: Citation 'quevedo2024cambridgelecturesstandardmodel' on page 7 u
-ndefined on input line 140.
+ndefined on input line 142.
 
 
-LaTeX Warning: Reference `fig:SM' on page 7 undefined on input line 143.
+LaTeX Warning: Reference `fig:SM' on page 7 undefined on input line 145.
 
 
 Underfull \vbox (badness 1189) has occurred while \output is active []
 
  [7]
 
-LaTeX Warning: Citation 'Skands_2013' on page 8 undefined on input line 159.
+LaTeX Warning: Citation 'Skands_2013' on page 8 undefined on input line 161.
 
 <pictures/quark_confinement.jpeg, id=37, 436.63126pt x 408.52625pt>
 File: pictures/quark_confinement.jpeg Graphic file (type jpg)
 <use pictures/quark_confinement.jpeg>
 Package pdftex.def Info: pictures/quark_confinement.jpeg  used on input line 16
-5.
+7.
 (pdftex.def)             Requested size: 276.60573pt x 258.80038pt.
 
-LaTeX Warning: Reference `modern_physics' on page 8 undefined on input line 166
+LaTeX Warning: Reference `modern_physics' on page 8 undefined on input line 168
 .
 
 
-LaTeX Warning: Reference `modern_physics' on page 8 undefined on input line 166
+LaTeX Warning: Reference `modern_physics' on page 8 undefined on input line 168
 .
 
 
@@ -1174,10 +1209,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [8{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 
 LaTeX Warning: Citation 'DAVIDPOLITZER1974129' on page 9 undefined on input lin
-e 170.
+e 172.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2181) has occurred while \output is active []
 
 
 
@@ -1190,15 +1225,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [9 <./pictures/quark_confinement.jpeg>]
 
-LaTeX Warning: Citation 'Semprini' on page 10 undefined on input line 189.
+LaTeX Warning: Citation 'Semprini' on page 10 undefined on input line 191.
 
-<pictures/QCD_vertices.jpeg, id=47, 558.085pt x 161.60374pt>
+<pictures/QCD_vertices.jpeg, id=46, 558.085pt x 161.60374pt>
 File: pictures/QCD_vertices.jpeg Graphic file (type jpg)
 <use pictures/QCD_vertices.jpeg>
-Package pdftex.def Info: pictures/QCD_vertices.jpeg  used on input line 194.
+Package pdftex.def Info: pictures/QCD_vertices.jpeg  used on input line 196.
 (pdftex.def)             Requested size: 276.60573pt x 80.09889pt.
 
-LaTeX Warning: Citation 'Peskin:1995ev' on page 10 undefined on input line 199.
+LaTeX Warning: Citation 'Peskin:1995ev' on page 10 undefined on input line 201.
 
 
 
@@ -1212,19 +1247,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [10]
 
 LaTeX Warning: Citation 'Herrmann:2920632' on page 11 undefined on input line 2
-06.
+08.
 
 
-LaTeX Warning: Citation 'Semprini' on page 11 undefined on input line 206.
+LaTeX Warning: Citation 'Semprini' on page 11 undefined on input line 208.
 
-<pictures/deconfinement.png, id=54, 624.3325pt x 429.605pt>
+<pictures/deconfinement.png, id=53, 624.3325pt x 429.605pt>
 File: pictures/deconfinement.png Graphic file (type png)
 <use pictures/deconfinement.png>
-Package pdftex.def Info: pictures/deconfinement.png  used on input line 209.
+Package pdftex.def Info: pictures/deconfinement.png  used on input line 211.
 (pdftex.def)             Requested size: 276.60573pt x 190.33783pt.
 
 LaTeX Warning: Citation 'heinz2004conceptsheavyionphysics' on page 11 undefined
- on input line 213.
+ on input line 215.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1237,7 +1272,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [11 <./pictures/QCD_vertices.jpeg>]
 
 LaTeX Warning: Citation 'PhysRevD.27.140' on page 12 undefined on input line 21
-7.
+9.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1250,25 +1285,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [12 <./pictures/deconfinement.png>]
 
 LaTeX Warning: Citation 'amsdottorato9036' on page 13 undefined on input line 2
-21.
+23.
 
 
 LaTeX Warning: Citation 'QCDPhase-Diagram' on page 13 undefined on input line 2
-24.
+26.
 
-<pictures/QCD_phase_diagram.jpg, id=64, 602.25pt x 397.485pt>
+<pictures/QCD_phase_diagram.jpg, id=63, 602.25pt x 397.485pt>
 File: pictures/QCD_phase_diagram.jpg Graphic file (type jpg)
 <use pictures/QCD_phase_diagram.jpg>
-Package pdftex.def Info: pictures/QCD_phase_diagram.jpg  used on input line 229
+Package pdftex.def Info: pictures/QCD_phase_diagram.jpg  used on input line 231
 .
 (pdftex.def)             Requested size: 276.60573pt x 182.56631pt.
 
 LaTeX Warning: Citation 'QCDPhase-Diagram' on page 13 undefined on input line 2
-30.
+32.
 
 
 LaTeX Warning: Citation 'QCDPhase-Diagram' on page 13 undefined on input line 2
-30.
+32.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1281,32 +1316,36 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [13]
 
 LaTeX Warning: Citation 'heinz2004conceptsheavyionphysics' on page 14 undefined
- on input line 238.
+ on input line 240.
 
 
 LaTeX Warning: Citation 'heinz2004conceptsheavyionphysics' on page 14 undefined
- on input line 241.
+ on input line 243.
 
 
 LaTeX Warning: Citation 'Herrmann:2920632' on page 14 undefined on input line 2
-41.
+43.
 
 
-LaTeX Warning: Citation 'Padhan:2924203' on page 14 undefined on input line 241
+LaTeX Warning: Citation 'Padhan:2924203' on page 14 undefined on input line 243
 .
 
 
-LaTeX Warning: Citation 'Arata:2922803' on page 14 undefined on input line 241.
+LaTeX Warning: Citation 'Arata:2922803' on page 14 undefined on input line 243.
 
 
 
 LaTeX Warning: Citation 'amsdottorato9036' on page 14 undefined on input line 2
-41.
+43.
 
 
-Overfull \hbox (68.47162pt too wide) in paragraph at lines 241--242
+Overfull \hbox (68.47162pt too wide) in paragraph at lines 243--244
 \OT1/cmr/m/n/12 [[]], [[]], [[]] and [[]]. 
  []
+
+
+Underfull \vbox (badness 2781) has occurred while \output is active []
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1335,25 +1374,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-15.05003pt}.
 
 [16]
-<pictures/collision_stage_mikowsky.png, id=78, 481.8pt x 440.64626pt>
+<pictures/collision_stage_mikowsky.png, id=77, 481.8pt x 440.64626pt>
 File: pictures/collision_stage_mikowsky.png Graphic file (type png)
 <use pictures/collision_stage_mikowsky.png>
 Package pdftex.def Info: pictures/collision_stage_mikowsky.png  used on input l
-ine 260.
+ine 262.
 (pdftex.def)             Requested size: 237.09407pt x 216.83969pt.
 
 
 LaTeX Warning: Citation 'EvolutionofcollisionsandQGP' on page 17 undefined on i
-nput line 261.
+nput line 263.
 
 
 LaTeX Warning: Citation 'EvolutionofcollisionsandQGP' on page 17 undefined on i
-nput line 261.
+nput line 263.
 
-<pictures/collision_stage.png, id=79, 602.25pt x 751.80875pt>
+<pictures/collision_stage.png, id=78, 602.25pt x 751.80875pt>
 File: pictures/collision_stage.png Graphic file (type png)
 <use pictures/collision_stage.png>
-Package pdftex.def Info: pictures/collision_stage.png  used on input line 267.
+Package pdftex.def Info: pictures/collision_stage.png  used on input line 269.
 (pdftex.def)             Requested size: 276.60573pt x 345.30852pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1373,79 +1412,58 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-15.05003pt}.
 
 [18 <./pictures/collision_stage.png>]
+
+LaTeX Warning: Citation 'amsdottorato9036' on page 19 undefined on input line 2
+90.
+
+
+LaTeX Warning: Citation 'Miller_2007' on page 19 undefined on input line 291.
+
+
+LaTeX Warning: Citation 'Arata:2922803' on page 19 undefined on input line 310.
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 27.05003pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.05003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-15.05003pt}.
+
+[19]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 27.05003pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.05003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-15.05003pt}.
+
+[20
+
+]
 Chapter 3.
 
-LaTeX Warning: Citation 'heinz2004conceptsheavyionphysics' on page 19 undefined
- on input line 275.
+LaTeX Warning: Citation 'heinz2004conceptsheavyionphysics' on page 21 undefined
+ on input line 314.
 
 
-LaTeX Warning: Citation 'phdthesis' on page 19 undefined on input line 275.
+LaTeX Warning: Citation 'phdthesis' on page 21 undefined on input line 314.
 
 
-Overfull \hbox (12.65483pt too wide) in paragraph at lines 275--276
+Overfull \hbox (12.65483pt too wide) in paragraph at lines 314--315
 \OT1/cmr/m/n/12 This sec-tion re-sume the in-for-ma-tion of [[]],
  []
 
-[19
 
-]
-
-! LaTeX Error: Unicode character − (U+2212)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.294 ...me with rapidity $\Delta \eta$ in the −
-                                                  z direction has $\eta'_l$ ...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-LaTeX Warning: Citation 'PhysRevD.27.140' on page 20 undefined on input line 30
-5.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[20]
-
-LaTeX Warning: Citation 'Cooper-Frye' on page 21 undefined on input line 337.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+LaTeX Warning: Citation 'Snellings_2011' on page 21 undefined on input line 321
+.
 
 [21]
-Overfull \hbox (249.05113pt too wide) detected at line 347
-[][][]
- []
 
-
-Overfull \hbox (42.28459pt too wide) detected at line 356
-[][] \OT1/cmr/m/n/12 = [] [][] \OML/cmm/m/it/12 r[] dr[] n[]\OT1/cmr/m/n/12 (\O
-ML/cmm/m/it/12 r[]\OT1/cmr/m/n/12 ) []
- []
-
-
-LaTeX Warning: Citation 'teaney2001hydrodynamicdescriptionheavyion' on page 22 
-undefined on input line 361.
-
-
-Overfull \hbox (41.72325pt too wide) in paragraph at lines 361--362
-\OT1/cmr/m/n/12 of grow are shown in the Fig 3.1[] [[]]. 
- []
+LaTeX Warning: Citation 'PhysRevD.27.140' on page 22 undefined on input line 35
+1.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1456,19 +1474,28 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [22]
-<pictures/radial_flow.png, id=107, 714.67pt x 695.59875pt>
-File: pictures/radial_flow.png Graphic file (type png)
-<use pictures/radial_flow.png>
-Package pdftex.def Info: pictures/radial_flow.png  used on input line 365.
-(pdftex.def)             Requested size: 237.09407pt x 230.7689pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[23]
+
+LaTeX Warning: Citation 'Cooper-Frye' on page 24 undefined on input line 383.
 
 
-LaTeX Warning: Citation 'EvolutionofcollisionsandQGP' on page 23 undefined on i
-nput line 366.
+Overfull \hbox (35.15126pt too wide) detected at line 393
+[][][]
+ []
 
 
-LaTeX Warning: Citation 'EvolutionofcollisionsandQGP' on page 23 undefined on i
-nput line 366.
+Overfull \hbox (42.28459pt too wide) detected at line 402
+[][] \OT1/cmr/m/n/12 = [] [][] \OML/cmm/m/it/12 r[] dr[] n[]\OT1/cmr/m/n/12 (\O
+ML/cmm/m/it/12 r[]\OT1/cmr/m/n/12 ) []
+ []
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1478,48 +1505,79 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[23 <./pictures/radial_flow.png>]
-<pictures/flow_spectra.png, id=112, 714.67pt x 324.21124pt>
+[24]
+
+LaTeX Warning: Citation 'teaney2001hydrodynamicdescriptionheavyion' on page 25 
+undefined on input line 407.
+
+
+Overfull \hbox (41.72325pt too wide) in paragraph at lines 407--408
+\OT1/cmr/m/n/12 of grow are shown in the Fig 3.1[] [[]]. 
+ []
+
+<pictures/radial_flow.png, id=112, 714.67pt x 742.775pt>
+File: pictures/radial_flow.png Graphic file (type png)
+<use pictures/radial_flow.png>
+Package pdftex.def Info: pictures/radial_flow.png  used on input line 411.
+(pdftex.def)             Requested size: 237.09407pt x 246.41989pt.
+
+LaTeX Warning: Citation 'EvolutionofcollisionsandQGP' on page 25 undefined on i
+nput line 412.
+
+
+LaTeX Warning: Citation 'EvolutionofcollisionsandQGP' on page 25 undefined on i
+nput line 412.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[25 <./pictures/radial_flow.png>]
+<pictures/flow_spectra.png, id=118, 714.67pt x 324.21124pt>
 File: pictures/flow_spectra.png Graphic file (type png)
 <use pictures/flow_spectra.png>
-Package pdftex.def Info: pictures/flow_spectra.png  used on input line 396.
+Package pdftex.def Info: pictures/flow_spectra.png  used on input line 442.
 (pdftex.def)             Requested size: 316.12341pt x 143.41028pt.
-<pictures/elliptic_flow_collision.pdf, id=113, 564.1075pt x 263.98625pt>
+<pictures/elliptic_flow_collision.pdf, id=119, 564.1075pt x 263.98625pt>
 File: pictures/elliptic_flow_collision.pdf Graphic file (type pdf)
 <use pictures/elliptic_flow_collision.pdf>
 Package pdftex.def Info: pictures/elliptic_flow_collision.pdf  used on input li
-ne 404.
+ne 450.
 (pdftex.def)             Requested size: 316.12341pt x 147.936pt.
 
 
-LaTeX Warning: Citation 'Snellings_2011' on page 24 undefined on input line 408
+LaTeX Warning: Citation 'Snellings_2011' on page 26 undefined on input line 454
 .
 
 
-LaTeX Warning: Citation 'heinz2004conceptsheavyionphysics' on page 24 undefined
- on input line 408.
+LaTeX Warning: Citation 'heinz2004conceptsheavyionphysics' on page 26 undefined
+ on input line 454.
 
 
-LaTeX Warning: Citation 'Kolb_2000' on page 24 undefined on input line 408.
+LaTeX Warning: Citation 'Kolb_2000' on page 26 undefined on input line 454.
 
 
 LaTeX Warning: Citation 'kolb2003hydrodynamicdescriptionultrarelativisticheavyi
-on' on page 24 undefined on input line 409.
+on' on page 26 undefined on input line 455.
 
-<pictures/timeEvolutionPerepheral.pdf, id=114, 916.42375pt x 281.05pt>
+<pictures/timeEvolutionPerepheral.pdf, id=120, 916.42375pt x 281.05pt>
 File: pictures/timeEvolutionPerepheral.pdf Graphic file (type pdf)
 <use pictures/timeEvolutionPerepheral.pdf>
 Package pdftex.def Info: pictures/timeEvolutionPerepheral.pdf  used on input li
-ne 412.
-(pdftex.def)             Requested size: 316.12341pt x 96.94948pt.
+ne 458.
+(pdftex.def)             Requested size: 355.63507pt x 109.0644pt.
 
-Overfull \hbox (28.02359pt too wide) in paragraph at lines 408--417
+Overfull \hbox (28.02359pt too wide) in paragraph at lines 454--463
 \OT1/cmr/m/n/12 This sec-tion come from [[]], [[]]
  []
 
 
-Overfull \hbox (41.35464pt too wide) in paragraph at lines 408--417
-\OT1/cmr/m/n/12 shown in Fig 3.4[] [[]].
+Overfull \hbox (113.8775pt too wide) in paragraph at lines 454--463
+\OT1/cmr/m/n/12 tion vol-ume is shown in Fig 3.4[] [[]].
  []
 
 
@@ -1530,8 +1588,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[24 <./pictures/flow_spectra.png>]
-Overfull \hbox (21.32779pt too wide) detected at line 419
+[26]
+Overfull \hbox (21.32779pt too wide) detected at line 465
 []\OML/cmm/m/it/12 E[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 b\OT1/cmr/m/n/12 ) = []
 (\OML/cmm/m/it/12 b\OT1/cmr/m/n/12 ) = [][](\OML/cmm/m/it/12 b\OT1/cmr/m/n/12 )
  []
@@ -1545,62 +1603,48 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[25 <./pictures/elliptic_flow_collision.pdf> <./pictures/timeEvolutionPerephera
+[27 <./pictures/flow_spectra.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[28 <./pictures/elliptic_flow_collision.pdf> <./pictures/timeEvolutionPerephera
 l.pdf>]
 
 LaTeX Warning: Citation 'becattini2009introductionstatisticalhadronizationmodel
-' on page 26 undefined on input line 442.
+' on page 29 undefined on input line 486.
 
 
 LaTeX Warning: Citation 'charm_hierarchy_in_the_statistical_hadronization_model
-' on page 26 undefined on input line 442.
+' on page 29 undefined on input line 486.
 
 
-LaTeX Warning: Citation 'heinz2004conceptsheavyionphysics' on page 26 undefined
- on input line 442.
+LaTeX Warning: Citation 'heinz2004conceptsheavyionphysics' on page 29 undefined
+ on input line 486.
 
 
-LaTeX Warning: Citation 'amsdottorato9036' on page 26 undefined on input line 4
-42.
+LaTeX Warning: Citation 'amsdottorato9036' on page 29 undefined on input line 4
+86.
 
 
-Overfull \hbox (208.35687pt too wide) in paragraph at lines 442--443
+Overfull \hbox (208.35687pt too wide) in paragraph at lines 486--487
 \OT1/cmr/m/n/12 This sec-tion had been in-spired by the folow-ing ar-ti-cle [[]
 ],
  []
 
 
-Overfull \hbox (140.59018pt too wide) in paragraph at lines 442--443
+Overfull \hbox (140.59018pt too wide) in paragraph at lines 486--487
 \OT1/cmr/m/n/12 [[]] [[]]
  []
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
+LaTeX Warning: Citation 'PhysRevC.65.044901' on page 29 undefined on input line
+ 490.
 
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[26]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[27]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[28]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1610,199 +1654,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [29]
-
-LaTeX Warning: Citation 'Andronic_2017' on page 30 undefined on input line 509.
-
-
-<pictures/hadron_yelds.png, id=162, 497.86pt x 484.81125pt>
-File: pictures/hadron_yelds.png Graphic file (type png)
-<use pictures/hadron_yelds.png>
-Package pdftex.def Info: pictures/hadron_yelds.png  used on input line 515.
-(pdftex.def)             Requested size: 142.25456pt x 138.52773pt.
-
-LaTeX Warning: Citation 'Andronic_2006' on page 30 undefined on input line 516.
-
-
-
-LaTeX Warning: Citation 'Andronic_2006' on page 30 undefined on input line 516.
-
-
-<pictures/particle_abbundance.png, id=163, 751.80875pt x 485.815pt>
-File: pictures/particle_abbundance.png Graphic file (type png)
-<use pictures/particle_abbundance.png>
-Package pdftex.def Info: pictures/particle_abbundance.png  used on input line 5
-21.
-(pdftex.def)             Requested size: 124.47173pt x 80.43028pt.
-! Missing { inserted.
-<to be read again> 
-                   \gdef 
-l.522 ...ar{He}, 4^\bar{He}$ \cite{Andronic_2017}}
-                                                  
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-! Missing { inserted.
-<to be read again> 
-                   \gdef 
-l.522 ...ar{He}, 4^\bar{He}$ \cite{Andronic_2017}}
-                                                  
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-! Missing { inserted.
-<to be read again> 
-                   \gdef 
-l.522 ...ar{He}, 4^\bar{He}$ \cite{Andronic_2017}}
-                                                  
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.522 ...ar{He}, 4^\bar{He}$ \cite{Andronic_2017}}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.522 ...ar{He}, 4^\bar{He}$ \cite{Andronic_2017}}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.522 ...ar{He}, 4^\bar{He}$ \cite{Andronic_2017}}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-LaTeX Warning: Citation 'Andronic_2017' on page 30 undefined on input line 522.
-
-
-! Missing { inserted.
-<to be read again> 
-                   \gdef 
-l.522 ...ar{He}, 4^\bar{He}$ \cite{Andronic_2017}}
-                                                  
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-! Missing { inserted.
-<to be read again> 
-                   \gdef 
-l.522 ...ar{He}, 4^\bar{He}$ \cite{Andronic_2017}}
-                                                  
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-! Missing { inserted.
-<to be read again> 
-                   \gdef 
-l.522 ...ar{He}, 4^\bar{He}$ \cite{Andronic_2017}}
-                                                  
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.522 ...ar{He}, 4^\bar{He}$ \cite{Andronic_2017}}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.522 ...ar{He}, 4^\bar{He}$ \cite{Andronic_2017}}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.522 ...ar{He}, 4^\bar{He}$ \cite{Andronic_2017}}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-LaTeX Warning: Citation 'Andronic_2017' on page 30 undefined on input line 522.
-
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 522--522
-[]\OT1/cmr/m/n/8 Figure 3.6: |adron mul-ti-plic-i-ties in
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 522--522
-\OT1/cmr/m/n/8 cen-tral (0-10%) Pb{Pb col-li-sions
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 522--522
-\OT1/cmr/m/n/8 at the LHC, for dif-fer-ent par-ti-cles:
- []
-
-
-Overfull \hbox (34.42532pt too wide) in paragraph at lines 522--522
-\OML/cmm/m/it/8 ^^Y[]; k[]; ^^^; p; []; \OT1/cmr/m/n/8 ^^C\OML/cmm/m/it/8 ; [];
- \OT1/cmr/m/n/8 ^^D[]\OML/cmm/m/it/8 ; []; \OT1/cmr/m/n/8 
-\OML/cmm/m/it/8 ; []; \OT1/cmr/m/n/8 3[]\OML/cmm/m/it/8 e; \OT1/cmr/m/n/8 3[]$
- []
-
-<pictures/shm_qcd_comparison.png, id=164, 854.19125pt x 565.11125pt>
-File: pictures/shm_qcd_comparison.png Graphic file (type png)
-<use pictures/shm_qcd_comparison.png>
-Package pdftex.def Info: pictures/shm_qcd_comparison.png  used on input line 52
-6.
-(pdftex.def)             Requested size: 316.12341pt x 209.13962pt.
-
-LaTeX Warning: Citation 'Andronic_2017' on page 30 undefined on input line 527.
-
-
-
-LaTeX Warning: Citation 'Andronic_2017' on page 30 undefined on input line 527.
-
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1820,8 +1671,92 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[31 <./pictures/hadron_yelds.png> <./pictures/particle_abbundance.png> <./pictu
-res/shm_qcd_comparison.png>]
+[31]
+
+LaTeX Warning: Citation 'Andronic_2017' on page 32 undefined on input line 550.
+
+
+<pictures/hadron_yelds.png, id=168, 497.86pt x 484.81125pt>
+File: pictures/hadron_yelds.png Graphic file (type png)
+<use pictures/hadron_yelds.png>
+Package pdftex.def Info: pictures/hadron_yelds.png  used on input line 556.
+(pdftex.def)             Requested size: 142.25456pt x 138.52773pt.
+
+LaTeX Warning: Citation 'Andronic_2006' on page 32 undefined on input line 557.
+
+
+
+LaTeX Warning: Citation 'Andronic_2006' on page 32 undefined on input line 557.
+
+
+
+Underfull \hbox (badness 6758) in paragraph at lines 557--557
+[]\OT1/cmr/m/n/12 Figure 3.5: |The en-ergy de-
+ []
+
+
+Underfull \hbox (badness 2035) in paragraph at lines 557--557
+\OT1/cmr/m/n/12 yields at mid-rapidity for var-i-
+ []
+
+
+Underfull \hbox (badness 1215) in paragraph at lines 557--557
+\OT1/cmr/m/n/12 ous species pro-duced in cen-tral
+ []
+
+
+Underfull \hbox (badness 1540) in paragraph at lines 557--557
+\OT1/cmr/m/n/12 a-tors are marked. Note that,
+ []
+
+
+Underfull \hbox (badness 1661) in paragraph at lines 557--557
+\OT1/cmr/m/n/12 able for the $^^C$ hy-peron yields.
+ []
+
+<pictures/particle_abbundance.png, id=169, 751.80875pt x 485.815pt>
+File: pictures/particle_abbundance.png Graphic file (type png)
+<use pictures/particle_abbundance.png>
+Package pdftex.def Info: pictures/particle_abbundance.png  used on input line 5
+62.
+(pdftex.def)             Requested size: 124.47173pt x 80.43028pt.
+
+LaTeX Warning: Citation 'Andronic_2017' on page 32 undefined on input line 563.
+
+
+
+LaTeX Warning: Citation 'Andronic_2017' on page 32 undefined on input line 563.
+
+
+
+Underfull \hbox (badness 1142) in paragraph at lines 563--563
+[]\OT1/cmr/m/n/12 Figure 3.6: |adron mul-ti-plic-i-ties
+ []
+
+
+Underfull \hbox (badness 1062) in paragraph at lines 563--563
+\OT1/cmr/m/n/12 in cen-tral (0-10%) Pb{Pb col-li-
+ []
+
+
+Underfull \hbox (badness 1158) in paragraph at lines 563--563
+\OT1/cmr/m/n/12 sions at the LHC, for dif-fer-ent
+ []
+
+<pictures/shm_qcd_comparison.png, id=170, 854.19125pt x 565.11125pt>
+File: pictures/shm_qcd_comparison.png Graphic file (type png)
+<use pictures/shm_qcd_comparison.png>
+Package pdftex.def Info: pictures/shm_qcd_comparison.png  used on input line 56
+7.
+(pdftex.def)             Requested size: 316.12341pt x 209.13962pt.
+
+LaTeX Warning: Citation 'Andronic_2017' on page 32 undefined on input line 568.
+
+
+
+LaTeX Warning: Citation 'Andronic_2017' on page 32 undefined on input line 568.
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1831,29 +1766,51 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [32]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[33 <./pictures/hadron_yelds.png> <./pictures/particle_abbundance.png> <./pictu
+res/shm_qcd_comparison.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[34]
 Chapter 4.
 
-LaTeX Warning: Citation 'yukawa' on page 33 undefined on input line 547.
+LaTeX Warning: Citation 'yukawa' on page 35 undefined on input line 590.
 
 
-LaTeX Warning: Citation 'heisemerg' on page 33 undefined on input line 547.
+LaTeX Warning: Citation 'heisemerg' on page 35 undefined on input line 590.
 
-[33
+[35
 
 ]
-<pictures/one_boson_exchange.png, id=183, 200.75pt x 231.86626pt>
+<pictures/one_boson_exchange.png, id=186, 200.75pt x 231.86626pt>
 File: pictures/one_boson_exchange.png Graphic file (type png)
 <use pictures/one_boson_exchange.png>
-Package pdftex.def Info: pictures/one_boson_exchange.png  used on input line 57
-7.
-(pdftex.def)             Requested size: 276.60573pt x 319.52643pt.
+Package pdftex.def Info: pictures/one_boson_exchange.png  used on input line 62
+0.
+(pdftex.def)             Requested size: 197.57639pt x 228.21446pt.
 
 
-LaTeX Warning: Citation 'sakata' on page 34 undefined on input line 583.
+LaTeX Warning: Citation 'Semprini' on page 36 undefined on input line 624.
 
 
-LaTeX Warning: Citation 'onebosonexchangepotentialmodelapproach' on page 34 und
-efined on input line 583.
+LaTeX Warning: Citation 'sakata' on page 36 undefined on input line 626.
+
+
+LaTeX Warning: Citation 'onebosonexchangepotentialmodelapproach' on page 36 und
+efined on input line 626.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1863,25 +1820,591 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[34 <./pictures/one_boson_exchange.png>]
+[36 <./pictures/one_boson_exchange.png>]
 
-LaTeX Warning: Citation 'Charmed-nucleon' on page 35 undefined on input line 58
-7.
+LaTeX Warning: Citation 'Charmed-nucleon' on page 37 undefined on input line 63
+0.
 
 
-LaTeX Warning: Citation 'baryon–nucleon-potential' on page 35 undefined on in
-put line 587.
+LaTeX Warning: Citation 'baryon–nucleon-potential' on page 37 undefined on in
+put line 630.
 
 Missing character: There is no � in font cmbx12!
 Missing character: There is no � in font cmbx12!
 Missing character: There is no � in font cmbx12!
 
-Overfull \hbox (39.9397pt too wide) in paragraph at lines 587--589
+Overfull \hbox (39.9397pt too wide) in paragraph at lines 630--632
 \OT1/cmr/m/n/12 This sec-tion is a re-sume of the [[]] and [[]]
  []
 
 
-LaTeX Warning: Citation 'Valcarce_2005' on page 35 undefined on input line 591.
+LaTeX Warning: Citation 'Valcarce_2005' on page 37 undefined on input line 634.
+
+
+
+LaTeX Warning: Citation 'Smit_2023' on page 37 undefined on input line 636.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[37]
+! Missing delimiter (. inserted).
+<to be read again> 
+                   {
+l.690 		N \rightarrow  4 \pi \left{
+                                    1-\frac{R^2}{8} \left(\frac{5}{b^2} +\fr...
+I was expecting to see something like `(' or `\{' or
+`\}' here. If you typed, e.g., `{' instead of `\{', you
+should probably delete the `{' by typing `1' now, so that
+braces don't get unbalanced. Otherwise just proceed.
+Acceptable delimiters are characters whose \delcode is
+nonnegative, or you can use `\delimiter <delimiter code>'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.690 ...c{5}{b^2} +\frac{1}{b_c^2} \right) \right
+                                                  } [1-3C(S,I)+\...]
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing delimiter (. inserted).
+<to be read again> 
+                   }
+l.690 ...{5}{b^2} +\frac{1}{b_c^2} \right) \right}
+                                                   [1-3C(S,I)+\...]
+I was expecting to see something like `(' or `\{' or
+`\}' here. If you typed, e.g., `{' instead of `\{', you
+should probably delete the `{' by typing `1' now, so that
+braces don't get unbalanced. Otherwise just proceed.
+Acceptable delimiters are characters whose \delcode is
+nonnegative, or you can use `\delimiter <delimiter code>'.
+
+! Extra }, or forgotten $.
+<recently read> }
+                 
+l.690 ...{5}{b^2} +\frac{1}{b_c^2} \right) \right}
+                                                   [1-3C(S,I)+\...]
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+LaTeX Warning: Command \. invalid in math mode on input line 690.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.690 ...{1}{b_c^2} \right) \right} [1-3C(S,I)+\..
+                                                  .]
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[38]
+<pictures/charmed_nucleos_interaction.png, id=199, 1009.7725pt x 284.06125pt>
+File: pictures/charmed_nucleos_interaction.png Graphic file (type png)
+<use pictures/charmed_nucleos_interaction.png>
+Package pdftex.def Info: pictures/charmed_nucleos_interaction.png  used on inpu
+t line 696.
+(pdftex.def)             Requested size: 276.60573pt x 77.8115pt.
+
+
+LaTeX Warning: Citation 'MIYAMOTO2018113' on page 39 undefined on input line 70
+2.
+
+
+Overfull \hbox (28.54144pt too wide) in paragraph at lines 702--704
+[]\OT1/cmr/m/n/12 A nu-mer-i-cal sim-u-la-tion of the po-ten-tial is de-scribed
+ in [[]]
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[39 <./pictures/charmed_nucleos_interaction.png>]
+
+LaTeX Warning: Citation 'PhysRevC.99.045208' on page 40 undefined on input line
+ 705.
+
+
+! LaTeX Error: Unicode character − (U+2212)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.705 ...g study has presented a charmed baryon−
+                                                  nucleon potential based on...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+<pictures/radial_potential_1s.jpg, id=205, 246.58524pt x 179.37415pt>
+File: pictures/radial_potential_1s.jpg Graphic file (type jpg)
+<use pictures/radial_potential_1s.jpg>
+Package pdftex.def Info: pictures/radial_potential_1s.jpg  used on input line 7
+12.
+(pdftex.def)             Requested size: 131.58595pt x 95.72198pt.
+File: pictures/radial_potential_1s.jpg Graphic file (type jpg)
+<use pictures/radial_potential_1s.jpg>
+Package pdftex.def Info: pictures/radial_potential_1s.jpg  used on input line 7
+19.
+(pdftex.def)             Requested size: 146.2076pt x 106.35806pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[40 <./pictures/radial_potential_1s.jpg>]
+
+LaTeX Warning: Reference `eq:culomb_potential' on page 41 undefined on input li
+ne 743.
+
+
+! LaTeX Error: Unicode character Λ (U+039B)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.748 ...he D wave probability. Thus, while for Λ
+                                                  π = 1.2
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character π (U+03C0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.748 ... D wave probability. Thus, while for Λπ
+                                                   = 1.2
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character Λ (U+039B)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.749 	GeV the probability of the 1 S0 Λ
+                                         cN channel in the J P = 0+ state is...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character Λ (U+039B)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.750 	Λ
+         cN channel in the J P = 1+ state is 97.6%, with a D wave probabilit...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character Λ (U+039B)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.752 	almost constant for any value of Λ
+                                          π . For example, for Λπ = 1.6 G...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character π (U+03C0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.752 	almost constant for any value of Λπ
+                                             . For example, for Λπ = 1.6 G...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character Λ (U+039B)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.752 ...r any value of Λπ . For example, for Λ
+                                                  π = 1.6 GeV they are 80.1...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character π (U+03C0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.752 ...any value of Λπ . For example, for Λπ
+                                                   = 1.6 GeV they are 80.1% and
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character Λ (U+039B)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.755 ...te. As can be seen, the uncoupled 1 S0 Λ
+                                                  cN state is bound for any ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+<pictures/binding_energy.jpg, id=209, 235.16658pt x 180.675pt>
+File: pictures/binding_energy.jpg Graphic file (type jpg)
+<use pictures/binding_energy.jpg>
+Package pdftex.def Info: pictures/binding_energy.jpg  used on input line 760.
+(pdftex.def)             Requested size: 292.4152pt x 224.66599pt.
+<pictures/binding_culomb.jpg, id=210, 235.16658pt x 174.8934pt>
+File: pictures/binding_culomb.jpg Graphic file (type jpg)
+<use pictures/binding_culomb.jpg>
+Package pdftex.def Info: pictures/binding_culomb.jpg  used on input line 769.
+(pdftex.def)             Requested size: 292.4152pt x 217.4767pt.
+
+! LaTeX Error: Unicode character Λ (U+039B)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.775 	mind the tendency that the Λ
+                                    c N attraction becomes stronger as the p...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character Λ (U+039B)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.776 	On the other hand, since the average Λ
+                                              cN (ΛN) potential that it is ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character Λ (U+039B)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.776 ...he other hand, since the average ΛcN (Λ
+                                                  N) potential that it is re...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character Λ (U+039B)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.778 	smaller 1S0 Λ
+                     cN scattering length compared to the ΛN system goes ag...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character Λ (U+039B)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.778 ...ΛcN scattering length compared to the Λ
+                                                  N system goes against its ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character Λ (U+039B)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.779 ...e tilted if the spin dependence of the Λ
+                                                  c N interaction induced by...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character Λ (U+039B)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.781 ...et one. Then, the existence of J = 3/2 Λ
+                                                  c hypernuclei might be
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character Λ (U+039B)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.784 	with the Λ
+                  c induced by its larger mass as compared to the Λ, could ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character Λ (U+039B)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.784 ... by its larger mass as compared to the Λ
+                                                  , could lead to a slightly...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character Λ (U+039B)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.785 	J = 3/2 Λ
+                 c hypernucleus [
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[41]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[42 <./pictures/binding_energy.jpg> <./pictures/binding_culomb.jpg>]
+
+LaTeX Warning: Reference `pot_simulation' on page 43 undefined on input line 78
+8.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[43]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[44
+
+]
+Chapter 5.
+
+LaTeX Warning: Citation 'Alice' on page 45 undefined on input line 796.
+
+
+LaTeX Warning: Reference `fig:ALICE_cortinates' on page 45 undefined on input l
+ine 797.
+
+<pictures/ALICE_cordinates.png, id=224, 600.2425pt x 385.44pt>
+File: pictures/ALICE_cordinates.png Graphic file (type png)
+<use pictures/ALICE_cordinates.png>
+Package pdftex.def Info: pictures/ALICE_cordinates.png  used on input line 800.
+
+(pdftex.def)             Requested size: 276.60573pt x 177.62213pt.
+
+LaTeX Warning: Citation 'Herrmann:2920632' on page 45 undefined on input line 8
+01.
+
+
+LaTeX Warning: Citation 'Herrmann:2920632' on page 45 undefined on input line 8
+01.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[45]
+Overfull \hbox (4.68706pt too wide) in paragraph at lines 816--817
+\OT1/cmr/m/n/12 ing, par-ti-cle iden-ti-fi-ca-tion and mo-men-tum mea-sure-ment
+. Are also present
+ []
+
+
+Overfull \hbox (3.86946pt too wide) in paragraph at lines 820--821
+[]\OT1/cmr/m/n/12 ElectroMagnetic CaLorime-ter (EM-Cal) is a Pb-scintillator ca
+lorime-
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[46 <./pictures/ALICE_cordinates.png>]
+
+LaTeX Warning: Citation 'Padhan:2924203' on page 47 undefined on input line 833
+.
+
+
+LaTeX Warning: Citation 'Arata:2922803' on page 47 undefined on input line 833.
+
+
+<pictures/ALICE_instruments.png, id=232, 722.7pt x 417.2388pt>
+File: pictures/ALICE_instruments.png Graphic file (type png)
+<use pictures/ALICE_instruments.png>
+Package pdftex.def Info: pictures/ALICE_instruments.png  used on input line 838
+.
+(pdftex.def)             Requested size: 276.60573pt x 159.692pt.
+
+LaTeX Warning: Citation 'Botta:2017bwj' on page 47 undefined on input line 839.
+
+
+
+LaTeX Warning: Citation 'Botta:2017bwj' on page 47 undefined on input line 839.
+
+
+
+LaTeX Warning: File `ITS_schematic.png' not found on input line 849.
+
+
+! Package pdftex.def Error: File `ITS_schematic.png' not found: using draft set
+ting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.849 ...s[width=0.7\textwidth]{ITS_schematic.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Command \texttimes invalid in math mode on input line 853.
+
+
+LaTeX Warning: Command \texttimes invalid in math mode on input line 853.
+
+Missing character: There is no � in font cmr12!
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[47 <./pictures/ALICE_instruments.png>]
+Underfull \vbox (badness 1565) has occurred while \output is active []
 
 
 
@@ -1892,9 +2415,231 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[35]
+[48]
 
-LaTeX Warning: Citation 'Smit_2023' on page 36 undefined on input line 593.
+LaTeX Warning: Citation 'Padhan:2924203' on page 49 undefined on input line 863
+.
+
+
+LaTeX Warning: Citation 'amsdottorato9036' on page 49 undefined on input line 8
+63.
+
+
+LaTeX Warning: Citation 'Cheng:2908766' on page 49 undefined on input line 863.
+
+
+
+LaTeX Warning: Citation 'Arata:2922803' on page 49 undefined on input line 863.
+
+
+
+Overfull \hbox (13.72052pt too wide) in paragraph at lines 862--864
+\OT1/cmr/m/n/12 [[]] [[]] [[]] [[]] 
+ []
+
+
+LaTeX Warning: Citation 'Rolandi:2008ujz' on page 49 undefined on input line 86
+8.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[49]
+
+LaTeX Warning: Reference `fig::TOF' on page 50 undefined on input line 875.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[50]
+
+LaTeX Warning: Citation 'Padhan:2924203' on page 51 undefined on input line 894
+.
+
+
+LaTeX Warning: Citation 'amsdottorato9036' on page 51 undefined on input line 8
+94.
+
+
+LaTeX Warning: Citation 'Cheng:2908766' on page 51 undefined on input line 894.
+
+
+
+LaTeX Warning: Citation 'Padhan:2924203' on page 51 undefined on input line 899
+.
+
+
+LaTeX Warning: Citation 'amsdottorato9036' on page 51 undefined on input line 8
+99.
+
+
+LaTeX Warning: Citation 'Padhan:2924203' on page 51 undefined on input line 903
+.
+
+
+LaTeX Warning: Citation 'amsdottorato9036' on page 51 undefined on input line 9
+03.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[51]
+
+LaTeX Warning: Citation 'Padhan:2924203' on page 52 undefined on input line 907
+.
+
+
+LaTeX Warning: Citation 'amsdottorato9036' on page 52 undefined on input line 9
+07.
+
+
+LaTeX Warning: Citation 'Padhan:2924203' on page 52 undefined on input line 909
+.
+
+
+LaTeX Warning: Citation 'Arata:2922803' on page 52 undefined on input line 909.
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[52]
+
+LaTeX Warning: Citation 'Padhan:2924203' on page 53 undefined on input line 921
+.
+
+
+LaTeX Warning: Citation 'amsdottorato9036' on page 53 undefined on input line 9
+21.
+
+
+LaTeX Warning: Citation 'Padhan:2924203' on page 53 undefined on input line 924
+.
+
+
+LaTeX Warning: Citation 'amsdottorato9036' on page 53 undefined on input line 9
+24.
+
+
+LaTeX Warning: Citation 'Padhan:2924203' on page 53 undefined on input line 928
+.
+
+
+LaTeX Warning: Citation 'amsdottorato9036' on page 53 undefined on input line 9
+28.
+
+
+LaTeX Warning: Citation 'Padhan:2924203' on page 53 undefined on input line 932
+.
+
+
+LaTeX Warning: Citation 'Alicemuonspectometer' on page 53 undefined on input li
+ne 932.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[53]
+
+LaTeX Warning: Citation 'Cheng:2908766' on page 54 undefined on input line 936.
+
+
+
+LaTeX Warning: Citation 'Herrmann:2920632' on page 54 undefined on input line 9
+36.
+
+<pictures/linear_track.png, id=256, 505.89pt x 268.00125pt>
+File: pictures/linear_track.png Graphic file (type png)
+<use pictures/linear_track.png>
+Package pdftex.def Info: pictures/linear_track.png  used on input line 940.
+(pdftex.def)             Requested size: 124.47173pt x 65.941pt.
+
+LaTeX Warning: Citation 'CERN-LHCC-2015-001' on page 54 undefined on input line
+ 941.
+
+
+LaTeX Warning: Citation 'CERN-LHCC-2015-001' on page 54 undefined on input line
+ 941.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 941--941
+\OT1/cmr/m/n/12 ear Track Finder schematic
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 941--941
+\OT1/cmr/m/n/12 us-ing the RCut pa-ram-e-ter
+ []
+
+<pictures/CA_track.png, id=257, 465.74pt x 183.68625pt>
+File: pictures/CA_track.png Graphic file (type png)
+<use pictures/CA_track.png>
+Package pdftex.def Info: pictures/CA_track.png  used on input line 946.
+(pdftex.def)             Requested size: 138.30286pt x 54.54572pt.
+
+LaTeX Warning: Citation 'CERN-LHCC-2015-001' on page 54 undefined on input line
+ 947.
+
+
+LaTeX Warning: Citation 'CERN-LHCC-2015-001' on page 54 undefined on input line
+ 947.
+
+
+Underfull \hbox (badness 1755) in paragraph at lines 947--947
+[]\OT1/cmr/m/n/12 Figure 5.5: |The fig-ure show how
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[54]
+
+LaTeX Warning: Citation 'Padhan:2924203' on page 55 undefined on input line 954
+.
+
+<pictures/track_finding_efficiency.png, id=261, 677.53125pt x 486.81876pt>
+File: pictures/track_finding_efficiency.png Graphic file (type png)
+<use pictures/track_finding_efficiency.png>
+Package pdftex.def Info: pictures/track_finding_efficiency.png  used on input l
+ine 958.
+(pdftex.def)             Requested size: 276.60573pt x 198.75015pt.
+
+LaTeX Warning: Citation 'ALICE:2014sbx' on page 55 undefined on input line 959.
+
+
+
+LaTeX Warning: Citation 'ALICE:2014sbx' on page 55 undefined on input line 959.
+
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1907,251 +2652,27 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[36]
-<pictures/charmed_nucleos_interaction.png, id=195, 1009.7725pt x 284.06125pt>
-File: pictures/charmed_nucleos_interaction.png Graphic file (type png)
-<use pictures/charmed_nucleos_interaction.png>
-Package pdftex.def Info: pictures/charmed_nucleos_interaction.png  used on inpu
-t line 648.
-(pdftex.def)             Requested size: 276.60573pt x 77.8115pt.
+[55 <./pictures/linear_track.png> <./pictures/CA_track.png>]
 
-
-LaTeX Warning: Reference `pot_simulation' on page 37 undefined on input line 65
-4.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[37 <./pictures/charmed_nucleos_interaction.png>]
-<pictures/radial_potential_1s.jpg, id=201, 246.58524pt x 179.37415pt>
-File: pictures/radial_potential_1s.jpg Graphic file (type jpg)
-<use pictures/radial_potential_1s.jpg>
-Package pdftex.def Info: pictures/radial_potential_1s.jpg  used on input line 6
-61.
-(pdftex.def)             Requested size: 131.58595pt x 95.72198pt.
-File: pictures/radial_potential_1s.jpg Graphic file (type jpg)
-<use pictures/radial_potential_1s.jpg>
-Package pdftex.def Info: pictures/radial_potential_1s.jpg  used on input line 6
-68.
-(pdftex.def)             Requested size: 146.2076pt x 106.35806pt.
-
-Underfull \vbox (badness 1082) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[38 <./pictures/radial_potential_1s.jpg>]
-
-LaTeX Warning: Reference `eq:culomb_potential' on page 39 undefined on input li
-ne 697.
-
-<pictures/binding_energy.jpg, id=205, 235.16658pt x 180.675pt>
-File: pictures/binding_energy.jpg Graphic file (type jpg)
-<use pictures/binding_energy.jpg>
-Package pdftex.def Info: pictures/binding_energy.jpg  used on input line 701.
-(pdftex.def)             Requested size: 292.4152pt x 224.66599pt.
-<pictures/binding_culomb.jpg, id=206, 235.16658pt x 174.8934pt>
-File: pictures/binding_culomb.jpg Graphic file (type jpg)
-<use pictures/binding_culomb.jpg>
-Package pdftex.def Info: pictures/binding_culomb.jpg  used on input line 710.
-(pdftex.def)             Requested size: 292.4152pt x 217.4767pt.
-
-LaTeX Warning: Reference `pot_simulation' on page 39 undefined on input line 71
-8.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[39]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[40 <./pictures/binding_energy.jpg> <./pictures/binding_culomb.jpg>]
-Chapter 5.
-
-LaTeX Warning: Citation 'Alice' on page 41 undefined on input line 726.
-
-[41
-
-]
-Overfull \hbox (4.68706pt too wide) in paragraph at lines 741--742
-\OT1/cmr/m/n/12 ing, par-ti-cle iden-ti-fi-ca-tion and mo-men-tum mea-sure-ment
-. Are also present
- []
-
-
-Overfull \hbox (3.86946pt too wide) in paragraph at lines 745--746
-[]\OT1/cmr/m/n/12 ElectroMagnetic CaLorime-ter (EM-Cal) is a Pb-scintillator ca
-lorime-
- []
-
-
-LaTeX Warning: Citation 'Padhan:2924203' on page 42 undefined on input line 758
+LaTeX Warning: Citation 'Padhan:2924203' on page 56 undefined on input line 971
 .
 
 
-LaTeX Warning: Citation 'Arata:2922803' on page 42 undefined on input line 758.
+LaTeX Warning: Citation 'ALICE:2014sbx' on page 56 undefined on input line 980.
 
 
+<pictures/secondary_vertex.png, id=268, 421.575pt x 402.50375pt>
+File: pictures/secondary_vertex.png Graphic file (type png)
+<use pictures/secondary_vertex.png>
+Package pdftex.def Info: pictures/secondary_vertex.png  used on input line 983.
 
-LaTeX Warning: File `ITS_schematic.png' not found on input line 767.
+(pdftex.def)             Requested size: 276.60573pt x 264.09944pt.
 
+LaTeX Warning: Citation 'ALICE:2014sbx' on page 56 undefined on input line 984.
 
-! Package pdftex.def Error: File `ITS_schematic.png' not found: using draft set
-ting.
 
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.767 ...s[width=0.7\textwidth]{ITS_schematic.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
 
-
-LaTeX Warning: Command \texttimes invalid in math mode on input line 771.
-
-
-LaTeX Warning: Command \texttimes invalid in math mode on input line 771.
-
-Missing character: There is no � in font cmr12!
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[42]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[43]
-
-LaTeX Warning: Citation 'Padhan:2924203' on page 44 undefined on input line 781
-.
-
-
-LaTeX Warning: Citation 'amsdottorato9036' on page 44 undefined on input line 7
-81.
-
-
-LaTeX Warning: Citation 'Cheng:2908766' on page 44 undefined on input line 781.
-
-
-
-LaTeX Warning: Citation 'Arata:2922803' on page 44 undefined on input line 781.
-
-
-
-Overfull \hbox (13.72052pt too wide) in paragraph at lines 780--782
-\OT1/cmr/m/n/12 [[]] [[]] [[]] [[]] 
- []
-
-
-LaTeX Warning: Citation 'Rolandi:2008ujz' on page 44 undefined on input line 78
-6.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[44]
-
-LaTeX Warning: Reference `fig::TOF' on page 45 undefined on input line 793.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[45]
-
-LaTeX Warning: Citation 'Padhan:2924203' on page 46 undefined on input line 812
-.
-
-
-LaTeX Warning: Citation 'amsdottorato9036' on page 46 undefined on input line 8
-12.
-
-
-LaTeX Warning: Citation 'Cheng:2908766' on page 46 undefined on input line 812.
-
-
-
-LaTeX Warning: Citation 'Padhan:2924203' on page 46 undefined on input line 817
-.
-
-
-LaTeX Warning: Citation 'amsdottorato9036' on page 46 undefined on input line 8
-17.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[46]
-
-LaTeX Warning: Citation 'Padhan:2924203' on page 47 undefined on input line 821
-.
-
-
-LaTeX Warning: Citation 'amsdottorato9036' on page 47 undefined on input line 8
-21.
-
-
-LaTeX Warning: Citation 'Padhan:2924203' on page 47 undefined on input line 825
-.
-
-
-LaTeX Warning: Citation 'amsdottorato9036' on page 47 undefined on input line 8
-25.
-
-
-LaTeX Warning: Citation 'Padhan:2924203' on page 47 undefined on input line 827
-.
-
-
-LaTeX Warning: Citation 'Arata:2922803' on page 47 undefined on input line 827.
+LaTeX Warning: Citation 'ALICE:2014sbx' on page 56 undefined on input line 984.
 
 
 
@@ -2162,96 +2683,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[47]
-
-LaTeX Warning: Citation 'Padhan:2924203' on page 48 undefined on input line 839
-.
-
-
-LaTeX Warning: Citation 'amsdottorato9036' on page 48 undefined on input line 8
-39.
-
-
-LaTeX Warning: Citation 'Padhan:2924203' on page 48 undefined on input line 842
-.
-
-
-LaTeX Warning: Citation 'amsdottorato9036' on page 48 undefined on input line 8
-42.
-
-
-LaTeX Warning: Citation 'Padhan:2924203' on page 48 undefined on input line 847
-.
-
-
-LaTeX Warning: Citation 'amsdottorato9036' on page 48 undefined on input line 8
-47.
-
-
-LaTeX Warning: Citation 'Padhan:2924203' on page 48 undefined on input line 851
-.
-
-
-LaTeX Warning: Citation 'Alicemuonspectometer' on page 48 undefined on input li
-ne 851.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[48]
-
-LaTeX Warning: Citation 'Cheng:2908766' on page 49 undefined on input line 855.
-
-
-
-LaTeX Warning: Reference `fig:linear_track' on page 49 undefined on input line 
-855.
-
-
-LaTeX Warning: Citation 'Herrmann:2920632' on page 49 undefined on input line 8
-55.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[49]
-
-LaTeX Warning: Reference `fig:track finding efficiency' on page 50 undefined on
- input line 857.
-
-
-LaTeX Warning: Citation 'Padhan:2924203' on page 50 undefined on input line 857
-.
-
-
-LaTeX Warning: Citation 'Padhan:2924203' on page 50 undefined on input line 865
-.
-
-
-LaTeX Warning: Reference `fig:secondary_vertex' on page 50 undefined on input l
-ine 867.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[50]
-
-LaTeX Warning: Citation 'ALICE:2014sbx' on page 51 undefined on input line 874.
+[56 <./pictures/track_finding_efficiency.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -2262,11 +2695,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[51]
-
-LaTeX Warning: Citation 'amsdottorato9036' on page 52 undefined on input line 8
-94.
-
+[57 <./pictures/secondary_vertex.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2275,8 +2704,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[52]
-Overfull \hbox (19.44318pt too wide) in paragraph at lines 956--958
+[58]
+Overfull \hbox (19.44318pt too wide) in paragraph at lines 1047--1049
 \OT1/cmr/m/n/12 replacing the log-a-rithm with tay-lor ex-pan-sion un-der the a
 s-sum-pion that $\OML/cmm/m/it/12 e[] <
  []
@@ -2289,19 +2718,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[53]
+[59]
 
-LaTeX Warning: Empty bibliography on input line 1009.
+LaTeX Warning: Empty bibliography on input line 1100.
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[54]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2310,7 +2730,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[55] (./tesi.aux)
+[60] (./tesi.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -2329,42 +2749,40 @@ Package logreq Info: Writing requests to 'tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27683 strings out of 474222
- 564494 string characters out of 5748732
+ 27886 strings out of 474222
+ 568334 string characters out of 5748732
  1943975 words of memory out of 5000000
- 49510 multiletter control sequences out of 15000+600000
- 575262 words of font info for 108 fonts, out of 8000000 for 9000
+ 49708 multiletter control sequences out of 15000+600000
+ 574953 words of font info for 107 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 101i,13n,107p,3289b,1794s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,13n,107p,3342b,1794s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-ti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-</usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on tesi.pdf (55 pages, 2385939 bytes).
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/symbols/msbm7.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pf
+b>
+Output written on tesi.pdf (60 pages, 4092668 bytes).
 PDF statistics:
- 378 PDF objects out of 1000 (max. 8388607)
- 232 compressed objects within 3 object streams
+ 389 PDF objects out of 1000 (max. 8388607)
+ 233 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 103 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 133 words of extra memory for PDF output out of 10000 (max. 10000000)
 

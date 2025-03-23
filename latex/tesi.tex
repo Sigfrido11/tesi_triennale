@@ -13,13 +13,15 @@
 \usepackage{tcolorbox}
 \usepackage{fancyhdr}
 \usepackage{float}
+\usepackage{caption} 
 \usepackage[font=scriptsize]{caption}
-%\usepackage[table,xcdraw]{xcolor}
+\usepackage[table,xcdraw]{xcolor}
 \usepackage[framemethod=tikz]{mdframed}
 \usepackage[
 backend=biber,
 style=alphabetic,
 ]{biblatex}
+\captionsetup{font={color{grey}}}
 \addbibresource{citations.bib}
 \newmdenv[innerlinewidth=0.5pt,roundcorner=4pt,linecolor=lightgray,innerleftmargin=6pt,
 innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
@@ -269,12 +271,56 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 		\label{fig::collision_stage} 
 	\end{figure}
 	
+	\subsection{centrality} %ARATA The Glauber model and the impact parameter
+	An important parameter to characterize heavy-ion collisions is the centrality, which is an
+	observable related to the transverse distance ($\vec{b}$) between the centers of the colliding nuclei. The collisions with the smallest b are called central collisions, and the collisions with large b are called peripheral collisions. Is expressed in therm of the fraction of the total hadronic cross section $\sigma_{AA}$. The centrality percentile of collisions with impact parameter ranging in the interval[$b_1,b_2$] is given by
+	\begin{equation}
+		c(b_1,b_2)=\frac{\int_{b_1}^{b_2} db \frac{d\sigma}{db}}{\int_{0}^{\infty} db \frac{d\sigma}{db}} = \frac{\int_{b_1}^{b_2} db \frac{d\sigma}{db}}{\sigma_{AA}}
+		\label{eq:centrrality1}
+	\end{equation}
+	 The centrality has important consequence in the particle abundances expected, in particular in the number of the charged one. This observable is frequently used and is called multiplicity, defined as the total number of charged particles produced in a collision. For these reason the centrality can be obtain experimentally starting from the measure of the multiplicity or by counting the number of spectator nucleons, the nucleons that non interact during the collision. so if $N_{ev}$ is the number of collision and $N_{ch}$ the number of charge particle the centrality can be expressed as
+	\begin{equation}
+		c(b_1,b_2) \approx \frac{1}{N_{EV}} \int_{N_{ch \ 1}}^{N_{ch \ 2}} dN_{ch} \frac{dN_{ev}}{dN_{ch}}
+		\label{eq:centrrality2}
+	\end{equation}
+	\begin{equation}
+		P(\vec{b})= \sigma_{NN} T_{AA}(\vec{b})
+		\label{eq:prob_collision}
+	\end{equation}
+	Where $\sigma_{NN}$ is the cross section and $T_{AA}$ is the nuclear overlapping function, it can be computed from the single nucleon distribution of the interacting nuclei. It' possible to imagine this parameter as probability to have a nucleon at the same position in the transverse plane in both colliding nuclei. The centrality of each collision has to be determined experimentally in order identify	peculiar behavior that can arise for very specific centrality classes. Only 5\% of the total cross section correspond to central interaction. \cite{amsdottorato9036}
+	The centrality can be use for calculate the number of interacting (participant) nucleons $N_{part}(b)$ and the total number of binary nucleon-nucleon collisions $N_{coll}(b)$. The Glauber Model formulation \cite{Miller_2007} assumed that the nucleons are supposed to be point-like and independent, their trajectory is a straight line, the nucleon-nucleon inelastic cross-section	does not vary during the collision. All these assumptions go under the name of optical limit. Calling A and B the nucleons number respectively in the first and in the second nucleus the probability of having n nucleon-nucleon interactions is given by the binomial distribution.
+	\begin{equation}
+		p(n,\vec{b})= \binom{AB}{n} \left[T_{AB}(\vec{b}) \sigma_{innel}^{NN}\right]^n \left[1-T_{AB}(\vec{b}) \sigma_{innel}^{NN}\right]^{AB-n}
+		\label{eq:prob_interaction}
+	\end{equation}
+	From the mean value of the binomial.
+	\begin{equation}
+		\langle N_{coll}(b) \rangle = A\ B \ T_{AB}(\vec{b}) \ \sigma_{innel}^{NN}
+		\label{eq:num_collisione}
+	\end{equation}
+	So the number of participant is given by:
+\begin{equation}
+	\begin{aligned}
+		\langle N_{part}(\vec{b}) \rangle = & A \int d^2 s \ T_{A}(\vec{b}) \ \left[1-\left( 1 - T_{B}(\vec{b}-\vec{s}) \sigma_{innel}^{NN} \right)^B \right] \\
+		& + B \int d^2 s \ T_{B}(\vec{b}-\vec{s}) \ \left[1-\left( 1 - T_{A}(\vec{s}) \sigma_{innel}^{NN} \right)^A \right]
+	\end{aligned}
+	\label{eq:num_partecipant}
+\end{equation}
+
+	With T the  thickness function \cite{Arata:2922803}.
 	
 	\chapter{Thermal model}
 	\subsection{hydrodynamical description}
 	This section resume the information of \cite{heinz2004conceptsheavyionphysics}, \cite{phdthesis}.
 	
-	We have already seen that the fireball can be approximately described as an ideal fluid. The approximation hold if the microscopic scattering time scale is much shorter than any macroscopic time scale associated with the fireball evolution. So hydrodynamics becomes applicable when the mean free path of the particles is much smaller than the system size, and allows for a description of the system in terms of macroscopic quantities. For these reason an equation that connect the pressure, the energy density and baryon density i.e. an equation of state is required. The possibilities to describe the evolution of the fireball in terms of macroscopic quantities make hydrodynamics the ideal language because it allows ad description of the hadronization phase transition without any need for a microscopic description and at the same time explain the observed collective flow phenomena.
+	We have already seen that the fireball can be approximately described as an ideal fluid. The approximation hold if the microscopic scattering time scale is much shorter than any macroscopic time scale associated with the fireball evolution. So hydrodynamics becomes applicable when the mean free path of the particles is much smaller than the system size, and allows for a description of the system in terms of macroscopic quantities. For these reason an equation that connect the pressure, the energy density and baryon density i.e. an equation of state is required. Lattice QCD suggest a simplify equation of state for an ideal massless gas.
+	\begin{equation}
+		P_{pressure}=\frac{\epsilon}{3}=\frac{d \pi^2 T^4}{90}
+		\label{eq:EoS}
+	\end{equation}
+	where d is the effective number of degrees of freedom, value of d = 47.5 for a three flavor QGP which is an order of magnitude larger than that of a pion gas where d $\sim$ 3. \cite{Snellings_2011}
+	
+	The possibilities to describe the evolution of the fireball in terms of macroscopic quantities make hydrodynamics the ideal language because it allows ad description of the hadronization phase transition without any need for a microscopic description and at the same time explain the observed collective flow phenomena.
 	
 	The particles velocities in the fireball are under the effect of pressure gradients and are not	independent. For these reason in the final state particle velocities will not be distributed according to random thermal motion, but instead will keep a collective ones. This means that, as happen in an expanding gas, the momentum distribution of particles depend on the position in the plasma and is not completely randomical. This feature is commonly called “collective flow” as opposed to the “non-collective flow” in which particles show uncorrelated velocities. For define the collective flow we can consider any space-time point in the fireball and considered an infinitesimal volume associate with the point. So the flow velocity can be expressed by $\vec{v}(x) =\frac{\vec{P}}{P^0}$, where $\vec{P}$ is the mean 3-momentum of the particle in the volume and $P^0$ is the mean energy in quadrivectorial formalism. With $\vec{v}(x)$ we can associate a normalized velocity $u^\mu=\gamma(1,\vec{v}(x))$ where $\gamma$ is the Lorentz factor. In the same manner we can define T(x) the average local temperature and the $\mu_i$, the chemical potential of the i-th particle species.  It's possible to separate the flow velocity into its components along the beam direction (“longitudinal flow” $\vec{v}_l(x)$) and in the plane perpendicular to the beam (“transverse flow” $\vec{v}_\perp(x)$). From now on we use natural unit. In this case the phase-space distribution of particles of type i is given by the Lorentz covariant local equilibrium distribution.
 	\begin{equation}
@@ -346,7 +392,7 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 		\label{eq:momentum_cooper-frye}
 	\end{equation}
 	
-	Where appear the modified Bessel functions and $v_\perp= tanh \rho$. This formula is useful because it allows to easily perform systematic studies of the influence of the radial profiles of temperature, density and transverse flow on the transverse momentum spectrum, in order to better understand which features of a real dynamical calculation of these profiles control the shape of the observed spectra.
+	Where appear the modified Bessel functions and $v_\perp= \tanh \rho$. This formula is useful because it allows to easily perform systematic studies of the influence of the radial profiles of temperature, density and transverse flow on the transverse momentum spectrum, in order to better understand which features of a real dynamical calculation of these profiles control the shape of the observed spectra.
 	
 	Eq \ref{eq:momentum_cooper-frye} can be simplified by assuming instantaneous freeze-out. In this case there is no dependence of the proper time at the freeze-out surface $\tau$ therefore $\frac{\partial \tau}{\partial r_\perp}=0$ so we can rewrite the previous equation in the following manner.
 	
@@ -398,7 +444,7 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 		\label{fig:flow_spectra} 
 	\end{figure}
 	
-	\subsection{Elliptic flow}
+	\subsection{Anisotropic flow}
 	\begin{figure}[ht]
 		\centering
 		\includegraphics[width=0.8\linewidth]{pictures/elliptic_flow_collision.pdf}
@@ -406,44 +452,43 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 		\label{fig:elliptic_flow_collision} 
 	\end{figure}
 	This section come from \cite{Snellings_2011}, \cite{heinz2004conceptsheavyionphysics} \cite{Kolb_2000}. 
-	For central collisions between equal spherical nuclei, radial flow is the only possible type of transverse flow allowed by symmetry. In non-central collisions between this azimuthal symmetry is broken and anisotropic transverse flow patterns can develop. The overlap region of the two colliding nuclei is then spatially deformed in the transverse plane. Experimentally, the most direct evidence of flow comes from the observation of anisotropic flow which is the anisotropy in particle momentum distributions correlated with the reaction plane. The evolution of the almond shaped interaction volume is shown in Fig \ref{fig:time_evolution_perepheral} \cite{kolb2003hydrodynamicdescriptionultrarelativisticheavyion}. The contours indicate the energy density profile and the sequence show the time evolution from an almost elliptical region into an almost symmetric system. This expansion happen at the speed of sound already seen. 
+	For central collisions between equal spherical nuclei, radial flow is the only possible type of transverse flow allowed by symmetry. In non-central collisions between this azimuthal symmetry is broken and anisotropic transverse flow patterns can develop. The overlap region of the two colliding nuclei is then spatially deformed in the transverse plane. Experimentally, the most direct evidence of flow in the QGP comes from the observation of anisotropic flow which produce anisotropy in particle momentum distributions correlated with the reaction plane. The evolution of the elliptic shaped interaction volume is shown in Fig \ref{fig:time_evolution_perepheral} \cite{kolb2003hydrodynamicdescriptionultrarelativisticheavyion}. The contours indicate the energy density profile and the sequence show time evolution from an almost elliptical region into an almost symmetric system. This expansion happen at the speed of sound already seen. 
 	\begin{figure}[ht]
 		\centering
-		\includegraphics[width=0.8\linewidth]{pictures/timeEvolutionPerepheral.pdf}
+		\includegraphics[width=0.9\linewidth]{pictures/timeEvolutionPerepheral.pdf}
 		\caption{The created initial transverse energy density profile and its time	dependence in coordinate space for a non-central heavy-ion collision. The z-axis is along the colliding beams, the x-axis is defined by the impact parameter.}
 		\label{fig:time_evolution_perepheral} 
 	\end{figure}
-	In this situation the equation \ref{eq:cooper-frye} can be written using a Fourier expansion and introducing b, the impact parameter, in the form
+	In this situation the equation \ref{eq:cooper-frye} can be written using a Fourier expansion and introducing b, the impact parameter, and $\psi_n$ the azimuthal angle of the symmetry plane in the form
 	\begin{equation}
 		E \frac{dN_i}{d^3 p}(b)= \frac{dN_i}{dy p_\perp dp_\perp d\phi_p} (b) = \frac{1}{2\pi} \frac{dN_i}{dy p_\perp dp_\perp} (b) \left(1 + 2 \sum_{n=1}^{\infty} v_2^i(p_\perp,b) \cos(n\phi_p-\psi_n) \right)
 	\end{equation}
-	In this Fourier decomposition, the coefficients $v^1$, $v^2$ and $v^3$ are known as directed, elliptic flow and triangular flow respectively. The overlap region of the two colliding nuclei is then spatially deformed in the transverse, as visible in Fig \ref{fig:elliptic_flow_collision}, plane so the momentum space distribution changes in the opposite direction from being approximately azimuthally symmetric to having a preferred direction in the reaction plane. The asymmetry in momentum space can be quantified by the spatial ellipticity:
+	In this Fourier decomposition, the coefficients $v^1$, $v^2$ and $v^3$ are known as directed, elliptic and triangular flow respectively. The overlap region of the two colliding nuclei is then spatially deformed in the transverse direction, as visible in Fig \ref{fig:elliptic_flow_collision}. Is possible to see that the momentum space distribution has a preferred direction. The asymmetry in momentum space can be quantified by the spatial ellipticity:
 	\begin{equation}
 		\epsilon_x(b)=\frac{\langle y^2 - x^2\rangle}{\langle y^2 - x^2\rangle}
 		\label{eq:anisotropy}
 	\end{equation}
-	As a function of time $\epsilon_x$ decreases, spontaneously due to free-streaming radial expansion (if no rescattering happens) or somewhat more quickly due to the development of elliptic flow (if rescattering occurs) which makes the system expand faster into the reaction plane perpendicular to it. The first mechanism is a consequence of the Heisenberg uncertainty principle because if the definition in the position increase the uncertainty on the linear momentum make the same. Instead the elliptic flow is a consequence of the fact that there is high pressure in the interior of the reaction zone which falls off to zero outside. The pressure gradient is so steeper in the short direction, leading to stronger hydrodynamic acceleration. Hydrodynamics predicts that heavier particles gain more momentum than lighter ones, leading to the previously discussed flattening of their spectra at low transverse kinetic energies. It's possible to show that the spatial eccentricity decrease as a function of time in the following manner, the proof is in the appendix \ref{app:A}.
+	As a function of time $\epsilon_x$ decreases, spontaneously due to free-streaming radial expansion (if no rescattering happens) or somewhat more quickly due to the development of elliptic flow (if rescattering occurs) which makes the system expand faster into the reaction plane perpendicular to it. The first mechanism is a consequence of the Heisenberg uncertainty principle because if the definition in the position increase the uncertainty on the linear momentum make the same. Instead the elliptic flow is a consequence of the fact that there is high pressure in the interior of the reaction zone which falls off to zero outside. The pressure gradient is very steep in the short direction leading a stronger hydrodynamic acceleration. Hydrodynamics predicts that heavier particles gain more momentum than lighter ones for the previously discussed flattening of their spectra at low transverse kinetic energies. It's possible to show that the spatial eccentricity decrease as a function of time in the following manner, the proof is in the appendix \ref{app:B}.
 	\begin{equation}
 		\frac{\epsilon_x(\tau_0 + \Delta \tau)}{\epsilon_x(\tau_0)} = \left[1+ \frac{(c \Delta \tau)^2}{\langle \vec{r}^2 \rangle_{\tau_0}} \right]^{-1}
 	\end{equation}
-	where $\tau_0$ is the time when the particles were created and $\langle \vec{r}^2 \rangle_{\tau_0}$ is the azimuthally averaged initial transverse radius squared of the reaction zone. So if thermalization is delayed by a time $\Delta \tau$ , any elliptic flow would have to build on a reduced spatial deformation and would come out smaller. It is also known from microscopic kinetic studies that for a given initial spatial eccentricity the magnitude of the generated elliptic flow is a monotonic function of the mean free path.
+	where $\tau_0$ is the time when the particles were created and $\langle \vec{r}^2 \rangle_{\tau_0}$ is the azimuthally averaged initial transverse radius squared of the reaction zone. It is also known from microscopic kinetic studies that for a given initial spatial eccentricity the magnitude of the generated elliptic flow is a monotonic function of the mean free path.
 	
 	More recently, it was realized that small deviations from ideal hydrodynamics, in particular viscous corrections, already modify significantly the buildup of the elliptic flow. The shear viscosity determines how good a fluid is, however, for relativistic
 	fluids the more useful quantity is the shear viscosity over entropy ratio $\eta_v/s$. For perfect	fluids the ratio can be approximated by:
 	\begin{equation}
 		\frac{\eta_v}{s} \approx \frac{\hbar}{4\pi k_B}
 	\end{equation}
-	It is argued that the transition from hadrons to quarks and gluons	occurs in the vicinity of the minimum in $\eta_v/s$, just as is the case for the phase transitions	of common life substance like water. The fact that the QGP behaves like an ideal fluid implies strong non-perturbative interactions in the quark-gluon plasma phase.
-	
-	
+	It is argued that the transition from hadrons to quarks and gluons occurs in the vicinity of the minimum in $\eta_v/s$, just as is the case for the phase transitions	of common life substance like water. The fact that the QGP behaves like an ideal fluid implies strong non-perturbative interactions in the quark-gluon plasma phase.
 	
 	
 	\subsection{Statistical Hadronisation Model (SHM)}
 	This section had been inspired by the folowing article \cite{becattini2009introductionstatisticalhadronizationmodel}, \cite{charm_hierarchy_in_the_statistical_hadronization_model} \cite{heinz2004conceptsheavyionphysics} \cite{amsdottorato9036}.
 	
-	The idea of applying statistical concepts to the problem of multi-particle production in high energy collisions dates back to a work of Fermi in 1950, who assumed that particles originated from an excited region evenly occupying all available phase space states. The microscopic description of the process in which thousand of quarks and gluons combine to form	thousands of final state hadrons is an impractical problem. Note that such a statistical approach has, of course, its limitations. In fact investigating correlations between pairs, triplets, quadruplets etc. of particles, because they all belong to a single collision and are not produced entirely independently. For example the momenta of thousand of particle emerging from the fireball must conserve the original momentum of the initially colliding nuclei probably generating non-statistical momentum correlations among considerably smaller subclusters of particles. So for describe this complex dynamical process, the Statistical Hadronisation Model (SHM) postulates that hadrons are formed from the decay of each cluster in a purely statistical way so. \textit{Every multihadronic state localized within the cluster and compatible with conservation laws is equally likely.}
+	The idea of applying statistical concepts to the problem of multi-particle production in high energy collisions dates back to a work of Fermi in 1950, who assumed that particles originated from an excited region evenly occupying all available phase space states. Note that such a statistical approach has, of course, its limitations. In fact in this way is impossible to investigate correlations between pairs, triplets, quadruplets etc. of particles because they belong to a event and so are not produced entirely independently but correlated in a non-statistical way. For example the momenta of thousand of particle emerging from the fireball must conserve the original momenta of the initially colliding nuclei generating non-statistical momentum correlations among considerably smaller subclusters of particles. So for describe this complex dynamical process, the Statistical Hadronisation Model (SHM) postulates that hadrons are formed from the decay of each cluster in a purely statistical way so. \textit{Every multihadronic state localized within the cluster and compatible with conservation laws is equally likely.}
 	
-	The volume of the system created in	heavy-ion collisions is considerably larger than the partonic scale, this justifies the usage of a grand-canonical ensemble. Under these conditions the elementary volume under study can exchange both particles and energy with its surroundings meaning that the quantum numbers are conserved. In particular the volume of clusters is in a constant ratio with their mass when hadronization takes place.  In addition one has to consider the quantum behaviour of both fermionic and bosonic degrees of freedom that form the system. Quantum interference effects in the production of identical particles, the so-called Bose-Einstein correlations or Hanbury Brown-Twiss second-order interference would simply be impossible without a finite volume. The Bose-Einstein correlations (BEC) refer to a quantum mechanical phenomenon that arises due to the wave-like nature of bosonic particles and their tendency to occupy the same quantum state. Instead the Hanbury Brown and Twiss (HBT) effect is any of a variety of correlation and anti-correlation effects in the intensities received by two detectors from a beam of particles. HBT effects can generally be attributed to the wave–particle duality of the beam, and the results of a given experiment depend on whether the beam is composed of fermions or bosons. From statistical mechanics is known that hold
+	The volume of the system created in	heavy-ion collisions is considerably larger than the partonic scale, this justifies the usage of a grand-canonical ensemble. In particular the volume of clusters is in a constant ratio with their mass when hadronization takes place. Under these conditions the elementary volume under study can exchange both particles and energy with its surroundings. For smaller systems, like happen for example in collision between proton or proton and other nucleus, the grand-canonical ensemble is no longer a good description of the system. In this case the volume created after the collision is considerably smaller and it is better to require the local conservation of quantum numbers and so the canonical formulation is more appropriate. It is worth noting that the transition from a canonical to a grand-canonical description effectively occurs when the cluster volume is of the order of 100 $fm^3$ at an energy density of 0.5 GeV/$fm^3$ \cite{PhysRevC.65.044901}. 
+	In addition one has to consider the quantum behaviour of both fermionic and bosonic degrees of freedom that form the system. Some possible effect are for example the Bose-Einstein correlations or Hanbury Brown-Twiss interference. The Bose-Einstein correlations refer to a quantum mechanical phenomenon that arises due to the wave-like nature of bosonic particles and their tendency to occupy the same quantum state. Instead the Hanbury Brown and Twiss effect is any of a variety of correlation and anti-correlation effects in the intensities received by two detectors from a beam of particles and depend on the fermionic or bosonic nature of the beam. From statistical mechanics is known that hold
 	
 	\begin{equation}
 		\langle N \rangle = \frac{1}{\beta} \left( \frac{\partial lnZ}{\partial \mu_B}\right)
@@ -469,13 +514,13 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 		\label{eq:partition_function}
 	\end{equation}
 	$\theta_i$ is +1 for fermions and -1 for bosons. Global observables such as the
-	particle mean multiplicities can be derived from the previous equation:
+	particle mean multiplicities and entropy can be derived from the previous equation:
 	\begin{equation}
 		\langle N \rangle = \frac{\Delta V g_i}{2\pi^2\hbar^3} \int_{0}^{\infty} dp \frac{p^2}{e^{\beta(\mu_i-E)}+\theta_i} 
 		\label{eq:mean_particle_number}
 	\end{equation}
 	\begin{equation}
-		\langle S \rangle= -\sum_{K} \int_{\Delta V} \int \frac{d^3x d^3p}{(2\pi)^3} \left[f_i \ln f_i + \theta_i (1-\theta_if_i)ln(1-\theta_if_i) \right]
+		\langle S \rangle= -\sum_{i} \int_{\Delta V} \int \frac{d^3x d^3p}{(2\pi)^3} \left[f_i \ln f_i + \theta_i (1-\theta_if_i)ln(1-\theta_if_i) \right]
 		\label{eq:entropy}
 	\end{equation}
 	In this case the distribution is a bit different from the \ref{eq:boltzmann}.
@@ -483,30 +528,26 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 		f_{i,eq}(x,p)=\frac{g_i}{e^{\beta(\Delta V)(E_i-\mu_i(\Delta V))} +\theta_i} 
 		\label{eq:boltmann2}
 	\end{equation}
-	can be further developed the by considering the Eq \ref{eq:partition_function} Taylor expansion of the logarithmic part, the full derivation is given in the appendix.
+	The Eq \ref{eq:partition_function} can be further developed the by considering  Taylor expansion of the logarithmic part, the full derivation is given in the appendix \ref{app:C}.
 	\begin{equation}
 		ln Z_i(T,V,\mu_i)= \frac{\Delta V g_i}{2\pi^2\hbar^3\beta} \sum_{K} \frac{(\theta_i e^{\beta \mu_i})^k}{k^2} m_i^2K_2(k\beta m_i)
 		\label{eq:partition_function2}
 	\end{equation}
 	
-	The definition of the chemical potential $\mu_i$ is strictly related to the processes at play and to the type of chosen ensemble.it became necessary in order to taking into account the possibility to have fluctuations of the number of particles of species i. This can happen because the volume can exchange particles with its surroundings, incrementing or decrementing the components of each species. This formulation corresponds to the grand-canonical ensemble which is the most commonly used in the description of heavy-ion collisions. For a given species i the chemical potential can be split into $\mu_i = B_i mu_B + S_i \mu_S + Qi \mu_Q$ , where $B_i$ , $S_i$ and $Q_i$ are respectively the baryon number, strangeness and electric charge while $\mu_B$ , $\mu_S$ and $\mu_Q$ are the corresponding chemical potentials. For smaller systems, like happen for example in collision between proton or proton and other nucleos, the grand-canonical ensemble is no longer a good description of the system. In this case the volume created after the collision is considerably smaller and it is better to require the local conservation of quantum numbers and so the canonical formulation is more appropriate. it is worth mentioning that the transition from a canonical to a grand-canonical description effectively occurs when the cluster volume is of the order of 100 $fm^3$ at an
-	energy density of 0.5 GeV/$fm^3$. If the energy of the collision is not enough the strange quark and antiquark can be non thermalized. So we should add another therm to chemical potential, This term take the form $|s_i| \bar{mu_s}$ where $s_i$ is the total number of	strange quarks and antiquarks in hadron and $\bar{mu_s}$ the corresponding potential. However in heavy-ion collisions the s quarks can be fully thermalized. Equation \ref{eq:boltmann2} is a local thermal and chemical equilibrium distribution function. If the system could	be kept at constant volume, any type of strong interaction among the hadrons would leave this distribution unchanged since such microscopic processes again conserve energy, baryon number and strangeness. Instead from a kinematic point of view the equilibrium is not achieved as a result of hadronic rescattering but statistically by interference of many different hadron production channels. The achievement of kinematic equilibrium is due to two different types of processes. The first one is to take the system of hadrons with an arbitrary initial phase-space, that respect the constrain, distribution and let it evolve for a sufficiently long time to obtain the validity of the Eq. \ref{eq:boltmann2} as a result of the action of	elastic and inelastic processes among the hadrons, the kinetic equilibration. Or is possible to realize	statistical process which fills hadronic phase-space in the statistically most probable configuration. This	is statistical equilibrium. Both processes share the property that they lead to a state of Maximum Entropy.
-	However, statistical hadronization can produce a Maximum Entropy distribution through non-hadronic processes which occur much faster than any inelastic scattering among hadrons at the given energy and	baryon number density. %chiedi quali sono questi processi extra
-	
+	The definition of the chemical potential $\mu_i$ is strictly related to the processes at play and to the type of chosen ensemble. It became necessary in order to taking into account the possibility to have fluctuations of the number of particles of species i. This can happen because the volume, if grand-canonical ensemble, can exchange particles with its surroundings, incrementing or decrementing the components of each species. For a given species i the chemical potential can be split into $\mu_i = B_i mu_B + S_i \mu_S + Qi \mu_Q$ , where $B_i$ , $S_i$ and $Q_i$ are respectively the baryon number, strangeness and electric charge while $\mu_B$ , $\mu_S$ and $\mu_Q$ are the corresponding chemical potentials. If the energy of the collision is not enough the strange quark and antiquark can be non thermalized. So we should add another therm to chemical potential, This term take the form $|s_i| \bar{\mu_s}$ where $s_i$ is the total number of strange quarks and antiquarks in hadron and $\bar{mu_s}$ the corresponding potential. However in heavy-ion collisions the s quarks can be fully thermalized. 	
 	
 	Starting from measurements of the identified particle yields (dN/dy) in the light flavor sector by using the SHM approach one gains the access to the thermodynamic properties of the system created in the collision. In principle the more particle species are measured the better, in fact all particle that are produced at equilibrium can be used for this purpose. An example of such measurement for different particle species is given in Fig. \ref{fig:hadron_yelds}. It is possible to see that the large evolution in particle production and identify some key features:
 	\begin{itemize}
-		\item All particles and their corresponding anti-particles tend to be equally produced if the collision energy is high enough. This is especially true at LHC energies
+		\item  Particles and antiparticles tend to be equally produced if the collision energy is high enough. This is especially true at LHC energies.
 		\item Baryons (p and $\Lambda$) and mesons ($\pi$ and K) follow different behaviour with significant baryon/anti-baryon discrepancies at lower energies.
-		\item  When $\mu_B$ is larger than 0 the baryonic number of the colliding nuclei is to be found in the products of the collision. At low energies, an important fraction of the initial colliding nucleons are found in the final state (large stopping power). For larger beam energies the colliding nuclei become almost transparent to each other (no baryon stopping). 
-		\item The production of $\Lambda$, similar to p, is affected by the non-zero $\mu_B$ at low energies but the effect is reduced since it contains an s quark. At intermediate energies $\Lambda$ exhibits a decrease similar to that of p.
+		\item  When $\mu_B$ is not null the baryonic number of the colliding nuclei is to be found in the products of the collision. Furthermore at low energies a fraction of the initial colliding nucleons are found in the final state (large stopping power). For larger beam energies the colliding nuclei become almost transparent to each other (no baryon stopping) but the original nucleons are less probabple to be found. 
 		\item  At high energies, pions are the most abundant particle species produced
-		\item Particles containing s quarks are subject to a significant increase in their abundances above the SPS energies. This effect known as “strangeness enhancement” was historically identified as a signature typical of the QGP. This aspect will be discuss better later.
+		\item Particles containing s or c quarks are subject to a significant increase in their abundances This effect known as “strangeness enhancement” was historically identified as a signature typical of the QGP. This aspect will be discuss better later.
 		\item At high energies the production of particles with same mass but different quark content tends to be similar.
 	\end{itemize}
 	
 	
-	The SHM can be used to fit the measured dN/dy using only a limited number of parameters This allows to obtain quantities such as the chemical freeze-out temperature, the system volume V and the chemical potential $\mu_B$. Results Fig. \ref{fig:particle_abbundance} show how the best fit parameters to describe the data from Pb–Pb central collisions collected by the ALICE experiment at $\sqrt{s_{NN}}$ = 2.76 TeV are: T = 156.5 $\pm$ 1.5 MeV, $\mu_B$ = 0.7 $\pm$ 3.8 MeV, V = 5280 $\pm$ 410 $fm^3$ . The model is able to describe reasonably well measurements of yields which span over 9 order of magnitudes with a $\tilde{\chi}^2$ = 1.61 with a low number of free parameters. The largest tension is observed for p and $\bar{p}$, reaching almost a 3 $\sigma$ deviation. \cite{Andronic_2017} In addition these results allow for a direct comparison with predictions from lattice QCD. Such comparison is resumed in Fig. \ref{fig:shm_qcd_comparison} where is possible to see that the curve is correctly described.
+	The SHM can be used to fit the measured dN/dy using only a limited number of parameters. This allows to obtain quantities such as the chemical freeze-out temperature, the system volume V and the chemical potential $\mu_B$. Results Fig. \ref{fig:particle_abbundance} show how the best fit parameters to describe the data from Pb–Pb central collisions collected by the ALICE experiment at $\sqrt{s_{NN}}$ = 2.76 TeV are: T = 156.5 $\pm$ 1.5 MeV, $\mu_B$ = 0.7 $\pm$ 3.8 MeV, V = 5280 $\pm$ 410 $fm^3$. The model is able to describe reasonably well measurements of yields which span over 9 order of magnitudes with a $\tilde{\chi}^2$ = 1.61 with a low number of free parameters. The largest tension is observed for p and $\bar{p}$, reaching almost a 3 $\sigma$ deviation. \cite{Andronic_2017} In addition these results allow for a direct comparison with predictions from lattice QCD. Such comparison is resumed in Fig. \ref{fig:shm_qcd_comparison} where is possible to see that the curve is correctly described.
 	
 	\begin{figure}
 		\centering
@@ -519,7 +560,7 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 		\begin{minipage}{0.45\textwidth}
 			\centering
 			\includegraphics[width=0.7 \linewidth]{pictures/particle_abbundance.png}
-			\caption{adron multiplicities in central (0-10\%) Pb–Pb collisions at the LHC, for different particles: $\pi^\pm, k^\pm, \phi, p, \bar{p}, \Lambda, \bar{\Lambda}, \Xi^-, \bar{\Xi}^+, \Omega, \bar{\Omega}^+, 3^He, 3^\bar{He}, 3^\Lambda_He, 3^\Lambda_\bar{He}, 4^\bar{He}$ \cite{Andronic_2017}}
+			\caption{adron multiplicities in central (0-10\%) Pb–Pb collisions at the LHC, for different particles.\cite{Andronic_2017}}
 			\label{fig:particle_abbundance}
 		\end{minipage}
 		\centering
@@ -530,11 +571,13 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	\end{figure}
 	
 	\subsection{Strangeness and Charmness enhancement}
-	Considering the particles production one would expect a suppression in the production af the heavier flavor with respect to the u and d quark, both for their mass but also for the conservation of quantum number. This is related to the fact that strong interactions conserve the strangeness number exactly. However is known that in microscopic therm the QCD predict that the heavier flavor are produced in pairs. So, ad example, for the small fireball volumes created in elementary particle collisions strange hadron get suppressed since always a second hadron with balancing strangeness has to be created inside the same small volume at the same time, and this requires more energy. More complicated is the problem for the quark u e d because of their similar mass that required he introduction of the isospin. This hold for a canonical formalism. Instead the grand-canonical formulation assumes the average conservation of the quantum number, a condition that is easily reproduced in heavy-ion collisions. For these reason the strangeness suppression is observed in small collision systems such as pp, p $\bar{p}$ and $e^+ e^-$. When quark-gluon plasma disassembles into hadrons in a breakup process, the high availability of strange antiquarks helps to produce antimatter containing multiple strange quarks, which is otherwise rarely made. Similar considerations are at present made for the heavier charm flavor, which is made at the beginning of the collision process in the first interactions and is only abundant in the high-energy environments of CERN's Large Hadron Collider. In addition, the restoration of the chiral symmetry in proximity to the temperature of deconfined transition lowers the constituent mass below $\sim$ 150 MeV thus decreasing the energetic threshold for its production. These reduce the time scale for strangeness saturation and chemical equilibration. The fact that the gran canonical formalism is useful for description of the process tell us that the system behave as if the strange and antistrange hadrons were created independently and statistically distributed over the entire nuclear fireball. This mean that the is not important the initial contrition in witch the pairs s$\bar{s}$ is created for determine the final distribution and make the statistical assumption hold. This point is not completely understood but is probably related to the fact that a significant amount of strangeness diffusion occur before hadronization.
+	Another success of the SHM model is the prediction of a phenomenon called strangeness	enhancement. It consist in an increase in the production of particle that contain strange quark. 	
+	In particle production, one would generally expect that the heavier flavours should be suppressed compared to the up and down quarks, both because of their greater mass and the need to preserve quantum numbers. Is known that strong interactions exactly preserve the strangeness quantum number and so the heavier flavours are produced in pairs. Consequently, the production of strange quarks is expected to be suppressed in small collision systems where there is less phase space available for particle production. In fact the creation of a second hadron with a compensating strangeness has to be created inside the same small volume at the same time resulting in a large energetic threshold that the system has to overcome (canonical suppression). Instead the fact that the gran canonical formalism, that assumes only the average conservation of the quantum number, is useful for description of the process tell us that the system behave as if the strange and antistrange hadrons were created independently and statistically distributed over the entire nuclear fireball. This mean that are not important the initial conditions in witch the pairs s$\bar{s}$ is created for determine the final distribution. This point is not completely understood but is probably related to the fact that a significant amount of strangeness diffusion occur before hadronization.
 	
-	The net strange quark abundance is starting to saturate for temperatures above 160 MeV. This temperature is close to the one of the chemical freeze-out where the relative particle abundances are fixed. As a consequence of the larger amount of strange quarks available before the hadronization it is expected that strange hadrons will be found more abundantly in the final state. The production of strange content in the plasma is predominant with respect to the one formed in interactions occurring after the hadronization	phase. 
+	In heavy–ion collisions, the enhancement of strange hadron production is possible due to the high gluon density of the QGP. This is thanks to the dominance of gluonic production channels, such as the processes gg $\rightarrow s \bar{s}$, $u \bar{u}\rightarrow s \bar{s}$ and $d \bar{d} \rightarrow s \bar{s}$. In addition, the partial restoration of the chiral symmetry in proximity to the temperature of deconfined transition reduces the constituent mass thus decreasing the energetic threshold for its production. These reduce also the time scale for strangeness saturation that occur for temperatures above 160 MeV. This temperature is close to the one of the chemical freeze-out where the relative particle abundances are fixed. As a consequence when quark-gluon plasma disassembles into hadrons in a breakup process the larger amount of strange quarks available made particle with this quark more abundant in the final state.
 	
-	Instead the charm quark mass is much larger than the other described in this section and hence thermal production of charm quarks or hadrons is strongly suppressed. However, with increasing center-of-mass energy the total charm production cross section which results from initial hard collisions increases strongly. 
+	 Instead the charm quark mass is much larger than the other described in this section and hence thermal production of charm quarks or hadrons is strongly suppressed. However, with increasing center-of-mass energy the total charm production cross section, which results from initial hard collisions, increases strongly. In this case similar considerations made for the strange quark holds also for the heavier charm flavor.
+	 
 	\subsection{Computer simulation}
 	Using an SHM model we have tried to understand how the production of supernuclei is influenced by different parameter. In particular the focus was on the c-deuteron, a bound state of a $\Lambda_c$ and a neutron. This choice is related to the fact that this nucleons is the easier to observe in heavy-ion collision due to his mass.    
 	
@@ -544,7 +587,7 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	\chapter{$Y_c$N bound state}
 	
 	\subsection{One Boson exchange model}
-	Before the publications of Hideki Yukawa's papers in 1935 \cite{yukawa} physicists cannot explain the results of James Chadwick's atomic model, which consisted of positively charged protons and neutrons packed inside of a small nucleus, with a radius on the order of $10^{-14}-10^{-15}$ m. This because the electromagnetic forces at these lengths would cause these protons to repel each other and for the nucleus to fall apart. For these reason in 1932, Werner Heisenberg proposed a "Platzwechsel" (migration) interaction between the neutrons and protons inside the nucleus, in which neutrons were composite particles of protons and electrons. These composite neutrons would emit electrons, creating an attractive force with the protons, and then turn into protons themselves \cite{heisemerg}. The model just explained violate the linear and anglular momentum and for these reason Enrico Fermi in 1934 proposed the  proposed the emission and absorption of two light particles: the neutrino and electron, rather than just the electron. Some month later the soviet physicists Igor Tamm and Dmitri Ivanenko demonstrated that the force associated with the neutrino and electron emission was not strong enough to bind the protons and neutrons in the nucleus.
+	Before the publication of Hideki Yukawa's groundbreaking papers in 1935 \cite{yukawa}, physicists struggled to explain the results of James Chadwick's atomic model, which proposed that protons and neutrons were packed inside a small nucleus with a radius on the order of $10^{-14}-10^{-15}$ meters. At such small scales, the electromagnetic forces would be extremely intense, causing the protons to repel each other. In 1932, Werner Heisenberg proposed a "Platzwechsel" (migration) interaction between protons and neutrons within the nucleus, suggesting that neutrons were composite particles made of protons and electrons. According to this model, neutrons would emit electrons, creating an attractive force with protons, and then transform back into protons \cite{heisemerg}. However, this model violated the conservation of linear and angular momentum. To resolve this, Enrico Fermi proposed in 1934 that the emission and absorption of two light particles: the neutrino and electron. A few months later, Soviet physicists Igor Tamm and Dmitri Ivanenko demonstrated that the force associated with the emission of neutrinos and electrons was not strong enough to bind protons and neutrons together in the nucleus.
 	
 	For these reasons Hideki Yukawa combines both the idea of Heisenberg's short-range force interaction and Fermi's idea of an exchange particle in order to fix the issue of the neutron-proton interaction. For introducing the Yukawa's potential we can start from the Klein-Gordon equation that governs dynamics of free massive scalar, without spin, field
 	
@@ -565,32 +608,32 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 		\label{eq:klein-gordon-sol}
 	\end{equation}
 	
-	Where $\vec{P}$ is the linear momentum and E the energy. For virtual particles hold that $0 \sim p^2 c^2 + m^2 c^4$ so $p\sim \pm i m c$ and with the Einsten-De Broglie equation one get that $\lambda = \frac{\pm ih}{mc}$, named Compton wave length, and the solution can be rewritten as
+	Where $\vec{P}$ is the linear momentum and E the energy. For virtual particles hold that $0 \sim p^2 c^2 + m^2 c^4$ so $p\sim \pm i m c$ and with the Einsten-De Broglie equation one get that $\lambda = \frac{\pm ih}{mc}$, named Compton wave length, and the solution can be rewritten rejecting the divergent solution as
 	\begin{equation}
 		\phi(\vec{r},t)= - g^2 \hbar c \frac{e^{-\frac{r}{\lambda}}}{r} = - g^2 \hbar c \frac{e^{-\frac{r mc}{h}}}{r}
 		\label{eq:klein-gordon-final-sol}
 	\end{equation}
 	
-	after have rejectes the divergent solution. The equation \ref{eq:klein-gordon-final-sol} clarify that massive mediators gives short range interaction. A graphical representation of the phenomena is visible in the pictures, \ref{fig:one_boson_exchange}.
+	The equation \ref{eq:klein-gordon-final-sol} clarify that massive mediators gives short range interaction. A graphical representation of the phenomena is visible in the Fig \ref{fig:one_boson_exchange}.
 	\begin{figure}[ht]
 		\centering
-		\includegraphics[width=0.7\linewidth]{pictures/one_boson_exchange.png}
+		\includegraphics[width=0.5\linewidth]{pictures/one_boson_exchange.png}
 		\caption{The one-boson-exchange diagram of the nucleon-nucleon scattering.}
 		\label{fig:one_boson_exchange} 
 	\end{figure}
-	Yukawa used his equation aslo to predict the mass of the mediating particle as about 200 times the mass of the electron $\sim 140$ Mev. Physicists called this particle the "meson," as its mass was in the middle of the leptons and barions. Yukawa's meson was found in 1947, and came to be known as the pion.
+	Yukawa used his equation also to predict the mass of the mediating particle as about 200 times the mass of the electron $\sim 140$ Mev. Physicists called this particle the "meson," as its mass was in the middle of the leptons and barions. Yukawa's meson was found in 1947, and came to be known as the pion \cite{Semprini}
 	The model has been referred to as the "one-boson-exchange model" (OBE model) or the
-	"one-particle-exchange model". This model has presented a new possibility for the realistic understanding of nuclear forces. Basing on the Yukawa potential the Sakata \cite{sakata} model was created with the aim of giving a systematic understanding not only of the nucleon-nucleon interaction but	of other various strong reactions. In this model, mesons and baryons are considered as composite systems of the fundamental particles: proton (p), neutron (n) and $\lambda$-particle ($\lambda$), and their antiparticles. With other generalization these works predicted the existence of many resonance levels including the octet mesons now established and seemed to support the basic features of the Sakata model and it became clear from experiment that the wide-spread existence of these resonance levels is one of the fundamental features of the baryon-meson system. From analysis of pion production processes, etc., by the isobar model in which the resonance states are regarded as particles was noted that: The treatment of a resonance as an "elementary" particle has considerable applicability and the non-correlated final states play only a minor role. For these reason the strong interactions should be derived from the fundamental interactions between the fundamental particles, and the Yukawa interaction observed between pion and nucleon is regarded as an effective Hamiltonian which results from the fundamental interactions including all the higher order corrections on the system of composite particles. Higher order effect should not be taken for the Yukawa interaction as because such effects should be considered in the fundamental interaction, not for the model Hamiltonian. Furthermore	The	Yukawa interaction, as a model Hamiltonian, already contain some of the higher order effects of the fundamental interaction in a certain correlated form. In conclusion we cannot logically exclude the possibility that there may remain some higher order effects of the fundamental interactions not represented by the lowest order diagram and that the higher order of the model interaction might represent such parts. However, we are interested in the OBE model as a zeroth order trial. \cite{onebosonexchangepotentialmodelapproach}.
+	"one-particle-exchange model". This model has presented a new possibility for the realistic understanding of nuclear forces. Basing on the Yukawa potential the Sakata \cite{sakata} model was created with the aim of giving a systematic understanding not only of the nucleon-nucleon interaction but	of other various strong reactions. While the OBE model is extremely useful for understanding the basics of nuclear interactions, it has several important limitations that prevent it from being a complete theory of nuclear forces. \cite{onebosonexchangepotentialmodelapproach}. Furthermore the theory was expanded and some ideas of the model was included in QCD. However his introduction was important for understand the next section.
 	
 	
 	\subsection{$\Lambda_c$ N interaction}
 	This section is a resume of the \cite{Charmed-nucleon} and \cite{baryon–nucleon-potential}
-	Constructing a model for describe with first-principles analytical calculations of non-perturbative quantum chromo-dynamics (QCD) phenomena is very limited. Furthermore the lack of experimental information on the elementary $Y_c$ N makes the describing of the formation of bound states much more difficult. Thus, the situation can be ameliorated with the use of well constrained models based as much as possible on symmetry principles and analogies with other similar processes, which is still a valid alternative for making progress.
+	As we have seen constructing a model for describe, with first-principles analytical calculations, non-perturbative QCD phenomena is very limited. Furthermore the lack of experimental information on the elementary $Y_c$ N makes the describing of the formation of bound states much more difficult. Thus, the situation can be ameliorated with the use of well constrained models based as much as possible on symmetry principles and analogies with other similar processes. With the notation $Y_c$ N we mean a bound state of a particle composed by a charm quark, in particular $\Lambda_c$ and 1, and a nucleon (N).
 	
 	A model was proposed in the early 1990s in an attempt to obtain a simultaneous
-	description of the light baryon spectrum and the nucleon-nucleon interaction \cite{Valcarce_2005}. It was later on generalized to all flavor. In this model, hadrons are described as clusters of three interacting massive (constituent) quarks. The masses of the quarks are generated by the dynamical breaking of the original $SU(2)_L \otimes SU(2)_R$ chiral symmetry of the QCD Lagrangian at a momentum scale of the order of $\Lambda_cbs= 4 \pi f_\pi \sim $ 1 GeV, where $f_\pi$ is the pion electroweak decay constant. 
+	description of the light baryon spectrum and the nucleon-nucleon interaction \cite{Valcarce_2005}. It was later on generalized to all flavor. In this model, hadrons are described as clusters of three interacting massive (constituent) quarks. 
 	
-	According to Goldstone's theorem, when a continuous symmetry is spontaneously broken, there should be massless particles associated with the broken symmetry. These particles are called Goldstone bosons. In the case of chiral symmetry breaking, the pions are the pseudo-Goldstone bosons. They arise because the chiral symmetry is spontaneously broken, and although they are not strictly massless, they have a very small mass compared to other hadrons like protons and neutrons. \cite{Smit_2023}
+	According to Goldstone's theorem, when a continuous symmetry is spontaneously broken, there should be massless particles associated with the broken symmetry. These particles are called Goldstone bosons and can be thought as the excitations of the field in the broken symmetry directions in group space. This spinless boson con acquire a mass if the symmetry is not exact, like in our case, but they typically remain relatively light if compared to other hadrons like protons and neutrons \cite{Smit_2023}.
 	
 	Light quarks interact through potentials generated by the exchange of pseudoscalar Goldstone bosons ($\pi$) and their chiral partner ($\sigma$):
 	\begin{equation}
@@ -635,13 +678,18 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 		\label{tab:par-resume}
 	\end{table}
 	
-	Finally, any model imitating QCD should incorporate confinement. Although it is a very important term from the spectroscopic point of view, it is negligible for the hadron-hadron interaction. Lattice QCD calculations suggest a screening effect on the potential when increasing the interquark distance which is modeled here by.
+	Finally, any model imitating QCD should incorporate confinement. Although it is a very important term from the spectroscopic point of view but it is negligible for the hadron-hadron interaction. Lattice QCD calculations suggest a screening effect on the potential when increasing the interquark distance which is modeled here by.
 	\begin{equation}
 		V_{CON}(\vec{r_{ij}})= -\alpha_c (1-e^{-\mu_c r_{ij}}) \vec{\lambda_i^c} \cdot \vec{\lambda_j^c}
 		\label{eq:confinement}
 	\end{equation}
 	
-	The figures \ref{fig:one_boson_exchange} shows the different diagrams contributing to the charmed baryon-nucleon interaction. The first type of interaction, visible in (a) and (b), is mediated by the exchange of a boson between light quark or between a light ad heavy flavor. The second one instead take in account also the exchange of the identical light quark (c) and (d). The second possibility correspond to short range that contain one-gluon exchange contributions that are also missed in hadronic models.
+	The figures \ref{fig:one_boson_exchange} shows the different diagrams contributing to the charmed baryon-nucleon interaction. The first type of interaction, visible in (a) and (b), is mediated by the exchange of a boson between light quark or between a light ad heavy flavor. The second one instead take in account also the exchange of the identical light quark (c) and (d). The second possibility correspond to short range that contain one-gluon exchange contributions not present in normal interaction in ordinary nucleus. In the limit where the two baryons $Y_c$ N overlap, the Pauli principle impose antisymmetry requirements. Such effects, if any, will be	prominent for relative S waves (L = 0).
+	The S wave normalization kernel of the two-baryon wave function can be written in the overlapping region (R $\rightarrow$ 0)
+	\begin{equation}
+		N \rightarrow  4 \pi \left{ 1-\frac{R^2}{8} \left(\frac{5}{b^2} +\frac{1}{b_c^2} \right) \right} [1-3C(S,I)+\...]
+	\end{equation}
+	 Where C(S,I) is a spin-isospin coefficient and b, $b_c$ The closer the value of C(S, I) to 1/3 the larger the suppression of the are the Gaussian parameters for the wave function of the light and charmed quarks, respectively, assumed different for the sake of generality. This normalization of the wave function at short distances, generating Pauli repulsion. The repulsion occur when C(S, I)=1/3, there might exist Pauli suppressed channels. 
 	
 	\begin{figure}[ht]
 		\centering
@@ -651,8 +699,11 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	\end{figure}
 	
 	
-	A numerical simulation of the potential is described in \ref{pot_simulation} performed with lattice QCD with lattice spacing a =0.0907(13)fm and a physical lattice size of La=2.902(42)fm. In order to see the quark mass dependence of the potentials, the members of the study had employed three ensembles of gauge configurations. The hopping parameters of these ensembles are $\kappa_{ud}$ =0.13700 (Ensemble 1), 0.13727 (Ensemble 2), 0.13754 (Ensemble 3) for u, d-quarks. The figure \ref{fig:radial_potential_1s} show the $\lambda_c$N central potential in the $1^S_0$ channel for each ensemble with different mass considered for the pion. For Ensemble 1 $m_\pi \sim$ 700 Mev, $m_\pi \sim$ 570 Mev for Ensemble 2 and 410 Mev for Ensemble 3. They found a repulsive core at short distances (r < 0.5 fm) and an attractive one for intermediate distances (0.5 < r < 1.5 fm). They discovered also that the height of the repulsive core increases and the minimum of the attractive pocket shifts outward, as u, d quark masses decrease. A variation of the repulsive core against u, d quark masses may be explained by the fact that the colour magnetic interaction is proportional to the inverse of the constituent quark mass. The same operation has also be done with a $\Lambda_c$N system with $J^P=1^+$ obtaining the result visible in figure \ref{fig:radial_potential_3s}, 
-	the result is similar to the one in $1^S_0$ channel exept at short distance (r<0.5fm) but in both cases the actrattive potential is weaker than the $\Lambda_c$N system.
+	A numerical simulation of the potential is described in \cite{MIYAMOTO2018113} performed with lattice QCD with lattice spacing a =0.0907(13)fm and a physical lattice size of La=2.902(42)fm. The figure \ref{fig:radial_potential_1s} show the $\lambda_c$N central potential in the $^{1}S_0$ channel for each ensemble with different mass considered for the pion. For Ensemble 1 $m_\pi \sim$ 700 Mev, $m_\pi \sim$ 570 Mev for Ensemble 2 and 410 Mev for Ensemble 3. They found a repulsive core at short distances (r < 0.5 fm) and an attractive one for intermediate distances (0.5 < r < 1.5 fm). The same calculation has also be perform with a $\Lambda_c$N system with $J^P=1^+$ obtaining the result visible in figure \ref{fig:radial_potential_3s}, 
+	The two result are qualitatively and quantitatively similar except at short distance (r<0.5fm). As can be seen there is a tendency that the attraction obtained by the latest lattice QCD simulations for both $\Lambda_c$ N S waves becomes stronger as the pion mass decreases, moving towards the predictions of the CQM. However the $^{3}S_1$ potential is more attractive than $^{1}S_0$. This is due to the short-range dynamics consequence of gluon and quark exchange. If no meson exchanges were considered, the S wave phase shifts of the $\Lambda_C$N system are very similar to the corresponding NN scattering. In both partial waves one obtains typical hard-core phase shifts due to the short-range gluon and quark-exchange dynamics. However,the hard-core radius in the spin-singlet state is larger than in the spin-triplet one leading to a more attractive interaction in the spin-triplet partial wave due to a lower short-range repulsion. In fact, the hard cores caused by the color magnetic part of the OGE potential have been calculated obtaining 0.35 fm for the spin-triplet state and 0.44 fm	for the spin-singlet one.
+	
+	Few years ago \cite{PhysRevC.99.045208} the following study has presented a charmed baryon−nucleon potential based on a SU(4) extension of the meson-exchange potential. The study has analyze different models of the interaction which differ only on the values of the couplings of $\sigma$ meson with the charmed baryons. In a first model the couplings of the $\sigma$ meson with the charmed baryons are assumed to be equal to those of the $\Lambda$ and $\Sigma$ hyperons for make comparison with the data and other model. Then these couplings were reduced by 15\% and 20\% respectively. The $\Lambda$c N phase shifts obtained with these models are in qualitative agreement with the CQM results. However they predict a higher overall attraction for the $^{3}S_1$than for the $^{1}S_0$ supporting the previous observation.
+	
 	
 	\begin{figure}
 		\centering
@@ -673,16 +724,11 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	
 	The weaker potential than $\Lambda_C$N could be explained from following facts: 
 	\begin{itemize}
-		\item The long-range contribution is expected to be caused by the K meson exchange for $\Lambda$N interaction. In the system, however, the K meson (strange quark) exchange is replaced by the D meson (charm quark) exchange, and this contribution is highly suppressed due to the much heavier D meson mass than the K meson mass.
-		\item The one-pion exchange in the transition is considered to give a sizable contribution to the effective $\Lambda$N interaction. In the system, however, this contribution is expected to be suppressed due to the large mass difference between $\Lambda_c$N and $\Sigma_c$N 
+		\item The long-range contribution is expected to be caused by the K meson exchange for $\Lambda$N interaction. In the system, however, the K meson (strange quark) exchange is replaced by the D meson (charm quark) exchange, and this contribution is highly suppressed due to the much heavier D meson mass than the K meson mass. 
+		\item The one-pion exchange in the $\Lambda N - \Sigma N$ transition is considered to give a contribution to the effective $\Lambda$N interaction. Instead this contribution is expected to be suppressed due to the large mass difference between $\Lambda_c$N and $\Sigma_c$N 
 		
 	\end{itemize}  
-	If no meson exchanges were considered, the S wave phase shifts of the $\Lambda_C$N system are very similar to the corresponding NN scattering. In both partial waves one obtains typical	hard-core phase shifts due to the short-range gluon and quark-exchange dynamics. However,the hard-core radius in the spin-singlet state is larger than in the spin-triplet one leading	to a more attractive interaction in the spin-triplet partial wave due to a lower short-range repulsion. In fact, the hard cores caused by the color magnetic part of the OGE potential have been calculated obtaining 0.35 fm for the spin-triplet state and 0.44 fm	for the spin-singlet one.
-	
-	\subsection{Potential energy}
-	
-	
-	
+
 	\subsection{Possible $\Lambda_c$ supernuclei}
 	
 	One of the most interesting applications of the charmed baryon-nucleon interaction is the study of the possible existence of charmed hypernuclei. Since the $\Lambda_c$ interaction is dominated by the spin-independent central force, as we discussed in the previous section, the spectrum of hypernuclei, if they exist, would probably can be approximated by the following single-folding potential defined by
@@ -695,6 +741,19 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	\end{equation}
 	where the parameters employed $\rho_0$, c, a are the same used for described spherical nuclei. They test the equation with different set of parameter taking the value assumed in the following nuclei ${12}^C$, ${28}^Si$, ${40}^Ca$, ${58}^Ni$ and ${208}^Pb$.
 	With the following potential they calculate the binding energy for $\Lambda_c$ hypernuclei by the Gaussian expansion method. The result is shown in figure \ref{fig:binding_energy}. As expected the binding increases as the atomic number increases. Furthermore, as the potential approaches to the physical one (as the u, d quark masses decrease toward physical values), the binding energy increases. These results suggest that hypernuclei may exist, if their binding energy is larger than the Coulomb repulsion energy described by\ref{eq:culomb_potential}.
+	
+	binding energies of the Yc N two-body systems as a function of the boson-exchange The binding energies of the J P = 1+ state
+	are always a little bit larger than those of the J P = 0+ state. This is due to the similar
+	contribution of the boson-exchange potentials in both partial waves, the difference coming
+	from the channel coupling that enhances the D wave probability. Thus, while for Λπ = 1.2
+	GeV the probability of the 1 S0 ΛcN channel in the J P = 0+ state is 98.2%, that of the 3S1
+	ΛcN channel in the J P = 1+ state is 97.6%, with a D wave probability of 1.8%. The small
+	difference between the 1S0 and 3 S1 probabilities in the J P = 0+ and 1+ states, remains
+	almost constant for any value of Λπ . For example, for Λπ = 1.6 GeV they are 80.1% and
+	79.6%, respectively. However, the D wave probability in the J P = 1+ state augments from
+	1.8 to 10.1%. Table IV of Ref. [26] reports binding solutions for the individual channels in
+	the J P = 0+ state. As can be seen, the uncoupled 1 S0 ΛcN state is bound for any value of
+	the cutof
 	
 	\begin{figure}
 		\centering
@@ -712,7 +771,18 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 		\label{fig:binding_culomb}
 	\end{figure}
 	
-	
+	On the one hand, it would be favored, bearing in
+	mind the tendency that the Λc N attraction becomes stronger as the pion mass decreases.
+	On the other hand, since the average ΛcN (ΛN) potential that it is relevant for the charmed
+	hypertriton (hypertriton) is dominated by the spin-singlet channel [57], the considerably
+	smaller 1S0 ΛcN scattering length compared to the ΛN system goes against its existence.
+	The balance could be tilted if the spin dependence of the Λc N interaction induced by the
+	short-range dynamics would slightly enhance the attraction in the spin-triplet partial wave as
+	compared with the spin-singlet one. Then, the existence of J = 3/2 Λc hypernuclei might be
+	considered seriously. The isoscalar J = 3/2 state is dominated by the more attractive spin-
+	triplet interaction [58], which together with the reduction of the kinetic energy associated
+	with the Λc induced by its larger mass as compared to the Λ, could lead to a slightly bound
+	J = 3/2 Λc hypernucleus [
 	
 	
 	The binding energy of $\Lambda_c$ hypernuclei has been analyzed in \ref{pot_simulation} using the HAL QCD for $m_\pi$ = 410 MeV. 
@@ -724,15 +794,20 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 		
 	The A Large Ion Collider Experiment (ALICE) is a detector designed for heavy-ion physics at the Large Hadron Collider (LHC). It is primarily used to study lead-lead collisions, recreating conditions similar to those just after the Big Bang. These extreme conditions may also be present in neutron stars and other astrophysical objects. The goal of ALICE is to recreate and study quark-gluon plasma. This is crucial for the understanding of the formation and evolution of quark-gluon plasma, the mechanisms that confine quarks and gluons, and the nature of the strong nuclear force. This force plays a key role in generating the bulk of the mass of ordinary matter. ALICE also investigates phenomena such as quark confinement and chiral symmetry restoration, which are important for understanding the fundamental behavior of matter at the smallest scales.
    	The ALICE collaboration uses the 10 000-tonne ALICE detector 26 m long, 16 m high, and 16 m wide to study quark-gluon plasma. The detector sits in a vast cavern 56 m below ground close to the village of St Genis-Pouilly in France, receiving beams from the LHC. \cite{Alice}
-    The lead isotope used in LHC is  $^{208}\text{Pb}$. The lead is taken from lead vapor obtained heating the substance and then with a electrons are stripped with electric current.
+    The lead isotope used in LHC is  $^{208}\text{Pb}$. The lead is taken from lead vapor obtained heating the substance and then with a electrons are stripped with electric current. A sketch of the ALICE coordinate system is shown in Fig \ref{fig:ALICE_cortinates} In this figure, the (x, y, z) axes are shown together with the spherical coordinates used to describe the trajectory of particles in ALICE, (r, $\theta$, $\psi$).
+    	\begin{figure}[h]
+    	\centering
+    	\includegraphics[width=0.7\textwidth]{pictures/ALICE_cordinates.png}
+    	\caption{The figure show the cylindrical coordinate set used for describe the position of the object with respect the cartesian one \cite{Herrmann:2920632}.}
+    	\label{fig:ALICE_cordinates}
+    \end{figure}
     
    	
-	The ALICE sub-detectors are categorized into three main	groups: one at mid-rapidity $|\eta|$ <1, the central barrel, and one at forward rapidity -4 $< \eta < -2.5$, and the the muon spectrometer dedicated to muon identification.  However the muon spectrometer is included in the forward detectors.  The apparatus scheme can be resumed in the following manner.
+	The ALICE sub-detectors are categorized into three main	groups: one at mid-rapidity $|\eta|$ <1, the central barrel, and one at forward rapidity -4 $< \eta < -2.5$, and the the muon spectrometer dedicated to muon identification.  However the muon spectrometer is included in the forward detectors. The apparatus scheme can be resumed in the following manner.
 	\begin{itemize}
 		\item The central barrel detectors can measure all over the azimuthal angle and include in order from the interaction point and going outward:
 		\begin{enumerate}
-			\item The Inner Tracking System (ITS) is a silicon tracking system composed of six cylin-
-			drical layers. its main goal is to identify the	position of the primary vertex with a resolution better than 100 $\mu$m and provide tracking of charged particles.
+			\item The Inner Tracking System (ITS) is a silicon tracking system composed of six cylindrical layers. its main goal is to identify the	position of the primary vertex with a resolution better than 100 $\mu$m and provide tracking of charged particles.
 			of charged particles down to
 			\item the Time Projection Chamber (TPC) is used for charged particle identification.
 			\item the Transition Radiation Detector (TRD) is composed of different gas chamber and radiation for identify and track electrons
@@ -757,7 +832,14 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 \end{itemize}
 \cite{Padhan:2924203} \cite{Arata:2922803}
 
-	In the following section we will discuss some of the most important one.
+	In the following section we will discuss some of the most important one. A graphical resume is visible in Fig \ref{fig:ALICE_instruments}
+		\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.7\textwidth]{pictures/ALICE_instruments.png}
+		\caption{The figure show the Layout of the ALICE detector in Run2 with their position and dimension \cite{Botta:2017bwj}}
+		\label{fig:ALICE_instruments}
+	\end{figure}
+	
 
 	\subsection{Inner Tracking System (ITS)}
 
@@ -843,8 +925,7 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	
 	\subsubsection{Zero Degree Calorimeter (ZDC)}
 	The Zero Degree Calorimeter (ZDC) consists of four calorimeters, two for protons (brass-quartz proton ZP) and two for neutrons (tungsten-quartz neutron ZN), on each side. located at $\sim$ 112.5 cm away from the Interaction Point,	symmetrically in both directions. ZDC measures the energy of spectator nucleons, assisting in centrality estimation and luminosity detection in heavy-ion collisions. By determining
-	collision geometry and overlap regions of colliding nuclei, and estimating the number of
-	participant nucleons.\cite{Padhan:2924203} \cite{amsdottorato9036}	
+	collision geometry and overlap regions of colliding nuclei, and estimating the number of participant nucleons.\cite{Padhan:2924203} \cite{amsdottorato9036}	
 	
 	\subsubsection{Muon Spectrometer}
 	The muon spectrometer is located 14 m in the negative beam direction, with a pseudorapidity range of 4 < $\eta$ < 2.5 and the resonances can be detected down to zero transverse momentum. It help to studies the complete spectrum of heavy quarkonia via their decay in the $\mu^+ \mu^-$ channel. It is made of carbon and concrete in order to limit the multiple scattering and the energy loss of the muons. The inner beam shield protects the chambers from background originating from particles at small angles. It is made of tungsten, lead and stainless steel to minimize the background arising from primary particles emitted in the collision and from their showers produced in the beam pipe and in the shield itself. The 4 planes of RPCs (Resistive Plate Chambers) arranged in 2 stations and positioned behind a passive muon filter provide the transverse momentum of each $\mu$. The spatial resolution should be better than 1 cm. Special front-end electronics have been designed to obtain the time resolution of 2 ns necessary for the identification of the bunch crossing. The dipole magnet is positioned at about 7 m from the interaction providing a magnetic field nominally of B = 0.7 T but can be changed by the requirements on the mass resolution.
@@ -852,9 +933,34 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	
 	\subsection{Track and vertex reconstruction} 
 	
-	The purpose of tracking algorithms \cite{Cheng:2908766} is to use the the cluster information transforming them into track information, obtaining the best possible approximation of the real trajectory of the particles crossing the detector. process that uses the Kalman filter algorithm to accurately determine the trajectory of particles as they pass through the detector layers. The tracking procedure starts with the clusterization step. Starting from the collected raw data, from each detector, the data cluster are produced. The cluster correspond to groups of hits produced by a single particle interaction with a detector element and contain his positions, signal amplitude, signal times, and their associated errors. The clusterization is performed separately for each detector. The reconstruction of the primary vertex is an essential step, as it is referred to the interaction point. Usually, each collision event only involves one primary interaction point, and numerous tracks traverse the detectors. In this ambitious the information provided by the SPD detector plays a crucial role in establishing a preliminary interaction vertex. This is the space point that minimises the distance among the tracklets, which are the track segments reconstructed by associating pairs of clusters in the two SPD layers. So is possible to localize the vertex searching  the point where most of the tracklets converge. In high multiplicity events the algorithm is repeated several times, discarding at each iteration those clusters which contributed to already found vertices. The tracking algorithm can be separated into two steps: the track finding and the track fitting. For the track finding, two methods are used. The first one is called Linear Track Finder (LTF) and it looks for cluster position aligned along a straight line. However the magnetic field curve the trajectory of charged particle but the deviation can be neglected at least at hight $p_\perp$ hence supporting the choice of a LTF for such tracks. For help in these work a radial tolerance Rcut is given, a graphical resume is visible in Fig \ref{fig:linear_track} . If a track had been recognized in the previous step the correspondent cluster are removed from the list of available clusters considered in the further steps. The next step consist on a Cellular Automaton (CA) approach particularly suited for low-momentum tracks, sensitive to multiple scatterings. It is based on a propagation and joining of “segments”. A segment is a portion of line connecting two clusters from two consecutive disks: So starting from a given segment, considered as the first, the algorithm search the further one towards imposing track continuity conditions. Tracks are only accepted if they have at least 20 associated clusters (out of a possible 159) and have missed fewer than 50\% of the expected clusters. Only after that the track candidates are found a track fitting algorithm is applied in order to extract the kinematic parameters of each track. It is able to determine the spatial and momentum coordinates considering material effects, updates the parameters based on measurement. The process is repeated for each track cluster \cite{Herrmann:2920632}.
+	The purpose of tracking algorithms \cite{Cheng:2908766} is to use the the cluster information transforming them into track information, obtaining the best possible approximation of the real trajectory of the particles crossing the detector. process that uses the Kalman filter algorithm to accurately determine the trajectory of particles as they pass through the detector layers. The tracking procedure starts with the clusterization step. Starting from the collected raw data, from each detector, the data cluster are produced. The cluster correspond to groups of hits produced by a single particle interaction with a detector element and contain his positions, signal amplitude, signal times, and their associated errors. The clusterization is performed separately for each detector. The reconstruction of the primary vertex is an essential step, as it is referred to the interaction point. Usually, each collision event only involves one primary interaction point, and numerous tracks traverse the detectors. In this ambitious the information provided by the SPD detector plays a crucial role in establishing a preliminary interaction vertex. This is the space point that minimises the distance among the tracklets, which are the track segments reconstructed by associating pairs of clusters in the two SPD layers. So is possible to localize the vertex searching  the point where most of the tracklets converge. In high multiplicity events the algorithm is repeated several times, discarding at each iteration those clusters which contributed to already found vertices. The tracking algorithm can be separated into two steps: the track finding and the track fitting. For the track finding, two methods are used. The first one is called Linear Track Finder (LTF) and it looks for cluster position aligned along a straight line. However the magnetic field curve the trajectory of charged particle but the deviation can be neglected at least at hight $p_\perp$ hence supporting the choice of a LTF for such tracks. For help in these work a radial tolerance Rcut is given, a graphical resume is visible in Fig \ref{fig:linear_track} . If a track had been recognized in the previous step the correspondent cluster are removed from the list of available clusters considered in the further steps. The next step consist on a Cellular Automaton (CA) approach particularly suited for low-momentum tracks, sensitive to multiple scatterings. It is based on a propagation and joining of “segments”. A segment is a portion of line connecting two clusters from two consecutive disks: So starting from a given segment, considered as the first, the algorithm search the further one towards imposing track continuity conditions. The strategist is visible in Fig \ref{fig:CA_track}. Tracks are only accepted if they have at least 20 associated clusters (out of a possible 159) and have missed fewer than 50\% of the expected clusters. Only after that the track candidates are found a track fitting algorithm is applied in order to extract the kinematic parameters of each track. It is able to determine the spatial and momentum coordinates considering material effects, updates the parameters based on measurement. The process is repeated for each track cluster \cite{Herrmann:2920632}.
+		\begin{figure}
+		\centering
+		\begin{minipage}{0.45\textwidth}
+		\includegraphics[width=0.7\textwidth]{pictures/linear_track.png}
+		\caption{The figure show Linear Track Finder schematic using the RCut parameter \cite{CERN-LHCC-2015-001}}
+		\label{fig:linear_track}
+			
+		\end{minipage}
+		\begin{minipage}{0.5\textwidth}
+			\includegraphics[width=0.7\textwidth]{pictures/CA_track.png}
+		\caption{The figure show how the Cellular Automaton method works \cite{CERN-LHCC-2015-001}}
+		\label{fig:CA_track}
+		\end{minipage}%
+	\end{figure}
 	
-	The efficiency of the track reconstruction process is influenced by the transverse momentum of the tracks. Efficiency drops below $p_\perp$ < 0.5 GeV/c, as visible in Fig \ref{fig:track finding efficiency} due to energy loss in the detector material, while higher $p_\perp$ tracks, which are typically straighter, may encounter reduced efficiency in areas where clusters are lost due to dead zones between	readout sectors. \cite{Padhan:2924203}.
+	
+	
+	The efficiency of the track reconstruction process is influenced by the transverse momentum of the tracks. Efficiency drops below $p_\perp$ < 0.5 GeV/c, as visible in Fig \ref{fig:track_finding_efficiency} due to energy loss in the detector material, while higher $p_\perp$ tracks, which are typically straighter, may encounter reduced efficiency in areas where clusters are lost due to dead zones between readout sectors. \cite{Padhan:2924203}.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.7\textwidth]{pictures/track_finding_efficiency.png}
+		\caption{The figure show track finding efficiency for primary particles in different types of collision \cite{ALICE:2014sbx}}
+		\label{fig:track_finding_efficiency}
+	\end{figure}
+	
+	
 	
 	More specifically for primary vertex finding the most useful instrument is the SPD. It is ideal for fast vertex measurements  as it provides a quick response, also because is closest to the interaction point, and has excellent transverse plane resolution due to its high granularity. The resolution of the SPD Vertex is of 10 $\mu$m in Pb–Pb collisions and 150 $\mu$m in pp collisions at $\sqrt{s_{NN}}$ = 7 TeV. In ALICE, three primary algorithms are used for vertex reconstruction
 	\begin{itemize}
@@ -872,30 +978,15 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	 	pair and the line connecting the primary and secondary vertices must be greater than 0.9
 	 \end{enumerate} 
 	 For $V^0$ candidates with a momentum below 1.5 GeV/c the cut are relaxed. The reconstruction of more complex secondary vertices is performed later, at the analysis stage. For the study of heavy-flavor decays close to the interaction point, the secondary vertex is searched starting from point that satisfied other different topological condition. \cite{ALICE:2014sbx}
+	 \begin{figure}[h]
+	 	\centering
+	 	\includegraphics[width=0.7\textwidth]{pictures/secondary_vertex.png}
+	 	\caption{The figure show the secondary vertices reconstruction procedure for different particles. Using long lives particles are detected and neutral vertices are reconstructed by back-propagating charged particles. The total reconstructed momentum and its orientation constitute useful quantities for background rejection. \cite{ALICE:2014sbx}}
+	 	\label{fig:secondary_vertex}
+	 \end{figure}
 	 
-	 	\subsection{centrality} %ARATA The Glauber model and the impact parameter
-	 An important parameter to characterize heavy-ion collisions is the centrality, which is an
-	 observable related to the transverse distance b between the centers of the colliding nuclei. Is expressed in therm of the fraction of the total hadronic cross section $\sigma_{AA}$. The centrality percentile of collisions with impact parameter ranging in the interval[$b_1,b_2$] is given by
-	 \begin{equation}
-	 	c(b_1,b_2)=\frac{\int_{b_1}^{b_2} db \frac{d\sigma}{db}}{\int_{0}^{\infty} db \frac{d\sigma}{db}} = \frac{\int_{b_1}^{b_2} db \frac{d\sigma}{db}}{\sigma_{AA}}
-	 	\label{eq:centrrality1}
-	 \end{equation}
-	 The collisions with the smallest b are
-	 called central collisions, and the collisions with large b are called peripheral collisions. The centrality has important consequence in the particle abundances expected, in particular in the number of the charged one. This observable is frequently used and is called multiplicity, defined as the total number of charged particles produced in a collision. For these reason the centrality can be obtain experimentally starting from the measure of the multiplicity or by counting the number of spectator nucleons, the nucleons that non interact during the collision. so if $N_{ev}$ is the number of collision and $N_{ch}$ the number of charge particle the centrality can be expressed as
-	 \begin{equation}
-	 	c(b_1,b_2) \approx \frac{1}{N_{EV}} \int_{N_{ch \ 1}}^{N_{ch \ 2}} dN_{ch} \frac{dN_{ev}}{dN_{ch}}
-	 	\label{eq:centrrality2}
-	 \end{equation}
-	 In ALICE the centrality determination is usually determined by using the sum of the signals amplitudes in the V0 detector (V0A and V0C) or in the ZDC. In general the probability for a collision to happen at a given impact parameter b can be computed as
-	 \begin{equation}
-	 	P(b)= \sigma_{NN} T_{AA}(b)
-	 	\label{eq:prob_collision}
-	 \end{equation}
-	 Where $\sigma_{NN}$ is the cross section and $T_{AA}$ is the nuclear overlapping function, it can be computed from the single nucleon distribution of the interacting nuclei. It' possible to imagine this parameter as probability to have a nucleon at the same position in the transverse plane in both colliding nuclei. The centrality of each collision has to be determined experimentally in order identify	peculiar behaviour that can arise for very specific centrality classes. \cite{amsdottorato9036}
-	
-    \subsection{Particle identification}
-	
-
+	 
+	 
 	\appendix
 	\renewcommand{\thesection}{\Alph{section}}
 	\section{Appendix A} \label{app:A}
