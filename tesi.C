@@ -11,33 +11,27 @@
 #include <sstream>
 
 void primo_grafico() {
-  const int n{22};
-  const int div{18};
+  const int n{16};
+  const int div{12};
   TGraphErrors *graph[n];
 
   const TString fileName[n] = {
-      "generazioni/chemical_charm_30/156_mev_5_fm/p.dN.dy.dat",
-      "generazioni/chemical_charm_30/156_mev_5_fm/anti-p.dN.dy.dat",
-      "generazioni/chemical_charm_30/156_mev_5_fm/n.dN.dy.dat",
-      "generazioni/chemical_charm_30/156_mev_5_fm/anti-n.dN.dy.dat",
-      "generazioni/chemical_charm_30/156_mev_5_fm/d.dN.dy.dat",
-      "generazioni/chemical_charm_30/156_mev_5_fm/anti-d.dN.dy.dat",
-      "generazioni/chemical_charm_30/156_mev_5_fm/H3.dN.dy.dat",
-      "generazioni/chemical_charm_30/156_mev_5_fm/anti-H3.dN.dy.dat",
-      "generazioni/chemical_charm_30/156_mev_5_fm/He3.dN.dy.dat",
-      "generazioni/chemical_charm_30/156_mev_5_fm/anti-He3.dN.dy.dat",
-      "generazioni/chemical_charm_30/156_mev_5_fm/He4.dN.dy.dat",
-      "generazioni/chemical_charm_30/156_mev_5_fm/anti-He4.dN.dy.dat",
-      "generazioni/chemical_charm_30/156_mev_5_fm/Lambda.dN.dy.dat",
-      "generazioni/chemical_charm_30/156_mev_5_fm/anti-Lambda.dN.dy.dat",
-      "generazioni/chemical_charm_30/156_mev_5_fm/LambdaNeutron.dN.dy.dat",
-      "generazioni/chemical_charm_30/156_mev_5_fm/anti-LambdaNeutron.dN.dy.dat",
-      "generazioni/chemical_charm_30/156_mev_5_fm/LambdaProton.dN.dy.dat",
-      "generazioni/chemical_charm_30/156_mev_5_fm/anti-LambdaProton.dN.dy.dat",
-      "generazioni/chemical_charm_30/156_mev_5_fm/Lambda-c.dN.dy.dat",
-      "generazioni/chemical_charm_30/156_mev_5_fm/anti-Lambda-c.dN.dy.dat",
-      "generazioni/chemical_charm_30/156_mev_5_fm/c-deuteron.dN.dy.dat",
-      "generazioni/chemical_charm_30/156_mev_5_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/156.5_mev_8_fm/p.dN.dy.dat",
+      "generazioni/fugacity_30/156.5_mev_8_fm/anti-p.dN.dy.dat",
+      "generazioni/fugacity_30/156.5_mev_8_fm/n.dN.dy.dat",
+      "generazioni/fugacity_30/156.5_mev_8_fm/anti-n.dN.dy.dat",
+      "generazioni/fugacity_30/156.5_mev_8_fm/d.dN.dy.dat",
+      "generazioni/fugacity_30/156.5_mev_8_fm/anti-d.dN.dy.dat",
+      "generazioni/fugacity_30/156.5_mev_8_fm/H3.dN.dy.dat",
+      "generazioni/fugacity_30/156.5_mev_8_fm/anti-H3.dN.dy.dat",
+      "generazioni/fugacity_30/156.5_mev_8_fm/He3.dN.dy.dat",
+      "generazioni/fugacity_30/156.5_mev_8_fm/anti-He3.dN.dy.dat",
+      "generazioni/fugacity_30/156.5_mev_8_fm/He4.dN.dy.dat",
+      "generazioni/fugacity_30/156.5_mev_8_fm/anti-He4.dN.dy.dat",
+      "generazioni/fugacity_30/156.5_mev_8_fm/Lambda-c.dN.dy.dat",
+      "generazioni/fugacity_30/156.5_mev_8_fm/anti-Lambda-c.dN.dy.dat",
+      "generazioni/fugacity_30/156.5_mev_8_fm/c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/156.5_mev_8_fm/anti-c-deuteron.dN.dy.dat"
   };
   for (int i{0}; i < n; i++) {
     std::ifstream file(fileName[i].Data());
@@ -50,12 +44,9 @@ void primo_grafico() {
 
   TH1F *histo[n];
   TH1F *histoSum[n / 2];
-  double mass[n / 2] = {0.938272, 0.939565, 1.87561, 2.80892, 2.80839, 3.72738,
-                        1.11568,  2.28646,  2.05,    2.28646, 3.225};
-  // massa prot neut deuterio trizio he3 he4 lamda lambda-neutron lambda-proton
-  // lambda c c-deuteron
-  double massNorm[div / 2] = {0.938272, 0.939565, 1.87561, 2.80892, 2.80839,
-                              3.72738,  1.11568,  2.28646, 2.05};
+  double mass[n / 2] = {0.938272, 0.939565, 1.87561, 2.80892, 2.80839, 3.72738, 2.28646, 3.225};
+  // massa prot neut deuterio trizio he3 he4 lambda c c-deuteron
+  double massNorm[div / 2] = {0.938272, 0.939565, 1.87561, 2.80892, 2.80839, 3.72738};
 
   double massCharm[(n - div) / 2] = {2.28646,
                                      3.225}; // massa lamda c c-deuteron
@@ -210,9 +201,6 @@ void primo_grafico() {
                                "H3",
                                "He3",
                                "He4",
-                               "Lambda",
-                               "Lambda-Neutron",
-                               "Lambda-Proton",
                                "Lambda(c)",
                                "c-deuteron"};
 
@@ -253,16 +241,6 @@ void primo_grafico() {
   leg->Draw();
 std::cout<< "fin qui tutto bene" << '\n';
   // Configurazione del grafico finale
-  finalGraph->GetYaxis()->SetTitleOffset(1.2);
-  finalGraph->GetXaxis()->SetTitleSize(0.04);
-  finalGraph->GetYaxis()->SetTitleSize(0.04);
-  finalGraph->GetXaxis()->SetTitle("Mass (GeV)");
-  finalGraph->GetYaxis()->SetTitle("dN/dy");
-  finalGraph->GetXaxis()->CenterTitle(true);
-  finalGraph->GetYaxis()->CenterTitle(true);
-  finalGraph->GetYaxis()->SetLimits(1e-7, 10);
-  finalGraph->GetYaxis()->SetRangeUser(1e-7, 10);
-
   gTest->SetMarkerStyle(21);
   gTest->SetMarkerSize(1.0);
   gTest->SetTitle("Particles; Mass (GeV); dN/dy");
@@ -279,39 +257,57 @@ std::cout<< "fin qui tutto bene" << '\n';
   finalGraph->GetYaxis()->CenterTitle(true);
   finalGraph->GetYaxis()->SetLimits(1e-7, 10);
   finalGraph->GetYaxis()->SetRangeUser(1e-7, 10);
+  finalGraph->GetXaxis()->SetLimits(0, 4);
+  finalGraph->GetXaxis()->SetRangeUser(0, 4);
+  leg->Draw();
 
   // Aggiornamento della canvas per visualizzare i risultati
   canvasFinal->Update();
 }
 
 void cambiamenti() {
-  int const n{24};
+  int const n{38};
   // se aggiungi un file le cose da cambiare sono qui
   const TString fileName[n] = {
-      "generazioni/156_mev_8_fm/c-deuteron.dN.dy.dat",
-      "generazioni/156_mev_8_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni/156_mev_6,5_fm/c-deuteron.dN.dy.dat",
-      "generazioni/156_mev_6,5_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni/156_mev_6_fm/c-deuteron.dN.dy.dat",
-      "generazioni/156_mev_6_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni/156_mev_5,5_fm/c-deuteron.dN.dy.dat",
-      "generazioni/156_mev_5,5_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni/156_mev_5_fm/c-deuteron.dN.dy.dat",
-      "generazioni/156_mev_5_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni/156_mev_4,5_fm/c-deuteron.dN.dy.dat",
-      "generazioni/156_mev_4,5_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni/156_mev_4_fm/c-deuteron.dN.dy.dat",
-      "generazioni/156_mev_4_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni/156_mev_3,5_fm/c-deuteron.dN.dy.dat",
-      "generazioni/156_mev_3,5_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni/160_mev_5_fm/c-deuteron.dN.dy.dat",
-      "generazioni/160_mev_5_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni/158_mev_5_fm/c-deuteron.dN.dy.dat",
-      "generazioni/158_mev_5_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni/154_mev_5_fm/c-deuteron.dN.dy.dat",
-      "generazioni/154_mev_5_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni/152_mev_5_fm/c-deuteron.dN.dy.dat",
-      "generazioni/152_mev_5_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni//fugacity_30/156_mev_4_fm/c-deuteron.dN.dy.dat",
+      "generazioni//fugacity_30/156_mev_4_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni//fugacity_30/156_mev_5_fm/c-deuteron.dN.dy.dat",
+      "generazioni//fugacity_30/156_mev_5_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni//fugacity_30/156_mev_6_fm/c-deuteron.dN.dy.dat",
+      "generazioni//fugacity_30/156_mev_6_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni//fugacity_30/156_mev_7_fm/c-deuteron.dN.dy.dat",
+      "generazioni//fugacity_30/156_mev_7_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni//fugacity_30/156_mev_8_fm/c-deuteron.dN.dy.dat",
+      "generazioni//fugacity_30/156_mev_8_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni//fugacity_30/156_mev_9_fm/c-deuteron.dN.dy.dat",
+      "generazioni//fugacity_30/156_mev_9_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni//fugacity_30/156_mev_10_fm/c-deuteron.dN.dy.dat",
+      "generazioni//fugacity_30/156_mev_10_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni//fugacity_30/156_mev_11_fm/c-deuteron.dN.dy.dat",
+      "generazioni//fugacity_30/156_mev_11_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni//fugacity_30/156_mev_12_fm/c-deuteron.dN.dy.dat",
+      "generazioni//fugacity_30/156_mev_12_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni//fugacity_30/150_mev_8_fm/c-deuteron.dN.dy.dat",
+      "generazioni//fugacity_30/150_mev_8_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni//fugacity_30/151_mev_8_fm/c-deuteron.dN.dy.dat",
+      "generazioni//fugacity_30/151_mev_8_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni//fugacity_30/152_mev_8_fm/c-deuteron.dN.dy.dat",
+      "generazioni//fugacity_30/152_mev_8_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni//fugacity_30/153_mev_8_fm/c-deuteron.dN.dy.dat",
+      "generazioni//fugacity_30/153_mev_8_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni//fugacity_30/154_mev_8_fm/c-deuteron.dN.dy.dat",
+      "generazioni//fugacity_30/154_mev_8_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni//fugacity_30/155_mev_8_fm/c-deuteron.dN.dy.dat",
+      "generazioni//fugacity_30/155_mev_8_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni//fugacity_30/157_mev_8_fm/c-deuteron.dN.dy.dat",
+      "generazioni//fugacity_30/157_mev_8_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni//fugacity_30/158_mev_8_fm/c-deuteron.dN.dy.dat",
+      "generazioni//fugacity_30/158_mev_8_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni//fugacity_30/159_mev_8_fm/c-deuteron.dN.dy.dat",
+      "generazioni//fugacity_30/159_mev_8_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni//fugacity_30/160_mev_8_fm/c-deuteron.dN.dy.dat",
+      "generazioni//fugacity_30/160_mev_8_fm/anti-c-deuteron.dN.dy.dat",
+     
   };
 
   double count[n / 2];
@@ -328,44 +324,73 @@ void cambiamenti() {
                 << std::endl;
     }
 
-    std::string line;
-    int parzCount{0}; // Contatore per i valori non nulli nella seconda colonna
+  double integral[n / 2];
+  double error[n / 2];
+  double integralNorm[div / 2];
+  double errorNorm[div / 2];
+  TGraphErrors *graph[n];
+  for (int i{0}; i < n; i = i + 2) {
+    graph[i] = new TGraphErrors(fileName[i], "%lg %lg %lg");
+    graph[i + 1] = new TGraphErrors(fileName[i + 1], "%lg %lg %lg");
+    for (int j{0}; j < graph[i]->GetN(); j++) {
+      double x = graph[i]->GetPointX(j);
+      double y1 = graph[i]->GetPointY(j);
+      double y2 = graph[i + 1]->GetPointY(j);
+      double err1 = graph[i]->GetErrorY(j);
+      double err2 = graph[i + 1]->GetErrorY(j);
+      graph[i]->SetPoint(j, x, y1 + y2);
+      graph[i]->SetPointError(j, 0., TMath::Sqrt(err1 * err1 + err2 * err2));
+    }
+    double partialArea{0};
+    double integralError{0};
+    for (int k = 0; k < graph[i]->GetN() - 1; ++k) {
+      // Estrai i punti x e y
+      double x1, y1, x2, y2;
+      graph[i]->GetPoint(k, x1, y1);
+      if (std::abs(x1) > 0.5)
+        continue;
+      graph[i]->GetPoint(k + 1, x2, y2);
 
-    while (std::getline(inputFile1, line)) {
-      std::istringstream ss(line);
-      double col1, col2, col3;
-      if (ss >> col1 >> col2 >> col3 && col2 != 0) {
-        parzCount++;
-      }
+      // Applica la formula del trapezio per l'area tra i punti (x1, y1) e (x2,
+      // y2)
+      double area = 0.5 * (y1 + y2) * (x2 - x1);
+      partialArea += area;
+
+      // Estrai gli errori sui punti y
+      double y1Error = graph[i]->GetErrorY(k);
+      double y2Error = graph[i]->GetErrorY(k + 1);
+
+      // Propagazione degli errori (considerando la somma in quadratura)
+      double areaError =
+          0.5 * std::sqrt(y1Error * y1Error + y2Error * y2Error) * (x2 - x1);
+      integralError +=
+          areaError * areaError; // Somma in quadratura degli errori
     }
-    while (std::getline(inputFile2, line)) {
-      std::istringstream ss(line);
-      double col1, col2, col3;
-      if (ss >> col1 >> col2 >> col3 && col2 != 0) {
-        parzCount++;
-      }
-    }
-    count[i / 2] = parzCount / 2e7;
-    countError[i / 2] = std::sqrt(count[i / 2]) / 2e7;
-    std::cout << count[i / 2] << "+/-" << countError[i / 2] << "\n";
+    error[i / 2] = std::sqrt(integralError); // Errore finale
+    integral[i / 2] = partialArea;
   }
-
-  double volume[n / 2] = {8, 6.5, 6, 5.5, 5, 4.5, 4, 3.5, 5, 5, 5};
-  double temperature[n / 2] = {156, 156, 156, 156, 156, 156,
-                               156, 156, 160, 158, 154, 152};
+  }
+    for(int j=0; i < n; i=i+2){
+      count[i]=integral[i];
+      countError[i]=error[i];
+    }
+  double volume[n/2] = {4,5,6,7,8,9,10,11,12, 8,8,8,8,8,8,8,8,8,8};
+  double temperature[n/2] = {156,156,156,156,156,156,156,156,156,
+                             150, 151, 152, 153, 154, 155, 157, 158, 159, 160};
 
   TGraph2D *d2Graph = new TGraph2D(n / 2, volume, temperature, count);
-  double radius[8] = {8, 6.5, 6, 5.5, 5, 4.5, 4, 3.5};
-  double countRadius[8] = {count[0], count[1], count[2], count[3],
-                           count[4], count[5], count[6], count[7]};
-  double errorVol[8] = {countError[0], countError[1], countError[2],
+  double radius[9] = {4,5,6,7,8,9,10,11,12};
+  double countRadius[9] = {count[0], count[1], count[2], count[3],
+                           count[4], count[5], count[6], count[7], count[8]};
+  double errorVol[9] = {countError[0], countError[1], countError[2],
                         countError[3], countError[4], countError[5],
-                        countError[6]};
+                        countError[6],countError[7],countError[8]};
 
-  double temp[5] = {160, 158, 156, 154, 152};
-  double countTemp[5] = {count[8], count[9], count[4], count[10], count[11]};
-  double errorTemp[5] = {countError[8], countError[9], countError[4],
-                         countError[10], countError[11]};
+  double temp[11] = {156, 150, 151, 152, 153, 154, 155, 157, 158, 159, 160};
+  double countTemp[11] = {count[0], count[10], count[11], count[12], count[13], count[14],count[15],count[16],count[17],count[18],count[19]};
+  double errorTemp[11] = {countError[0], countError[10], countError[11],
+                         countError[12], countError[13],countError[14], countError[15],
+                         countError[16], countError[17], countError[18], countError[19]};
 
   TGraphErrors *diffVolume = new TGraphErrors(8, radius, countRadius, errorVol);
   TGraphErrors *diffTemp = new TGraphErrors(5, temp, countTemp, errorTemp);
@@ -473,17 +498,17 @@ void cambiamenti() {
 
   c3->Update(); // Aggiorna il canvas
 }
-
+/*
 void densFreq() {
 
   TH1::AddDirectory(kFALSE);
   TFile *file =
       new TFile("rivelazioni/pythia/pythia8312/densFreq.root", "RECREATE");
   const TString fileName[4] = {
-      "generazioni/chemical_charm_30/156_mev_5_fm/c-deuteron.dN.dy.dat",
-      "generazioni/chemical_charm_30/156_mev_5_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni/chemical_charm_30/156_mev_5_fm/c-deuteron.dN.dp.dat",
-      "generazioni/chemical_charm_30/156_mev_5_fm/anti-c-deuteron.dN.dp.dat"};
+      "generazioni/fugacity_30/156_mev_5_fm/c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/156_mev_5_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/156_mev_5_fm/c-deuteron.dN.dp.dat",
+      "generazioni/fugacity_30/156_mev_5_fm/anti-c-deuteron.dN.dp.dat"};
 
   int count{0}; // Contatore per i valori non nulli nella seconda colonna
   int bin1{0};  // conto il numero di bin di entrambi i dati
@@ -577,3 +602,4 @@ void densFreq() {
 
   file->Close();
 }
+*/
