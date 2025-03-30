@@ -3,7 +3,7 @@
 \contentsline {chapter}{\numberline {2}Heavy-ion collision}{7}{}%
 \contentsline {subsection}{\numberline {2.0.1}Concepts of quantum chromodynamics (QCD)}{7}{}%
 \contentsline {subsection}{\numberline {2.0.2}The QCD phase diagram}{13}{}%
-\contentsline {subsection}{\numberline {2.0.3}The different stage of a heavy-ion collision}{15}{}%
+\contentsline {subsection}{\numberline {2.0.3}The different stage of a heavy-ion collision}{14}{}%
 \contentsline {subsection}{\numberline {2.0.4}Centrality}{18}{}%
 \contentsline {chapter}{\numberline {3}Thermal model}{21}{}%
 \contentsline {subsection}{\numberline {3.0.1}Hydrodynamical description}{21}{}%
@@ -15,21 +15,21 @@
 \contentsline {chapter}{\numberline {4}$Y_c$N bound state}{35}{}%
 \contentsline {subsection}{\numberline {4.0.1}One Boson exchange model}{35}{}%
 \contentsline {subsection}{\numberline {4.0.2}$\Lambda _c$ N interaction}{37}{}%
-\contentsline {subsection}{\numberline {4.0.3}Possible $\Lambda _c$ supernuclei}{41}{}%
+\contentsline {subsection}{\numberline {4.0.3}Possible $\Lambda _c$ super-nuclei}{41}{}%
 \contentsline {subsection}{\numberline {4.0.4}C-deuteron ($D_c$) simulation}{43}{}%
 \contentsline {chapter}{\numberline {5}ALICE}{45}{}%
-\contentsline {subsection}{\numberline {5.0.1}Inner Tracking System (ITS)}{47}{}%
+\contentsline {subsection}{\numberline {5.0.1}Inner Tracking System (ITS)}{48}{}%
 \contentsline {subsection}{\numberline {5.0.2}Time projection chamber (TPC)}{49}{}%
-\contentsline {subsection}{\numberline {5.0.3}Time Of Flight (TOF)}{50}{}%
+\contentsline {subsection}{\numberline {5.0.3}Time Of Flight (TOF)}{51}{}%
 \contentsline {subsubsection}{Transition Radiation Detector (TRD)}{52}{}%
 \contentsline {subsubsection}{Photon Spectrometer (PHOS)}{52}{}%
 \contentsline {subsubsection}{High-Momentum Particle Identification Detector (HMPID)}{52}{}%
 \contentsline {subsubsection}{Electromagnetic Calorimeter (EMCaL)}{52}{}%
-\contentsline {subsection}{\numberline {5.0.4}Forward Detectors}{53}{}%
-\contentsline {subsubsection}{VZERO detector (V0)}{53}{}%
+\contentsline {subsection}{\numberline {5.0.4}Forward Detectors}{52}{}%
+\contentsline {subsubsection}{VZERO detector (V0)}{52}{}%
 \contentsline {subsubsection}{T0 Detectors}{53}{}%
 \contentsline {subsubsection}{Zero Degree Calorimeter (ZDC)}{53}{}%
-\contentsline {subsubsection}{Muon Spectrometer}{54}{}%
+\contentsline {subsubsection}{Muon Spectrometer}{53}{}%
 \contentsline {subsection}{\numberline {5.0.5}Track and vertex reconstruction}{54}{}%
 \contentsline {chapter}{\numberline {6}Appendix}{59}{}%
 \contentsline {section}{\numberline {A}Appendix A}{59}{}%

@@ -17,14 +17,14 @@
 \usepackage[font=scriptsize]{caption}
 \usepackage[table,xcdraw]{xcolor}
 \usepackage[framemethod=tikz]{mdframed}
-\usepackage[
-backend=biber,
-style=alphabetic,
-]{biblatex}
 \captionsetup{font={color={gray}}}
+\usepackage[utf8]{inputenc}
+\usepackage{biblatex}  % Usa biblatex per la bibliografia
 \addbibresource{citations.bib}
+
 \newmdenv[innerlinewidth=0.5pt,roundcorner=4pt,linecolor=lightgray,innerleftmargin=6pt,
 innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
+
 
 \pagestyle{fancy}  % Imposta il formato delle intestazioni e dei piè di pagina
 
@@ -567,7 +567,7 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	\subsection{One Boson exchange model}
 	Before the publication of Hideki Yukawa's groundbreaking papers in 1935 \cite{yukawa}, physicists struggled to explain the results of James Chadwick's atomic model, which proposed that protons and neutrons were packed inside a small nucleus with a radius on the order of $10^{-14}-10^{-15}$ meters. At such small scales, the electromagnetic forces would be extremely intense, causing the protons to repel each other. In 1932, Werner Heisenberg proposed a "Platzwechsel" (migration) interaction between protons and neutrons within the nucleus, suggesting that neutrons were composite particles made of protons and electrons. According to this model, neutrons would emit electrons, creating an attractive force with protons, and then transform back into protons \cite{heisemerg}. However, this model violated the conservation of linear and angular momentum. To resolve this issue, Enrico Fermi proposed in 1934 that the emission and absorption of two light particles: the neutrino and electron. A few months later, Soviet physicists Igor Tamm and Dmitri Ivanenko demonstrated that the force associated with the emission of neutrinos and electrons was not strong enough to bind protons and neutrons together in the nucleus.
 	
-	Yukawa decides so to combine both the idea of short-range force interaction and the idea of an exchange particle in order to explain the neutron-proton interaction. For introducing the Yukawa's potential is possible to start from the Klein-Gordon equation that governs dynamics of free massive scalar, without spin, field
+	Yukawa decides so to combine both the idea of short-range force interaction and the idea of an exchange particle in order to explain the neutron-proton binding. For introduce the Yukawa's potential is possible to start from the Klein-Gordon equation that governs dynamics of free massive scalar, without spin, field
 	
 	\begin{equation}
 		\nabla^2 \phi(\vec{r},t) - \frac{1}{c^2} \frac{\partial^2 \phi(\vec{r},t)}{\partial^2 t} = \frac{m^2 c^2}{\hbar^2} \phi(\vec{r},t)
@@ -600,13 +600,13 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 		\label{fig:one_boson_exchange} 
 	\end{figure}
 	
-	Yukawa used his equation also to predict the mass of the mediating particle in nuceus as about 200 times the mass of the electron $\sim 140$ Mev. Physicists called this particle the "meson," as its mass was in the middle of the leptons and baryons ones. Yukawa's meson was found in 1947, and came to be known as the pion \cite{Semprini}.
+	Yukawa used his equation also to predict the mass of the mediating particle in nuceus as about 280 times the mass of the electron $\sim 140$ Mev. Physicists called this particle the "meson," as its mass was in the middle of the leptons and baryons ones. Yukawa's meson was found in 1947, and came to be known as the pion \cite{Semprini}.
 	This model of interaction based on the exchange of particle is generally called  "one-boson-exchange model" (OBE model) or the "one-particle-exchange model". This model has opened up a new possibility for a realistic understanding of nuclear forces; indeed, based on the Yukawa potential, the Sakata model \cite{sakata} was created with the aim of giving a systematic understanding not only of the nucleon-nucleon interaction but also of other various strong reactions. While the OBE model is extremely useful for understanding the basics of nuclear interactions, it has several important limitations that prevent it from being a complete theory of nuclear forces. \cite{onebosonexchangepotentialmodelapproach}. Furthermore, the theory has been extended since Sakata's proposal, and some ideas from the model have been incorporated into QCD. However, his introduction was important for understanding the next section.
 	
 	
 	\subsection{$\Lambda_c$ N interaction}
 	This section is a resume of the \cite{Charmed-nucleon} and \cite{baryon–nucleon-potential}.
-	As already seen, the construction of a model to describe non-perturbative QCD phenomena with analytical first-principles calculations is very limited. In addition, the lack of experimental information on $Y_c$ N, a bound state of a particle containing a quark charm, in particular $\Lambda_c$, and a nucleon (N), makes its description much more difficult. The situation can therefore be improved by using well-constrained models based as much as possible on symmetry principles and analogies with other similar processes. For this scope an approach was proposed in the early 1990s in an attempt to obtain a simultaneous description of the light baryon spectrum and the nucleon-nucleon interaction \cite{Valcarce_2005}. In this model, baryons are described as clusters of three interacting massive (constituent) quarks and is for these reason called Costituent Quark Model (CQM). In this way the microscopic interaction between quarks and gluons are neglected.
+	As already seen, the construction of a model to describe non-perturbative QCD phenomena with analytical first-principles calculations is very limited. In addition, the lack of experimental information on $Y_c$ N, a bound state of a particle containing a quark charm, in particular for our issue $\Lambda_c$, and a nucleon (N), makes its description much more difficult. The situation can therefore be improved by using well-constrained models based as much as possible on symmetry principles and analogies with other similar processes. For this scope an approach was proposed in the early 1990s in an attempt to obtain a simultaneous description of the light baryon spectrum and the nucleon-nucleon interaction \cite{Valcarce_2005}. In this model, baryons are described as clusters of three interacting massive (constituent) quarks and is for these reason called Costituent Quark Model (CQM). In this way the microscopic interaction between quarks and gluons are neglected.
 	
 	According to Goldstone's theorem, when a continuous symmetry is spontaneously broken, new massless scalar particles appear in the spectrum of possible excitations. These particles are called Goldstone bosons and can be thought as the excitations of the field in the broken symmetry directions in group space. This spinless boson can acquire a mass if the symmetry is not exact, like happen for the approximate chiral symmetry, but they typically remain relatively light if compared to other hadrons like protons and neutrons \cite{Smit_2023}. When the Goldstone bosons are created in the system they can be exchanged by other particle creating a potential. For the chiral symmetry the Goldstone bosons are pions ($\pi$) and their chiral partner ($\sigma$) and the complessive potential take the form:
 	\begin{equation}
@@ -625,7 +625,7 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	\end{align}
 	
 	
-	$\frac{g_{ch}^2}{4\pi}$ is the chiral coupling constant, $m_i$ are the masses of the constituent quarks, $\Lambda \sim \Lambda_{CSB}=4\pi f_\pi \sim 1$GeV a momentum scale where $f_\pi$ is the pion electroweak decay constant, $Y(x)= \frac{e^{-x}}{x}$ is the standard Yukawa function, $H(x)= (1 + \frac{3}{x} + \frac{3}{x^2}) Y(x)$, $S_{ij}=3(\vec{\sigma_i} \cdot \hat{r_{ij}}) (\vec{\sigma_j} \cdot \hat{r_{ij}}) \vec{\sigma_i} \cdot \vec{\sigma_j}$ is the quark tensor operator with $\sigma$ the Pauli matrices. For an explicit of the parameter and their expectation value see \cite{baryon–nucleon-potential}. The meson exchange potential contains four kinds of terms: spin-independent, spin-spin, spin-
+	$\frac{g_{ch}^2}{4\pi}$ is the chiral coupling constant, $m_i$ are the masses of the constituent quarks, $\Lambda \sim \Lambda_{CSB}=4\pi f_\pi \sim 1$GeV a momentum scale where $f_\pi$ is the pion electroweak decay constant, $Y(x)= \frac{e^{-x}}{x}$ is the standard Yukawa function, $H(x)= (1 + \frac{3}{x} + \frac{3}{x^2}) Y(x)$, $S_{ij}=3(\vec{\sigma_i} \cdot \hat{r_{ij}}) (\vec{\sigma_j} \cdot \hat{r_{ij}}) \vec{\sigma_i} \cdot \vec{\sigma_j}$ is the quark tensor operator with $\sigma$ the Pauli matrices. For an explicit expression of the parameter and their expectation value see \cite{baryon–nucleon-potential}. The meson exchange potential contains four kinds of terms: spin-independent, spin-spin, spin-
 	orbit, and tensor. The spin-independent term is the one that has the greatest influence on the depth and shape of the potential well at not too small distances and for these reason it will be studied in bigger detail in the following section. The spin operator also includes the Pauli repulsion in its effect, producing an increasing repulsion as the distance between the hadrons decreases, which became essential for the fermion description. It's possible to see that this term will become significant in determining which configuration between nucleons is most plausible to be observed. The spin-orbit and tensor contributions can instead be thought as effects analogous to magnetism, due to the presence of relative motion in the colour charges (colour-magnetism effect). The latter will then contribute in the case where the total angular momentum of the bound state is not zero. 
 	Perturbative QCD effects are taken into account through the one-gluon-exchange (OGE) potential that take the form:
 	
@@ -666,7 +666,7 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	\end{equation}
 	
 	Where C(S,I) is a spin-isospin coefficient and b, $b_c$ are the parameters for the wave function of the light and charmed quarks, respectively, assumed to be different for the
-	sake of generality. The closer the value of C(S, I) to 1/3 the grater is  the suppression at short distances of the wave function, generating Pauli repulsion. So there might exist Pauli suppressed channels. The effect of Pauli repulsion are visible in the phase shift.
+	sake of generality. The closer the value of C(S, I) to 1/3 the grater is  the suppression at short distances of the wave function, generating Pauli repulsion, effect visible in the phase shift. So there might exist Pauli suppressed channels. 
 	
 	\begin{figure}[ht]
 		\centering
@@ -677,7 +677,7 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	
 	
 	A numerical simulation of the potential is described in \cite{MIYAMOTO2018113}, performed with lattice QCD with lattice spacing a =0.0907(13)fm and physical lattice size La=2.902(42)fm. The figure \ref{fig:radial_potential_1s} shows the $\Lambda_c$N central potential in the $^{1}S_0$ channel with different masses considered for the pion. For ensemble 1 $m_\pi \sim$ 700 Mev, $m_\pi \sim$ 570 Mev for ensemble 2 and 410 Mev for ensemble 3. They found a repulsive interaction at short distances (r $<$ 0.5 fm) and an attractive one for intermediate distances (0.5 $<$ r $<$ 1.5 fm). The same calculation has also been performed with a $\Lambda_c$N system with $J^P=1^+$ obtaining the result visible in the figure \ref{fig:radial_potential_3s}, 
-	The two result are qualitatively and quantitatively similar except at short distance (r $<$ 0.5 fm). As can be seen there is a tendency that the attraction obtained by the latest lattice QCD simulations for both $\Lambda_c$ N S waves becomes stronger as the pion mass decreases, moving towards the predictions of the CQM. However the $^{3}S_1$ potential is more attractive than $^{1}S_0$. This is due to the short-range dynamics consequence of gluon and quark exchange. If no meson exchanges were considered, the S wave phase shifts of the $\Lambda_C$N system are very similar to the corresponding NN scattering. In both partial waves one obtains typical hard-core phase shifts due to the short-range gluon and quark-exchange dynamics. However, the hard-core radius in the spin-singlet state is larger than in the spin-triplet one leading to a more attractive interaction in the spin-triplet partial wave due to a lower short-range repulsion. In fact, the hard cores caused by the color magnetic part of the OGE potential have been calculated obtaining 0.35 fm for the spin-triplet state and 0.44 fm	for the spin-singlet one.
+	The two result are qualitatively and quantitatively similar except at short distance (r $<$ 0.5 fm). As can be seen for both $\Lambda_c$ N S waves the intensity of the attraction becomes stronger as the pion mass decreases, moving towards the predictions of the CQM. However the $^{3}S_1$ potential is more attractive than $^{1}S_0$. This is due to the short-range dynamics consequence of gluon and quark exchange. In fact, if no meson exchanges were considered, the S wave phase shifts of the $\Lambda_C$N system are very similar to the corresponding NN scattering. Instead considering the exchange both partial waves are subjected by hard-core phase shifts due to the short-range gluon and quark-exchange dynamics. However, the hard-core radius in the spin-singlet state is larger than in the spin-triplet one leading to a more attractive interaction in the spin-triplet partial wave due to a lower short-range repulsion. In fact, the hard cores caused by the color magnetic part of the OGE potential have been calculated obtaining 0.35 fm for the spin-triplet state and 0.44 fm for the spin-singlet one.
 	
 	\begin{figure}
 		\centering
@@ -696,16 +696,16 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 		\end{minipage}%
 	\end{figure}
 	
-	However the potential $\Lambda_c$N is less actractive with respect to other Hyper-nucleus like $\Lambda$N, this fact could be explained from the following consideration. 
+	In conclusion is possible to note that the potential of $\Lambda_c$N system is less attractive with respect to other hyper-nucleus like $\Lambda$N, this fact could be explained from the following consideration. 
 	\begin{itemize}
 		\item The long-range contribution is expected to be caused by the K meson exchange for $\Lambda$N interaction. In the system, however, the K meson (strange quark) exchange is replaced by the D meson (charm quark) exchange, and this contribution is highly suppressed due to the much heavier D meson mass than the K meson mass. 
 		\item The one-pion exchange in the $\Lambda N - \Sigma N$ transition is considered to give a contribution to the effective $\Lambda$N interaction. Instead this contribution is expected to be suppressed due to the large mass difference between $\Lambda_c$N and $\Sigma_c$N 
 		
 	\end{itemize}  
 	
-	\subsection{Possible $\Lambda_c$ supernuclei}
+	\subsection{Possible $\Lambda_c$ super-nuclei}
 	
-	One of the most interesting applications of the charmed baryon-nucleon interaction is the study of the possible existence of charmed hypernuclei. A description of the potential had been taken from \cite{MIYAMOTO2018113}. Since the $\Lambda_c$ interaction is dominated by the spin-independent central force, as we discussed in the previous section, the spectrum of hypernuclei, if they exist, would probably can be approximated by the following single-folding potential defined by:
+	One of the most interesting applications of the charmed baryon-nucleon interaction is the study of the possible existence of super-nuclei. A description of the potential had been taken from \cite{MIYAMOTO2018113}. Since the $\Lambda_c$ interaction is dominated by the spin-independent central force, as we discussed in the previous section, the spectrum of super-nuclei, if they exist, would probably can be approximated by the following single-folding potential defined by:
 	\begin{equation}
 		V_f(\vec{r}) = \int d^3r' \rho_A (\vec{r'}) V_{\Lambda_cN} (\vec{r}- \vec{r'}) 
 	\end{equation}
@@ -714,18 +714,18 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 		\rho_A(\vec{r})=\rho_0 \left[1+ e^{\frac{r-c}{a}}\right]
 	\end{equation}
 	Where the parameters employed $\rho_0$, c, a are the same used for described spherical nuclei such as $^{12}C$, $^{28}Si$, $^{40}Ca$, $^{58}Ni$ and $^{208}Pb$.
-	With the following potential they calculate the binding energy for $\Lambda_c$ super-nuclei by the Gaussian expansion method for the S-wave potential. The result is shown in figure \ref{fig:binding_energy}. As expected the binding energy increases with increasing atomic number. Furthermore varying the mass of the quark up and down in the simulation is observed that when the u, d quark masses decrease toward physical values, and so the potential approach the physical one, the binding energy increases. These results suggest that hypernuclei may exist, if their binding energy is larger than the Coulomb repulsion energy. For calculate the expectation value for the Coulomb potential energy they used a potential defined by.
+	With the following potential they calculate the binding energy for $\Lambda_c$ super-nuclei by the Gaussian expansion method for the S-wave potential. The result is shown in figure \ref{fig:binding_energy}. As expected the binding energy increases with increasing atomic number. Furthermore varying the mass of the quark up and down in the simulation is observed that when their masses decrease toward physical values, and so the potential approach the physical one, the binding energy increases. These results suggest super-nuclei may exist, if their binding energy is larger than the Coulomb repulsion energy. For calculate the expectation value for the Coulomb potential energy they used a potential defined by.
 	\begin{equation}
 		V_C(\vec{r})= \int d^3 r' \rho_{ch}\vec{(r')} V_{Coulomb}(\vec{r}-\vec{r'})
 	\end{equation}
 	Where $V_{Coulomb}$ is an ordinary Coulomb potential and $\rho_{ch}$ is charge density distribution obtained from elastic electron scattering for the previous nucleus. 
-	It's interesting to confront energy expectation taking into account also the Culomb repulsion, the result is reported in figure \ref{fig:binding_culomb}. It's possible to see that for heavy nuclei the repulsion is too stench but for A = 12-58 the expectation values of Coulomb force are not much stronger than the binding energy of $\Lambda_c$ hypernuclei. 
+	It's interesting to confront energy expectation taking into account also the Coulomb repulsion, the result is reported in figure \ref{fig:binding_culomb}. It's possible to see that for heavy nuclei the repulsion is too stench but for A = 12-58 the expectation values of Coulomb force are not much stronger than the binding energy of $\Lambda_c$ super-nuclei. 
 	
 	
 	\begin{figure}
 		\centering
 		\includegraphics[width=0.7 \linewidth]{pictures/binding_energy.jpg}
-		\caption{ The figure show the binding energy in symmetric nuclei with the parameter assumed for each atomic number for each ensemble. The binding energies are calculated from the folding potentials for $\Lambda_c$ hypernuclei by using the Gaussian expansion method. The folding potentials are constructed from the spin-independent central potential of the $\Lambda_c$N system}
+		\caption{ The figure show the binding energy in symmetric nuclei with the parameter assumed for each atomic number for each ensemble. The binding energies are calculated from the folding potentials for $\Lambda_c$ super-nuclei by using the Gaussian expansion method. The folding potentials are constructed from the spin-independent central potential of the $\Lambda_c$N system}
 		\label{fig:binding_energy}
 	\end{figure}
 	
@@ -733,17 +733,45 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	\begin{figure}
 		\centering
 		\includegraphics[width=0.7 \linewidth]{pictures/binding_culomb.jpg}
-		\caption{The figure show the expectation value of folding potential for Coulomb force in $\Lambda_c$ hypernuclei (Blue). The expectation values are calculated from the binding solution of the $\Lambda_c$ hypernuclei for Ensemble 3 ($m_\pi \approx$ 410 MeV). For comparison, the binding energy of $\Lambda_c$ hypernuclei (Green) and sum of them (Red) are also plotted.}
+		\caption{The figure show the expectation value of folding potential for Coulomb force in $\Lambda_c$ super-nuclei (Blue). The expectation values are calculated from the binding solution of the $\Lambda_c$ super-nuclei for Ensemble 3 ($m_\pi \approx$ 410 MeV). For comparison, the binding energy of $\Lambda_c$ super-nuclei (Green) and sum of them (Red) are also plotted.}
 		\label{fig:binding_culomb}
 	\end{figure}
 	
 	
 	\FloatBarrier
 	\subsection{C-deuteron ($D_c$) simulation}
-	Using an SHM model we have tried to understand how the production of super-nucleus is influenced by different parameter. In particular the focus was on the c-deuteron (for later convenience indicated as $D_c$), a bound state of a $\Lambda_c$ and a neutron. This choice is related to the fact that this nucleons is the easier to observe in heavy-ion collision due to his mass. In fact is the lightest bound state of a $\Lambda_c$ and a nucleus without Coulomb repulsion, present in a $\Lambda_c$ proton bound state, that make the existence of this super-nucleus more improbable. The software used for perform the simulation was the Thermal-FIST, for more details see \cite{Vovchenko_2019}.
-	The first thing that was the super-nucleus characterization. We have chosen the most probable configuration for his existence i.e. the $^{3}S_1$ state so the associated spin is of 1 $\hbar$. As for the mass, this was obtained by adding the mass of the $\Lambda_c = 2286.46 \pm 0.14$ MeV/$c^2$ and the neutron mass $m_n$ 939.56542052(54) Mev/$c^2$ \cite{ParticleDataGroup:2024cfk} and then the binding energy had been removed. The last value is still unknown, for these reason was used the binding energy of the deuteron of $E_{be\ D}$= (2,224575 $\pm$ 0.000009) MeV \cite{VANDERLEUN1982261} obtaining $m_{D_c}=3.223$ GeV/$c^2$. One would expect a lower effective $D_c$ binding energy but as can be seen in \ref{fig:binding_energy}, the order of magnitude is correctly individuated. Furthermore, since the binding energy is of the order of MeV/$c^2$ while the estimated mass is of the order of Gev/$c^2$, the influence of this approximation can be neglected for the general evaluations made.
-	At this point, the simulation was started using a gran-canonical formalism based on the Maxwell-Boltzmann statistics, thus neglecting quantum mechanical effects, for all particles except for mesons, for which the Bose-Einstein statistics were used due to their low mass. The simulation was then performed with a spherically symmetric shock wave momentum spectrum, so only the central collision was considered. Are then generate 2 $10^7$ events using a baryonic potential of $\mu_B=0.71$ MeV and an electric charge potential of $\mu_Q= -0.18$ MeV as described in \cite{Acharya_2024} in Pb-Pb collisions at $\sqrt{s_{NN}}= 5.02$ Tev in ALICE \footnote{The measured value were of $\mu_B=0.71 \pm 0.45$ MeV while $\mu_Q=-0.18 \pm 0.90$ MeV}. Energy of the right order of magnitude for the temperatures analyzed. Instead, as described in \cite{charm_hierarchy_in_the_statistical_hadronization_model}, at the same energy in the center of mass the charm fugacity was $\gamma_c = 29.6 \pm 5.2$. On the other hand, the chemical potential of the strangeness had no influence on the following considerations and was considered to be null.
-	% The number of occurrences versus rapidity was then graphed, obtaining the result shown in Fig \ref{fig:first_graph}. Instead the Fig \ref{fig:comparison} shows a comparison between the experimental data and the simulation data. As there is no data available for $D_c$, no value has be considered. The data presented were obtained with temperatures of and volumes of . We then analysed how its abundance varied with temperature and volume, obtaining the same results as shown in Fig{fig:comparison_graph}. Linear growth was found for increases in volume exactly as predicted by Eq \ref{eq:mean_particle_number}, whereas for increases in temperature $...$ a three-dimensional account can be seen in Eq \ref{fig:3d_dist}. 
+	Using an SHM model, we have tried to understand how the production of the super-nucleus is affected by various parameters. In particular, we focused on the c-deuteron, denoted $D_c$ for convenience, which is a bound state of a $\Lambda_c$ and a neutron. This choice is related to the fact that this nucleon is the easiest to observe in a heavy ion collision due to its mass. In fact, the lightest bound state of a $\Lambda_c$ and a nucleus without Coulomb repulsion which makes the existence of this super-nucleus less likely.
+	The first step was the super-nucleus characterization. The most probable configuration for its existence was chosen, i.e. the $^{3}S_1$ state, so that the associated spin is 1 $\bar$. The mass was obtained by adding the mass of the $\Lambda_c = 2286.46 \pm 0.14$ MeV/$c^2$ and the neutron mass $m_n$ = 939.56542052(54) Mev/$c^2$ \cite{ParticleDataGroup:2024cfk} removing then the binding energy. The latter value is still unknown, for this reason the binding energy of the deuteron was used, $E_{be\ D}$= (2.224575 $\pm$ 0.000009) MeV \cite{VANDERLEUN1982261}, giving $m_{D_c} \approx 3.223$ GeV/$c^2$. One would expect a lower effective $D_c$ binding energy, but as can be seen in \ref{fig:binding_energy}, the order of magnitude is correctly individualized. Furthermore, since the binding energy is of the order of MeV/$c^2$ while the estimated mass is of the order of Gev/$c^2$, the influence of this approximation can be neglected for the general evaluations made.
+	
+	We then started the simulation using the Thermal FIST, for more information see \cite{Vovchenko_2019}, with a gran-canonical formalism based on Maxwell-Boltzmann statistics, thus neglecting quantum mechanical effects, for all particles except mesons, for which Bose-Einstein statistics were used due to their low mass. The focus was on central collisions, so a spherically symmetric shock wave momentum spectrum was assumed. For each combination of parameters, 2 $10^7$ events were generated, setting the typical chemical potential observed in the LHC collision. The baryonic potential was $\mu_B=0.71$ MeV and the electric charge potential was $\mu_Q= -0.18$ MeV as described in \cite{Acharya_2024} for Pb-Pb collisions at $\sqrt{s_{NN}}= 5.02$ Tev in ALICE \footnote{The measured values were $\mu_B=0.71 \pm 0.45$ MeV while $\mu_Q=-0.18 \pm 0.90$ MeV}. Energy of the right order of magnitude for the temperatures analyzed. Instead, as described in \cite{charm_hierarchy_in_the_statistical_hadronization_model}, at the same energy in the center of mass the charm fugacity was $\gamma_c = 29.6 \pm 5.2$. However, this parameter was particularly important in determining the expected abundance of $D_c$, so it was changed in a second step. On the other hand, the chemical potential of strangeness had no influence on the following considerations, since no particle with a strange quark had been considered and was therefore considered to be zero.
+	The number of particles versus rapidity was then graphed for a chemical freeze-out temperature of 156 Mev and a radius of 8 fm in the range $|y| <0.5$, obtaining the result shown in Fig \ref{fig:first_graph}. the slope and the... he Fig \ref{fig:comparison} shows a comparison between the experimental data and the simulation data. As there is no data available for $D_c$, no value has be considered. The data presented were obtained with temperatures of and volumes of .
+
+	We then started to change the value of the temperature of chemical freeze-out and his radius. sono state analizzate delle temperature nel range fra 150 MeV a 160 con incrementi unitari per poter vedere come sarebbe cambiato localmente il numero di particelle prodotte fissando il raggio di freeze-out a 8 fm. Dai modelli statistici non era evidente quale sarebbe dovuto essere l'andamento osservato ma ci si aspettava un profilo esponenziale. Procedimento analogo è stato effettuato anche per il volume considerando raggi di freeze-out fa 4 a 12 fm con incrementi unitari con una temperatura di freeze-out fissata a 156 MeV. Diversamente dal caso precedente il risultato atteso era prevedibile dall'Eq \ref{eq:mean_particle_number} quindi ci si aspettava un andamento $N \propto r^3$ vista la simmetria sferica assunta. La figura \ref{fig:2dgraph} mostra gli effetti combinati di variazioni sui volumi e sulle temperature. Si riscontra che il numero di $D_c$ attesi aumenta più rapidamente per incrementi del volume rispetto a quanto non si osservi per la temperatura. Bisogna però rimarcare come le variazioni percentuali sul raggio, e quindi sul volume, che sono state eseguite durante la simulazione risultano essere decisamente più consistenti rispetto a quanto non si sia fatto per le temperature. Analizzando con maggiore attenzione il risultato delle variazioni sul raggio visibile in Fig \ref{fig:var_radius} si nota un andamento cubico perfettamente coerente con quando previsto inizialmente ed un perfetto accordo visivo. La relazione con la quale è stato eseguito il fit era della forma $a r^3 +b$ ed i risultati ottenuti sono stati a = (1.3942 $\pm$ 0.0023) $10^{-6} \ fm^-3$ mentre b = (-5.479 $\pm$ 0.013) $10^{-8}$ con un $\tilde{\chi}^2$ = 25 usando un fattore di copertura k=3. Si osserva dunque che il valore della costante risulta essere minimo e che il $\tilde{\chi}^2$ è decisamente alto. Il motivo è da ricercarsi probabilmente nell'alto numero di eventi generati che ha ridotto significamente le incertezze fornite dal programma causandone una sottostima. 
+	\begin{figure}
+			\includegraphics[width=0.8 \linewidth]{pictures/2dgraph.pdf}
+		\caption{The figure shoe the value of dN/dy of $D_c$ in the range $|y|<0.5$ obtained from dalla simulazione al variare della temperatura e del raggio di freeze-out. Per le variazioni sul raggio la temperaura è stata fissata a 156 Mev mentre per la variazione sulla temperatura il raggio è stato fissato a 8 fm}
+		\label{fig:2dgraph}
+	\end{figure}
+	
+		\begin{figure}
+		\includegraphics[width=0.8 \linewidth]{pictures/var_radius.pdf}
+		\caption{The figure shoe the value of dN/dy of $D_c$ in the range $|y|<0.5$ obtained from dalla simulazione al variare della temperatura e del raggio di freeze-out. Per le variazioni sul raggio la temperaura è stata fissata a 156 Mev mentre per la variazione sulla temperatura il raggio è stato fissato a 8 fm}
+		\label{fig:var_radius}
+	\end{figure}
+	
+	Per quanto riguarda le valutazioni sugli incrementi di temperatura il risultato è visibile in Fig{fig:var_temperature}, il grafico è riportato in scala logaritmica sull'asse delle ordinate. La relazione funzionale che meglio era capace di descrivere i dati prodotti era della forma $a e^{bT}$, con a e b parametri di fit,il motivo di questo andamento non è chiaro e potrebbe essere solo un comportamento locale di una relazione funzionale più strutturata come la \ref{eq:no_vanish_rad_flow}. A differenza di quanto osservato per i volumi in questo caso ci sono delle fluttuazioni rispetto alla linea di best-fit, visibili sopratutto per i valori di temperatura più alti e più bassi. Ciò è coerente con la possibilità che l'andamento individuato sia solo di natura locale. I valori ottenuti sono stati di a = ()
+		\begin{figure}
+		\includegraphics[width=0.8 \linewidth]{pictures/var_temperaure.pdf}
+		\caption{The figure shoe the value of dN/dy of $D_c$ in the range $|y|<0.5$ obtained from dalla simulazione al variare della temperatura e del raggio di freeze-out. Per le variazioni sul raggio la temperaura è stata fissata a 156 Mev mentre per la variazione sulla temperatura il raggio è stato fissato a 8 fm}
+		\label{fig:var_temperaure}
+	\end{figure}
+		\begin{figure}
+		\includegraphics[width=0.8 \linewidth]{pictures/var_fugacity.pdf}
+		\caption{The figure shoe the value of dN/dy of $D_c$ in the range $|y|<0.5$ obtained from dalla simulazione al variare della temperatura e del raggio di freeze-out. Per le variazioni sul raggio la temperaura è stata fissata a 156 Mev mentre per la variazione sulla temperatura il raggio è stato fissato a 8 fm}
+		\label{fig:var_fugacity}
+	\end{figure}
+	
+	 We then analysed how its abundance varied with temperature and volume, obtaining the same results as shown in Fig{fig:comparison_graph}. Linear growth was found for increases in volume exactly as predicted by Eq \ref{eq:mean_particle_number}, whereas for increases in temperature $...$ a three-dimensional account can be seen in Eq \ref{fig:3d_dist}. 
 	
 	We have then moved analyze the detection of the $D_C$. Studying the data obtained from the previous simulations, an instrogram to correlate the momenta of $D_C$ with its occurrence was constructed. Then, using a Monte Carlo simulation with PYTHIA 8, for more information see \cite{biderman2023pythiasuiteanalyzinglarge}, $D_C$ were generated which had a distribution of moments based on what had been previously determined. At this point, the decays involving the formation of a deuterium were examined to estimate the increase in number of deuteron due to the super-nucleus decay. The decay channels with their branching ratios are summarised in \ref{tab:decay_channel}
 	\begin{table}[h]
@@ -781,7 +809,8 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	\chapter{ALICE}
 	
 	The A Large Ion Collider Experiment (ALICE) is a detector designed for heavy-ion physics at the Large Hadron Collider (LHC). It is primarily used to study lead-lead ($^{208}\text{Pb}$) collision and so the most severe design constraint is to being able to withstand the high charge multiplicity expected for central events. During a collision conditions similar to those just after the Big Bang are recreated, condition that may also be present in neutron stars and other astrophysical objects. The ALICE collaboration uses the 10 000-tonne ALICE detector 26 m long, 16 m high, and 16 m wide. The detector sits in a vast cavern 56 m below ground close to the village of St Genis-Pouilly in France, receiving beams from the LHC. \cite{Alice}  The aim of ALICE is to recreate and study quark-gluon plasma, which is crucial for understanding the mechanisms that confine quarks and gluons, chiral symmetry restoration and the nature of the strong nuclear force. ALICE is currently the only experiment at the LHC specifically designed to study nuclear matter produced in relativistic heavy ion collisions and the QGP. For this reason, it must be able to measure as many observables as possible by studying all the different phenomena that can be attributed to the formation of a QGP state. It can estimate parameters such as the charged multiplicity of the interactions, the impact parameter, the shape and orientation of the fireball, the collision volume and the number of nucleons interacting in the collision. Almost all known Particle IDentification (PID) techniques are used in ALICE, such as: specific energy loss (dE/dx), time-of-flight, Cherenkov radiation, electromagnetic calorimetry, muon detectors and topological reconstruction of decays. 
-	Despite all these identification techniques, it's very difficult to select signals of decays of heavy flavours, as will be explain in the last section, so the acquisition of a huge amount of events with a high efficiency of the data acquisition system (up to a frequency of 1.3 GB/s) is required. 
+	Despite all these identification techniques, it's very difficult to select signals of decays of heavy flavours, as will be explain in the last section, so the acquisition of a huge amount of data with a high efficiency of the data acquisition system (up to a frequency of 1.3 GB/s) is required. 
+	
 	A sketch of the ALICE coordinate system is shown in Fig \ref{fig:ALICE_cordinates} In this figure, the (x, y, z) axes are shown together with the cylindrical coordinates used to describe the trajectory of particles in ALICE, (r, $\theta$, $\varphi$).
 	\begin{figure}[h]
 		\centering
@@ -826,45 +855,38 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 		\label{fig:ALICE_instruments}
 	\end{figure}
 	
-	
-	\subsection{Inner Tracking System (ITS)}
-	
-	The Inner Tracking System (ITS) is a crucial part of the ALICE tracking system, positioned as the innermost sub-detector of the central barrel, closest to the beam pipe and the interaction point. It consists of six concentric cylindrical layers of silicon detectors, comprising two layers each of Silicon Pixel Detector (SPD), Silicon Drift Detector (SDD), and Silicon Strip Detector (SSD). The ITS covers the pseudorapidity region |$\eta$| < 0.9 for interactions occurring within 10 cm from the detector center.
-	\begin{figure}[h]
-		\centering
-		\includegraphics[width=0.7\textwidth]{ITS_schematic.png}
-		\caption{Schematic diagram of the Inner Tracking System (ITS) of the ALICE experiment \cite{collaboration_2010}}
-		\label{fig:ITS_schematic}
-	\end{figure}
-	The  SPD is located at radial distances of 3.9 cm and 7.6 cm from the beam pipe. These layers cover extended pseudorapidity ranges of |$\eta$| $<$ 2.0 and |$\eta$| $<$ 1.4, respectively. They consist of hybrid silicon pixel detectors, in total $9.8 \ × \ 10^6$, which generate binary signals when traversed by charged particles, facilitating their counting. The primary functions of the SPD are to determine the position of the primary vertex with a high resolution, surpassing 100 $\mu$m, to help isolate events coming from pileup, and to contribute to the triggering system due to their fast response. The SPD also contributes to achieving an impact-parameter resolution surpassing 50 $\mu$m for tracks with transverse momentum $p_\perp$ $>$ 1.3 GeV/c.
-	The two intermediate layers are the SDD, situated at radii of 15.0 cm and 23.9 cm, covering |$\eta$| $<$ 0.9. The SDD has very good multi-track capability and provides two out of the four measurements of specific dE/dx employed for PID by the ITS. It provides two-dimensional spatial information (r $\phi$ and z) with a spatial resolution of 35 $\mu$m (r $\phi$) and 25 $\mu$m (z). The SDD determines particle positions using drift time estimation and charge centroid measurement and is structured with a central cathode for precise particle tracking.
-	The two outermost layers employ double-sided Silicon Strip Detectors (SSD), located at radial distances of 38.0 cm and 43.0 cm, covering |$\eta$| $<$ 1.0. The SSD is essential for the prolongation of tracks from the main tracking detector of ALICE, the Time Projection Chamber (TPC), to the ITS. It provides a spatial resolution of 20 $\mu$m (r $\phi$) and 830 $\mu$m (z) and 27 $\mu$m (r $\phi$) and 830 $\mu$m (z) according to the third source, with a fast readout time of 1 $\mu$s. Besides connecting tracks, the SSD also provides dE/dx information, enabling the ITS with the standalone capability to serve as a low-pT particle spectrometer. Each SSD module consists of a 1536-strip double-sided sensor connected to twelve front-end chips that furnish position and energy deposition details.
-	The primary responsibilities of the ITS include:
-	\begin{itemize}
-		\item 	Reconstructing the primary vertex of collisions with a high resolution, surpassing 100 $\mu$m
-		\item 	Reconstructing the secondary vertices, points of decay for short-lived hadrons
-		\item 	Particle identification (PID) and tracking of low-momentum particles with momentum below 200 MeV/c.
-	\end{itemize}
-	The ITS can also perform "standalone" tracking that reconstructs charged particles in the low pT region (e.g., pions with pT $<$ 80 MeV/c) by using exclusively the information from its six planes. The high granularity of ITS allows maintaining the detector occupancy below a safe level. The good resolution of the detector allows to separate primary and secondary vertices from weak decays, hyperons, D and B mesons. The analogue readout in the four outer layers (SDD and SSD) samples the particle energy loss (dE/dx) in the material, providing information sufficient to perform PID below 700 MeV/c. %da controllare
+\FloatBarrier	
+\subsection{Inner Tracking System (ITS)}
+
+ The Inner Tracking System (ITS) is a crucial part of the ALICE tracking system, positioned as the innermost sub-detector of the central barrel, closest to the beam pipe and the interaction point. It consists of six concentric cylindrical layers of silicon detectors, comprising two layers each of Silicon Pixel Detector (SPD), Silicon Drift Detector (SDD), and Silicon Strip Detector (SSD). The ITS covers the pseudorapidity region $|\eta|\ <$ 0.9 for interactions occurring within 10 cm from the detector point.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\textwidth]{pictures/ITS_schematic.png}
+	\caption{Schematic diagram of the Inner Tracking System (ITS) of the ALICE experiment \cite{collaboration_2010}}
+	\label{fig:ITS_schematic}
+\end{figure}
+The  SPD is located at radial distances of 3.9 cm and 7.6 cm from the beam pipe. These layers cover extended pseudorapidity ranges of $|\eta|\ <$ 2.0 and $|\eta|\ <$ 1.4, respectively. They consist of hybrid silicon pixel detectors, in total $9.8 \ × \ 10^6$, which generate binary signals when traversed by charged particles, facilitating their counting. The primary functions of the SPD are to determine the position of the primary vertex with a high resolution, surpassing 100 $\mu$m, to help isolate events coming from pileup, and to contribute to the triggering system due to their fast response. The SPD also contributes to achieving an impact-parameter resolution surpassing 50 $\mu$m for tracks with transverse momentum $p_\perp$ $>$ 1.3 GeV/c.
+The two intermediate layers are the SDD, situated at radii of 15.0 cm and 23.9 cm, covering $|\eta|\ <$ 0.9. The SDD has very good multi-track capability and provides two out of the four measurements of specific dE/dx employed for PID by the ITS. It provides two-dimensional spatial information (r $\phi$ and z) with a spatial resolution of 35 $\mu$m (r $\phi$) and 25 $\mu$m (z). The SDD determines particle positions using drift time estimation and charge centroid measurement for these reason is structured with a central cathode for more precise particle tracking.
+The two outermost layers employ double-sided Silicon Strip Detectors (SSD), located at radial distances of 38.0 cm and 43.0 cm, covering $|\eta|\ <$ 1.0. The SSD is essential for the prolongation of tracks from the main tracking detector of ALICE, the Time Projection Chamber (TPC), to the ITS. It provides a spatial resolution of 20 $\mu$m (r $\phi$) and 830 $\mu$m (z) and 27 $\mu$m (r $\phi$) and 830 $\mu$m (z), with a readout time of 1 $\mu$s. Besides connecting tracks, the SSD also provides dE/dx information. The ITS can also perform "standalone" tracking for charged particles in the low $p_\perp$ region by using exclusively the information from its six layers. 
 	\cite{Padhan:2924203} \cite{amsdottorato9036} \cite{Cheng:2908766} \cite{Arata:2922803}
 	
 	\subsection{Time projection chamber (TPC)}
 	The Time projection chamber is the main
-	tracking detector of the central barrel. It is specifically designed for measure tracks with transverse momentum range 0.1 Gev/c $\div$ 100 Gev/c and pseudorapidity range $|\eta| \ <$ 0.9.  It is positioned at radial distances ranging from 85 to 247 cm from the beam pipe, extending along the beam direction with a total length of 510 cm. It is divided along the beam axis into two equally large drift regions by a central cathode, each having a length of 2.5 m. On the opposite sides of the central electrodes there is the readout plate, which is equipped with multi-wire proportional chambers (MWPC). Each of the 18 readout chambers covers an azimuth of $20^{\circ}$. The volume of the TPC ($\sim$ 90 $m^3$) can be filled with different gases depending on the running conditions. A graphical resume is visible in Fig \reg{fig:time_projection_chamber} The perfect candidate is a gas with a small radiation length and low multiple scattering rates, usually filled with a mixture containing various combinations of argon, neon, carbon dioxide and sometimes nitrogen. When charged particles pass through the gas, they ionise it, creating an electron-ion pair. These ionization electrons then drift towards sensing electrodes under a uniform electric field, typically achieved by applying a high voltage of around 100 kV between the central electrode and the readout plates. The ionization electrons drift with a speed of approximately 2.7 cm/s, corresponding to a maximum drift time of around 92 ms. This drift process allows spatial localisation of the ionisation event along the particle trajectory. In addition, the presence of a uniform magnetic field along the z-direction causes charged particles to bend into curved trajectories. This allows precise momentum measurements.  The position resolution for the inner/outer radii ranges from 800 to 1100 $\mu$m in the transverse plane (r $\phi$) and from 1100 to 1250 $\mu$m along the beam axis (z). The total charge collected at the end plates for each track is proportional to the particle energy loss in the gas. This allows a sampling of the dE/dx and therefore perform PID below 1 GeV/c. The resolution on the dE/dx is 5\% for isolated tracks (low multiplicity collisions), while when the number of particles increase such as Pb–Pb collisions (high multiplicity collisions), the resolution is 7\%. This is due to the increased probability to have hits close in space. In addition, the contribution of positive ions to the signal shape increases with the particle occupancy and the formation of large amount of charged particles that can induce local modifications to the external electric field modifying the drift speed and complicating the reconstruction of the track. The specific energy loss can be described by the Bethe-Bloch formula, which depends on the particle species, it momentum, and the properties of the traversed medium. It can be estimate in the following manner proposed by \cite{Rolandi:2008ujz}.
+	tracking detector of the central barrel. It is specifically designed for measure tracks with transverse momentum range 0.1 - 100 Gev/c and pseudorapidity range $|\eta| \ <$ 0.9.  It is positioned at radial distances ranging from 85 to 247 cm from the beam pipe, extending along the beam direction with a total length of 510 cm. It is divided along the beam axis into two equally large drift regions by a central cathode, each having a length of 2.5 m. On the opposite sides of the central electrodes there is the readout plate, which is equipped with multi-wire proportional chambers (MWPC). Each of the 18 readout chambers covers an azimuth of $20^{\circ}$. The volume of the TPC ($\sim$ 90 $m^3$) can be filled with different gases depending on the running conditions. A graphical resume is visible in Fig \ref{fig:time_projection_chamber} The perfect candidate is a gas with a small radiation length and low multiple scattering rates, so is usually filled with a mixture containing various combinations of argon, neon, carbon dioxide and sometimes nitrogen. When charged particles pass through the gas, they ionize it, creating an electron-ion pair. These ionization electrons then drift towards sensing electrodes under a uniform electric field, typically achieved by applying a high voltage of around 100 kV between the central electrode and the readout plates. The ionization electrons drift with a speed of approximately 2.7 cm/s, corresponding to a maximum drift time of around 92 ms. This drift process allows spatial localization of the ionization event along the particle trajectory. In addition, the presence of a uniform magnetic field along the z-direction causes charged particles to bend into curved trajectories. This allows precise momentum measurements.  The position resolution for the inner/outer radii ranges from 800 to 1100 $\mu$m in the transverse plane (r $\phi$) and from 1100 to 1250 $\mu$m along the beam axis (z). The total charge collected at the end plates for each track is proportional to the particle energy loss in the gas. This allows a sampling of the dE/dx and therefore perform PID below 1 GeV/c. The resolution on the dE/dx is 5\% for isolated tracks (low multiplicity collisions), while when the number of particles increase such as Pb–Pb collisions (high multiplicity collisions), the resolution is 7\%. This is due to the increased probability to have hits close in space. In addition, the contribution of positive ions to the signal shape increases with the particle occupancy and the formation of large amount of charged particles can induce local modifications to the external electric field modifying the drift speed and complicating the reconstruction of the track. The specific energy loss can be described by the Bethe-Bloch formula, which depends on the particle species, it momentum, and the properties of the traversed medium. It can be estimate in the following manner proposed by \cite{Rolandi:2008ujz}.
 	\begin{equation}
 		f(\beta) = \frac{P_1}{\beta^{P_4}} \left(P_2 - \beta^{P_4} -ln(P_3) \frac{1}{(\beta \gamma)^{P_5}} \right)
 	\end{equation}
 	Where $\beta$ is the particle velocity in c unit, $\gamma$ the Lorentz factor, $P_{1-5}$ free parameter that must be estimate from data.
 	\begin{figure}
 		\centering
-		\begin{minipage}{0.45\textwidth}
-			\includegraphics[width=0.7\textwidth]{pictures/time_projection_chamber.png}
-			\caption{The figure show a schematic rapresentation of the time projection chamber \cite{Dellacasa:451098}}
+		\begin{minipage}{0.5\textwidth}
+			\includegraphics[width=0.8\textwidth]{pictures/time_projection_chamber.png}
+			\caption{The figure show a schematic representation of the time projection chamber \cite{Dellacasa:451098}}
 			\label{fig:time_projection_chamber}
 			
 		\end{minipage}
-		\begin{minipage}{0.5\textwidth}
-			\includegraphics[width=0.7\textwidth]{pictures/TPC_traking.png}
+		\begin{minipage}{0.45\textwidth}
+			\includegraphics[width=0.8\textwidth]{pictures/TPC_traking.png}
 			\caption{The figure show a diagram of the TPC tracking method \cite{Rohr_2012}}
 			\label{fig:CA_track}
 		\end{minipage}%
@@ -873,7 +895,7 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	\cite{Padhan:2924203} \cite{amsdottorato9036} \cite{Cheng:2908766} \cite{Arata:2922803}
 	
 	\subsection{Time Of Flight (TOF)}
-	The Time Of Flight (TOF) detector is a large array of Multi-gap Resistive-Plate Chambers (MRPC), located at 3.7 m and 3.99 m radial distance, respectively, from the interaction point. It is designed to identify charged particle produced in pseudorapidity of $|\eta|$ $<$ 0.9 and with an intermediate momentum range (0.5 $<$ $p_\perp$ $<$ 4 GeV/c). In addition TOF has been used to provide a trigger specific for cosmic ray and Ultra Peripheral Collision UPC events. The TOF detector has a modular structure divided along the azimuthal direction into 18 super modules as visible in Fig \ref{fig::TOF}. If a particle ionizes the gas in the detector, an avalanche process will be triggered to generate signal on the readout electrodes. Particle identification is performed by combining the information bring by the linear momentum module (p) and track length (l) with the measurement of the time of flight (t) in TOF. The mass (m) corresponding to the one of the detected particle can be obtained. 
+	The Time Of Flight (TOF) detector is a large array of Multi-gap Resistive-Plate Chambers (MRPC), located at 3.7 m and 3.99 m radial distance, respectively, from the interaction point. It is designed to identify charged particle produced in pseudorapidity of $|\eta|$ $<$ 0.9 and with an intermediate momentum range (0.5 $<$ $p_\perp$ $<$ 4 GeV/c). In addition TOF has been used to provide a trigger specific for cosmic ray and Ultra Peripheral Collision UPC events. The TOF detector has a modular structure divided along the azimuthal direction into 18 super modules as visible in Fig \ref{fig:TOF}. If a particle ionizes the gas in the detector, an avalanche process will be triggered to generate signal on the readout electrodes. Particle identification is performed by combining the information bring by the linear momentum module (p) and track length (l) with the measurement of the time of flight (t) in TOF. The mass (m) corresponding to the one of the detected particle can be obtained. 
 	\begin{equation}
 		p = m \gamma \beta c \leftarrow \rightarrow m = \frac{p \sqrt{1- \beta^2}}{c \beta} = \frac{p \sqrt{\frac{1}{\beta^2}-1}}{c}
 	\end{equation} 
@@ -888,11 +910,12 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	Studying the equation became clear that, at large momenta, the resolution on the track momentum ($\sigma_p$) becomes negligible and the total uncertainty is driven by the uncertainties on the timing ($\sigma_t$) and track length ($\sigma_l$). For these reason the TOF detector was designed to achieve a timing resolution better than 40 ps with a detector efficiency close to 100\%.
 	\begin{figure}
 		\centering
-		\includegraphics[width=0.5\linewidth]{}
-		\caption{Caption}
-		\label{fig:enter-label}
+		\includegraphics[width=0.5\linewidth]{pictures/TOF.png}
+		\caption{The figures shoe the structures of the time of flight detector \cite{ALICE:2014sbxFs}.}
+		\label{fig:TOF}
 	\end{figure}
 	\cite{Padhan:2924203} \cite{amsdottorato9036} \cite{Cheng:2908766}
+	\FloatBarrier
 	
 	\subsubsection{Transition Radiation Detector (TRD)}
 	The Transition Radiation Detector (TRD) is positioned between the TPC and TOF detector and it covers a pseudorapidity range of $|\eta|\ <$ 0.84. It is principally use for electron identification in high momentum region (p $>$ 1 GeV), where discriminating between electrons and pions using traditional dE/dx techniques becomes challenging. When charged particles attempt to cross the detector, pass through two media with different dielectric constants emitting so transition radiation with an intensity proportional to their Lorentz factor. Since different particles have different masses and velocities, they emit different amounts of transition radiation making the identification possible.
@@ -925,66 +948,52 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{myblock}
 	The Zero Degree Calorimeter (ZDC) consists of four calorimeters, two for protons (brass-quartz proton ZP) and two for neutrons (tungsten-quartz neutron ZN), on each side. located at $\sim$ 112.5 cm away from the interaction point,	symmetrically in both directions. The ZDC measures the energy of the spectator nucleons and assists in the estimation of centrality and luminosity in heavy ion collisions by determining the collision geometry, overlap regions of the colliding nuclei and the number of participating nucleons.\cite{Padhan:2924203} \cite{amsdottorato9036}	
 	
 	\subsubsection{Muon Spectrometer}
-	The muon spectrometer is located 14 m in the negative beam direction and cover a pseudorapidity range of 4 $<\ \eta\ <$ 2.5. It help to studies the complete spectrum of heavy quarkonia via their decay in the $\mu^+ \mu^-$ channel. It is composed of different part. The particles cross first an absorber, mainly composed of carbon and concrete, designed to absorb the hadrons emerging from the interaction point. This material choice is for limit the multiple scattering and the energy loss of the muons. The muons then traverse five tracking stations and are deflected by the magnetic field allowing for the determination of their momentum. The dipole magnet is positioned at about 7 m from the interaction providing a magnetic field nominally of B = 0.7 T but can be changed by the requirements on the mass resolution. The next part is the muon filter, an iron wall designed to reduce the background in the trigger chambers by absorbing secondary hadrons and low momentum muons. Finally, the muons reach the trigger system, which consists of two stations equipped with resistive plate chambers characterised by a time resolution of about 1 ns.
+	The muon spectrometer is located 14 m in the negative beam direction and cover a pseudorapidity range of 4 $<\ \eta\ <$ 2.5. It help to studies the complete spectrum of heavy quarkonia via their decay in the $\mu^+ \mu^-$ channel. It is composed of different part. The particles cross first an absorber, mainly composed of carbon and concrete, designed to absorb the hadrons emerging from the interaction point. This material choice is for limit the multiple scattering and the energy loss of the muons. The muons then traverse five tracking stations and are deflected by the magnetic field allowing for the determination of their momentum. The dipole magnet provide a magnetic field nominally of B = 0.7 T but can be changed by the requirements on the mass resolution. The next part is the muon filter, an iron wall designed to reduce the background in the trigger chambers by absorbing secondary hadrons and low momentum muons. Finally, the muons reach the trigger system, which consists of two stations equipped with resistive plate chambers characterized by a time resolution of about 1 ns.
 	\cite{Padhan:2924203} \cite{Alicemuonspectometer} \cite{Herrmann:2920632}
 	
-	\subsection{Track and vertex reconstruction} 
-	
-	The purpose of tracking algorithms \cite{Cheng:2908766} is to use the the cluster information transforming them into track information, obtaining the best possible approximation of the real trajectory of the particles crossing the detector. process that uses the Kalman filter algorithm to accurately determine the trajectory of particles as they pass through the detector layers. The tracking procedure starts with the clusterization step. Starting from the collected raw data, from each detector, the data cluster are produced. The cluster correspond to groups of hits produced by a single particle interaction with a detector element and contain his positions, signal amplitude, signal times, and their associated errors. The clusterization is performed separately for each detector. The reconstruction of the primary vertex is an essential step, as it is referred to the interaction point. Usually, each collision event only involves one primary interaction point, and numerous tracks traverse the detectors. In this ambitious the information provided by the SPD detector plays a crucial role in establishing a preliminary interaction vertex. This is the space point that minimises the distance among the tracklets, which are the track segments reconstructed by associating pairs of clusters in the two SPD layers. So is possible to localize the vertex searching  the point where most of the tracklets converge. In high multiplicity events the algorithm is repeated several times, discarding at each iteration those clusters which contributed to already found vertices. The tracking algorithm can be separated into two steps: the track finding and the track fitting. For the track finding, two methods are used. The first one is called Linear Track Finder (LTF) and it looks for cluster position aligned along a straight line. However the magnetic field curve the trajectory of charged particle but the deviation can be neglected at least at hight $p_\perp$ hence supporting the choice of a LTF for such tracks. For help in these work a radial tolerance Rcut is given, a graphical resume is visible in Fig \ref{fig:linear_track} . If a track had been recognized in the previous step the correspondent cluster are removed from the list of available clusters considered in the further steps. The next step consist on a Cellular Automaton (CA) approach particularly suited for low-momentum tracks, sensitive to multiple scatterings. It is based on a propagation and joining of “segments”. A segment is a portion of line connecting two clusters from two consecutive disks: So starting from a given segment, considered as the first, the algorithm search the further one towards imposing track continuity conditions. The strategist is visible in Fig \ref{fig:CA_track}. Tracks are only accepted if they have at least 20 associated clusters (out of a possible 159) and have missed fewer than 50\% of the expected clusters. Only after that the track candidates are found a track fitting algorithm is applied in order to extract the kinematic parameters of each track. It is able to determine the spatial and momentum coordinates considering material effects, updates the parameters based on measurement. The process is repeated for each track cluster \cite{Herrmann:2920632}.
-	\begin{figure}
-		\centering
-		\begin{minipage}{0.45\textwidth}
-			\includegraphics[width=0.7\textwidth]{pictures/linear_track.png}
-			\caption{The figure show Linear Track Finder schematic using the RCut parameter \cite{CERN-LHCC-2015-001}}
-			\label{fig:linear_track}
-			
-		\end{minipage}
-		\begin{minipage}{0.5\textwidth}
-			\includegraphics[width=0.7\textwidth]{pictures/CA_track.png}
-			\caption{The figure show how the Cellular Automaton method works \cite{CERN-LHCC-2015-001}}
-			\label{fig:CA_track}
-		\end{minipage}%
-	\end{figure}
-	
-	
-	
-	The efficiency of the track reconstruction process is influenced by the transverse momentum of the tracks. Efficiency drops below $p_\perp$ < 0.5 GeV/c, as visible in Fig \ref{fig:track_finding_efficiency} due to energy loss in the detector material, while higher $p_\perp$ tracks, which are typically straighter, may encounter reduced efficiency in areas where clusters are lost due to dead zones between readout sectors. \cite{Padhan:2924203}.
-	
-	\begin{figure}[h]
-		\centering
-		\includegraphics[width=0.7\textwidth]{pictures/track_finding_efficiency.png}
-		\caption{The figure show track finding efficiency for primary particles in different types of collision \cite{ALICE:2014sbxFs}}
-		\label{fig:track_finding_efficiency}
-	\end{figure}
-	
-	
-	
-	More specifically for primary vertex finding the most useful instrument is the SPD. It is ideal for fast vertex measurements  as it provides a quick response, also because is closest to the interaction point, and has excellent transverse plane resolution due to its high granularity. The resolution of the SPD Vertex is of 10 $\mu$m in Pb–Pb collisions and 150 $\mu$m in pp collisions at $\sqrt{s_{NN}}$ = 7 TeV. In ALICE, three primary algorithms are used for vertex reconstruction
-	\begin{itemize}
-		\item VertexerSPDz: Provides the measurement of the z-coordinate of the interaction	point using the SPD. It calculates the z-coordinate from tracklets correlations in the SPD layers and iteratively refines the estimate by focusing on the peak of the z-distribution.
-		\item  VertexerSPD3D: Offers a three-dimensional measurement of the primary vertex using the SPD tracklets. To perform the task it minimize the distances among tracklets. 
-		\item VertexerTracks: Provides a three-dimensional measurement of the primary vertex using reconstructed tracks. Where the final vertex position and its covariance matrix are obtained through a fitting process.
-	\end{itemize}
-	\cite{Padhan:2924203}
-	Once the tracks and the interaction vertex have been found in the course of event
-	reconstruction, a search for photon conversions and secondary vertices from particle decays is performed. Instead the hadronic interaction vertices are found at the analysis level by identifying groups of two or more tracks originating from a common secondary vertex with precises restriction in the invariant mass of the pair. In ALICE, secondary vertex reconstruction begins by selecting tracks with Distance of Closest Approach DCA greater than 0.5 mm in pp collisions or 1 mm in Pb–Pb collisions. A graphical resume is visible in Fig \ref{fig:secondary_vertex}. For each pair of selected tracks with opposite charges, known as $V^0$ candidates, are then subjected to further selection criteria: 
-	\begin{enumerate}
-		\item The distance between the two tracks at their PCA is requested to be less than 1.5 cm
-		\item The PCA is requested to be closer to the interaction vertex than the innermost hit of either of the two tracks.
-		\item The cosine of the angle between the total momentum vector of the
-		pair and the line connecting the primary and secondary vertices must be greater than 0.9
-	\end{enumerate} 
-	For $V^0$ candidates with a momentum below 1.5 GeV/c the cut are relaxed. The reconstruction of more complex secondary vertices is performed later, at the analysis stage. For the study of heavy-flavor decays close to the interaction point, the secondary vertex is searched starting from point that satisfied other different topological condition. \cite{ALICE:2014sbxFs} 
-	
-	%identificazione avviene mediante la ricostruzione dei loro decadimenti carichi in volo.Le caratteristiche fisiche principali del $\Lambda_c$c sono un contenuto di quark udc, una massa di(2286.46 ± 0.14) MeV/c2, un I (JP ) = 0 (1/2+) e una vita media di (2.024 ± 0.031) × 10−13 s. La principale sfida nell’analisi di questa particella è rappresentata dalla sua brevissimavita media. Il barione $\Lambda_c$+c ha un cτ = 60 μm e quindi in media decade dopo aver percorsouna distanzainferiore alla precisione dei rivelatori di microvertice di ALICE che si attestaintorno ai 100 $\mu$m per impulsi trasversi pT $\approx$GeV/c. Questa situazione rende impossibilela distinzione netta tra vertice primario e vertice secondario: talecomplicazione rendel’analisi considerevolmente più complessa.
-	
-	\begin{figure}[h]
-		\centering
-		\includegraphics[width=0.7\textwidth]{pictures/secondary_vertex.png}
-		\caption{The figure show the secondary vertices reconstruction procedure for different particles. Using long lives particles are detected and neutral vertices are reconstructed by back-propagating charged particles. The total reconstructed momentum and its orientation constitute useful quantities for background rejection. \cite{ALICE:2014sbxFs}}
-		\label{fig:secondary_vertex}
-	\end{figure}
-	
+\subsection{Track and vertex reconstruction} 
+
+To reconstruct particle's trajectory a tracking algorithms is used \cite{Cheng:2908766}.  This process employ the Kalman filter algorithm, which use the information contained in a data cluster and transforms them into tracking information to obtain the best possible approximation of the real trajectory. It is implemented in a three-pass tracking scheme known as inward-outward-inward. 
+
+The tracking procedure starts with the clustering step performed separately by each detector in witch, starting from the raw data, clusters are created. The clusters are groups of hits produced by a single particle interaction with a detector element and contain its positions, signal amplitudes, signal times and their associated errors. Then the first inward stage starts. As a first step, the track seeds are built from the clusters of the two outermost pad rows of the TPC and the primary vertex point as a constraint. For determine the interaction vertex the information provided by the SPD detector plays a crucial role because is closest to the interaction point, and has excellent transverse plane resolution due to its high granularity. The resolution of the SPD Vertex is of 10 $\mu$m in Pb–Pb collisions and 150 $\mu$m in pp collisions at $\sqrt{s_{NN}}$ = 7 TeV. For find the vertex position the algorithm search the space point that minimises the distance among the tracklets, which are the track segments reconstructed by associating pairs of clusters in the two SPD layers, localizing the point where most of the tracklets converge. When pileup interaction is expected, like in the hight multiplicity events,  the algorithm is repeated several times, discarding at each iteration those clusters which contributed to already-found vertices. When the primary vertex has been localize the algorithm start to search the tracklets that fulfill certain proximity cuts trying to reconstruct the path from the interaction vertex and the data of the TPC. Sometimes happen that the same physical track is reconstruct multiple times; to mitigate this issue, a dedicated algorithm is used to identify pairs of tracks that share a fraction of common clusters above a certain threshold, typically ranging from 25\% to 50\% . 
+The efficiency of the track reconstruction process is influenced by the transverse momentum of the tracks and drops below $p_\perp \ <$ 0.5 GeV/c, as visible in Fig \ref{fig:track_finding_efficiency} due to energy loss in the detector material, while for higher $p_\perp$ the efficiency is affected by the path followed, as it may pass through areas where clusters are lost due to dead zones between read sectors. \cite{Padhan:2924203}.
+In the second step the track reconstructed thanks to the TPC are used as seed for the propagation of the outer track. As these seeds are propagated inward, they are continuously updated by  incorporating clusters within a defined proximity cut. In this way a tree of track hypothesis is create using the new seed generated by each update. The final candidates tracks are selected based on their $\tilde{\chi}^2$ penalizing the case in witch cluster are not found during the extrapolation except for the passage in the dead zones of the detector. In the last stage, the reconstructed tracks are propagated starting from the outer TPC radius toward the interaction point for refine the track parameter. Finally the Kalman filter provides the track parameters including: position, direction, and inverse curvature, with the associated covariance matrix.    
+
+For the study of the heavy-flavor sector the Muon Forward Tracker (MFT) plays a crucial role. The MFT has been designed to allow a clean identification of prompt/displaced muon sources, resulting in particular in the possibility of having charm/beauty separation and background reduction in the light-flavor sector. The MFT tracking algorithm can be separated into two steps: the track finding and the track fitting. For the track finding two methods are used. The first one is called Linear Track Finder (LTF) that looks for cluster position aligned along a straight line although the magnetic field curve the trajectory of charged particle, but the deviation can be neglected at least at hight $p_\perp$. For help in these work a radial tolerance Rcut is given, a graphical resume is visible in Fig \ref{fig:linear_track} . If a track had been recognized in the previous step the correspondent clusters are removed from the list of available ones and are not more considered. The next step consist on a Cellular Automaton (CA) approach particularly suited for low-momentum tracks. It is based on a propagation and joining of consecutive tracklets. So starting from a given segment, considered as the first, the algorithm search the further ones imposing track continuity conditions. The strategist is visible in Fig \ref{fig:CA_track}. Only after that the track candidates are found a track fitting algorithm is applied in order to extract the kinematic parameters. It is able to determine the spatial and momentum coordinates considering material effects. \cite{Herrmann:2920632}.
+\begin{figure}
+	\centering
+	\begin{minipage}{0.45\textwidth}
+		\includegraphics[width=0.7\textwidth]{pictures/linear_track.png}
+		\caption{The figure show Linear Track Finder schematic using the RCut parameter \cite{CERN-LHCC-2015-001}}
+		\label{fig:linear_track}
+		
+	\end{minipage}
+	\begin{minipage}{0.5\textwidth}
+		\includegraphics[width=0.7\textwidth]{pictures/CA_track.png}
+		\caption{The figure show how the Cellular Automaton method works \cite{CERN-LHCC-2015-001}}
+		\label{fig:CA_track}
+	\end{minipage}%
+\end{figure}
+
+
+
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\textwidth]{pictures/track_finding_efficiency.png}
+	\caption{The figure show track finding efficiency for primary particles in different types of collision \cite{ALICE:2014sbxFs}}
+	\label{fig:track_finding_efficiency}
+\end{figure}
+
+
+Once the tracks and the interaction vertex have been found a search for photon conversions and secondary vertices from particle decays is performed. In ALICE, secondary vertex reconstruction begins by selecting tracks with Distance of Closest Approach DCA greater than 0.5 mm in pp collisions or 1 mm in Pb–Pb collisions. A graphical resume is visible in Fig \ref{fig:secondary_vertex}. For each pair of selected tracks with opposite charges, known as $V^0$ candidates, are then subjected to further selection criteria: 
+\begin{enumerate}
+	\item The distance between the two tracks at their PCA is requested to be less than 1.5 cm
+	\item The PCA is requested to be closer to the interaction vertex than the innermost hit of either of the two tracks.
+	\item The cosine of the angle between the total momentum vector of the pair and the line connecting the primary and secondary vertices must be greater than 0.9
+\end{enumerate} 
+For $V^0$ candidates with a momentum below 1.5 GeV/c the cut are relaxed. For the study of heavy-flavor decays close to the interaction point, the secondary vertex is searched starting from point that satisfied other different topological condition. \cite{ALICE:2014sbxFs} The secondary vertex are then reconstructed with the same algorithm used to compute the primary vertex from tracks. The resolution on the position of secondary vertex can be estimated by Monte Carlo simulations to be of the order of 100 $\mu$m with little pt-dependence for $p_\perp >$ 1 GeV/c \cite{2012}. For this reason it is particularly difficult to detect particles with charm flavour, because for example the $\Lambda_c$ has a mean life of t= (2.024 $\pm$ 0.031) $10^{-13}$ s, so it can move away from the interaction point for ct $\approx$ 60 $\mu$m, less than the instrument resolution. For this reason it is impossible to clearly distinguish the two vertices, making the analysis much more complex.
 	
 	\chapter{Appendix}
 	\appendix

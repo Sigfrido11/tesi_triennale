@@ -16,23 +16,22 @@ void primo_grafico() {
   TGraphErrors *graph[n];
 
   const TString fileName[n] = {
-      "generazioni/fugacity_30/156.5_mev_8_fm/p.dN.dy.dat",
-      "generazioni/fugacity_30/156.5_mev_8_fm/anti-p.dN.dy.dat",
-      "generazioni/fugacity_30/156.5_mev_8_fm/n.dN.dy.dat",
-      "generazioni/fugacity_30/156.5_mev_8_fm/anti-n.dN.dy.dat",
-      "generazioni/fugacity_30/156.5_mev_8_fm/d.dN.dy.dat",
-      "generazioni/fugacity_30/156.5_mev_8_fm/anti-d.dN.dy.dat",
-      "generazioni/fugacity_30/156.5_mev_8_fm/H3.dN.dy.dat",
-      "generazioni/fugacity_30/156.5_mev_8_fm/anti-H3.dN.dy.dat",
-      "generazioni/fugacity_30/156.5_mev_8_fm/He3.dN.dy.dat",
-      "generazioni/fugacity_30/156.5_mev_8_fm/anti-He3.dN.dy.dat",
-      "generazioni/fugacity_30/156.5_mev_8_fm/He4.dN.dy.dat",
-      "generazioni/fugacity_30/156.5_mev_8_fm/anti-He4.dN.dy.dat",
-      "generazioni/fugacity_30/156.5_mev_8_fm/Lambda-c.dN.dy.dat",
-      "generazioni/fugacity_30/156.5_mev_8_fm/anti-Lambda-c.dN.dy.dat",
-      "generazioni/fugacity_30/156.5_mev_8_fm/c-deuteron.dN.dy.dat",
-      "generazioni/fugacity_30/156.5_mev_8_fm/anti-c-deuteron.dN.dy.dat"
-  };
+      "generazioni/fugacity_30/156_mev_8_fm/p.dN.dy.dat",
+      "generazioni/fugacity_30/156_mev_8_fm/anti-p.dN.dy.dat",
+      "generazioni/fugacity_30/156_mev_8_fm/n.dN.dy.dat",
+      "generazioni/fugacity_30/156_mev_8_fm/anti-n.dN.dy.dat",
+      "generazioni/fugacity_30/156_mev_8_fm/d.dN.dy.dat",
+      "generazioni/fugacity_30/156_mev_8_fm/anti-d.dN.dy.dat",
+      "generazioni/fugacity_30/156_mev_8_fm/H3.dN.dy.dat",
+      "generazioni/fugacity_30/156_mev_8_fm/anti-H3.dN.dy.dat",
+      "generazioni/fugacity_30/156_mev_8_fm/He3.dN.dy.dat",
+      "generazioni/fugacity_30/156_mev_8_fm/anti-He3.dN.dy.dat",
+      "generazioni/fugacity_30/156_mev_8_fm/He4.dN.dy.dat",
+      "generazioni/fugacity_30/156_mev_8_fm/anti-He4.dN.dy.dat",
+      "generazioni/fugacity_30/156_mev_8_fm/Lambda(c)+.dN.dy.dat",
+      "generazioni/fugacity_30/156_mev_8_fm/anti-Lambda(c)+.dN.dy.dat",
+      "generazioni/fugacity_30/156_mev_8_fm/c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/156_mev_8_fm/anti-c-deuteron.dN.dy.dat"};
   for (int i{0}; i < n; i++) {
     std::ifstream file(fileName[i].Data());
     std::cout << "file: " << fileName[i] << std::endl;
@@ -53,7 +52,7 @@ void primo_grafico() {
 
   double integral[n / 2];
   double error[n / 2];
-  double integralNorm[div / 2];
+  double integralogorm[div / 2];
   double errorNorm[div / 2];
   double integralCharm[(n - div) / 2];
   double errorCharm[(n - div) / 2];
@@ -102,7 +101,7 @@ void primo_grafico() {
 
   for (int i = 0; i < n / 2; ++i) {
     if (i < div / 2) {
-      integralNorm[i] = integral[i];
+      integralogorm[i] = integral[i];
       errorNorm[i] = error[i];
     } else {
       integralCharm[i - div / 2] = integral[i];
@@ -111,7 +110,7 @@ void primo_grafico() {
   }
   // verifica correttezza
   for (int i{0}; i < n / 2; i++) {
-    std::cout << "integralNorm[i] " << i << " " << integralNorm[i] << '\n';
+    std::cout << "integralogorm[i] " << i << " " << integralogorm[i] << '\n';
   }
 
   for (int i{0}; i < 2; i++) {
@@ -124,7 +123,7 @@ void primo_grafico() {
   TGraphErrors *gTest = new TGraphErrors(n / 2, mass, integral, error);
 
   TGraphErrors *gNormal =
-      new TGraphErrors(div / 2, massNorm, integralNorm, errorNorm);
+      new TGraphErrors(div / 2, massNorm, integralogorm, errorNorm);
   TGraphErrors *gCharm =
       new TGraphErrors((n - div) / 2, massCharm, integralCharm, errorCharm);
 
@@ -265,49 +264,74 @@ std::cout<< "fin qui tutto bene" << '\n';
   canvasFinal->Update();
 }
 
+
 void cambiamenti() {
-  int const n{38};
+  int const n{62};
   // se aggiungi un file le cose da cambiare sono qui
   const TString fileName[n] = {
-      "generazioni//fugacity_30/156_mev_4_fm/c-deuteron.dN.dy.dat",
-      "generazioni//fugacity_30/156_mev_4_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni//fugacity_30/156_mev_5_fm/c-deuteron.dN.dy.dat",
-      "generazioni//fugacity_30/156_mev_5_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni//fugacity_30/156_mev_6_fm/c-deuteron.dN.dy.dat",
-      "generazioni//fugacity_30/156_mev_6_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni//fugacity_30/156_mev_7_fm/c-deuteron.dN.dy.dat",
-      "generazioni//fugacity_30/156_mev_7_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni//fugacity_30/156_mev_8_fm/c-deuteron.dN.dy.dat",
-      "generazioni//fugacity_30/156_mev_8_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni//fugacity_30/156_mev_9_fm/c-deuteron.dN.dy.dat",
-      "generazioni//fugacity_30/156_mev_9_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni//fugacity_30/156_mev_10_fm/c-deuteron.dN.dy.dat",
-      "generazioni//fugacity_30/156_mev_10_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni//fugacity_30/156_mev_11_fm/c-deuteron.dN.dy.dat",
-      "generazioni//fugacity_30/156_mev_11_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni//fugacity_30/156_mev_12_fm/c-deuteron.dN.dy.dat",
-      "generazioni//fugacity_30/156_mev_12_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni//fugacity_30/150_mev_8_fm/c-deuteron.dN.dy.dat",
-      "generazioni//fugacity_30/150_mev_8_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni//fugacity_30/151_mev_8_fm/c-deuteron.dN.dy.dat",
-      "generazioni//fugacity_30/151_mev_8_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni//fugacity_30/152_mev_8_fm/c-deuteron.dN.dy.dat",
-      "generazioni//fugacity_30/152_mev_8_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni//fugacity_30/153_mev_8_fm/c-deuteron.dN.dy.dat",
-      "generazioni//fugacity_30/153_mev_8_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni//fugacity_30/154_mev_8_fm/c-deuteron.dN.dy.dat",
-      "generazioni//fugacity_30/154_mev_8_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni//fugacity_30/155_mev_8_fm/c-deuteron.dN.dy.dat",
-      "generazioni//fugacity_30/155_mev_8_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni//fugacity_30/157_mev_8_fm/c-deuteron.dN.dy.dat",
-      "generazioni//fugacity_30/157_mev_8_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni//fugacity_30/158_mev_8_fm/c-deuteron.dN.dy.dat",
-      "generazioni//fugacity_30/158_mev_8_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni//fugacity_30/159_mev_8_fm/c-deuteron.dN.dy.dat",
-      "generazioni//fugacity_30/159_mev_8_fm/anti-c-deuteron.dN.dy.dat",
-      "generazioni//fugacity_30/160_mev_8_fm/c-deuteron.dN.dy.dat",
-      "generazioni//fugacity_30/160_mev_8_fm/anti-c-deuteron.dN.dy.dat",
-     
+      "generazioni/fugacity_30/156_mev_4_fm/c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/156_mev_4_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/156_mev_5_fm/c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/156_mev_5_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/156_mev_6_fm/c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/156_mev_6_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/156_mev_7_fm/c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/156_mev_7_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/156_mev_8_fm/c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/156_mev_8_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/156_mev_9_fm/c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/156_mev_9_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/156_mev_10_fm/c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/156_mev_10_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/156_mev_11_fm/c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/156_mev_11_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/156_mev_12_fm/c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/156_mev_12_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/150_mev_8_fm/c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/150_mev_8_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/151_mev_8_fm/c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/151_mev_8_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/152_mev_8_fm/c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/152_mev_8_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/153_mev_8_fm/c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/153_mev_8_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/154_mev_8_fm/c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/154_mev_8_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/155_mev_8_fm/c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/155_mev_8_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/157_mev_8_fm/c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/157_mev_8_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/158_mev_8_fm/c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/158_mev_8_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/159_mev_8_fm/c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/159_mev_8_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/160_mev_8_fm/c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/160_mev_8_fm/anti-c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/fugacity_24/c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/fugacity_24/anti-c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/fugacity_25/c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/fugacity_25/anti-c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/fugacity_26/c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/fugacity_26/anti-c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/fugacity_27/c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/fugacity_27/anti-c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/fugacity_28/c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/fugacity_28/anti-c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/fugacity_30/c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/fugacity_30/anti-c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/fugacity_31/c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/fugacity_31/anti-c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/fugacity_32/c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/fugacity_32/anti-c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/fugacity_33/c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/fugacity_33/anti-c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/fugacity_34/c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/fugacity_34/anti-c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/fugacity_35/c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/fugacity_35/anti-c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/fugacity_36/c-deuteron.dN.dy.dat",
+      "generazioni/fugacity_30/fugacity_36/anti-c-deuteron.dN.dy.dat",
+
   };
 
   double count[n / 2];
@@ -323,11 +347,7 @@ void cambiamenti() {
       std::cerr << "Impossibile aprire il file: " << fileName[i + 1]
                 << std::endl;
     }
-
-  double integral[n / 2];
-  double error[n / 2];
-  double integralNorm[div / 2];
-  double errorNorm[div / 2];
+  }
   TGraphErrors *graph[n];
   for (int i{0}; i < n; i = i + 2) {
     graph[i] = new TGraphErrors(fileName[i], "%lg %lg %lg");
@@ -366,39 +386,59 @@ void cambiamenti() {
       integralError +=
           areaError * areaError; // Somma in quadratura degli errori
     }
-    error[i / 2] = std::sqrt(integralError); // Errore finale
-    integral[i / 2] = partialArea;
+    countError[i / 2] = std::sqrt(integralError); // Errore finale
+    count[i / 2] = partialArea;
+    std::cout << "ingresso " << fileName[i] << " " << i << '\n';
+    std::cout << partialArea << '\n';
   }
-  }
-    for(int j=0; i < n; i=i+2){
-      count[i]=integral[i];
-      countError[i]=error[i];
-    }
-  double volume[n/2] = {4,5,6,7,8,9,10,11,12, 8,8,8,8,8,8,8,8,8,8};
-  double temperature[n/2] = {156,156,156,156,156,156,156,156,156,
-                             150, 151, 152, 153, 154, 155, 157, 158, 159, 160};
+
+  double volume[n / 2] = {4, 5, 6, 7, 8, 9, 10, 11, 12, 8,
+                          8, 8, 8, 8, 8, 8, 8,  8,  8};
+  double temperature[n / 2] = {156, 156, 156, 156, 156, 156, 156, 156, 156, 150,
+                               151, 152, 153, 154, 155, 157, 158, 159, 160};
 
   TGraph2D *d2Graph = new TGraph2D(n / 2, volume, temperature, count);
-  double radius[9] = {4,5,6,7,8,9,10,11,12};
-  double countRadius[9] = {count[0], count[1], count[2], count[3],
-                           count[4], count[5], count[6], count[7], count[8]};
+  double radius[9] = {4, 5, 6, 7, 8, 9, 10, 11, 12};
+  double countRadius[9] = {count[0], count[1], count[2], count[3], count[4],
+                           count[5], count[6], count[7], count[8]};
   double errorVol[9] = {countError[0], countError[1], countError[2],
                         countError[3], countError[4], countError[5],
-                        countError[6],countError[7],countError[8]};
+                        countError[6], countError[7], countError[8]};
 
   double temp[11] = {156, 150, 151, 152, 153, 154, 155, 157, 158, 159, 160};
-  double countTemp[11] = {count[0], count[10], count[11], count[12], count[13], count[14],count[15],count[16],count[17],count[18],count[19]};
-  double errorTemp[11] = {countError[0], countError[10], countError[11],
-                         countError[12], countError[13],countError[14], countError[15],
-                         countError[16], countError[17], countError[18], countError[19]};
+  double countTemp[11] = {count[4],  count[9],  count[10], count[11],
+                          count[12], count[13],   count[14], count[15],
+                          count[16], count[17], count[18]};
+  double errorTemp[11] = {countError[4],  countError[9],  countError[10],
+                          countError[11], countError[12], countError[13],
+                          countError[14], countError[15], countError[16],
+                          countError[17], countError[18]};
+  
+  double logTemp[11] = {std::log(count[4]),std::log(count[9]),std::log(count[10]),std::log(count[11]),std::log(count[12]),std::log(0.000534),std::log(count[14]),std::log(count[15]),std::log(count[16]),std::log(count[17]),std::log(count[18])};
 
-  TGraphErrors *diffVolume = new TGraphErrors(8, radius, countRadius, errorVol);
-  TGraphErrors *diffTemp = new TGraphErrors(5, temp, countTemp, errorTemp);
+  double fugacity[13] = {24, 25, 26, 27, 28, 30, 31, 32, 33, 34, 35, 36, 29};
+  double countFugacity[13] = {count[19], count[20], count[21], count[22],
+                              count[23], count[24], count[25], count[26],
+                              count[27], count[28], count[29], count[30],
+                              count[4]};
+  double errorFugacity[13] = {countError[19], countError[20], countError[21],
+                              countError[22], countError[23], countError[24],
+                              countError[25], countError[26], countError[27],
+                              countError[28], countError[29], countError[30],
+                              countError[4]};
+
+  TGraphErrors *diffVolume = new TGraphErrors(9, radius, countRadius, errorVol);
+  TGraphErrors *diffTemp = new TGraphErrors(11, temp, logTemp, errorTemp);
+  TGraphErrors *gFugacity =
+      new TGraphErrors(13, fugacity, countFugacity, errorFugacity);
+
   // Crea un canvas
   TCanvas *c1 = new TCanvas("c1", "c1", 800, 600);
 
   c1->SetTheta(15); // Imposta l'angolo di vista in azimut
   c1->SetPhi(20);   // Imposta l'angolo di vista in elevazione
+  c1->SetGridx();  // Griglia solo sull'asse X
+  c1->SetGridy();  // Griglia solo sull'asse Y
 
   // Disegna il grafico 3D
   d2Graph->SetMarkerStyle(21);    // Marker stile 21 (cerchi pieni)
@@ -412,15 +452,21 @@ void cambiamenti() {
   pad1->cd();
 
   d2Graph->SetLineColor(1);
-  d2Graph->GetYaxis()->SetTitleOffset(1.2);
-  d2Graph->GetXaxis()->SetTitleSize(0.04);
-  d2Graph->GetYaxis()->SetTitleSize(0.04);
+  d2Graph->GetXaxis()->SetTitleOffset(1.3);
+  d2Graph->GetYaxis()->SetTitleOffset(1.3);
+  d2Graph->GetZaxis()->SetTitleOffset(1.);
+  d2Graph->GetXaxis()->SetTitleSize(0.05);
+  d2Graph->GetYaxis()->SetTitleSize(0.05);
+  d2Graph->GetZaxis()->SetTitleSize(0.05);
   d2Graph->GetXaxis()->SetTitle("Radius (fm)");
   d2Graph->GetYaxis()->SetTitle("Temperature (Mev)");
-  d2Graph->GetXaxis()->SetLimits(1.5, 10);
-  d2Graph->GetXaxis()->SetRangeUser(1.5, 10);
-  d2Graph->GetYaxis()->SetLimits(150, 165);
-  d2Graph->GetYaxis()->SetRangeUser(150, 165);
+  d2Graph->GetZaxis()->SetTitle("dN/dy");
+  d2Graph->GetXaxis()->SetLimits(1.5, 14);
+  d2Graph->GetXaxis()->SetRangeUser(1.5, 14);
+  d2Graph->GetYaxis()->SetLimits(149, 165);
+  d2Graph->GetYaxis()->SetRangeUser(149, 165);
+  d2Graph->GetZaxis()->SetLimits(1e-5, 1e-3);
+  d2Graph->GetZaxis()->SetRangeUser(1e-5, 1e-5);
   d2Graph->Draw("P0");
 
   c1->Update();
@@ -436,23 +482,24 @@ void cambiamenti() {
   diffVolume->GetXaxis()->SetTitleSize(0.04);
   diffVolume->GetYaxis()->SetTitleSize(0.04);
   diffVolume->GetXaxis()->SetTitle("Radius (fm)");
-  diffVolume->GetYaxis()->SetTitle("Frequency");
+  diffVolume->GetYaxis()->SetTitle("dN/dy");
   diffVolume->Draw("P0");
-  diffVolume->SetMarkerStyle(20);
+  diffVolume->SetMarkerStyle(21);
   diffVolume->SetMarkerSize(.8);
-  diffVolume->SetMarkerColor(kGreen);
+  diffVolume->SetMarkerColor(6);
 
   auto leg1 = new TLegend(0.7, 0.1, 0.9, 0.3);
   leg1->AddEntry(diffVolume, "T = 156 Mev", "");
+  leg1->AddEntry(diffVolume, "|y|<0.5", "");
   leg1->SetTextSize(0.04);
   leg1->Draw();
 
   // (Opzionale) Aggiungi la linea di fit
   // TF1 *fitVolume = new TF1("fitVolume", "[0] * log([1] * x) + [2]", 0, 10);
-  TF1 *fitVolume = new TF1("fitVolume", "[0] * x + [1]", 0, 10);
+  TF1 *fitVolume = new TF1("fitVolume", "[0] * x^3 + [1]", 0, 10);
   fitVolume->SetLineColor(kRed);
   fitVolume->SetParameter(0, 1e-6);
-  fitVolume->SetParLimits(0, 0, 3e-6);
+  // fitVolume->SetParLimits(0, 0, 3e-6);
   fitVolume->SetParameter(1, 1e-3);
   // fitVolume->SetParLimits(1, 0, 1e5);
   diffVolume->Fit(fitVolume);
@@ -464,9 +511,19 @@ void cambiamenti() {
 
   // Crea il terzo canvas per il pad3
   TCanvas *c3 = new TCanvas("c3", "Canvas 3", 800, 600);
-  TPad *pad3 = new TPad("pad3", "Pad piccolo destro", 0, 0, 1, 1);
+  TPad *pad3 = new TPad("pad3", "Pad piccolo destro", 0, 0, 1, 1);;
   pad3->Draw();
-  pad3->cd();
+  c3->cd();
+  
+TF1 *fitTemp = new TF1("fitTemp", "[0]*x+[1]", 140, 165);
+
+// Imposta i parametri iniziali per il fit
+fitTemp->SetParameter(0, 1e-4);  // Parametro per l'intercetta (start value)
+fitTemp->SetParameter(1, 1e-7);  // Parametro per la pendenza (start value)
+fitTemp->SetLineColor(kGreen);   // Imposta il colore della linea di fit
+//fitTemp->SetParameter(2,1);
+// fitTemp->SetParameter(0,0);
+// fitTemp->SetParameter(2,2e-6);
 
   // Disegna il grafico diffTemp
   diffTemp->SetLineColor(1);
@@ -474,29 +531,53 @@ void cambiamenti() {
   diffTemp->GetXaxis()->SetTitleSize(0.04);
   diffTemp->GetYaxis()->SetTitleSize(0.04);
   diffTemp->GetXaxis()->SetTitle("Temperature (Mev)");
-  diffTemp->GetYaxis()->SetTitle("Frequency");
-  diffTemp->Draw("P0");
-  diffTemp->SetMarkerStyle(20);
+  diffTemp->GetYaxis()->SetTitle("dN/dy");
+  diffTemp->Fit(fitTemp);
+  diffTemp->Draw("APE");
+  diffTemp->SetMarkerStyle(21);
   diffTemp->SetMarkerSize(.8);
   diffTemp->SetMarkerColor(kRed);
   auto leg2 = new TLegend(0.7, 0.1, 0.9, 0.3);
-  leg2->AddEntry(diffTemp, "R=5fm", "");
+  leg2->AddEntry(diffTemp, "R=8fm", "");
+  leg2->AddEntry(diffTemp, "|y|<0.5", "");
   leg2->SetTextSize(0.04);
   leg2->Draw();
 
   // (Opzionale) Aggiungi la linea di fit
-  TF1 *fitTemp = new TF1("fitTemp", "[0]*x + [1]", 0, 10);
-  fitTemp->SetLineColor(kGreen);
-  fitTemp->SetParameter(0, 1e-6);
-  // fitTemp->SetParLimits(0, 0, 1e-5);
-  fitTemp->SetParameter(1, 1e3);
-  // fitTemp->SetParLimits(1, 0, 1e5);
-  diffTemp->Fit(fitTemp);
-  leg2->AddEntry(fitTemp, "Fit Line", "l");
-  diffTemp->Draw("APE");
-  leg2->Draw();
+
 
   c3->Update(); // Aggiorna il canvas
+
+  TF1 *fitFug = new TF1("fugacity", "[0]*x + [1]", 0, 10);
+  fitFug->SetLineColor(kBlue);
+  fitFug->SetParameter(0, 1e-3);
+  // fitFug->SetParLimits(0, 0, 1e-5);
+  fitFug->SetParameter(1, 1e-3);
+  fitFug->SetParLimits(1, 0, 1e-4);
+  // fitFug->SetParameter(2, 1e-3);
+  // fitFug->SetParLimits(2, 0, 1e-3);
+
+  gFugacity->Fit(fitFug);
+  // leg2->AddEntry(fitTemp, "Fit Line", "l");
+
+  TCanvas *c4 = new TCanvas("c4", "Canvas 4", 800, 600);
+  // Disegna il grafico diffTemp
+  gFugacity->SetLineColor(1);
+  gFugacity->GetYaxis()->SetTitleOffset(1.2);
+  gFugacity->GetXaxis()->SetTitleSize(0.04);
+  gFugacity->GetYaxis()->SetTitleSize(0.04);
+  gFugacity->GetXaxis()->SetTitle("Charm fugacity");
+  gFugacity->GetYaxis()->SetTitle("dN/dy");
+  gFugacity->SetMarkerStyle(21);
+  gFugacity->SetMarkerSize(.8);
+  gFugacity->SetMarkerColor(kRed);
+  gFugacity->Draw("APE");
+  auto leg3 = new TLegend(0.7, 0.1, 0.9, 0.3);
+  leg3->AddEntry(diffTemp, "R=8fm", "");
+  leg3->AddEntry(diffTemp, "t=156 MeV", "");
+  leg3->AddEntry(diffTemp, "|y|<0.5", "");
+  leg3->SetTextSize(0.04);
+  leg3->Draw();
 }
 /*
 void densFreq() {
@@ -602,4 +683,4 @@ void densFreq() {
 
   file->Close();
 }
-*/
+*/  
