@@ -71,6 +71,11 @@
         "semaphore": "cpp",
         "rilevazioni.C": "cpp",
         "fit.C": "cpp",
-        "Macro_combo.C": "cpp"
+        "Macro_combo.C": "cpp",
+        "cfenv": "cpp",
+        "codecvt": "cpp",
+        "source_location": "cpp",
+        "typeindex": "cpp",
+        "stdfloat": "cpp"
     }
 }

@@ -11,15 +11,11 @@
 #include <sstream>
 
 void primo_grafico() {
-  const int n{16};
-  const int div{12};
+  const int n{12};
+  const int div{8};
   TGraphErrors *graph[n];
 
   const TString fileName[n] = {
-      "generazioni/fugacity_30/156_mev_8_fm/p.dN.dy.dat",
-      "generazioni/fugacity_30/156_mev_8_fm/anti-p.dN.dy.dat",
-      "generazioni/fugacity_30/156_mev_8_fm/n.dN.dy.dat",
-      "generazioni/fugacity_30/156_mev_8_fm/anti-n.dN.dy.dat",
       "generazioni/fugacity_30/156_mev_8_fm/d.dN.dy.dat",
       "generazioni/fugacity_30/156_mev_8_fm/anti-d.dN.dy.dat",
       "generazioni/fugacity_30/156_mev_8_fm/H3.dN.dy.dat",
@@ -43,9 +39,9 @@ void primo_grafico() {
 
   TH1F *histo[n];
   TH1F *histoSum[n / 2];
-  double mass[n / 2] = {0.938272, 0.939565, 1.87561, 2.80892, 2.80839, 3.72738, 2.28646, 3.225};
-  // massa prot neut deuterio trizio he3 he4 lambda c c-deuteron
-  double massNorm[div / 2] = {0.938272, 0.939565, 1.87561, 2.80892, 2.80839, 3.72738};
+  double mass[n / 2] = { 1.87561, 2.80892, 2.80839, 3.72738, 2.28646, 3.225};
+  // massa deuterio trizio he3 he4 lambda c c-deuteron
+  double massNorm[div / 2] = { 1.87561, 2.80892, 2.80839, 3.72738};
 
   double massCharm[(n - div) / 2] = {2.28646,
                                      3.225}; // massa lamda c c-deuteron
@@ -120,26 +116,26 @@ void primo_grafico() {
   // grafici finali
   TMultiGraph *finalGraph = new TMultiGraph;
 
-  TGraphErrors *gTest = new TGraphErrors(n / 2, mass, integral, error);
+  TGraphErrors *gTest = new TGraphErrors(n / 2, mass, integral, nullptr, error);
 
   TGraphErrors *gNormal =
-      new TGraphErrors(div / 2, massNorm, integralogorm, errorNorm);
+      new TGraphErrors(div / 2, massNorm, integralogorm, nullptr, errorNorm);
   TGraphErrors *gCharm =
-      new TGraphErrors((n - div) / 2, massCharm, integralCharm, errorCharm);
+      new TGraphErrors((n - div) / 2, massCharm, integralCharm, nullptr, errorCharm);
 
   // Configurazione della funzione di fit per entrambi i grafici
   TF1 *fitExp = new TF1("fitExp", "[0] * exp(-[1] * x)", 0, 4);
   TF1 *fitExpCharm = new TF1("fitExpCharm", "[0] * exp(-[1] * x)", 0, 4);
 
   fitExp->SetParameter(0, 1e3);
-  fitExp->SetParLimits(0, 0, 1e5);
+  //fitExp->SetParLimits(0, 0, 1e5);
   fitExp->SetParameter(1, 5);
-  fitExp->SetParLimits(1, 4, 8);
+  //fitExp->SetParLimits(1, 4, 8);
 
   fitExpCharm->SetParameter(0, 1e3);
-  fitExpCharm->SetParLimits(0, 0, 1e5);
+  //fitExpCharm->SetParLimits(0, 0, 1e5);
   fitExpCharm->SetParameter(1, 5);
-  fitExpCharm->SetParLimits(1, 4, 8);
+  //fitExpCharm->SetParLimits(1, 4, 8);
 
   fitExp->SetLineColor(kRed);
   fitExpCharm->SetLineColor(kGreen);
@@ -194,9 +190,7 @@ void primo_grafico() {
   finalGraph->Draw("APE");
 
   // Aggiunta delle etichette ai punti
-  const char *labels[n / 2] = {"p",
-                               "n",
-                               "d",
+  const char *labels[n / 2] = {"d",
                                "H3",
                                "He3",
                                "He4",
@@ -254,8 +248,8 @@ std::cout<< "fin qui tutto bene" << '\n';
   finalGraph->GetYaxis()->SetTitle("dN/dy");
   finalGraph->GetXaxis()->CenterTitle(true);
   finalGraph->GetYaxis()->CenterTitle(true);
-  finalGraph->GetYaxis()->SetLimits(1e-7, 10);
-  finalGraph->GetYaxis()->SetRangeUser(1e-7, 10);
+  finalGraph->GetYaxis()->SetLimits(1e-7, 1);
+  finalGraph->GetYaxis()->SetRangeUser(1e-7, 1);
   finalGraph->GetXaxis()->SetLimits(0, 4);
   finalGraph->GetXaxis()->SetRangeUser(0, 4);
   leg->Draw();
@@ -360,7 +354,7 @@ void cambiamenti() {
       double err2 = graph[i + 1]->GetErrorY(j);
       graph[i]->SetPoint(j, x, y1 + y2);
       graph[i]->SetPointError(j, 0., TMath::Sqrt(err1 * err1 + err2 * err2));
-    }
+       }
     double partialArea{0};
     double integralError{0};
     for (int k = 0; k < graph[i]->GetN() - 1; ++k) {
@@ -382,14 +376,14 @@ void cambiamenti() {
 
       // Propagazione degli errori (considerando la somma in quadratura)
       double areaError =
-          0.5 * std::sqrt(y1Error * y1Error + y2Error * y2Error) * (x2 - x1);
+          0.5 * std::sqrt(y1Error * y1Error + y2Error * y2Error)*(x2-x1);
       integralError +=
           areaError * areaError; // Somma in quadratura degli errori
-    }
+            }
     countError[i / 2] = std::sqrt(integralError); // Errore finale
     count[i / 2] = partialArea;
     std::cout << "ingresso " << fileName[i] << " " << i << '\n';
-    std::cout << partialArea << '\n';
+    std::cout << partialArea << " err " << countError[i/2] <<  '\n';
   }
 
   double volume[n / 2] = {4, 5, 6, 7, 8, 9, 10, 11, 12, 8,
@@ -404,6 +398,7 @@ void cambiamenti() {
   double errorVol[9] = {countError[0], countError[1], countError[2],
                         countError[3], countError[4], countError[5],
                         countError[6], countError[7], countError[8]};
+  double exV [9] ={0.006,0.006,0.006,0.006,0.006,0.006,0.006,0.006,0.006};
 
   double temp[11] = {156, 150, 151, 152, 153, 154, 155, 157, 158, 159, 160};
   double countTemp[11] = {count[4],  count[9],  count[10], count[11],
@@ -414,6 +409,7 @@ void cambiamenti() {
                           countError[14], countError[15], countError[16],
                           countError[17], countError[18]};
   
+  double exT[11]={0.006,0.006,0.006,0.006,0.006,0.006,0.006,0.006,0.006,0.006,0.006};
   double logTemp[11] = {std::log(count[4]),std::log(count[9]),std::log(count[10]),std::log(count[11]),std::log(count[12]),std::log(0.000534),std::log(count[14]),std::log(count[15]),std::log(count[16]),std::log(count[17]),std::log(count[18])};
 
   double fugacity[13] = {24, 25, 26, 27, 28, 30, 31, 32, 33, 34, 35, 36, 29};
@@ -426,11 +422,13 @@ void cambiamenti() {
                               countError[25], countError[26], countError[27],
                               countError[28], countError[29], countError[30],
                               countError[4]};
+  double exF[13]={0.006,0.006,0.006,0.006,0.006,0.006,0.006,0.006,0.006,0.006,0.006,0.006,0.006};
+  
 
-  TGraphErrors *diffVolume = new TGraphErrors(9, radius, countRadius, errorVol);
-  TGraphErrors *diffTemp = new TGraphErrors(11, temp, logTemp, errorTemp);
+  TGraphErrors *diffVolume = new TGraphErrors(9, radius, countRadius, exV,errorVol);
+  TGraphErrors *diffTemp = new TGraphErrors(11, temp, countTemp,  exT,errorTemp);
   TGraphErrors *gFugacity =
-      new TGraphErrors(13, fugacity, countFugacity, errorFugacity);
+      new TGraphErrors(13, fugacity, countFugacity, exF,errorFugacity);
 
   // Crea un canvas
   TCanvas *c1 = new TCanvas("c1", "c1", 800, 600);
@@ -460,6 +458,7 @@ void cambiamenti() {
   d2Graph->GetZaxis()->SetTitleSize(0.05);
   d2Graph->GetXaxis()->SetTitle("Radius (fm)");
   d2Graph->GetYaxis()->SetTitle("Temperature (Mev)");
+  d2Graph->SetTitle(" ");
   d2Graph->GetZaxis()->SetTitle("dN/dy");
   d2Graph->GetXaxis()->SetLimits(1.5, 14);
   d2Graph->GetXaxis()->SetRangeUser(1.5, 14);
@@ -478,22 +477,25 @@ void cambiamenti() {
 
   // Disegna il grafico diffVolume
   diffVolume->SetLineColor(1);
-  diffVolume->GetYaxis()->SetTitleOffset(1.2);
-  diffVolume->GetXaxis()->SetTitleSize(0.04);
-  diffVolume->GetYaxis()->SetTitleSize(0.04);
+  diffVolume->GetYaxis()->SetTitleOffset(1.);
+  diffVolume->GetXaxis()->SetTitleSize(0.05);
+  diffVolume->GetYaxis()->SetTitleSize(0.05);
   diffVolume->GetXaxis()->SetTitle("Radius (fm)");
   diffVolume->GetYaxis()->SetTitle("dN/dy");
+  diffVolume->SetTitle(" ");
+  diffVolume->GetXaxis()->SetLabelSize(0.04);  // Dimensione etichette sull'asse X
+  diffVolume->GetYaxis()->SetLabelSize(0.04);
   diffVolume->Draw("P0");
   diffVolume->SetMarkerStyle(21);
   diffVolume->SetMarkerSize(.8);
-  diffVolume->SetMarkerColor(6);
-
+  diffVolume->SetMarkerColor(9);
+/*
   auto leg1 = new TLegend(0.7, 0.1, 0.9, 0.3);
   leg1->AddEntry(diffVolume, "T = 156 Mev", "");
   leg1->AddEntry(diffVolume, "|y|<0.5", "");
   leg1->SetTextSize(0.04);
   leg1->Draw();
-
+*/
   // (Opzionale) Aggiungi la linea di fit
   // TF1 *fitVolume = new TF1("fitVolume", "[0] * log([1] * x) + [2]", 0, 10);
   TF1 *fitVolume = new TF1("fitVolume", "[0] * x^3 + [1]", 0, 10);
@@ -503,8 +505,10 @@ void cambiamenti() {
   fitVolume->SetParameter(1, 1e-3);
   // fitVolume->SetParLimits(1, 0, 1e5);
   diffVolume->Fit(fitVolume);
+  /*
   leg1->AddEntry(fitVolume, "Fit Line", "l");
   leg1->Draw();
+  */
   diffVolume->Draw("APE");
 
   c2->Update(); // Aggiorna il canvas
@@ -515,11 +519,12 @@ void cambiamenti() {
   pad3->Draw();
   c3->cd();
   
-TF1 *fitTemp = new TF1("fitTemp", "[0]*x+[1]", 140, 165);
+TF1 *fitTemp = new TF1("fitTemp", "[0]*exp(x*[1])+[2]", 140, 165);
 
 // Imposta i parametri iniziali per il fit
-fitTemp->SetParameter(0, 1e-4);  // Parametro per l'intercetta (start value)
-fitTemp->SetParameter(1, 1e-7);  // Parametro per la pendenza (start value)
+fitTemp->SetParameter(0, 4.24449e-14);  // Parametro per l'intercetta (start value)
+fitTemp->SetParameter(1, 0.150492); 
+fitTemp->SetParameter(2, 0.0000284396);  // Parametro per la pendenza (start value)
 fitTemp->SetLineColor(kGreen);   // Imposta il colore della linea di fit
 //fitTemp->SetParameter(2,1);
 // fitTemp->SetParameter(0,0);
@@ -527,11 +532,14 @@ fitTemp->SetLineColor(kGreen);   // Imposta il colore della linea di fit
 
   // Disegna il grafico diffTemp
   diffTemp->SetLineColor(1);
-  diffTemp->GetYaxis()->SetTitleOffset(1.2);
-  diffTemp->GetXaxis()->SetTitleSize(0.04);
-  diffTemp->GetYaxis()->SetTitleSize(0.04);
+  diffTemp->GetYaxis()->SetTitleOffset(1.);
+  diffTemp->GetXaxis()->SetTitleSize(0.05);
+  diffTemp->GetYaxis()->SetTitleSize(0.05);
   diffTemp->GetXaxis()->SetTitle("Temperature (Mev)");
   diffTemp->GetYaxis()->SetTitle("dN/dy");
+  diffTemp->SetTitle(" ");
+  diffTemp->GetXaxis()->SetLabelSize(0.04);  // Dimensione etichette sull'asse X
+  diffTemp->GetYaxis()->SetLabelSize(0.04);
   diffTemp->Fit(fitTemp);
   diffTemp->Draw("APE");
   diffTemp->SetMarkerStyle(21);
@@ -541,7 +549,7 @@ fitTemp->SetLineColor(kGreen);   // Imposta il colore della linea di fit
   leg2->AddEntry(diffTemp, "R=8fm", "");
   leg2->AddEntry(diffTemp, "|y|<0.5", "");
   leg2->SetTextSize(0.04);
-  leg2->Draw();
+  //leg2->Draw();
 
   // (Opzionale) Aggiungi la linea di fit
 
@@ -553,7 +561,7 @@ fitTemp->SetLineColor(kGreen);   // Imposta il colore della linea di fit
   fitFug->SetParameter(0, 1e-3);
   // fitFug->SetParLimits(0, 0, 1e-5);
   fitFug->SetParameter(1, 1e-3);
-  fitFug->SetParLimits(1, 0, 1e-4);
+  //fitFug->SetParLimits(1, 0, 1e-4);
   // fitFug->SetParameter(2, 1e-3);
   // fitFug->SetParLimits(2, 0, 1e-3);
 
@@ -563,11 +571,14 @@ fitTemp->SetLineColor(kGreen);   // Imposta il colore della linea di fit
   TCanvas *c4 = new TCanvas("c4", "Canvas 4", 800, 600);
   // Disegna il grafico diffTemp
   gFugacity->SetLineColor(1);
-  gFugacity->GetYaxis()->SetTitleOffset(1.2);
-  gFugacity->GetXaxis()->SetTitleSize(0.04);
-  gFugacity->GetYaxis()->SetTitleSize(0.04);
+  gFugacity->GetYaxis()->SetTitleOffset(1.);
+  gFugacity->GetXaxis()->SetTitleSize(0.05);
+  gFugacity->GetYaxis()->SetTitleSize(0.05);
   gFugacity->GetXaxis()->SetTitle("Charm fugacity");
   gFugacity->GetYaxis()->SetTitle("dN/dy");
+  gFugacity->SetTitle(" ");
+  gFugacity->GetXaxis()->SetLabelSize(0.04);  // Dimensione etichette sull'asse X
+  gFugacity->GetYaxis()->SetLabelSize(0.04);  // Dimensione etichette sull'asse 
   gFugacity->SetMarkerStyle(21);
   gFugacity->SetMarkerSize(.8);
   gFugacity->SetMarkerColor(kRed);
@@ -577,7 +588,7 @@ fitTemp->SetLineColor(kGreen);   // Imposta il colore della linea di fit
   leg3->AddEntry(diffTemp, "t=156 MeV", "");
   leg3->AddEntry(diffTemp, "|y|<0.5", "");
   leg3->SetTextSize(0.04);
-  leg3->Draw();
+  //leg3->Draw();
 }
 /*
 void densFreq() {
