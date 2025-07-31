@@ -110,7 +110,7 @@ void primo_grafico() {
   }
 
   for (int i{0}; i < 2; i++) {
-    std::cout << "integralCharm[i] " << i << " " << integralCharm[i] << '\n';
+    std::cout << "integralCharm[i] " << i << " " << integralCharm[i] <<" " << errorCharm[i] <<'\n';
   }
 
   // grafici finali
@@ -120,12 +120,15 @@ void primo_grafico() {
 
   TGraphErrors *gNormal =
       new TGraphErrors(div / 2, massNorm, integralogorm, nullptr, errorNorm);
+  double cDMass[1]={3.225};
+  double cDInt[1]={integralCharm[1]};
+  double cDError[1]={errorCharm[1]};
   TGraphErrors *gCharm =
-      new TGraphErrors((n - div) / 2, massCharm, integralCharm, nullptr, errorCharm);
+      new TGraphErrors(1,cDMass, cDInt, nullptr, cDError);
 
   // Configurazione della funzione di fit per entrambi i grafici
   TF1 *fitExp = new TF1("fitExp", "[0] * exp(-[1] * x)", 0, 4);
-  TF1 *fitExpCharm = new TF1("fitExpCharm", "[0] * exp(-[1] * x)", 0, 4);
+  TF1 *fitExpCharm = new TF1("fitExpCharm", "[0] * exp(-6.2107 * x)", 0, 4);
 
   fitExp->SetParameter(0, 1e3);
   //fitExp->SetParLimits(0, 0, 1e5);
@@ -140,7 +143,9 @@ void primo_grafico() {
   fitExp->SetLineColor(kRed);
   fitExpCharm->SetLineColor(kGreen);
   gNormal->Fit("fitExp");
-  gCharm->Fit("fitExpCharm");
+  gCharm->Fit("fitExpCharm", "R");
+  gCharm->SetPoint(0,2.28646,0.316);
+  gCharm->SetPoint(1,3.225,integralCharm[1]);
 
   // Configurazione dei marker per i grafici
   gNormal->SetMarkerStyle(21);

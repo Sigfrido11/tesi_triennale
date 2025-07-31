@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.10)  31 MAR 2025 19:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.10)  4 APR 2025 16:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1129,7 +1129,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [2
 
-] (./tesi.toc)
+] (./tesi.toc
+Overfull \hbox (4.5709pt too wide) in paragraph at lines 26--26
+ [][] []\OT1/cmr/m/n/12 High-Momentum Par-ti-cle Iden-ti-fi-ca-tion De-tec-tor 
+(HMPID) [][]  
+ []
+
+)
 \tf@toc=\write5
 \openout5 = `tesi.toc'.
 
@@ -1143,10 +1149,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [4]
-Chapter 1.
-[5
 
-]
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[5{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1158,7 +1169,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [6
 
 ]
-Chapter 2.
+Chapter 1.
 
 Underfull \vbox (badness 1365) has occurred while \output is active []
 
@@ -1171,12 +1182,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[8{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-<pictures/quark_confinement.jpeg, id=42, 436.63126pt x 408.52625pt>
+[8]
+<pictures/quark_confinement.jpeg, id=41, 436.63126pt x 408.52625pt>
 File: pictures/quark_confinement.jpeg Graphic file (type jpg)
 <use pictures/quark_confinement.jpeg>
-Package pdftex.def Info: pictures/quark_confinement.jpeg  used on input line 14
-8.
+Package pdftex.def Info: pictures/quark_confinement.jpeg  used on input line 15
+1.
 (pdftex.def)             Requested size: 276.60573pt x 258.80038pt.
 
 
@@ -1188,10 +1199,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [9 <./pictures/quark_confinement.jpeg>]
-<pictures/QCD_vertices.jpeg, id=46, 558.085pt x 161.60374pt>
+<pictures/QCD_vertices.jpeg, id=45, 558.085pt x 161.60374pt>
 File: pictures/QCD_vertices.jpeg Graphic file (type jpg)
 <use pictures/QCD_vertices.jpeg>
-Package pdftex.def Info: pictures/QCD_vertices.jpeg  used on input line 177.
+Package pdftex.def Info: pictures/QCD_vertices.jpeg  used on input line 180.
 (pdftex.def)             Requested size: 276.60573pt x 80.09889pt.
 
 
@@ -1203,10 +1214,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [10]
-<pictures/deconfinement.png, id=53, 624.3325pt x 429.605pt>
+<pictures/deconfinement.png, id=52, 624.3325pt x 429.605pt>
 File: pictures/deconfinement.png Graphic file (type png)
 <use pictures/deconfinement.png>
-Package pdftex.def Info: pictures/deconfinement.png  used on input line 194.
+Package pdftex.def Info: pictures/deconfinement.png  used on input line 197.
 (pdftex.def)             Requested size: 276.60573pt x 190.33783pt.
 
 
@@ -1227,10 +1238,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [12 <./pictures/deconfinement.png>]
-<pictures/QCD_phase_diagram.png, id=63, 687.56876pt x 587.19376pt>
+<pictures/QCD_phase_diagram.png, id=62, 687.56876pt x 587.19376pt>
 File: pictures/QCD_phase_diagram.png Graphic file (type png)
 <use pictures/QCD_phase_diagram.png>
-Package pdftex.def Info: pictures/QCD_phase_diagram.png  used on input line 214
+Package pdftex.def Info: pictures/QCD_phase_diagram.png  used on input line 217
 .
 (pdftex.def)             Requested size: 276.60573pt x 236.22627pt.
 
@@ -1243,6 +1254,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [13]
+Overfull \hbox (10.87079pt too wide) in paragraph at lines 228--229
+\OT1/cmr/m/n/12 The main stages of rel-a-tivis-tic heavy-ion col-li-sions are: 
+col-li-sion, pre-equilibrium,
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1270,16 +1286,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [16]
-<pictures/collision_stage_mikowsky.png, id=77, 481.8pt x 440.64626pt>
+<pictures/collision_stage_mikowsky.png, id=76, 481.8pt x 440.64626pt>
 File: pictures/collision_stage_mikowsky.png Graphic file (type png)
 <use pictures/collision_stage_mikowsky.png>
 Package pdftex.def Info: pictures/collision_stage_mikowsky.png  used on input l
-ine 245.
+ine 247.
 (pdftex.def)             Requested size: 237.09407pt x 216.83969pt.
-<pictures/collision_stage.png, id=78, 602.25pt x 751.80875pt>
+<pictures/collision_stage.png, id=77, 602.25pt x 751.80875pt>
 File: pictures/collision_stage.png Graphic file (type png)
 <use pictures/collision_stage.png>
-Package pdftex.def Info: pictures/collision_stage.png  used on input line 252.
+Package pdftex.def Info: pictures/collision_stage.png  used on input line 254.
 (pdftex.def)             Requested size: 276.60573pt x 345.30852pt.
 
 
@@ -1320,7 +1336,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [20
 
 ]
-Chapter 3.
+Chapter 2.
 [21]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1349,10 +1365,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [24]
-<pictures/radial_flow.png, id=112, 714.67pt x 742.775pt>
+<pictures/radial_flow.png, id=111, 714.67pt x 742.775pt>
 File: pictures/radial_flow.png Graphic file (type png)
 <use pictures/radial_flow.png>
-Package pdftex.def Info: pictures/radial_flow.png  used on input line 388.
+Package pdftex.def Info: pictures/radial_flow.png  used on input line 390.
 (pdftex.def)             Requested size: 237.09407pt x 246.41989pt.
 
 
@@ -1364,10 +1380,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [25]
-<pictures/flow_spectra.png, id=117, 714.67pt x 324.21124pt>
+<pictures/flow_spectra.png, id=116, 714.67pt x 324.21124pt>
 File: pictures/flow_spectra.png Graphic file (type png)
 <use pictures/flow_spectra.png>
-Package pdftex.def Info: pictures/flow_spectra.png  used on input line 419.
+Package pdftex.def Info: pictures/flow_spectra.png  used on input line 421.
 (pdftex.def)             Requested size: 316.12341pt x 143.41028pt.
 
 
@@ -1379,17 +1395,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [26 <./pictures/radial_flow.png>]
-<pictures/elliptic_flow_collision.pdf, id=122, 564.1075pt x 263.98625pt>
+<pictures/elliptic_flow_collision.pdf, id=121, 564.1075pt x 263.98625pt>
 File: pictures/elliptic_flow_collision.pdf Graphic file (type pdf)
 <use pictures/elliptic_flow_collision.pdf>
 Package pdftex.def Info: pictures/elliptic_flow_collision.pdf  used on input li
-ne 427.
+ne 429.
 (pdftex.def)             Requested size: 316.12341pt x 147.936pt.
-<pictures/timeEvolutionPerepheral.pdf, id=123, 916.42375pt x 281.05pt>
+<pictures/timeEvolutionPerepheral.pdf, id=122, 916.42375pt x 281.05pt>
 File: pictures/timeEvolutionPerepheral.pdf Graphic file (type pdf)
 <use pictures/timeEvolutionPerepheral.pdf>
 Package pdftex.def Info: pictures/timeEvolutionPerepheral.pdf  used on input li
-ne 435.
+ne 437.
 (pdftex.def)             Requested size: 316.12341pt x 96.94948pt.
 
 
@@ -1428,13 +1444,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [30]
-Overfull \hbox (15.20964pt too wide) in paragraph at lines 522--523
+Overfull \hbox (15.20964pt too wide) in paragraph at lines 528--529
 []\OT1/cmr/m/n/12 Baryons and mesons fol-low dif-fer-ent be-haviour with sig-ni
 f-i-cant baryon/anti-
  []
 
 
-Overfull \hbox (0.38293pt too wide) in paragraph at lines 524--525
+Overfull \hbox (0.38293pt too wide) in paragraph at lines 530--531
 \OT1/cmr/m/n/12 their abun-dances at op-por-tune en-ergy. This ef-fect known as
  \strangeness
  []
@@ -1448,37 +1464,37 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [31]
-<pictures/hadron_yelds.png, id=168, 497.86pt x 484.81125pt>
+<pictures/hadron_yelds.png, id=167, 497.86pt x 484.81125pt>
 File: pictures/hadron_yelds.png Graphic file (type png)
 <use pictures/hadron_yelds.png>
-Package pdftex.def Info: pictures/hadron_yelds.png  used on input line 535.
+Package pdftex.def Info: pictures/hadron_yelds.png  used on input line 541.
 (pdftex.def)             Requested size: 142.25456pt x 138.52773pt.
 
-Underfull \hbox (badness 6758) in paragraph at lines 536--536
-[][]\OT1/cmr/m/n/12 Figure 3.5: |The en-ergy de-
+Underfull \hbox (badness 6758) in paragraph at lines 542--542
+[][]\OT1/cmr/m/n/12 Figure 2.5: |The en-ergy de-
  []
 
 
-Underfull \hbox (badness 2035) in paragraph at lines 536--536
+Underfull \hbox (badness 2035) in paragraph at lines 542--542
 \OT1/cmr/m/n/12 yields at mid-rapidity for var-i-
  []
 
 
-Underfull \hbox (badness 1215) in paragraph at lines 536--536
+Underfull \hbox (badness 1215) in paragraph at lines 542--542
 \OT1/cmr/m/n/12 ous species pro-duced in cen-tral
  []
 
-<pictures/particle_abbundance.png, id=169, 751.80875pt x 485.815pt>
+<pictures/particle_abbundance.png, id=168, 751.80875pt x 485.815pt>
 File: pictures/particle_abbundance.png Graphic file (type png)
 <use pictures/particle_abbundance.png>
 Package pdftex.def Info: pictures/particle_abbundance.png  used on input line 5
-41.
+47.
 (pdftex.def)             Requested size: 124.47173pt x 80.43028pt.
-<pictures/shm_qcd_comparison.png, id=170, 854.19125pt x 565.11125pt>
+<pictures/shm_qcd_comparison.png, id=169, 854.19125pt x 565.11125pt>
 File: pictures/shm_qcd_comparison.png Graphic file (type png)
 <use pictures/shm_qcd_comparison.png>
-Package pdftex.def Info: pictures/shm_qcd_comparison.png  used on input line 54
-6.
+Package pdftex.def Info: pictures/shm_qcd_comparison.png  used on input line 55
+2.
 (pdftex.def)             Requested size: 316.12341pt x 209.13962pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1508,15 +1524,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [34]
-Chapter 4.
+Chapter 3.
 [35
 
 ]
-<pictures/one_boson_exchange.png, id=186, 200.75pt x 231.86626pt>
+<pictures/one_boson_exchange.png, id=185, 200.75pt x 231.86626pt>
 File: pictures/one_boson_exchange.png Graphic file (type png)
 <use pictures/one_boson_exchange.png>
-Package pdftex.def Info: pictures/one_boson_exchange.png  used on input line 59
-8.
+Package pdftex.def Info: pictures/one_boson_exchange.png  used on input line 60
+4.
 (pdftex.def)             Requested size: 118.54703pt x 136.92372pt.
 
 
@@ -1546,11 +1562,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [38]
-<pictures/charmed_nucleos_interaction.png, id=199, 1009.7725pt x 284.06125pt>
+<pictures/charmed_nucleos_interaction.png, id=198, 1009.7725pt x 284.06125pt>
 File: pictures/charmed_nucleos_interaction.png Graphic file (type png)
 <use pictures/charmed_nucleos_interaction.png>
 Package pdftex.def Info: pictures/charmed_nucleos_interaction.png  used on inpu
-t line 673.
+t line 679.
 (pdftex.def)             Requested size: 276.60573pt x 77.8115pt.
 
 
@@ -1562,17 +1578,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [39 <./pictures/charmed_nucleos_interaction.png>]
-<pictures/radial_potential_1s.jpg, id=205, 246.58524pt x 179.37415pt>
+<pictures/radial_potential_1s.jpg, id=204, 246.58524pt x 179.37415pt>
 File: pictures/radial_potential_1s.jpg Graphic file (type jpg)
 <use pictures/radial_potential_1s.jpg>
 Package pdftex.def Info: pictures/radial_potential_1s.jpg  used on input line 6
-86.
+92.
 (pdftex.def)             Requested size: 142.25456pt x 103.48145pt.
-<pictures/radial_potential_3s.jpg, id=206, 245.28438pt x 181.68678pt>
+<pictures/radial_potential_3s.jpg, id=205, 245.28438pt x 181.68678pt>
 File: pictures/radial_potential_3s.jpg Graphic file (type jpg)
 <use pictures/radial_potential_3s.jpg>
 Package pdftex.def Info: pictures/radial_potential_3s.jpg  used on input line 6
-93.
+99.
 (pdftex.def)             Requested size: 140.67723pt x 104.20293pt.
 
 Underfull \vbox (badness 1496) has occurred while \output is active []
@@ -1587,15 +1603,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [40 <./pictures/radial_potential_1s.jpg> <./pictures/radial_potential_3s.jpg>]
-<pictures/binding_energy.jpg, id=210, 235.16658pt x 180.675pt>
+<pictures/binding_energy.jpg, id=209, 235.16658pt x 180.675pt>
 File: pictures/binding_energy.jpg Graphic file (type jpg)
 <use pictures/binding_energy.jpg>
-Package pdftex.def Info: pictures/binding_energy.jpg  used on input line 727.
+Package pdftex.def Info: pictures/binding_energy.jpg  used on input line 733.
 (pdftex.def)             Requested size: 276.60573pt x 212.5192pt.
-<pictures/binding_culomb.jpg, id=211, 235.16658pt x 174.8934pt>
+<pictures/binding_culomb.jpg, id=210, 235.16658pt x 174.8934pt>
 File: pictures/binding_culomb.jpg Graphic file (type jpg)
 <use pictures/binding_culomb.jpg>
-Package pdftex.def Info: pictures/binding_culomb.jpg  used on input line 735.
+Package pdftex.def Info: pictures/binding_culomb.jpg  used on input line 741.
 (pdftex.def)             Requested size: 276.60573pt x 205.7186pt.
 
 
@@ -1617,14 +1633,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [42 <./pictures/binding_energy.jpg> <./pictures/binding_culomb.jpg>]
 
-LaTeX Warning: Reference `fig:first_graph' on page 43 undefined on input line 7
-47.
-
-
-LaTeX Warning: Citation 'alicecollaboration2022letterintentalice3' on page 43 u
-ndefined on input line 747.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -1633,56 +1641,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [43]
-<pictures/2dgraph.pdf, id=222, 569.12625pt x 256.96pt>
+<pictures/first_graph.pdf, id=221, 569.12625pt x 320.19624pt>
+File: pictures/first_graph.pdf Graphic file (type pdf)
+<use pictures/first_graph.pdf>
+Package pdftex.def Info: pictures/first_graph.pdf  used on input line 758.
+(pdftex.def)             Requested size: 276.60573pt x 155.62721pt.
+<pictures/first_graph_comp.png, id=222, 999.735pt x 842.14626pt>
+File: pictures/first_graph_comp.png Graphic file (type png)
+<use pictures/first_graph_comp.png>
+Package pdftex.def Info: pictures/first_graph_comp.png  used on input line 764.
+
+(pdftex.def)             Requested size: 276.60573pt x 232.99802pt.
+<pictures/2dgraph.pdf, id=223, 569.12625pt x 282.05376pt>
 File: pictures/2dgraph.pdf Graphic file (type pdf)
 <use pictures/2dgraph.pdf>
-Package pdftex.def Info: pictures/2dgraph.pdf  used on input line 751.
-(pdftex.def)             Requested size: 316.12341pt x 142.73602pt.
-<pictures/var_radius.pdf, id=223, 569.12625pt x 336.25626pt>
-File: pictures/var_radius.pdf Graphic file (type pdf)
-<use pictures/var_radius.pdf>
-Package pdftex.def Info: pictures/var_radius.pdf  used on input line 757.
-(pdftex.def)             Requested size: 316.12341pt x 186.78348pt.
+Package pdftex.def Info: pictures/2dgraph.pdf  used on input line 774.
+(pdftex.def)             Requested size: 276.60573pt x 137.08855pt.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.762 ... il risultato Ã¨ visibile in Fig{fig:var_
-                                                  temperature}. La relazione...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-l.762 ...o Ã¨ visibile in Fig{fig:var_temperature}
-                                                  . La relazione funzionale ...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.762 ...ere i dati prodotti era della forma $a e^
-                                                  {bT}+c$, con a, b e c para...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-<pictures/var_temperaure.pdf, id=224, 569.12625pt x 336.25626pt>
-File: pictures/var_temperaure.pdf Graphic file (type pdf)
-<use pictures/var_temperaure.pdf>
-Package pdftex.def Info: pictures/var_temperaure.pdf  used on input line 764.
-(pdftex.def)             Requested size: 316.12341pt x 186.78348pt.
-
-Overfull \hbox (242.1757pt too wide) in paragraph at lines 762--768
-\OT1/cmr/m/n/12 tato ^^Re vis-i-bile in Figfig:var$[]\OML/cmm/m/it/12 emperatur
-e:Larelazionefunzionalechemeglioeracapacedidescrivereidatiprodottieradellaforma
-$\OT1/cmr/m/n/12 a
- []
-
-
-Underfull \vbox (badness 4634) has occurred while \output is active []
+Underfull \vbox (badness 1371) has occurred while \output is active []
 
 
 
@@ -1702,50 +1678,34 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[45 <./pictures/2dgraph.pdf, page is rotated 90 degrees> <./pictures/var_radius
+[45 <./pictures/first_graph.pdf, page is rotated 90 degrees> <./pictures/first_
+graph_comp.png>]
+<pictures/var_radius.pdf, id=273, 569.12625pt x 322.20375pt>
+File: pictures/var_radius.pdf Graphic file (type pdf)
+<use pictures/var_radius.pdf>
+Package pdftex.def Info: pictures/var_radius.pdf  used on input line 781.
+(pdftex.def)             Requested size: 276.60573pt x 156.60294pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[46 <./pictures/2dgraph.pdf, page is rotated 90 degrees> <./pictures/var_radius
 .pdf, page is rotated 90 degrees>]
-<pictures/var_fugacity.pdf, id=317, 569.12625pt x 410.53375pt>
+<pictures/var_temperaure.pdf, id=363, 569.12625pt x 311.1625pt>
+File: pictures/var_temperaure.pdf Graphic file (type pdf)
+<use pictures/var_temperaure.pdf>
+Package pdftex.def Info: pictures/var_temperaure.pdf  used on input line 790.
+(pdftex.def)             Requested size: 316.12341pt x 172.84442pt.
+<pictures/var_fugacity.pdf, id=364, 569.12625pt x 410.53375pt>
 File: pictures/var_fugacity.pdf Graphic file (type pdf)
 <use pictures/var_fugacity.pdf>
-Package pdftex.def Info: pictures/var_fugacity.pdf  used on input line 785.
-(pdftex.def)             Requested size: 316.12341pt x 228.04312pt.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.790 ...e results as shown in Fig{fig:comparison_
-                                                  graph}. Linear growth was ...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-l.790 ...lts as shown in Fig{fig:comparison_graph}
-                                                  . Linear growth was found ...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-
-LaTeX Warning: Reference `fig:3d_dist' on page 46 undefined on input line 790.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.791 	
-       
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (553.63426pt too wide) in paragraph at lines 790--791
-\OT1/cmr/m/n/12 ob-tain-ing the same re-sults as shown in Figfig:comparison$[]\
-OML/cmm/m/it/12 raph:Lineargrowthwasfoundforincreasesinvolumeexactlyaspredicted
-byEq\OT1/cmr/m/n/12 3\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 25[]\OML/cmm/m/it/12 ; w
-hereasforincreasesintemperature$\OT1/cmr/m/n/12 ...$\OML/cmm/m/it/12 athree \OM
-S/cmsy/m/n/12 ^^@
- []
+Package pdftex.def Info: pictures/var_fugacity.pdf  used on input line 811.
+(pdftex.def)             Requested size: 276.60573pt x 199.53459pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1755,129 +1715,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[46 <./pictures/var_temperaure.pdf, page is rotated 90 degrees>]
-! Display math should end with $$.
-<to be read again> 
-                   c
-l.792 ...instrogram to correlate the momenta of $c
-                                                  -d$ with its occurrence wa...
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
+[47 <./pictures/var_temperaure.pdf, page is rotated 90 degrees>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (103.82874pt too wide) detected at line 792
-\OML/cmm/m/it/12 :Studyingthedataobtainedfromtheprevioussimulations; aninstrogr
-amtocorrelatethemomentaof
- []
+Underfull \vbox (badness 1406) has occurred while \output is active []
 
-! You can't use `\spacefactor' in math mode.
-\blx@leavevmode ...\else \leavevmode \spacefactor 
-                                                  \blx@sf@par \fi 
-l.792 ...e{biderman2023pythiasuiteanalyzinglarge},
-                                                   $c-d$ were generated whic...
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `\spacefactor' in math mode.
-\blx@leavevmode ...\else \leavevmode \spacefactor 
-                                                  \blx@sf@par \fi 
-l.792 ...e{biderman2023pythiasuiteanalyzinglarge},
-                                                   $c-d$ were generated whic...
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `\spacefactor' in math mode.
-\blx@leavevmode ...\else \leavevmode \spacefactor 
-                                                  \blx@sf@par \fi 
-l.792 ...e{biderman2023pythiasuiteanalyzinglarge},
-                                                   $c-d$ were generated whic...
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `\spacefactor' in math mode.
-\reserved@b ->\spacefactor 
-                           \@m 
-l.792 ...e{biderman2023pythiasuiteanalyzinglarge},
-                                                   $c-d$ were generated whic...
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-Missing character: There is no ò in font cmex10!
-Missing character: There is no ò in font cmex10!
-Missing character: There is no ò in font cmex10!
-Missing character: There is no è in font cmex10!
-
-LaTeX Warning: Reference `tab:decay_channel' on page 47 undefined on input line
- 792.
-
-
-! LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.793 	\begin{table}[h]
-                       
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-! Undefined control sequence.
-\@float@Hx ...ltovf \fi \global \setbox \@currbox 
-                                                  \color@vbox \normalcolor \...
-l.793 	\begin{table}[h]
-                       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \vbox 
-l.793 	\begin{table}[h]
-                       
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.817 	
-       
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (237.10088pt too wide) in paragraph at lines 792--817
-\OT1/cmr/m/n/12 c-d$\OML/cmm/m/it/12 withitsoccurrencewasconstructed:Then; usin
-gaMonteCarlosimulationwithPYTHIA\OT1/cmr/m/n/12 8\OML/cmm/m/it/12 ; formoreinfo
-rmationsee\OT1/cmr/m/n/12 [[][][][]10]\OML/cmm/m/it/12 ;$\OT1/cmr/m/n/12 c-
- []
-
-
-Overfull \hbox (791.94308pt too wide) in paragraph at lines 792--817
-\OT1/cmr/m/n/12 d$\OML/cmm/m/it/12 weregeneratedwhichhadadistributionofmomentsb
-asedonwhathadbeenpreviouslydetermined:Atthispoint; thedecaysinvolvingtheformati
-onofadeuteriumwereexaminedtoestimatetheincreaseinnumberofdeuteronduetothesuper 
-\OMS/cmsy/m/n/12 ^^@
- []
-
-
-Overfull \hbox (14.07295pt too wide) in paragraph at lines 792--817
-\OML/cmm/m/it/12 nucleusdecay:Thedecaychannelswiththeirbranchingratiosaresummar
-isedin[]$ 
- []
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1887,7 +1731,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[47 <./pictures/var_fugacity.pdf, page is rotated 90 degrees>]
+[48 <./pictures/var_fugacity.pdf, page is rotated 90 degrees>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1896,14 +1740,23 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[48
+[49]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[50
 
 ]
-Chapter 5.
-<pictures/ALICE_cordinates.png, id=413, 600.2425pt x 385.44pt>
+Chapter 4.
+<pictures/ALICE_cordinates.png, id=465, 600.2425pt x 385.44pt>
 File: pictures/ALICE_cordinates.png Graphic file (type png)
 <use pictures/ALICE_cordinates.png>
-Package pdftex.def Info: pictures/ALICE_cordinates.png  used on input line 833.
+Package pdftex.def Info: pictures/ALICE_cordinates.png  used on input line 858.
 
 (pdftex.def)             Requested size: 276.60573pt x 177.62213pt.
 
@@ -1912,20 +1765,20 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 Underfull \vbox (badness 1117) has occurred while \output is active []
 
- [49]
-Overfull \hbox (4.68706pt too wide) in paragraph at lines 847--848
+ [51]
+Overfull \hbox (4.68706pt too wide) in paragraph at lines 872--873
 \OT1/cmr/m/n/12 ing, par-ti-cle iden-ti-fi-ca-tion and mo-men-tum mea-sure-ment
 . Are also present
  []
 
 
-Overfull \hbox (7.06476pt too wide) in paragraph at lines 849--850
+Overfull \hbox (7.06476pt too wide) in paragraph at lines 874--875
 []\OT1/cmr/bx/n/12 High-Momentum Par-ti-cle Iden-ti-fi-ca-tion De-tec-tor (HMPI
 D)
  []
 
 
-Overfull \hbox (0.82146pt too wide) in paragraph at lines 850--851
+Overfull \hbox (0.82146pt too wide) in paragraph at lines 875--876
 []\OT1/cmr/bx/n/12 PHOton Spec-trom-e-ter (PHOS) \OT1/cmr/m/n/12 is an elec-tro
 -mag-netic calorime-
  []
@@ -1938,22 +1791,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[50 <./pictures/ALICE_cordinates.png>]
-Overfull \hbox (1.80261pt too wide) in paragraph at lines 856--857
+[52 <./pictures/ALICE_cordinates.png>]
+Overfull \hbox (1.80261pt too wide) in paragraph at lines 881--882
 []\OT1/cmr/bx/n/12 Muon spec-trom-e-ter \OT1/cmr/m/n/12 for re-con-struct heavy
  quark hadrons thought
  []
 
 
-Overfull \hbox (10.03952pt too wide) in paragraph at lines 859--860
+Overfull \hbox (10.03952pt too wide) in paragraph at lines 884--885
 []\OT1/cmr/bx/n/12 Zero De-gree Calorime-ters (ZDC) \OT1/cmr/m/n/12 a pro-ton a
 nd neu-tron calorime-
  []
 
-<pictures/ALICE_instruments.png, id=422, 722.7pt x 417.2388pt>
+<pictures/ALICE_instruments.png, id=473, 722.7pt x 417.2388pt>
 File: pictures/ALICE_instruments.png Graphic file (type png)
 <use pictures/ALICE_instruments.png>
-Package pdftex.def Info: pictures/ALICE_instruments.png  used on input line 869
+Package pdftex.def Info: pictures/ALICE_instruments.png  used on input line 894
 .
 (pdftex.def)             Requested size: 395.15277pt x 228.13234pt.
 
@@ -1967,29 +1820,23 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[51]
-<pictures/ITS_schematic.png, id=426, 576.1525pt x 356.33125pt>
+[53]
+<pictures/ITS_schematic.png, id=477, 576.1525pt x 356.33125pt>
 File: pictures/ITS_schematic.png Graphic file (type png)
 <use pictures/ITS_schematic.png>
-Package pdftex.def Info: pictures/ITS_schematic.png  used on input line 880.
+Package pdftex.def Info: pictures/ITS_schematic.png  used on input line 906.
 (pdftex.def)             Requested size: 276.60573pt x 171.0751pt.
 
 
-LaTeX Warning: Command \texttimes invalid in math mode on input line 884.
+LaTeX Warning: Command \texttimes invalid in math mode on input line 910.
 
 
-LaTeX Warning: Command \texttimes invalid in math mode on input line 884.
+LaTeX Warning: Command \texttimes invalid in math mode on input line 910.
 
 Missing character: There is no Ö in font cmr12!
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[52 <./pictures/ALICE_instruments.png> <./pictures/ITS_schematic.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1998,22 +1845,31 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[53]
-<pictures/time_projection_chamber.png, id=435, 598.235pt x 522.95375pt>
+[54 <./pictures/ALICE_instruments.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[55 <./pictures/ITS_schematic.png>]
+<pictures/time_projection_chamber.png, id=486, 598.235pt x 522.95375pt>
 File: pictures/time_projection_chamber.png Graphic file (type png)
 <use pictures/time_projection_chamber.png>
 Package pdftex.def Info: pictures/time_projection_chamber.png  used on input li
-ne 899.
+ne 925.
 (pdftex.def)             Requested size: 158.0617pt x 138.16713pt.
 
-Underfull \hbox (badness 5696) in paragraph at lines 900--900
-[][]\OT1/cmr/m/n/12 Figure 5.4: |The fig-ure show a
+Underfull \hbox (badness 5696) in paragraph at lines 926--926
+[][]\OT1/cmr/m/n/12 Figure 4.4: |The fig-ure show a
  []
 
-<pictures/TPC_traking.png, id=436, 632.3625pt x 663.47874pt>
+<pictures/TPC_traking.png, id=487, 632.3625pt x 663.47874pt>
 File: pictures/TPC_traking.png Graphic file (type png)
 <use pictures/TPC_traking.png>
-Package pdftex.def Info: pictures/TPC_traking.png  used on input line 905.
+Package pdftex.def Info: pictures/TPC_traking.png  used on input line 931.
 (pdftex.def)             Requested size: 142.25456pt x 149.2459pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2023,11 +1879,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[54 <./pictures/time_projection_chamber.png> <./pictures/TPC_traking.png>]
-<pictures/TOF.png, id=442, 635.37375pt x 438.63875pt>
+[56]
+<pictures/TOF.png, id=491, 635.37375pt x 438.63875pt>
 File: pictures/TOF.png Graphic file (type png)
 <use pictures/TOF.png>
-Package pdftex.def Info: pictures/TOF.png  used on input line 929.
+Package pdftex.def Info: pictures/TOF.png  used on input line 955.
 (pdftex.def)             Requested size: 197.57639pt x 136.39825pt.
 
 
@@ -2038,7 +1894,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[55 <./pictures/TOF.png>]
+[57 <./pictures/time_projection_chamber.png> <./pictures/TPC_traking.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2047,53 +1903,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[56]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[57]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[58]
-<pictures/linear_track.png, id=457, 505.89pt x 268.00125pt>
-File: pictures/linear_track.png Graphic file (type png)
-<use pictures/linear_track.png>
-Package pdftex.def Info: pictures/linear_track.png  used on input line 982.
-(pdftex.def)             Requested size: 124.47173pt x 65.941pt.
-<pictures/CA_track.png, id=458, 465.74pt x 183.68625pt>
-File: pictures/CA_track.png Graphic file (type png)
-<use pictures/CA_track.png>
-Package pdftex.def Info: pictures/CA_track.png  used on input line 988.
-(pdftex.def)             Requested size: 138.30286pt x 54.54572pt.
-<pictures/track_finding_efficiency.png, id=459, 677.53125pt x 486.81876pt>
-File: pictures/track_finding_efficiency.png Graphic file (type png)
-<use pictures/track_finding_efficiency.png>
-Package pdftex.def Info: pictures/track_finding_efficiency.png  used on input l
-ine 1000.
-(pdftex.def)             Requested size: 276.60573pt x 198.75015pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: Reference `fig:secondary_vertex' on page 59 undefined on input l
-ine 1006.
-
-
-Underfull \vbox (badness 4634) has occurred while \output is active []
-
-
+[58 <./pictures/TOF.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2111,8 +1921,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[60 <./pictures/linear_track.png> <./pictures/CA_track.png> <./pictures/track_f
-inding_efficiency.png>]
+[60]
+<pictures/linear_track.png, id=507, 505.89pt x 268.00125pt>
+File: pictures/linear_track.png Graphic file (type png)
+<use pictures/linear_track.png>
+Package pdftex.def Info: pictures/linear_track.png  used on input line 1008.
+(pdftex.def)             Requested size: 124.47173pt x 65.941pt.
+<pictures/CA_track.png, id=508, 465.74pt x 183.68625pt>
+File: pictures/CA_track.png Graphic file (type png)
+<use pictures/CA_track.png>
+Package pdftex.def Info: pictures/CA_track.png  used on input line 1014.
+(pdftex.def)             Requested size: 138.30286pt x 54.54572pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2122,6 +1945,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [61]
+<pictures/track_finding_efficiency.png, id=513, 677.53125pt x 486.81876pt>
+File: pictures/track_finding_efficiency.png Graphic file (type png)
+<use pictures/track_finding_efficiency.png>
+Package pdftex.def Info: pictures/track_finding_efficiency.png  used on input l
+ine 1026.
+(pdftex.def)             Requested size: 276.60573pt x 198.75015pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2130,12 +1960,44 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[62
+[62 <./pictures/linear_track.png> <./pictures/CA_track.png> <./pictures/track_f
+inding_efficiency.png>]
+<pictures/ALICE_c-d_detection.png, id=520, 1516.66624pt x 457.71pt>
+File: pictures/ALICE_c-d_detection.png Graphic file (type png)
+<use pictures/ALICE_c-d_detection.png>
+Package pdftex.def Info: pictures/ALICE_c-d_detection.png  used on input line 1
+041.
+(pdftex.def)             Requested size: 395.15277pt x 119.24623pt.
+<pictures/secondary_vertex.png, id=521, 421.575pt x 402.50375pt>
+File: pictures/secondary_vertex.png Graphic file (type png)
+<use pictures/secondary_vertex.png>
+Package pdftex.def Info: pictures/secondary_vertex.png  used on input line 1048
+.
+(pdftex.def)             Requested size: 197.57639pt x 188.64246pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[63 <./pictures/ALICE_c-d_detection.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[64 <./pictures/secondary_vertex.png>]
+Chapter 5.
+[65
 
 ]
-Chapter 6.
-[63]
-Overfull \hbox (19.44318pt too wide) in paragraph at lines 1072--1074
+Overfull \hbox (19.44318pt too wide) in paragraph at lines 1114--1116
 \OT1/cmr/m/n/12 replacing the log-a-rithm with tay-lor ex-pan-sion un-der the a
 s-sum-pion that $\OML/cmm/m/it/12 e[] <
  []
@@ -2148,7 +2010,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[64]
+[66]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2157,7 +2019,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[65]
+[67]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2166,10 +2028,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[66
+[68
 
 ]
-Overfull \hbox (54.64153pt too wide) in paragraph at lines 1118--1118
+Overfull \hbox (54.64153pt too wide) in paragraph at lines 1160--1160
 []\OT1/cmr/m/n/12 "Mattia". \OT1/cmr/m/it/12 Evo-lu-tion of col-li-sions and QG
 P\OT1/cmr/m/n/12 . \OT1/cmr/m/sc/12 url\OT1/cmr/m/n/12 : $\OT1/cmtt/m/n/12 http
 s : / / particlesandfriends .
@@ -2183,7 +2045,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1118 \end
+l.1160 \end
            {document}
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -2196,19 +2058,19 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1118 \end
+l.1160 \end
            {document}
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-Overfull \hbox (25.90259pt too wide) in paragraph at lines 1118--1118
+Overfull \hbox (25.90259pt too wide) in paragraph at lines 1160--1160
 \OT1/cmr/m/n/12 sions at <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathM
 L"
  []
 
 
-Overfull \hbox (1464.31819pt too wide) in paragraph at lines 1118--1118
+Overfull \hbox (1464.31819pt too wide) in paragraph at lines 1160--1160
 \OT1/cmr/m/n/12 dis-play="inline"><mml:mrow><mml:msqrt><mml:mrow><mml:msub><mml
 :mrow><mml:mi>s</mml:mi></mml:mrow><mml:mrow><mml:mi>NN</mml:mi></mml:mrow></mm
 l:msub></mml:mrow></mml:msqrt><mml:mo>=</mml:mo><mml:mn>5.02</mml:mn><mml:mtext
@@ -2216,10 +2078,10 @@ l:msub></mml:mrow></mml:msqrt><mml:mo>=</mml:mo><mml:mn>5.02</mml:mn><mml:mtext
 .
  []
 
-[67]
-Overfull \hbox (2.70528pt too wide) in paragraph at lines 1118--1118
-[]\OT1/cmr/m/n/12 H. Gar-cilazo, A. Val-carce, and T. F. Caram^^Ses. \  Charmed
- baryon{nucleon
+[69]
+Overfull \hbox (42.974pt too wide) in paragraph at lines 1160--1160
+\OT1/cmr/m/it/12 heavy-ion ex-per-i-ment at the LHC\OT1/cmr/m/n/12 . 2022. arXi
+v: $\OT1/cmtt/m/n/12 2211 . 02491$ [physics.ins-det]\OT1/cmr/m/n/12 .
  []
 
 
@@ -2230,7 +2092,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[68]
+[70]
+Overfull \hbox (2.70528pt too wide) in paragraph at lines 1160--1160
+[]\OT1/cmr/m/n/12 H. Gar-cilazo, A. Val-carce, and T. F. Caram^^Ses. \  Charmed
+ baryon{nucleon
+ []
+
 
 ! LaTeX Error: Unicode character Ïˆ (U+03C8)
                not set up for use with LaTeX.
@@ -2239,13 +2106,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1118 \end
+l.1160 \end
            {document}
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-Overfull \hbox (3.55298pt too wide) in paragraph at lines 1118--1118
+Overfull \hbox (3.55298pt too wide) in paragraph at lines 1160--1160
 []\OT1/cmr/m/n/12 Morris Low. \  Shoichi Sakata: His Life, the Sakata Model and
  His Achieve-
  []
@@ -2258,7 +2125,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[69]
+[71]
 
 ! LaTeX Error: Unicode character Î› (U+039B)
                not set up for use with LaTeX.
@@ -2267,7 +2134,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1118 \end
+l.1160 \end
            {document}
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -2280,7 +2147,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1118 \end
+l.1160 \end
            {document}
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -2293,7 +2160,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1118 \end
+l.1160 \end
            {document}
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -2306,7 +2173,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1118 \end
+l.1160 \end
            {document}
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -2319,8 +2186,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[70]
-Overfull \hbox (15.71103pt too wide) in paragraph at lines 1118--1118
+[72]
+Overfull \hbox (15.71103pt too wide) in paragraph at lines 1160--1160
 []\OT1/cmr/m/n/12 Cern web-page. \OT1/cmr/m/it/12 AL-ICE\OT1/cmr/m/n/12 . \OT1/
 cmr/m/sc/12 url\OT1/cmr/m/n/12 : $\OT1/cmtt/m/n/12 https : / / home . cern / sc
 ience / experiments /
@@ -2334,7 +2201,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[71]
+[73]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2343,67 +2210,53 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[72] (./tesi.aux)
+[74] (./tesi.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
-
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                tesi
-(biblatex)                and rerun LaTeX afterwards.
 
 Package logreq Info: Writing requests to 'tesi.run.xml'.
 \openout1 = `tesi.run.xml'.
 
- )
-(\end occurred inside a group at level 2)
-
-### simple group (level 2) entered at line 790 ({)
-### simple group (level 1) entered at line 762 ({)
-### bottom level 
+ ) 
 Here is how much of TeX's memory you used:
- 28124 strings out of 474222
- 578449 string characters out of 5748732
- 1942975 words of memory out of 5000000
- 49944 multiletter control sequences out of 15000+600000
- 575875 words of font info for 110 fonts, out of 8000000 for 9000
+ 28157 strings out of 474222
+ 579832 string characters out of 5748732
+ 1940975 words of memory out of 5000000
+ 49979 multiletter control sequences out of 15000+600000
+ 575254 words of font info for 108 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 101i,14n,107p,3026b,1909s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/symbols/msbm7.pfb></usr/share/texmf/fonts/type1/public/cm-sup
-er/sfrm1200.pfb>
-Output written on tesi.pdf (72 pages, 5207773 bytes).
+ 101i,13n,107p,3026b,1794s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/symbols/msbm7.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm
+1200.pfb>
+Output written on tesi.pdf (74 pages, 5456524 bytes).
 PDF statistics:
- 611 PDF objects out of 1000 (max. 8388607)
- 331 compressed objects within 4 object streams
+ 663 PDF objects out of 1000 (max. 8388607)
+ 352 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 173 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 193 words of extra memory for PDF output out of 10000 (max. 10000000)
 
