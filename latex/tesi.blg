@@ -1,15 +1,15 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'tesi.blg'
-[69] biber:340> INFO - === ven apr  4, 2025, 11:31:10
-[99] Biber.pm:419> INFO - Reading 'tesi.bcf'
-[159] Biber.pm:979> INFO - Found 54 citekeys in bib section 0
-[169] Biber.pm:4419> INFO - Processing section 0
-[200] Biber.pm:4610> INFO - Looking for bibtex file 'citations.bib' for section 0
-[205] bibtex.pm:1713> INFO - LaTeX decoding ...
-[250] bibtex.pm:1519> INFO - Found BibTeX data source 'citations.bib'
-[2706] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[2706] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[2706] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[2706] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[2791] bbl.pm:660> INFO - Writing 'tesi.bbl' with encoding 'UTF-8'
-[3335] bbl.pm:763> INFO - Output to tesi.bbl
+[131] biber:340> INFO - === mar ago  5, 2025, 10:56:18
+[156] Biber.pm:419> INFO - Reading 'tesi.bcf'
+[286] Biber.pm:979> INFO - Found 54 citekeys in bib section 0
+[309] Biber.pm:4419> INFO - Processing section 0
+[331] Biber.pm:4610> INFO - Looking for bibtex file 'citations.bib' for section 0
+[344] bibtex.pm:1713> INFO - LaTeX decoding ...
+[461] bibtex.pm:1519> INFO - Found BibTeX data source 'citations.bib'
+[6013] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[6013] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[6014] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[6014] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[6176] bbl.pm:660> INFO - Writing 'tesi.bbl' with encoding 'UTF-8'
+[7908] bbl.pm:763> INFO - Output to tesi.bbl
