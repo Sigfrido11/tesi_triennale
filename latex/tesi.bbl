@@ -240,7 +240,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{Presented 24 Oct 2024}
-      \field{title}{{Measurements of forward charged-particle multiplicity and multiplicity dependence of forward J/ψ production in pp collisions with the ALICE experiment at LHC}}
+      \field{title}{{Measurements of forward charged-particle multiplicity and multiplicity dependence of forward J/$\Psi$ production in pp collisions with the ALICE experiment at LHC}}
       \field{year}{2024}
       \verb{urlraw}
       \verb https://cds.cern.ch/record/2920632
@@ -5605,7 +5605,7 @@
       \field{journaltitle}{Physical Review Letters}
       \field{month}{8}
       \field{number}{9}
-      \field{title}{Measurements of Chemical Potentials in Pb-Pb Collisions at <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:msqrt><mml:mrow><mml:msub><mml:mrow><mml:mi>s</mml:mi></mml:mrow><mml:mrow><mml:mi>NN</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msqrt><mml:mo>=</mml:mo><mml:mn>5.02</mml:mn><mml:mtext> </mml:mtext><mml:mtext> </mml:mtext><mml:mi>TeV</mml:mi></mml:mrow></mml:math>}
+      \field{title}{Measurements of Chemical Potentials in Pb-Pb Collisions at <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:msqrt><mml:mrow><mml:msub><mml:mrow><mml:mi>s</mml:mi></mml:mrow><mml:mrow><mml:mi>NN</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msqrt><mml:mo>=</mml:mo><mml:mn>5.02</mml:mn><mml:mtext> </mml:mtext><mml:mtext> </mml:mtext><mml:mi>TeV</mml:mi></mml:mrow></mml:math>}
       \field{volume}{133}
       \field{year}{2024}
       \verb{doi}
@@ -5777,7 +5777,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{Presented 29 Jan 2025}
-      \field{title}{{Multiplicity and energy dependence of Λ(1520) production in pp collisions at √s = 5.02 and 13 TeV with ALICE at the LHC}}
+      \field{title}{{Multiplicity and energy dependence of $\Lambda$(1520) production in pp collisions at $$\sqrt{s}$$ = 5.02 and 13 TeV with ALICE at the LHC}}
       \field{year}{2025}
       \verb{urlraw}
       \verb https://cds.cern.ch/record/2924203
@@ -5940,7 +5940,7 @@
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{One of the fundamental questions in the field of subatomic physics is the question of what happens to matter at extreme densities and temperatures as may have existed in the first microseconds after the Big Bang and exists, perhaps, in the core of dense neutron stars. The aim of heavy-ion physics is to collide nuclei at very high energies and thereby create such a state of matter in the laboratory. The experimental program began in the 1990s with collisions made available at the Brookhaven Alternating Gradient Synchrotron (AGS) and the CERN Super Proton Synchrotron (SPS), and continued at the Brookhaven Relativistic Heavy-Ion Collider (RHIC) with the maximum center-of-mass energies of , 17.2 and 200 GeV, respectively. Collisions of heavy ions at the unprecedented energy of 2.76 TeV recently became available at the LHC collider at CERN. In this review, I give a brief introduction to the physics of ultrarelativistic heavy-ion collisions and discuss the current status of elliptic flow measurements.}
+      \field{abstract}{One of the fundamental questions in the field of subatomic physics is the question of what happens to matter at extreme densities and temperatures as may have existed in the first microseconds after the Big Bang and exists, perhaps, in the core of dense neutron stars. The aim of heavy-ion physics is to collide nuclei at very high energies and thereby create such a state of matter in the laboratory. The experimental program began in the 1990s with collisions made available at the Brookhaven Alternating Gradient Synchrotron (AGS) and the CERN Super Proton Synchrotron (SPS), and continued at the Brookhaven Relativistic Heavy-Ion Collider (RHIC) with the maximum center-of-mass energies of , 17.2 and 200 GeV, respectively. Collisions of heavy ions at the unprecedented energy of 2.76 TeV recently became available at the LHC collider at CERN. In this review, I give a brief introduction to the physics of ultrarelativistic heavy-ion collisions and discuss the current status of elliptic flow measurements.}
       \field{journaltitle}{New Journal of Physics}
       \field{number}{5}
       \field{title}{Elliptic flow: a brief review}
@@ -6843,7 +6843,7 @@
       \field{abstract}{The interaction between Λc and a nucleon (N) is investigated by employing the HAL QCD method in the (2+1)-flavor lattice QCD on a (2.9fm)3 volume at mπ≃410,570,700 MeV. We study the central potential in S01 channel as well as central and tensor potentials in S13−3D1 channel, and find that the tensor potential for ΛcN is negligibly weak and central potentials in both S01 and S13−3D1 channels are almost identical with each other except at short distances. Phase shifts and scattering lengths calculated with these potentials show that the interaction of ΛcN system is attractive and has a similar strength in S01 and S13 channels at low energies (i.e. the kinetic energy less than about 40 MeV). While the attractions are not strong enough to form two-body bound states, our results lead to a possibility to form Λc hypernuclei for sufficiently large atomic numbers (A). To demonstrate this, we derive a single-folding potential for Λc hypernuclei from the Λc-nucleon potential obtained in lattice QCD, and find that Λc hypernuclei can exist for A≥12 with the binding energies of a few MeV. We also estimate the Coulomb effect for the Λc hypernuclei.}
       \field{issn}{0375-9474}
       \field{journaltitle}{Nuclear Physics A}
-      \field{title}{ΛcN interaction from lattice QCD and its application to Λc hypernuclei}
+      \field{title}{$\Lambda_c$N interaction from lattice QCD and its application to $\Lambda_c$c hypernuclei}
       \field{volume}{971}
       \field{year}{2018}
       \field{pages}{113\bibrangedash 129}
@@ -7871,8 +7871,8 @@
       \strng{authornamehash}{5fee4f7d8933f104a2fbbd5f5c0c0275}
       \strng{authorfullhash}{5fee4f7d8933f104a2fbbd5f5c0c0275}
       \field{extraname}{1}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{nucl-ex}

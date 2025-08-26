@@ -1,15 +1,15 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'tesi.blg'
-[131] biber:340> INFO - === mar ago  5, 2025, 10:56:18
-[156] Biber.pm:419> INFO - Reading 'tesi.bcf'
-[286] Biber.pm:979> INFO - Found 54 citekeys in bib section 0
-[309] Biber.pm:4419> INFO - Processing section 0
-[331] Biber.pm:4610> INFO - Looking for bibtex file 'citations.bib' for section 0
-[344] bibtex.pm:1713> INFO - LaTeX decoding ...
-[461] bibtex.pm:1519> INFO - Found BibTeX data source 'citations.bib'
-[6013] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[6013] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[6014] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[6014] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[6176] bbl.pm:660> INFO - Writing 'tesi.bbl' with encoding 'UTF-8'
-[7908] bbl.pm:763> INFO - Output to tesi.bbl
+[62] biber:340> INFO - === mar ago 26, 2025, 15:57:16
+[73] Biber.pm:419> INFO - Reading 'tesi.bcf'
+[134] Biber.pm:979> INFO - Found 54 citekeys in bib section 0
+[145] Biber.pm:4419> INFO - Processing section 0
+[152] Biber.pm:4610> INFO - Looking for bibtex file 'citations.bib' for section 0
+[157] bibtex.pm:1713> INFO - LaTeX decoding ...
+[201] bibtex.pm:1519> INFO - Found BibTeX data source 'citations.bib'
+[2612] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[2612] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[2612] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[2612] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[2684] bbl.pm:660> INFO - Writing 'tesi.bbl' with encoding 'UTF-8'
+[3222] bbl.pm:763> INFO - Output to tesi.bbl
