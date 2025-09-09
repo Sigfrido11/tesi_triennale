@@ -5605,7 +5605,7 @@
       \field{journaltitle}{Physical Review Letters}
       \field{month}{8}
       \field{number}{9}
-      \field{title}{Measurements of Chemical Potentials in Pb-Pb Collisions at <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:msqrt><mml:mrow><mml:msub><mml:mrow><mml:mi>s</mml:mi></mml:mrow><mml:mrow><mml:mi>NN</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msqrt><mml:mo>=</mml:mo><mml:mn>5.02</mml:mn><mml:mtext> </mml:mtext><mml:mtext> </mml:mtext><mml:mi>TeV</mml:mi></mml:mrow></mml:math>}
+      \field{title}{Measurements of Chemical Potentials in Pb-Pb Collisions at $\sqrt{s}$ = 5.02 TeV}
       \field{volume}{133}
       \field{year}{2024}
       \verb{doi}
@@ -5777,7 +5777,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{Presented 29 Jan 2025}
-      \field{title}{{Multiplicity and energy dependence of $\Lambda$(1520) production in pp collisions at $$\sqrt{s}$$ = 5.02 and 13 TeV with ALICE at the LHC}}
+      \field{title}{{Multiplicity and energy dependence of $\Lambda$(1520) production in pp collisions at $\sqrt{s}$ = 5.02 and 13 TeV with ALICE at the LHC}}
       \field{year}{2025}
       \verb{urlraw}
       \verb https://cds.cern.ch/record/2924203
@@ -5873,8 +5873,8 @@
       \strng{authorbibnamehash}{43f2df4debbf6be0a58144fd022fce5f}
       \strng{authornamehash}{43f2df4debbf6be0a58144fd022fce5f}
       \strng{authorfullhash}{a0171cf07f60288c3468bb4c4fdfc917}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1545-4134}
@@ -6337,8 +6337,8 @@
       \strng{authorbibnamehash}{2f8d8497c05d07eedd82b023b3c943f3}
       \strng{authornamehash}{2f8d8497c05d07eedd82b023b3c943f3}
       \strng{authorfullhash}{2f8d8497c05d07eedd82b023b3c943f3}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0375-9474}
@@ -6513,8 +6513,8 @@
       \strng{authorbibnamehash}{b87f26fb3fe1dbfe9abe6d3eb8a9e776}
       \strng{authornamehash}{b87f26fb3fe1dbfe9abe6d3eb8a9e776}
       \strng{authorfullhash}{b87f26fb3fe1dbfe9abe6d3eb8a9e776}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Progress of Theoretical Physics Supplement}
@@ -6552,8 +6552,8 @@
       \strng{authorbibnamehash}{f13ab9bef192bb49616a00cc37e17871}
       \strng{authornamehash}{f13ab9bef192bb49616a00cc37e17871}
       \strng{authorfullhash}{f13ab9bef192bb49616a00cc37e17871}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{nucl-th}
@@ -6909,8 +6909,8 @@
       \strng{authorbibnamehash}{760ce9f090aa99244769cfb742f8e894}
       \strng{authornamehash}{760ce9f090aa99244769cfb742f8e894}
       \strng{authorfullhash}{760ce9f090aa99244769cfb742f8e894}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The 1H(n, γ)2H γ-ray energy has been measured relative to 48V and 144Ce γ-rays, which are both based on the gold standard for γ-ray energies. The ensuing deuteron binding energy, B(2H = 2224575 ± 9 eV, confirms (with higher accuracy) the value from one of two conflicting recent precision measurements. This value has been used to recalculate the energies of γ-rays from thermal-neutron capture in 2H, 12C, 13C and 14N, which serve as mass-based γ-ray energy standards.}
@@ -6955,8 +6955,8 @@
       \strng{authorbibnamehash}{254a28166547f3ed24f07dabadc1f692}
       \strng{authornamehash}{254a28166547f3ed24f07dabadc1f692}
       \strng{authorfullhash}{254a28166547f3ed24f07dabadc1f692}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0010-4655}
@@ -7256,8 +7256,8 @@
       \strng{authorbibnamehash}{a4b73a9f6552660712a1cc0e36c68a09}
       \strng{authornamehash}{a4b73a9f6552660712a1cc0e36c68a09}
       \strng{authorfullhash}{a4b73a9f6552660712a1cc0e36c68a09}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{series}{Particle Acceleration and Detection}
