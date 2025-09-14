@@ -1,0 +1,170 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{ParticleDataGroup:2024cfk}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=25b6d239864c97a90ec8be94cdea417d}{%
+           family={Navas},
+           familyi={N\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{9e02c695d9a57f6e8669b26d9be3e077}
+      \strng{fullhash}{9e02c695d9a57f6e8669b26d9be3e077}
+      \strng{bibnamehash}{9e02c695d9a57f6e8669b26d9be3e077}
+      \strng{authorbibnamehash}{9e02c695d9a57f6e8669b26d9be3e077}
+      \strng{authornamehash}{9e02c695d9a57f6e8669b26d9be3e077}
+      \strng{authorfullhash}{9e02c695d9a57f6e8669b26d9be3e077}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Phys. Rev. D}
+      \field{number}{3}
+      \field{title}{{Review of particle physics}}
+      \field{volume}{110}
+      \field{year}{2024}
+      \field{pages}{030001}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevD.110.030001
+      \endverb
+    \endentry
+    \entry{VANDERLEUN1982261}{article}{}
+      \name{author}{2}{}{%
+        {{hash=efd91df597284c9f725c11e156462dd9}{%
+           family={{Van Der Leun}},
+           familyi={V\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=9eb7ddec2520b6b7a64959c06c4bd2ad}{%
+           family={Alderliesten},
+           familyi={A\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{760ce9f090aa99244769cfb742f8e894}
+      \strng{fullhash}{760ce9f090aa99244769cfb742f8e894}
+      \strng{bibnamehash}{760ce9f090aa99244769cfb742f8e894}
+      \strng{authorbibnamehash}{760ce9f090aa99244769cfb742f8e894}
+      \strng{authornamehash}{760ce9f090aa99244769cfb742f8e894}
+      \strng{authorfullhash}{760ce9f090aa99244769cfb742f8e894}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The 1H(n, γ)2H γ-ray energy has been measured relative to 48V and 144Ce γ-rays, which are both based on the gold standard for γ-ray energies. The ensuing deuteron binding energy, B(2H = 2224575 ± 9 eV, confirms (with higher accuracy) the value from one of two conflicting recent precision measurements. This value has been used to recalculate the energies of γ-rays from thermal-neutron capture in 2H, 12C, 13C and 14N, which serve as mass-based γ-ray energy standards.}
+      \field{issn}{0375-9474}
+      \field{journaltitle}{Nuclear Physics A}
+      \field{number}{2}
+      \field{title}{The deuteron binding energy}
+      \field{volume}{380}
+      \field{year}{1982}
+      \field{pages}{261\bibrangedash 269}
+      \range{pages}{9}
+      \verb{doi}
+      \verb https://doi.org/10.1016/0375-9474(82)90105-1
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/0375947482901051
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/0375947482901051
+      \endverb
+      \keyw{Nuclear reactions}
+    \endentry
+    \entry{charm_hierarchy_in_the_statistical_hadronization_model}{article}{}
+      \name{author}{7}{}{%
+        {{hash=044d27b5f31dbc224618217e15eaa357}{%
+           family={Andronic},
+           familyi={A\bibinitperiod},
+           given={Anton},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d037d386a9a3b72a5e82863538308748}{%
+           family={Braun-Munzinger},
+           familyi={B\bibinithyphendelim M\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=8b12b7bec1791cbf010fd3c0ed7eb311}{%
+           family={Köhler},
+           familyi={K\bibinitperiod},
+           given={Markus},
+           giveni={M\bibinitperiod}}}%
+        {{hash=6c448f148486dc170d8a2367c3a372d2}{%
+           family={Mazeliauskas},
+           familyi={M\bibinitperiod},
+           given={Aleksas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9eb47623005a9a0b930f4f496c10d294}{%
+           family={Redlich},
+           familyi={R\bibinitperiod},
+           given={Krzysztof},
+           giveni={K\bibinitperiod}}}%
+        {{hash=22259c68c7e7c69714c060f2d9e09b21}{%
+           family={Stachel},
+           familyi={S\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=1622705a82321626d4c1a2e5ad443207}{%
+           family={Vislavicius},
+           familyi={V\bibinitperiod},
+           given={Vytautas},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{081ba17a17e0097d3739b648aed0adc0}
+      \strng{fullhash}{381835210821d33e5e73367f4ab1700b}
+      \strng{bibnamehash}{081ba17a17e0097d3739b648aed0adc0}
+      \strng{authorbibnamehash}{081ba17a17e0097d3739b648aed0adc0}
+      \strng{authornamehash}{081ba17a17e0097d3739b648aed0adc0}
+      \strng{authorfullhash}{381835210821d33e5e73367f4ab1700b}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of High Energy Physics}
+      \field{month}{07}
+      \field{title}{The multiple-charm hierarchy in the statistical hadronization model}
+      \field{volume}{2021}
+      \field{year}{2021}
+      \verb{doi}
+      \verb 10.1007/JHEP07(2021)035
+      \endverb
+    \endentry
+    \entry{CERN-LHCC-2015-001}{report}{}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{title}{{Technical Design Report for the Muon Forward Tracker}}
+      \field{type}{techreport}
+      \field{year}{2015}
+      \verb{urlraw}
+      \verb https://cds.cern.ch/record/1981898
+      \endverb
+      \verb{url}
+      \verb https://cds.cern.ch/record/1981898
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

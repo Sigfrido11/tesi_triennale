@@ -1,0 +1,316 @@
+\documentclass[11pt]{beamer}
+
+\usetheme{Madrid} % Tema sobrio ed elegante
+%\usecolortheme{Madrid} % Colorazione leggera
+\usefonttheme{professionalfonts}
+
+% Pacchetti utili
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{hyperref}
+\usepackage[table]{xcolor}
+\usepackage[backend=biber, sorting=none]{biblatex}  
+\addbibresource{citations.bib}
+
+% Informazioni della tesi
+\title[Facility for c-deuteron production in ALICE]{Facility for c-deuteron production in ALICE}
+\author[Giuseppe Luciano]{\textbf{Giuseppe Luciano}}
+\institute[Università di Bologna]{
+	\normalsize{
+		\textbf{Dipartimento di Fisica e Astronomia “Augusto Righi”\\
+		} \\
+		Corso di Laurea in Fisica
+	}\\[1ex]
+	\textbf{Relatore:} Prof. Andrea Alici \\
+	\textbf{Correlatore:} Dott. Nicolò Jacazio
+}
+\date{19 Settembre 2025}
+
+% Inizio documento
+\begin{document}
+	
+	% Slide iniziale
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{C-deuteron}
+		
+		\begin{figure}		
+			\centering
+			\includegraphics[width=0.45 \linewidth]{pictures/c-deuteron.png}
+			\caption{L'immagine mostra una rappresentazione schematica del c-deuteron}
+		\end{figure}	
+		\begin{itemize}
+			\item Massa $\Lambda_c^+$: $m_{\Lambda_c^+} = (2286.46 \pm 0.14)$ MeV/$c^2$ \cite{ParticleDataGroup:2024cfk}.
+			\item Massa neutrone: $m_N$ = 939.56542052(54) MeV/$c^2$ \cite{ParticleDataGroup:2024cfk}.
+			\item Energia legame Deutone: $E_{be, d} = (2.224575 \pm 0.000009)\,\text{MeV}$
+			\cite{VANDERLEUN1982261}.
+			\item Massa c-deuteron: $m_{c-d} \approx 3.223$ GeV/$c^2$.
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	\begin{frame}
+		\frametitle{Simulazione}
+		Parametri della simulazione:
+		\begin{itemize}
+			\item Fireball a simmetria sferica.
+			\item Numero eventi generati: N = $2 \cdot \ 10^7$.
+			\item Ensemble gran-canonico per tutti gli adroni ad eccezione dei mesoni per i quali è stato utilizzato il formalismo basato sulla statistica di Bose-Einstein.
+			\item Potenziale barionico: $\mu_B=0.71 \pm 0.45$ MeV \cite{charm_hierarchy_in_the_statistical_hadronization_model}.
+			\item Potenziale della carica elettrica: $\mu_Q=-0.18 \pm 0.90$ MeV \cite{charm_hierarchy_in_the_statistical_hadronization_model}.
+			\item Fugacità di charm $\gamma_c = 29.6 \pm 5.2$ \cite{charm_hierarchy_in_the_statistical_hadronization_model}.
+			\item Temperatura di freeze-out: $T= 156$ MeV.
+			\item Raggio di freeze-out: $r= 8$ fm.
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	\begin{frame}
+		\frametitle{Molteplicità}
+		\begin{figure}
+			\includegraphics[width=0.9\linewidth]{pictures/first_graph.pdf}
+			\caption{La figura mostra dN/dy di differenti adroni per $|y|<$0.5. Si sono utilizzate le unità naturali.}
+		\end{figure}
+		
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Relazione funzionale}
+		La relazione funzionale utilizzata per il fit è della forma $dN/dy= a e^{bx}$, con a e b parametri liberi. 
+		
+		Per i nuclei senza quark charm si è ottenuto:
+		\begin{itemize}
+			\item a = (1.057 $\pm$ 0.014) $\cdot \ 10^5$.
+			\item b = (6.2107 $\pm$ 0.0071) $GeV^{-1}$. 
+			\item $\tilde{\chi}^2 = 0.16$. 
+		\end{itemize}
+		Per i nuclei contenenti il quark charm invece è stato fissato il parametro b al valore precedentemente ottenuto per poi determinare a = (3.534 $\pm$ 0.021) $\cdot \ 10^5$.
+		Nello specifico per il c-deuteron si è ottenuto $(dN/dy)_{c-d}= (7.072 \pm 0.042) \cdot 10^{-4}$.
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Variazioni nel raggio di freeze-out}
+		Dalla meccanica statistica è noto che:
+		\begin{equation}
+			\langle N \rangle = \frac{1}{\beta} \left( \frac{\partial \ln Z}{\partial \mu_B}\right)
+			\label{eq:stat_n}
+		\end{equation}
+		
+		e che:
+		\begin{equation}
+			\boxed{\ln Z_i(T,V,\mu_i) =
+				\frac{\Delta V g_i}{2\pi^2 \hbar^3}
+				\int_{0}^{\infty} p^2 \, dp \,
+				\ln \left( 1 + \theta_i e^{\beta(\mu_i - E)} \right)}
+			\label{eq:partition_function}
+		\end{equation}
+		
+		Quindi:
+		\begin{equation}
+			\boxed{\langle N \rangle =
+				\frac{\Delta V g_i}{2\pi^2 \hbar^3}
+				\int_{0}^{\infty} dp \,
+				\frac{p^2}{e^{-\beta(\mu_i - E)} + \theta_i}}
+			\label{eq:mean_particle_number}
+		\end{equation}
+		
+		Assumendo una simmetria sferica:
+		\begin{equation}
+			\langle N \rangle =
+			\frac{\tfrac{4}{3}\pi r^3 g_i}{2\pi^2 \hbar^3}
+			\int_{0}^{\infty} dp \,
+			\frac{p^2}{e^{-\beta(\mu_i - E)} + \theta_i}
+			\;\;\propto r^3
+		\end{equation}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Variazioni nel raggio di freeze-out}
+		\begin{figure}
+			
+			\centering
+			\includegraphics[width=1\linewidth]{pictures/var_radius.pdf	}
+			\caption{La figura mostra dN/dy del c-deuteron nel range $|y| < 0.5$ per le variazioni nel raggio di freeze-out.}
+			
+		\end{figure}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Variazioni nel raggio di freeze-out}
+		Il fit è stato eseguito utilizzando la seguente relazione funzionale $dN/dy =a r^3 +b$, con a e b parametri da determinare. I risultati del fit sono stati:
+		\begin{itemize}
+			\item a = (1.3921 $\pm$ 0.0032) $\cdot \ 10^{-6} \ fm^{-3}$.
+			\item b = (2.43 $\pm$ 0.13) $\cdot 	\ 10^{-8}$.
+			\item $\tilde{\chi}^2$ = 0.42.
+		\end{itemize}	
+		
+	\end{frame}
+	
+	
+	\begin{frame}
+		\frametitle{Variazioni nella temperatura di freeze-out}
+		
+		\begin{figure}
+			\centering
+			\includegraphics[width=1 \linewidth]{pictures/var_temperaure.pdf}
+			\caption{La figura mostra dN/dy del c-deuteron nel range $|y| < 0.5$ per le variazioni nella temperatura di freeze-out.}
+		\end{figure}
+	\end{frame}
+	
+	
+	\begin{frame}
+		\frametitle{Variazioni con la temperatura}
+		
+		Il fit è stato eseguito utilizzando la seguente relazione funzionale 
+		$dN/dy = a e^{bT} + c$, con a, b e c parametri da determinare. 
+		I risultati del fit sono stati:
+		
+		\begin{itemize}
+			\item a = (1.19 $\pm$ 0.17) $\cdot \ 10^{-12}$.
+			\item b = (0.13009 $\pm$ 0.00087) $MeV^{-1}$.
+			\item c = (-6.38 $\pm$ 0.50) $\cdot \ 10^{-6}$.
+			\item $\tilde{\chi}^2$ = 1.0.
+		\end{itemize}
+		
+		Quest'ultimo valore suggerisce che, sebbene non sia stato possibile procedere analiticamente, l'accordo fra dati simulati e la relazione empirica risulta comunque consistente.
+		
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Variazioni nella fugacità di charm}
+		Utilizzando la precedente relazione è possibile osservare come:
+		\begin{equation}
+			\begin{aligned}
+				\langle N \rangle &= \frac{\Delta V g_i}{2\pi^2\hbar^3} 
+				\int_{0}^{\infty} dp 
+				\frac{p^2}{e^{-\beta(\mu_i-E)}+\theta_i} \\
+				&\approx \frac{\Delta V g_i}{2\pi^2\hbar^3} 
+				\int_{0}^{\infty} dp \ p^2 e^{\beta(\mu_i-E)} \\
+				&= \frac{\Delta V g_i}{2\pi^2\hbar^3} e^{\beta \mu_i} 
+				\int_{0}^{\infty} dp \ p^2 e^{-\beta E} \\
+				&= \frac{\Delta V g_i}{2\pi^2\hbar^3} \gamma_c 
+				\int_{0}^{\infty} dp \ p^2 e^{-\beta E}\\
+				&\propto \gamma_c
+			\end{aligned}
+		\end{equation} 
+	\end{frame}
+	
+	
+	\begin{frame}
+		\frametitle{Variazioni nella fugacità di charm}
+		\begin{figure}
+			\centering
+			\includegraphics[width=0.7 \linewidth]{pictures/var_fugacity.pdf}
+			\caption{La figura mostra dN/dy del c-deuteron nel range $|y| < 0.5$ per le variazioni nella fugacità di charm.}
+			\label{fig:var_fugacity}
+		\end{figure}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Variazioni nella fugacità di charm}
+		Il fit è stato eseguito utilizzando la seguente relazione funzionale $dN/dy = a x + b$, con $a$ e $b$ parametri da determinare. I risultati del fit sono stati:
+		\begin{itemize}
+			\item $a = (2.366 \pm 0.032) \cdot 10^{-5}$.
+			\item $b = (2.53 \pm 0.94) \cdot 10^{-5}$.
+			\item $\tilde{\chi}^2 = 1.4$.
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Decadimenti}
+		\begin{table}[h]
+			\centering
+			\begin{tabular}{c|c}
+				\hline
+				\cellcolor{yellow} \text{Channel} & \cellcolor{yellow} \text{Branching ratio} \\
+				\hline
+				d $\bar{K^0}$ & (2.3 $\pm$ 0.6)\% x 7\% \\
+				\hline
+				d $K^- \ \pi^+$ &  (5.0 $\pm$ 1.3)\% x 7\% \\
+				\hline
+				d $\bar{K^*}(892)$ &  (1.6 $\pm$ 0.5)\% x 7\% \\
+				\hline
+				d $\bar{K^0} \ \pi^0$ &  (3.3 $\pm$ 1.0)\% x 7\% \\
+				\hline
+				d $\bar{K^0} \ \eta$ &  (1.2 $\pm$ 0.4)\% x 7\% \\
+				\hline
+				d $\bar{K^0} \ \pi^+ \ \pi^-$ &  (2.6 $\pm$ 0.7)\% x 7\% \\
+				\hline
+				d $K^- \ \pi^+ \ \pi^0$ &  (3.4 $\pm$ 1.0)\% x 7\% \\
+				\hline
+				totale & (1.36 $\pm$ 0.39)\% \\
+				\hline
+			\end{tabular}
+			\caption{La tabella mostra tutti i canali di decadimento considerati per la presente analisi. La prima colonna mostra i possibili prodotti del decadimento mentre la seconda i relativi branching ratio con i relativi errori. Il termine x 7\% significa che il branching ratio deve essere ridotto per la probabilità di formare uno stato legato fra protone e neutrone. In questo caso d indica il deutone.}
+			\label{tab:decay_channel}
+		\end{table}
+		
+	\end{frame}
+	
+	\begin{frame}
+		
+		\begin{figure}		
+			\centering
+			\includegraphics[width=0.7\linewidth]{pictures/track_finding_efficiency_2.png}
+			\caption{La figura mostra i grafici relativi all'efficienza di ricostruzione della traccia del Time Projection Chamber (TPC) di ALICE \cite{CERN-LHCC-2015-001}.}
+		\end{figure}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Incremento deutoni}
+		Sotto le seguenti ipotesi: 
+		\begin{itemize}
+			\item Il numero di collisioni effettuate dal LHC è $N_{LHC} = 10^{10}$;
+			\item Sono state considerate solo le collisioni centrali, assunte pari al $5\%$ del totale;
+			\item La temperatura di freeze-out è 156 MeV, con un raggio di freeze-out di 8 fm e una fugacità del charm pari a 29.6, assumendo simmetria sferica;
+			\item Le abbondanze sono derivate unicamente dai canali di decadimento elencati nella tabella precedente;
+			\item La probabilità di formazione di uno stato legato dopo il decadimento è del 7\%;
+			\item Sono stati considerati solo i c-deuteron con $|y|<0.5$.
+		\end{itemize}
+		
+	\end{frame}
+	
+	\begin{frame}
+		Si è osservato come l'incremento del numero di deutoni la cui traccia viene ricostruita correttamente a causa del decadimento del c-deuteron è:
+		\begin{equation}
+			N_D = N_{LHC} \cdot p_D \cdot (dN/dy)_{c-d} \cdot \Delta y \cdot p_{central}
+		\end{equation}
+		Dove $N_{LHC} = 10^{10}$, $p_D$ è la probabilità che venga ricostruita la traccia di un deutone proveniente dal decadimento del c-deuteron $p_D = \frac{N_{detect}}{10^9}= (5.4823 \pm 0.0023) \ \cdot \ 10^{-3}$, $(dN/dy)_{c-d}= (7.072 \pm 0.042) \cdot 10^{-4}$. $\Delta y = 1$, $p_{central}$ è la probabilità che si verifichi una collisione centrale $p_{central} = 5\%$. 
+		
+		Ottenendo:
+		\begin{center}
+			$N_D$ = (1938 $\pm$ 12) deuterons.
+		\end{center}
+	\end{frame}
+	
+	\begin{frame}		
+		\begin{figure}		
+			\centering
+			\includegraphics[width=0.5\linewidth]{pictures/ALICE_c-d_detection_2.png}
+			\caption{La figura mostra la distribuzione della massa invariante, il fondo correlato e il fondo dovuto ai deuteroni primari.}
+			\label{fig:QCD_vertices} 
+		\end{figure}
+	\end{frame}
+	
+	\begin{frame}
+		\centering
+		\Huge{\textbf{Grazie per l'attenzione.}}\\[2ex]
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Bibliografia}
+		\printbibliography
+	\end{frame}
+	
+	% Slide finale
+	
+	
+\end{document}
+
