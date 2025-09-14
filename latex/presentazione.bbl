@@ -164,6 +164,38 @@
       \verb https://cds.cern.ch/record/1981898
       \endverb
     \endentry
+    \entry{alicecollaboration2022letterintentalice3}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=bba493875cad84e685cfd57b472fe505}{%
+           family={Collaboration},
+           familyi={C\bibinitperiod},
+           given={ALICE},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{bba493875cad84e685cfd57b472fe505}
+      \strng{fullhash}{bba493875cad84e685cfd57b472fe505}
+      \strng{bibnamehash}{bba493875cad84e685cfd57b472fe505}
+      \strng{authorbibnamehash}{bba493875cad84e685cfd57b472fe505}
+      \strng{authornamehash}{bba493875cad84e685cfd57b472fe505}
+      \strng{authorfullhash}{bba493875cad84e685cfd57b472fe505}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{physics.ins-det}
+      \field{eprinttype}{arXiv}
+      \field{title}{Letter of intent for ALICE 3: A next-generation heavy-ion experiment at the LHC}
+      \field{year}{2022}
+      \verb{eprint}
+      \verb 2211.02491
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2211.02491
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2211.02491
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

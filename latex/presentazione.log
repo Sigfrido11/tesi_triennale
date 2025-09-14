@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.11)  14 SEP 2025 18:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.11)  14 SEP 2025 19:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1178,10 +1178,7 @@ Type  H <return>  for immediate help.
                                                   
 l.37 	\end{frame}
                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
+? 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
@@ -1288,7 +1285,7 @@ Overfull \vbox (6.02841pt too high) detected at line 165
 <pictures/var_fugacity.pdf, id=496, 569.12625pt x 410.53375pt>
 File: pictures/var_fugacity.pdf Graphic file (type pdf)
 <use pictures/var_fugacity.pdf>
-Package pdftex.def Info: pictures/var_fugacity.pdf  used on input line 214.
+Package pdftex.def Info: pictures/var_fugacity.pdf  used on input line 215.
 (pdftex.def)             Requested size: 239.60567pt x 172.83643pt.
 
 [12
@@ -1302,7 +1299,7 @@ Package pdftex.def Info: pictures/var_fugacity.pdf  used on input line 214.
 File: pictures/track_finding_efficiency_2.png Graphic file (type png)
 <use pictures/track_finding_efficiency_2.png>
 Package pdftex.def Info: pictures/track_finding_efficiency_2.png  used on input
- line 264.
+ line 265.
 (pdftex.def)             Requested size: 239.60567pt x 171.77148pt.
 
 [15
@@ -1316,7 +1313,7 @@ Package pdftex.def Info: pictures/track_finding_efficiency_2.png  used on input
 File: pictures/ALICE_c-d_detection_2.png Graphic file (type png)
 <use pictures/ALICE_c-d_detection_2.png>
 Package pdftex.def Info: pictures/ALICE_c-d_detection_2.png  used on input line
- 300.
+ 301.
 (pdftex.def)             Requested size: 171.14764pt x 162.68759pt.
  [18
 
@@ -1324,15 +1321,15 @@ Package pdftex.def Info: pictures/ALICE_c-d_detection_2.png  used on input line
 
 ]
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 310.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 311.
 
 
 
 LaTeX Font Warning: Font shape `OT1/lmss/m/sc' in size <10.95> not available
-(Font)              Font shape `OT1/lmr/m/sc' tried instead on input line 310.
+(Font)              Font shape `OT1/lmr/m/sc' tried instead on input line 311.
 
 LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
-310.
+311.
 (/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [20
@@ -1354,17 +1351,24 @@ ips/lm/lm-rmtt.enc}]
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `presentazione.out' has not changed.
 (rerunfilecheck)             Checksum: D7F7175CDE9BC35FFDC181AC65804A42;171.
+
+Package biblatex Warning: Please rerun LaTeX.
+
 Package logreq Info: Writing requests to 'presentazione.run.xml'.
 \openout1 = `presentazione.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 30414 strings out of 474222
- 595051 string characters out of 5748732
+ 30419 strings out of 474222
+ 595331 string characters out of 5748732
  1938975 words of memory out of 5000000
- 52047 multiletter control sequences out of 15000+600000
+ 52051 multiletter control sequences out of 15000+600000
  613275 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,123p,686b,1470s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1380,10 +1384,10 @@ fb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts
 ></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type
 1/public/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/symbols/msbm10.pfb>
-Output written on presentazione.pdf (20 pages, 1531385 bytes).
+Output written on presentazione.pdf (20 pages, 1534109 bytes).
 PDF statistics:
- 896 PDF objects out of 1000 (max. 8388607)
- 689 compressed objects within 7 object streams
- 52 named destinations out of 1000 (max. 500000)
+ 902 PDF objects out of 1000 (max. 8388607)
+ 694 compressed objects within 7 object streams
+ 53 named destinations out of 1000 (max. 500000)
  128 words of extra memory for PDF output out of 10000 (max. 10000000)
 
