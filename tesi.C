@@ -107,6 +107,7 @@ void primo_grafico() {
   // verifica correttezza
   for (int i{0}; i < n / 2; i++) {
     std::cout << "integralogorm[i] " << i << " " << integralogorm[i] << '\n';
+    std::cout << "integraerror[i] " << i << " " << error[i] << '\n';
   }
 
   for (int i{0}; i < 2; i++) {

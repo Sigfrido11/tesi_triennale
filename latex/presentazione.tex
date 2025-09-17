@@ -42,12 +42,12 @@
 		\begin{figure}		
 			\centering
 			\includegraphics[width=0.45 \linewidth]{pictures/c-deuteron.png}
-			\caption{L'immagine mostra una rappresentazione schematica del c-deuteron}
+			\caption{L'immagine mostra una rappresentazione schematica del c-deuteron, ipotetico stato legato fra neutrone e $\Lambda_c^+$ mai osservato sperimentalmente}
 		\end{figure}	
 		\begin{itemize}
 			\item Massa $\Lambda_c^+$: $m_{\Lambda_c^+} = (2286.46 \pm 0.14)$ MeV/$c^2$ \cite{ParticleDataGroup:2024cfk}.
 			\item Massa neutrone: $m_N$ = 939.56542052(54) MeV/$c^2$ \cite{ParticleDataGroup:2024cfk}.
-			\item Energia legame deutone: $E_{be, d} = (2.224575 \pm 0.000009)\,\text{MeV}$
+			\item Energia di legame del deutone: $E_{be, d} = (2.224575 \pm 0.000009)\,\text{MeV}$
 			\cite{VANDERLEUN1982261}.
 			\item Massa c-deuteron: $m_{c-d} \approx 3.223$ GeV/$c^2$.
 		\end{itemize}
@@ -56,7 +56,7 @@
 	
 	
 	\begin{frame}
-		\frametitle{Simulazione}
+		\frametitle{Simulazione con Thermal FIST}
 		Parametri della simulazione:
 		\begin{itemize}
 			\item Fireball a simmetria sferica.
@@ -82,7 +82,7 @@
 	\end{frame}
 	
 	\begin{frame}
-		\frametitle{Relazione funzionale}
+		\frametitle{Fit}
 		La relazione funzionale utilizzata per il fit è della forma $dN/dy= a e^{bx}$, con a e b parametri liberi. 
 		
 		Per i nuclei senza quark charm si è ottenuto:
@@ -166,7 +166,7 @@
 	
 	
 	\begin{frame}
-		\frametitle{Variazioni nella temperatura}
+		\frametitle{Variazioni nella temperatura di freeze-out}
 		
 		Il fit è stato eseguito utilizzando la seguente relazione funzionale 
 		$dN/dy = a e^{bT} + c$, con a, b e c parametri da determinare. 
@@ -180,7 +180,7 @@
 			\item $\tilde{\chi}^2$ = 1.0.
 		\end{itemize}
 		
-		Quest'ultimo valore suggerisce che, sebbene non sia stato possibile procedere analiticamente, l'accordo fra dati simulati e la relazione empirica risulta comunque consistente.
+		Quest'ultimo valore suggerisce che, sebbene non sia stato possibile procedere analiticamente, l'accordo fra dati simulati e la relazione empirica risulti comunque consistente.
 		
 	\end{frame}
 	
@@ -196,7 +196,7 @@
 				\int_{0}^{\infty} dp \ p^2 e^{\beta(\mu_i-E)} \\
 				&= \frac{\Delta V g_i}{2\pi^2\hbar^3} e^{\beta \mu_i} 
 				\int_{0}^{\infty} dp \ p^2 e^{-\beta E} \\
-				&= \frac{\Delta V g_i}{2\pi^2\hbar^3} \gamma_c 
+				&= \frac{\Delta V g_i}{2\pi^2\hbar^3} \gamma_c \ e^{\beta \mu_j}
 				\int_{0}^{\infty} dp \ p^2 e^{-\beta E}\\
 				&\propto \gamma_c
 			\end{aligned}
@@ -249,26 +249,17 @@
 				totale & (1.36 $\pm$ 0.39)\% \\
 				\hline
 			\end{tabular}
-			\caption{La tabella mostra tutti i canali di decadimento considerati per la presente analisi. La prima colonna mostra i possibili prodotti del decadimento mentre la seconda i relativi branching ratio con le rispettive incertezze. Il termine x 7\% significa che il branching ratio deve essere ridotto per la probabilità di formare uno stato legato fra protone e neutrone. In questo caso d indica il deutone.}
+			\caption{La tabella mostra tutti i canali di decadimento considerati per la presente analisi. La prima colonna mostra i possibili prodotti del decadimento mentre la seconda i relativi branching ratio con le rispettive incertezze. Il termine x 7\% significa che il branching ratio deve essere ridotto per la probabilità di formare uno stato legato fra protone, derivante dal decadimento della $\Lambda_c$, e neutrone. In questo caso d indica il deutone.}
 			\label{tab:decay_channel}
 		\end{table}
 		
 	\end{frame}
 	
 	\begin{frame}
-		
-		\begin{figure}		
-			\centering
-			\includegraphics[width=0.7\linewidth]{pictures/track_finding_efficiency_2.png}
-			\caption{La figura mostra i grafici relativi all'efficienza di ricostruzione della traccia del Time Projection Chamber (TPC) di ALICE \cite{CERN-LHCC-2015-001}.}
-		\end{figure}
-	\end{frame}
-	
-	\begin{frame}
 		\frametitle{Incremento deutoni}
 		Sotto le seguenti ipotesi: 
 		\begin{itemize}
-			\item Il numero di collisioni effettuate dal LHC è $N_{LHC} = 10^{10}$;
+			\item Il numero di collisioni effettuate dal LHC è $N_{LHC} = 10^{10}$, stima del numero di eventi osservati durante il run Pb-Pb del 2024;
 			\item Sono state considerate solo le collisioni centrali, assunte pari al $5\%$ del totale;
 			\item La temperatura di freeze-out è 156 MeV, con un raggio di freeze-out di 8 fm e una fugacità del charm pari a 29.6, assumendo simmetria sferica;
 			\item Le abbondanze sono derivate unicamente dai canali di decadimento elencati nella tabella precedente;
@@ -287,18 +278,18 @@
 		
 		Ottenendo:
 		\begin{center}
-			$N_D$ = (1938 $\pm$ 12) deuterons.
+			$N_D$ = (1938 $\pm$ 12) deuteroni.
 		\end{center}
 	\end{frame}
 	
-	\begin{frame}		
-		\begin{figure}		
-			\centering
-			\includegraphics[width=0.5\linewidth]{pictures/ALICE_c-d_detection_2.png}
-			\caption{La figura mostra la distribuzione della massa invariante, il fondo correlato e il fondo dovuto ai deuteroni primari \cite{alicecollaboration2022letterintentalice3}.}
-			\label{fig:QCD_vertices} 
-		\end{figure}
-	\end{frame}
+%	\begin{frame}		
+%		\begin{figure}		
+%			\centering
+%			\includegraphics[width=0.5\linewidth]{pictures/ALICE_c-d_detection_2.png}
+%			\caption{La figura mostra la distribuzione della massa invariante, il fondo correlato e il fondo dovuto ai deuteroni primari \cite{alicecollaboration2022letterintentalice3}.}
+%			\label{fig:QCD_vertices} 
+%		\end{figure}
+%	\end{frame}
 	
 	\begin{frame}
 		\centering

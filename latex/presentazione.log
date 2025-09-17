@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.11)  14 SEP 2025 19:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.10)  17 SEP 2025 17:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1178,7 +1178,10 @@ Type  H <return>  for immediate help.
                                                   
 l.37 	\end{frame}
                  
-? 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
@@ -1212,11 +1215,11 @@ LaTeX Font Info:    Trying to load font information for OMX+lmex on input line
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 55.
+(Font)              <10> on input line 55.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 55.
+(Font)              <7> on input line 55.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 55.
+(Font)              <5> on input line 55.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 55.
 
 
@@ -1228,23 +1231,24 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 55.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [2
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 55.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 55.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 55.
+ [2
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/
 dvips/lm/lm-mathsy.enc} <./pictures/c-deuteron.png (PNG copy)>] [3
 
 ]
-<pictures/first_graph.pdf, id=139, 569.12625pt x 320.19624pt>
+<pictures/first_graph.pdf, id=141, 569.12625pt x 320.19624pt>
 File: pictures/first_graph.pdf Graphic file (type pdf)
 <use pictures/first_graph.pdf>
 Package pdftex.def Info: pictures/first_graph.pdf  used on input line 82.
 (pdftex.def)             Requested size: 308.06367pt x 173.32845pt.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 82.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 82.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 82.
  [4
 
  <./pictures/first_graph.pdf, page is rotated 90 degrees>] [5
@@ -1252,7 +1256,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 ] [6
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}]
-<pictures/var_radius.pdf, id=270, 569.12625pt x 322.20375pt>
+<pictures/var_radius.pdf, id=272, 569.12625pt x 322.20375pt>
 File: pictures/var_radius.pdf Graphic file (type pdf)
 <use pictures/var_radius.pdf>
 Package pdftex.def Info: pictures/var_radius.pdf  used on input line 143.
@@ -1266,7 +1270,7 @@ Overfull \vbox (12.66939pt too high) detected at line 143
  <./pictures/var_radius.pdf, page is rotated 90 degrees>] [8
 
 ]
-<pictures/var_temperaure.pdf, id=370, 569.12625pt x 311.1625pt>
+<pictures/var_temperaure.pdf, id=372, 569.12625pt x 311.1625pt>
 File: pictures/var_temperaure.pdf Graphic file (type pdf)
 <use pictures/var_temperaure.pdf>
 Package pdftex.def Info: pictures/var_temperaure.pdf  used on input line 165.
@@ -1282,7 +1286,7 @@ Overfull \vbox (6.02841pt too high) detected at line 165
 ] [11
 
 ]
-<pictures/var_fugacity.pdf, id=496, 569.12625pt x 410.53375pt>
+<pictures/var_fugacity.pdf, id=498, 569.12625pt x 410.53375pt>
 File: pictures/var_fugacity.pdf Graphic file (type pdf)
 <use pictures/var_fugacity.pdf>
 Package pdftex.def Info: pictures/var_fugacity.pdf  used on input line 215.
@@ -1295,44 +1299,26 @@ Package pdftex.def Info: pictures/var_fugacity.pdf  used on input line 215.
 ] [14
 
 ]
-<pictures/track_finding_efficiency_2.png, id=625, 925.4575pt x 663.47874pt>
-File: pictures/track_finding_efficiency_2.png Graphic file (type png)
-<use pictures/track_finding_efficiency_2.png>
-Package pdftex.def Info: pictures/track_finding_efficiency_2.png  used on input
- line 265.
-(pdftex.def)             Requested size: 239.60567pt x 171.77148pt.
-
 [15
 
- <./pictures/track_finding_efficiency_2.png>] [16
+] [16
 
 ] [17
 
 ]
-<pictures/ALICE_c-d_detection_2.png, id=713, 589.20125pt x 560.0925pt>
-File: pictures/ALICE_c-d_detection_2.png Graphic file (type png)
-<use pictures/ALICE_c-d_detection_2.png>
-Package pdftex.def Info: pictures/ALICE_c-d_detection_2.png  used on input line
- 301.
-(pdftex.def)             Requested size: 171.14764pt x 162.68759pt.
- [18
-
- <./pictures/ALICE_c-d_detection_2.png>] [19
-
-]
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 311.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 302.
 
 
 
 LaTeX Font Warning: Font shape `OT1/lmss/m/sc' in size <10.95> not available
-(Font)              Font shape `OT1/lmr/m/sc' tried instead on input line 311.
+(Font)              Font shape `OT1/lmr/m/sc' tried instead on input line 302.
 
 LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
-311.
+302.
 (/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [20
+) [18
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rmsc.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-rmtt.enc}]
@@ -1358,36 +1344,39 @@ LaTeX Warning: There were undefined references.
 Package rerunfilecheck Info: File `presentazione.out' has not changed.
 (rerunfilecheck)             Checksum: D7F7175CDE9BC35FFDC181AC65804A42;171.
 
-Package biblatex Warning: Please rerun LaTeX.
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                presentazione
+(biblatex)                and rerun LaTeX afterwards.
 
 Package logreq Info: Writing requests to 'presentazione.run.xml'.
 \openout1 = `presentazione.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 30419 strings out of 474222
- 595331 string characters out of 5748732
+ 30395 strings out of 474222
+ 594620 string characters out of 5748732
  1938975 words of memory out of 5000000
- 52051 multiletter control sequences out of 15000+600000
+ 52032 multiletter control sequences out of 15000+600000
  613275 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,123p,686b,1470s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/t
 ype1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></
 usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/p
-ublic/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/shar
-e/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/
-lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/f
-onts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss8.p
-fb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts
-/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb
-></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type
-1/public/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/symbols/msbm10.pfb>
-Output written on presentazione.pdf (20 pages, 1534109 bytes).
+ublic/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/shar
+e/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm
+/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fo
+nts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb
+></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/typ
+e1/public/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></u
+sr/share/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/
+public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/sh
+are/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on presentazione.pdf (18 pages, 1322596 bytes).
 PDF statistics:
- 902 PDF objects out of 1000 (max. 8388607)
- 694 compressed objects within 7 object streams
- 53 named destinations out of 1000 (max. 500000)
- 128 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 846 PDF objects out of 1000 (max. 8388607)
+ 644 compressed objects within 7 object streams
+ 48 named destinations out of 1000 (max. 500000)
+ 118 words of extra memory for PDF output out of 10000 (max. 10000000)
 
