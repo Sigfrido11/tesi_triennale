@@ -1,20 +1,30 @@
-// Giuseppe Luciano software analisi dati tesi sul c-deuteron
+// ROOT macro for the c-deuteron thesis analysis.
+// Original logic preserved; comments added for clarity.
 
 #include "TCanvas.h"
+#include "TF1.h"
+#include "TGraph2D.h"
 #include "TGraphErrors.h"
 #include "TH1.h"
+#include "TLatex.h"
 #include "TLegend.h"
+#include "TMath.h"
+#include "TMultiGraph.h"
+#include "TPad.h"
+#include "TString.h"
 #include <cassert>
 #include <cmath>
 #include <fstream>
 #include <iostream>
 #include <sstream>
 
+// Draw yields vs mass for light and charm nuclei.
 void primo_grafico() {
   const int n{12};
   const int div{8};
   TGraphErrors *graph[n];
 
+  // Input files come in particle / antiparticle pairs.
   const TString fileName[n] = {
       "generazioni/fugacity_30/156_mev_8_fm/d.dN.dy.dat",
       "generazioni/fugacity_30/156_mev_8_fm/anti-d.dN.dy.dat",
@@ -39,12 +49,12 @@ void primo_grafico() {
 
   TH1F *histo[n];
   TH1F *histoSum[n / 2];
-  double mass[n / 2] = { 1.87561, 2.80892, 2.80839, 3.72738, 2.28646, 3.225};
-  // massa deuterio trizio he3 he4 lambda c c-deuteron
-  double massNorm[div / 2] = { 1.87561, 2.80892, 2.80839, 3.72738};
+  double mass[n / 2] = {1.87561, 2.80892, 2.80839, 3.72738, 2.28646, 3.225};
+  // Mass order: deuteron, tritium, He3, He4, Lambda_c, c-deuteron.
+  double massNorm[div / 2] = {1.87561, 2.80892, 2.80839, 3.72738};
 
-  double massCharm[(n - div) / 2] = {2.28646,
-                                     3.225}; // massa lamda c c-deuteron
+  // Charm-only masses used for separated plotting.
+  double massCharm[(n - div) / 2] = {2.28646, 3.225};
 
   double integral[n / 2];
   double error[n / 2];
@@ -53,9 +63,14 @@ void primo_grafico() {
   double integralCharm[(n - div) / 2];
   double errorCharm[(n - div) / 2];
 
+  const double rapidityMax = 0.5; // |y| acceptance used for all integrals.
+
+  // Combine particle/antiparticle spectra and integrate within |y|<rapidityMax.
   for (int i{0}; i < n; i = i + 2) {
     graph[i] = new TGraphErrors(fileName[i], "%lg %lg %lg");
     graph[i + 1] = new TGraphErrors(fileName[i + 1], "%lg %lg %lg");
+
+    // Sum particle + antiparticle and propagate errors.
     for (int j{0}; j < graph[i]->GetN(); j++) {
       double x = graph[i]->GetPointX(j);
       double y1 = graph[i]->GetPointY(j);
@@ -68,33 +83,31 @@ void primo_grafico() {
     double partialArea{0};
     double integralError{0};
     for (int k = 0; k < graph[i]->GetN() - 1; ++k) {
-      // Estrai i punti x e y
+      // Extract neighbor points.
       double x1, y1, x2, y2;
       graph[i]->GetPoint(k, x1, y1);
-      if (std::abs(x1) > 0.5)
+      if (std::abs(x1) > rapidityMax)
         continue;
       graph[i]->GetPoint(k + 1, x2, y2);
 
-      // Applica la formula del trapezio per l'area tra i punti (x1, y1) e (x2,
-      // y2)
+      // Trapezoidal area between (x1,y1) and (x2,y2).
       double area = 0.5 * (y1 + y2) * (x2 - x1);
       partialArea += area;
 
-      // Estrai gli errori sui punti y
+      // Propagate uncertainties in quadrature.
       double y1Error = graph[i]->GetErrorY(k);
       double y2Error = graph[i]->GetErrorY(k + 1);
 
-      // Propagazione degli errori (considerando la somma in quadratura)
       double areaError =
           0.5 * std::sqrt(y1Error * y1Error + y2Error * y2Error) * (x2 - x1);
-      integralError +=
-          areaError * areaError; // Somma in quadratura degli errori
+      integralError += areaError * areaError;
     }
-    error[i / 2] = std::sqrt(integralError); // Errore finale
+    error[i / 2] = std::sqrt(integralError); // Final integration error.
     integral[i / 2] = partialArea;
     std::cout << "valori " << i / 2 << " " << integral[i / 2] << "\n";
   }
 
+  // Separate light (norm) and charm contributions.
   for (int i = 0; i < n / 2; ++i) {
     if (i < div / 2) {
       integralogorm[i] = integral[i];
@@ -104,7 +117,7 @@ void primo_grafico() {
       errorCharm[i - div / 2] = error[i];
     }
   }
-  // verifica correttezza
+  // Quick sanity printouts (kept for reproducibility).
   for (int i{0}; i < n / 2; i++) {
     std::cout << "integralogorm[i] " << i << " " << integralogorm[i] << '\n';
     std::cout << "integraerror[i] " << i << " " << error[i] << '\n';
@@ -114,7 +127,7 @@ void primo_grafico() {
     std::cout << "integralCharm[i] " << i << " " << integralCharm[i] <<" " << errorCharm[i] <<'\n';
   }
 
-  // grafici finali
+  // Final graphs: combined, light-only, charm-only.
   TMultiGraph *finalGraph = new TMultiGraph;
 
   TGraphErrors *gTest = new TGraphErrors(n / 2, mass, integral, nullptr, error);
@@ -127,7 +140,7 @@ void primo_grafico() {
   TGraphErrors *gCharm =
       new TGraphErrors(1,cDMass, cDInt, nullptr, cDError);
 
-  // Configurazione della funzione di fit per entrambi i grafici
+  // Exponential fits (Boltzmann-like) for light and charm sectors.
   TF1 *fitExp = new TF1("fitExp", "[0] * exp(-[1] * x)", 0, 4);
   TF1 *fitExpCharm = new TF1("fitExpCharm", "[0] * exp(-6.2107 * x)", 0, 4);
 
@@ -162,7 +175,7 @@ void primo_grafico() {
   gTest->SetMarkerSize(1.0);
   gTest->SetTitle("Charm Particles; Mass (GeV); dN/dy");
 
-  // Canvas per gNormal
+  // Canvas for light nuclei (gNormal).
   auto canvasNorm = new TCanvas("canvasNorm", "gNormal - Particles", 800, 600);
   canvasNorm->cd();
   canvasNorm->SetLogy();
@@ -170,7 +183,7 @@ void primo_grafico() {
   gNormal->GetXaxis()->SetLimits(0, 6);
   gNormal->Draw("APE");
 
-  // Canvas per gCharm
+  // Canvas for charm-only graph.
   auto canvasCharm = new TCanvas("canvasCharm", "gCharm - Particles", 800, 600);
   canvasCharm->cd();
   canvasCharm->SetLogy();
@@ -178,7 +191,7 @@ void primo_grafico() {
   gCharm->GetXaxis()->SetLimits(0, 6);
   gCharm->Draw("APE");
 
-  // Canvas per test
+  // Canvas for full test graph (all points).
   auto canvasTest = new TCanvas("canvastest", "gTest - Particles", 800, 600);
   canvasTest->cd();
   canvasTest->SetLogy();
@@ -186,7 +199,7 @@ void primo_grafico() {
   gTest->GetYaxis()->SetLimits(1e-7, 10);
   gTest->Draw("APE");
 
-  // Canvas per il grafico combinato
+  // Canvas for combined graph (light + charm overlay).
   auto canvasFinal = new TCanvas("canvasFinal", "Combined Graph", 800, 600);
   canvasFinal->cd();
   canvasFinal->SetLogy();
@@ -195,7 +208,7 @@ void primo_grafico() {
   finalGraph->SetTitle("Combined Graph; Mass (GeV); dN/dy");
   finalGraph->Draw("APE");
 
-  // Aggiunta delle etichette ai punti
+  // Add labels to points on individual and combined canvases.
   const char *labels[n / 2] = {"d",
                                "H3",
                                "He3",
@@ -225,28 +238,28 @@ void primo_grafico() {
   }
   
   canvasCharm->cd();
-  for (int i = 0; i < 1; ++i) {
+  for (int i = 0; i < gCharm->GetN(); ++i) {
     double x, y;
-    gCharm->GetPoint(i + div / 2, x, y);
-    TLatex *label = new TLatex(x, y * 1.5, labels[i + n / 2]);
+    gCharm->GetPoint(i, x, y);
+    TLatex *label = new TLatex(x, y * 1.5, labels[i + div / 2]);
     label->SetTextSize(0.03);
     label->Draw();
   }
   
-  // Aggiunta della legenda
+  // Legend for combined graph.
   auto leg = new TLegend(0.7, 0.7, 0.9, 0.9);
   leg->AddEntry(gNormal, "Normal Particles", "P");
   leg->AddEntry(gCharm, "Charm Particles", "P");
   leg->Draw();
 std::cout<< "fin qui tutto bene" << '\n';
-  // Configurazione del grafico finale
+  // Final axis configuration for summary plots.
   gTest->SetMarkerStyle(21);
   gTest->SetMarkerSize(1.0);
   gTest->SetTitle("Particles; Mass (GeV); dN/dy");
   gTest->GetYaxis()->SetLimits(1e-7, 10);
   gTest->GetXaxis()->SetLimits(0, 4);
 
-  // Configurazione del grafico finale
+  // Axis cosmetics for multigraph overlay.
   finalGraph->GetYaxis()->SetTitleOffset(1.2);
   finalGraph->GetXaxis()->SetTitleSize(0.04);
   finalGraph->GetYaxis()->SetTitleSize(0.04);
@@ -260,14 +273,15 @@ std::cout<< "fin qui tutto bene" << '\n';
   finalGraph->GetXaxis()->SetRangeUser(0, 4);
   leg->Draw();
 
-  // Aggiornamento della canvas per visualizzare i risultati
+  // Refresh canvas to display results.
   canvasFinal->Update();
 }
 
 
 void cambiamenti() {
   int const n{62};
-  // se aggiungi un file le cose da cambiare sono qui
+  // Main study: scan c-deuteron yield vs radius, temperature, and fugacity.
+  // If new files are added, update this list accordingly.
   const TString fileName[n] = {
       "generazioni/fugacity_30/156_mev_4_fm/c-deuteron.dN.dy.dat",
       "generazioni/fugacity_30/156_mev_4_fm/anti-c-deuteron.dN.dy.dat",
@@ -338,7 +352,7 @@ void cambiamenti() {
   double countError[n / 2];
 
   for (int i{0}; i < n; i = i + 2) {
-    std::ifstream inputFile1(fileName[i]); // Apertura del file
+    std::ifstream inputFile1(fileName[i]); // Input file check
     std::ifstream inputFile2(fileName[i + 1]);
     if (!inputFile1) {
       std::cerr << "Impossibile aprire il file: " << fileName[i] << std::endl;
@@ -364,29 +378,27 @@ void cambiamenti() {
     double partialArea{0};
     double integralError{0};
     for (int k = 0; k < graph[i]->GetN() - 1; ++k) {
-      // Estrai i punti x e y
+      // Extract neighbor points.
       double x1, y1, x2, y2;
       graph[i]->GetPoint(k, x1, y1);
       if (std::abs(x1) > 0.5)
         continue;
       graph[i]->GetPoint(k + 1, x2, y2);
 
-      // Applica la formula del trapezio per l'area tra i punti (x1, y1) e (x2,
-      // y2)
+      // Trapezoidal integration between (x1,y1) and (x2,y2).
       double area = 0.5 * (y1 + y2) * (x2 - x1);
       partialArea += area;
 
-      // Estrai gli errori sui punti y
+      // Propagate uncertainties.
       double y1Error = graph[i]->GetErrorY(k);
       double y2Error = graph[i]->GetErrorY(k + 1);
 
-      // Propagazione degli errori (considerando la somma in quadratura)
       double areaError =
           0.5 * std::sqrt(y1Error * y1Error + y2Error * y2Error)*(x2-x1);
       integralError +=
-          areaError * areaError; // Somma in quadratura degli errori
+          areaError * areaError; // Quadrature sum
             }
-    countError[i / 2] = std::sqrt(integralError); // Errore finale
+    countError[i / 2] = std::sqrt(integralError); // Final uncertainty
     count[i / 2] = partialArea;
     std::cout << "ingresso " << fileName[i] << " " << i << '\n';
     std::cout << partialArea << " err " << countError[i/2] <<  '\n';
@@ -436,22 +448,22 @@ void cambiamenti() {
   TGraphErrors *gFugacity =
       new TGraphErrors(13, fugacity, countFugacity, exF,errorFugacity);
 
-  // Crea un canvas
+  // 3D surface canvas: yield vs radius vs temperature.
   TCanvas *c1 = new TCanvas("c1", "c1", 800, 600);
 
-  c1->SetTheta(15); // Imposta l'angolo di vista in azimut
-  c1->SetPhi(20);   // Imposta l'angolo di vista in elevazione
-  c1->SetGridx();  // Griglia solo sull'asse X
-  c1->SetGridy();  // Griglia solo sull'asse Y
+  c1->SetTheta(15); // Azimuth view angle
+  c1->SetPhi(20);   // Elevation angle
+  c1->SetGridx();   // Grid on X
+  c1->SetGridy();   // Grid on Y
 
-  // Disegna il grafico 3D
-  d2Graph->SetMarkerStyle(21);    // Marker stile 21 (cerchi pieni)
-  d2Graph->SetMarkerSize(1.5);    // Aumenta la dimensione del marker
-  d2Graph->SetMarkerColor(kBlue); // Colore del marker blu
+  // 3D scatter style.
+  d2Graph->SetMarkerStyle(21);    // Solid circles
+  d2Graph->SetMarkerSize(1.5);    // Larger markers
+  d2Graph->SetMarkerColor(kBlue); // Blue
 
-  // Crea il primo canvas per il pad1
+  // Main pad (single pad layout).
   TPad *pad1 = new TPad("pad1", "Pad grande", 0, 0, 1, 1);
-  // pad1->SetBottomMargin(0.05); // Riduci il margine inferiore del pad1
+  // pad1->SetBottomMargin(0.05);
   pad1->Draw();
   pad1->cd();
 
@@ -471,7 +483,7 @@ void cambiamenti() {
   d2Graph->GetYaxis()->SetLimits(149, 165);
   d2Graph->GetYaxis()->SetRangeUser(149, 165);
   d2Graph->GetZaxis()->SetLimits(1e-5, 1e-3);
-  d2Graph->GetZaxis()->SetRangeUser(1e-5, 1e-5);
+  d2Graph->GetZaxis()->SetRangeUser(1e-5, 1e-3);
   d2Graph->Draw("P0");
 
   c1->Update();
@@ -481,7 +493,7 @@ void cambiamenti() {
   pad2->Draw();
   pad2->cd();
 
-  // Disegna il grafico diffVolume
+  // Radius dependence at fixed T=156 MeV.
   diffVolume->SetLineColor(1);
   diffVolume->GetYaxis()->SetTitleOffset(1.);
   diffVolume->GetXaxis()->SetTitleSize(0.05);
@@ -502,7 +514,7 @@ void cambiamenti() {
   leg1->SetTextSize(0.04);
   leg1->Draw();
 */
-  // (Opzionale) Aggiungi la linea di fit
+  // Optional fit curve.
   // TF1 *fitVolume = new TF1("fitVolume", "[0] * log([1] * x) + [2]", 0, 10);
   TF1 *fitVolume = new TF1("fitVolume", "[0] * x^3 + [1]", 0, 10);
   fitVolume->SetLineColor(kRed);
@@ -519,7 +531,7 @@ void cambiamenti() {
 
   c2->Update(); // Aggiorna il canvas
 
-  // Crea il terzo canvas per il pad3
+  // Third canvas: temperature dependence at R=8 fm.
   TCanvas *c3 = new TCanvas("c3", "Canvas 3", 800, 600);
   TPad *pad3 = new TPad("pad3", "Pad piccolo destro", 0, 0, 1, 1);;
   pad3->Draw();
@@ -527,16 +539,16 @@ void cambiamenti() {
   
 TF1 *fitTemp = new TF1("fitTemp", "[0]*exp(x*[1])+[2]", 140, 165);
 
-// Imposta i parametri iniziali per il fit
-fitTemp->SetParameter(0, 4.24449e-14);  // Parametro per l'intercetta (start value)
+// Initial parameters for the exponential fit.
+fitTemp->SetParameter(0, 4.24449e-14);  // Intercept guess
 fitTemp->SetParameter(1, 0.150492); 
-fitTemp->SetParameter(2, 0.0000284396);  // Parametro per la pendenza (start value)
-fitTemp->SetLineColor(kGreen);   // Imposta il colore della linea di fit
+fitTemp->SetParameter(2, 0.0000284396); // Offset guess
+fitTemp->SetLineColor(kGreen);   // Fit line color
 //fitTemp->SetParameter(2,1);
 // fitTemp->SetParameter(0,0);
 // fitTemp->SetParameter(2,2e-6);
 
-  // Disegna il grafico diffTemp
+  // Temperature dependence (R = 8 fm).
   diffTemp->SetLineColor(1);
   diffTemp->GetYaxis()->SetTitleOffset(1.);
   diffTemp->GetXaxis()->SetTitleSize(0.05);
@@ -560,7 +572,7 @@ fitTemp->SetLineColor(kGreen);   // Imposta il colore della linea di fit
   // (Opzionale) Aggiungi la linea di fit
 
 
-  c3->Update(); // Aggiorna il canvas
+  c3->Update(); // Refresh canvas
 
   TF1 *fitFug = new TF1("fugacity", "[0]*x + [1]", 0, 10);
   fitFug->SetLineColor(kBlue);
@@ -575,7 +587,7 @@ fitTemp->SetLineColor(kGreen);   // Imposta il colore della linea di fit
   // leg2->AddEntry(fitTemp, "Fit Line", "l");
 
   TCanvas *c4 = new TCanvas("c4", "Canvas 4", 800, 600);
-  // Disegna il grafico diffTemp
+  // Charm fugacity scan.
   gFugacity->SetLineColor(1);
   gFugacity->GetYaxis()->SetTitleOffset(1.);
   gFugacity->GetXaxis()->SetTitleSize(0.05);

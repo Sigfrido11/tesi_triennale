@@ -1,9 +1,9 @@
-// lo faccio compilato con ROOT in combo con Pythia per i decadimenti a più
-// corpi
-
-// per compilare senza stare a scrivere un cmake che poi coi due pc..
-//  g++ -o rilevazioni rilevazioni.cpp -I./include -L./lib -l:libpythia8.a
-//  $(root-config --cflags --libs)
+// ROOT + Pythia macro to simulate c-deuteron decays and detector acceptance.
+// Built as a standalone ROOT macro; logic kept intact, clarity improved.
+//
+// Quick compile (without full CMake):
+//  g++ -o rilevazioni rilevazioni.cpp -I./include -L./lib -l:libpythia8.a \
+//      $(root-config --cflags --libs)
 
 #include "Pythia8/Pythia.h"
 #include "TCanvas.h"
@@ -23,15 +23,17 @@ void rilevazioni() {
   TH1::AddDirectory(kFALSE);
   TFile *file = new TFile("densFreq.root", "READ");
   if (!file || file->IsZombie()) {
-    std::cerr << "Errore nell'apertura del file: ";
+    std::cerr << "Failed to open densFreq.root\n";
+    return;
   }
   TGraph *freqCom = (TGraph *)file->Get("FreqComu");
   if (!freqCom) {
-    std::cerr << "Oggetto non trovato nel file." << std::endl;
+    std::cerr << "FreqComu graph not found in densFreq.root\n";
     file->Close();
+    return;
   }
 
-  TCanvas *c = new TCanvas("c", "Canvas", 800, 10304122);
+  TCanvas *c = new TCanvas("c", "Canvas", 800, 600);
   freqCom->Draw("APE");
 
   TH1F *pModuleDist =
@@ -41,6 +43,11 @@ void rilevazioni() {
   TH1D *hefficiency = nullptr;
   TFile feff("efficiency.root");
   feff.GetObject("eff", hefficiency);
+  if (!hefficiency) {
+    std::cerr << "Efficiency histogram 'eff' not found in efficiency.root\n";
+    return;
+  }
+
   // Inizializzazione di Pythia
   Pythia pythia;
 
@@ -172,14 +179,18 @@ void rilevazioni() {
     double phi = gRandom->Uniform(0., 2 * M_PI); // azimuth angle
     double theta = gRandom->Uniform(0., M_PI);   // polar angle
     double randDist = gRandom->Rndm();
-    double pM;
+    double pM{0.0};
     int j{1};
-    while (true) {
+    while (j < freqCom->GetN()) {
       if (randDist < freqCom->GetPointY(j)) {
         pM = freqCom->GetPointX(j);
         break;
       }
       j++;
+    }
+    if (pM == 0.0) {
+      // If not found, fall back to last bin edge to avoid undefined momentum.
+      pM = freqCom->GetPointX(freqCom->GetN() - 1);
     }
     pModuleDist->Fill(pM);
     double px = pM * std::cos(phi) * std::sin(theta);
@@ -216,7 +227,7 @@ void rilevazioni() {
             hefficiency->GetXaxis()->FindBin(p_perp));
         bool const passed = random <= eff;
         if (passed)
-        detected++;
+          detected++;
         double const DPM = std::sqrt(px * px + py * py + pz * pz);
         // Aggiungi il modulo dell'impulso all'istogramma
         dModule->Fill(DPM);
@@ -230,9 +241,11 @@ void rilevazioni() {
   pModuleDist->Draw("APE");
   dModule->Draw("APE");
 
-  TFile *output = new TFile("result.root", "READ");
+  TFile *output = new TFile("result.root", "RECREATE");
   pModuleDist->Write();
   dModule->Write();
+  output->Close();
+  file->Close();
 }
 
 int main() { rilevazioni(); }

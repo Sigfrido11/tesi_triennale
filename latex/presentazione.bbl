@@ -150,50 +150,38 @@
       \verb 10.1007/JHEP07(2021)035
       \endverb
     \endentry
-    \entry{CERN-LHCC-2015-001}{report}{}
+    \entry{Amsler2008}{article}{}
+      \name{author}{2}{}{%
+        {{hash=7afff7d8d2427ef604d33d6e9f44d22e}{%
+           family={Amsler},
+           familyi={A\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=38026ba4ee6b102b47bf3ffb41325c8f}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{35a2697ed56085c130d2fdd7fa28b93c}
+      \strng{fullhash}{35a2697ed56085c130d2fdd7fa28b93c}
+      \strng{bibnamehash}{35a2697ed56085c130d2fdd7fa28b93c}
+      \strng{authorbibnamehash}{35a2697ed56085c130d2fdd7fa28b93c}
+      \strng{authornamehash}{35a2697ed56085c130d2fdd7fa28b93c}
+      \strng{authorfullhash}{35a2697ed56085c130d2fdd7fa28b93c}
       \field{sortinit}{7}
       \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
-      \field{labeltitlesource}{title}
-      \field{title}{{Technical Design Report for the Muon Forward Tracker}}
-      \field{type}{techreport}
-      \field{year}{2015}
-      \verb{urlraw}
-      \verb https://cds.cern.ch/record/1981898
-      \endverb
-      \verb{url}
-      \verb https://cds.cern.ch/record/1981898
-      \endverb
-    \endentry
-    \entry{alicecollaboration2022letterintentalice3}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=bba493875cad84e685cfd57b472fe505}{%
-           family={Collaboration},
-           familyi={C\bibinitperiod},
-           given={ALICE},
-           giveni={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{bba493875cad84e685cfd57b472fe505}
-      \strng{fullhash}{bba493875cad84e685cfd57b472fe505}
-      \strng{bibnamehash}{bba493875cad84e685cfd57b472fe505}
-      \strng{authorbibnamehash}{bba493875cad84e685cfd57b472fe505}
-      \strng{authornamehash}{bba493875cad84e685cfd57b472fe505}
-      \strng{authorfullhash}{bba493875cad84e685cfd57b472fe505}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{eprintclass}{physics.ins-det}
-      \field{eprinttype}{arXiv}
-      \field{title}{Letter of intent for ALICE 3: A next-generation heavy-ion experiment at the LHC}
-      \field{year}{2022}
-      \verb{eprint}
-      \verb 2211.02491
-      \endverb
-      \verb{urlraw}
-      \verb https://arxiv.org/abs/2211.02491
-      \endverb
-      \verb{url}
-      \verb https://arxiv.org/abs/2211.02491
+      \field{issue}{1}
+      \field{journaltitle}{Physics Letters B}
+      \field{title}{{Review of Particle Physics}}
+      \field{volume}{667}
+      \field{year}{2008}
+      \field{pages}{1}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.physletb.2008.07.018
       \endverb
     \endentry
   \enddatalist
